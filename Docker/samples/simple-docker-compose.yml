@@ -1,0 +1,18 @@
+version: "3"
+services: 
+  api-container: 
+    build: ./api
+    image: "api-container:0.0.1"
+    ports: 
+      - "7777:7777"
+  app-container: 
+    build: ./app
+    image: "app-container:0.0.1"
+    ports: 
+      - "3000:3000"
+  mongodb: 
+    image: "mongo:4.0.4"
+    ports: 
+      - "27017:27017"
+      - "27018:27018"
+      - "27019:27019"

@@ -1,0 +1,39 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nodered
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: nodered
+  template:
+    metadata:
+      labels:
+        app: nodered
+    spec:
+      containers:
+        - name: nodered
+          image: adamdomowy44/node-red-docker-mongo:1
+          ports:
+            - containerPort: 1880
+          env:
+            - name: DB_NAME
+              value: db
+            - name: DB_URL
+              value: mongodb://mongo:27017/db
+            - name: DB_COLLECTION
+              value: LicencePlate
+          imagePullPolicy: Always
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: nodered
+spec:
+  selector:
+    app: nodered
+  ports:
+    - port: 1880
+      targetPort: 1880
+  type: LoadBalancer

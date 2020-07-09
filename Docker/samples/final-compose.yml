@@ -1,0 +1,27 @@
+version: "3"
+services: 
+  web-client: 
+    build: https://github.com/youraccount/web-client.git
+    ports: 
+      - "4210::5000"
+    entrypoint: "npm run dev"
+
+  web-server:
+    build: https://github.com/youraccount/web-server.git
+    ports: 
+      - "4200:5000"
+    # just keep server alive
+    entrypoint: "tail -f /dev/null"
+
+  database: 
+    image: "postgres:alpine"
+    environment: 
+      POSTGRES_USER: postgres
+      POSTGRES_DB: mydb
+    ports: 
+      - "4201:5432"
+    volumes:
+      - server_db:/var/lib/postgresql/data
+
+volumes: 
+  server_db:

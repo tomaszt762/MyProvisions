@@ -1,0 +1,45 @@
+version: "3"
+services:
+  nodered:
+    image: "nodered/node-red"
+    ports:
+      - "1880:1880"
+    volumes:
+      - c:\Users\MACIEJMARTUSEWICZ\NRdata:/data
+    environment:
+      REDIS_MASTER_URL: redis-master:6379
+      REDIS_SLAVE_URL: redis-slave:6379
+    depends_on:
+      - redis-master
+      - redis-slave     
+    networks:
+      - internal_network
+  redis-master:
+    image: "redis:latest"
+    ports:
+      - "6379"
+    environment:
+      - REDIS_REPLICATION_MODE=master
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    volumes:
+      - redis_data_container:/data/redis
+    networks:
+      - internal_network
+  redis-slave:
+    image: "redis:latest"
+    ports:
+      - "6379"
+    depends_on:
+      - redis-master
+    environment:
+      - REDIS_REPLICATION_MODE=slave
+      - REDIS_MASTER_HOST=redis-master
+      - REDIS_MASTER_PORT_NUMBER=6379
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    networks:
+      - internal_network
+networks:
+  internal_network:
+    driver: bridge
+volumes:
+  redis_data_container:

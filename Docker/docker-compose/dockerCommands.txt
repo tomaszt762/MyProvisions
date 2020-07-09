@@ -1,0 +1,22 @@
+docker network create --driver bridge internal_network
+docker network inspect internal_network
+docker run -d -p 27017-27019:27017-27019 --network=internal_network --name mongo bitnami/mongodb:latest
+docker run -d -p 6379:6379 --network=internal_network --name redis redis:latest
+docker run -itd -p 1880:1880 --env-file env.list -v c:\Users\MACIEJMARTUSEWICZ\NRdata:/data -e NODE_RED_ENABLE_PROJECTS=true --network=internal_network --name mynodered nodered/node-red
+docker run -itd --network=internal_network --env-file env.list -p 1880:1880 --name mynodered adamdomowy44/node-red-docker-mongo:1
+docker system prune
+docker system prune --volumes
+
+docker-compose up -d
+docker-compose stop
+docker-compose start
+docker-compose down
+
+docker network ls
+
+kubectl apply -f mongo-k8s.yaml
+kubectl apply -f nodered-k8s.yaml
+kubectl delete deployment mongo
+kubectl delete deployment nodered
+kubectl delete service mongo
+kubectl delete service nodered

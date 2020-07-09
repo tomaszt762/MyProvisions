@@ -1,0 +1,29 @@
+version: "3"
+services:
+  nodered:
+    image: "nodered/node-red"
+    ports:
+      - "1880:1880"
+    volumes:
+      - c:\Users\MACIEJMARTUSEWICZ\NRdata:/data
+    depends_on:
+      - rabbitmq
+    networks:
+      - internal_network
+  rabbitmq:
+    image: rabbitmq:3.7.5-management
+    hostname: app-rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: rabbitmq
+      RABBITMQ_DEFAULT_PASS: rabbitmq
+    networks:
+      - internal_network
+networks:
+  internal_network:
+# docker-compose up -d
+# docker-compose down
+# docker-compose start
+# docker-compose stop

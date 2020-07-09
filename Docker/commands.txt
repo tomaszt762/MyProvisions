@@ -1,0 +1,98 @@
+//XXXXXXXXX - Docker  - XXXXXXXXX
+
+//login
+docker login
+docker login -u kubeadmin -p db9Dr-J2csc-8oP78-9sbmf gcr.io
+
+//list all containers (running and stopped)
+docker ps -a
+// will stop the container instance named mynodered, but leave the container resources intact
+docker stop mynodered
+//will start a stopped container instance named mynodered
+docker start mynodered 
+//will remove all resources for container instance named mynodered. The container instance must be stopped before it can be removed
+docker rm mynodered 
+
+//run from folder wirth dockerfile
+docker build -t adamdomowy44/node-red-docker-hello:1 .
+docker buildx build --platform linux/amd64 -t adamdomowy44/node-red-docker-hello --push .
+
+docker build -t registry-1.docker.io/Node-red-Project/node-red-docker-hello:1 .
+docker login
+//Push your image into the private registry :
+docker push adamdomowy44/node-red-docker-hello:1
+
+//run docker
+docker run -itd -p 1880:1880 -v c:\Users\XXXX\NRdata:/data -e NODE_RED_ENABLE_PROJECTS=true --name mynodered nodered/node-red
+docker run -dit -p 1880:1880 --name dockerNR adamdomowy44/node-red-docker-hello:latest
+
+//To see the image, use the following command:
+docker images adamdomowy44/node-red-docker-hello
+
+
+# docker build - builds an image from a Dockerfile
+# docker images - displays all Docker images on that machine
+# docker run - starts container and runs any commands in that container
+# docker run including
+#	-p - allows you to specify ports in host and Docker container
+#	-it - opens up an interactive terminal after the container starts running
+#	-v - bind mount a volume to the container
+#	-e - set environmental variables
+#	-d - starts the container in daemon mode (it runs in a background process)
+# docker rmi - removes one or more images
+# docker rm - removes one or more containers
+# docker kill - kills one or more running containers
+# docker ps - displays a list of running containers
+# docker tag - tags the image with an alias that can be referenced later (good for versioning)
+# docker login - login to Docker registry
+# docker network ls - 
+
+# docker build -t api-container:0.0.1 .
+# docker build -t app-container:0.0.1 .
+# docker run -p 3000:3000 -d container-name
+# docker run -p 7777:7777 -d container-name
+# docker pull mongo:4.0.4
+# docker run -d -p 27017-27019:27017-27019 --name mongodb mongo:4.0.4
+
+
+docker system prune
+docker system prune --volumes
+
+
+
+//XXXXXXXXX - Docker Compose  - XXXXXXXXX
+
+# Starts existing containers for a service.
+docker-compose start
+
+# Stops running containers without removing them.
+docker-compose stop
+
+# Pauses running containers of a service.
+docker-compose pause
+
+# Unpauses paused containers of a service.
+docker-compose unpause
+
+# Lists containers.
+docker-compose ps
+
+# Builds, (re)creates, starts, and attaches to containers for a service.
+docker-compose up
+
+# Stops containers and removes containers, networks, volumes, and images created by up.
+docker-compose down
+
+
+//Build services: 
+docker-compose build docker-compose.yaml
+
+//Generate and run containers detached: -d 
+docker-compose up -d docker-compose.yaml
+
+//tail the container logs manually with 
+docker-compose logs --follow docker-compose.yaml
+
+
+
+docker-compose up -d

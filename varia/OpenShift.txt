@@ -1,0 +1,258 @@
+
+//XXXXXXXXX - OpenShift - XXXXXXXXX
+//After upgrade
+crc version
+crc setup
+// To start
+crc start
+// To access the cluster, first set up your environment by following 'crc oc-env' instructions
+crc oc-env
+//prints the password for the developer user.
+crc console --credentials
+
+INFO Then you can access it by running '
+oc login -u developer -p developer https://api.crc.testing:6443
+INFO To login as an admin, run '
+oc login -u kubeadmin -p 8rynV-SeYLc-h8Ij7-YPYcz https://api.crc.testing:6443
+
+//You can now run 'crc console' and use these credentials to access the OpenShift web console
+crc console
+
+crc stop
+
+//Now using project "node-red-project" on server "https://api.crc.testing:6443".
+//You can add applications to this project with the 'new-app' command. For example, try:
+oc new-app django-psql-example
+//to build a new example application in Python. Or use kubectl to deploy a simple Kubernetes application:
+kubectl create deployment hello-node --image=gcr.io/hello-minikube-zero-install/hello-node
+
+//XXXXXXXXX - Kubernetes - XXXXXXXXX
+
+kubectl apply -f 
+kubectl delete deployment 
+kubectl delete 
+
+//To remove the service, use $ 
+kubectl delete service guestbook
+kubectl delete -f guestbook-service.yaml
+
+
+kubectl config view
+kubectl cluster-info
+kubectl version
+
+//list nodes
+kubectl get nodes
+
+//Create the application Deployment using the file above:
+kubectl (create|get|apply|delete) -f myResource.yaml
+
+//Using Declarative way (Apply)
+//kubectl apply 
+kubectl apply -f https://k8s.io/examples/service/access/hello-application.yaml
+
+//Using Imperative way (Create)
+//kubectl create  
+kubectl create deployment node-red-hello --image=adamdomowy44/node-red-docker-hello:latest
+
+//Using Generators (Run, Expose)
+//kubectl run 
+kubectl run guestbook --image=ibmcom/guestbook:v1
+kubectl run my-app --image=mycompany/myapp:latest --replicas=1 --port=8080
+
+//View the pod status to check that it is ready:
+
+kubectl get pods
+
+
+//Display information about the Deployment:
+kubectl get deployments deployment.apps/node-red-hello
+kubectl describe deployments hello-world
+kubectl edit deployment
+
+//Display information about your ReplicaSet objects:
+kubectl get replicasets
+kubectl describe replicasets
+
+//Create a Service object that exposes the deployment:
+kubectl expose deployment guestbook --type="NodePort" --port=3000
+kubectl expose deployment hello-world --type=NodePort --name=example-service
+kubectl expose deployment.apps/node-red-hello --type=NodePort --port=1880 --name=node-red-hello --target-port=8080
+kubectl expose deployment my=app --port=80 --type=LoadBalancer
+
+kubectl apply -f https://k8s.io/examples/service/access/hello-service.yaml
+
+//określenie typu w ServiceSpec:
+// - ClusterIP (domyślnie) - Wystawia serwis poprzez wewnętrzny adres IP w klastrze. W ten sposób serwis jest dostępny tylko wewnątrz klastra.
+// - NodePort - Wystawia serwis na tym samym porcie na każdym z wybranych węzłów klastra przy pomocy NAT. W ten sposób serwis jest dostępny z zewnątrz klastra poprzez <NodeIP>:<NodePort>. Nadzbiór ClusterIP.
+// - LoadBalancer - Tworzy zewnętrzny load balancer u bieżącego dostawcy usług chmurowych (o ile jest taka możliwość) i przypisuje serwisowi stały, zewnętrzny adres IP. Nadzbiór NodePort.
+// - ExternalName - Wystawia Service przy pomocy wybranej nazwy (wyspecyfikowanej jako externalName) poprzez zwracanie wartości rekordu CNAME przypisanego w usłudze DNS. W tym przypadku nie jest wykorzystywany proces przekierowania ruchu metodą proxy. Ten typ wymaga wersji v1.7 lub wyższej usługi kube-dns.
+
+
+//Display information about the Service:
+kubectl get service guestbook
+kubectl describe services example-service
+
+//Check the new port number NodePort service uses:
+kubectl get service hello1-service -o=jsonpath='{.spec.ports[0].nodePort}{"\n"}'
+
+
+//If the POD is running then You may look at his log (change the pod name with the one shown in latest command):
+kubectl logs hello-world-deployment-67b694c76f-hvg9k 
+
+//You can also exec a command inside your container:
+kubectl exec -it hello-world-deployment-67b694c76f-hvg9k /bin/sh
+
+//to check cluster events 
+kubectl get events
+
+
+//Cleaning up
+//To delete the Service, enter this command:
+kubectl delete services example-service
+
+//To delete the Deployment, the ReplicaSet, and the Pods that are running the Hello World application, enter this command:
+kubectl delete deployment hello-world
+
+kubectl delete pod 
+
+
+
+//XXXXXXXXX - K8s Steps  - XXXXXXXXX
+
+//For IBM Cloud Platform 
+   // Install the IBM Cloud CLIs and login, as described in Lab 0.
+   //Provision a cluster:
+ibmcloud cs cluster-create --name <name-of-cluster>
+
+// kubectl needs to be configured to talk to the provisioned cluster. Set the KUBECONFIG environment variable based on the output of the command. This will make your kubectl client point to your new Kubernetes cluster.
+ibmcloud cs cluster-config <name-of-cluster>
+
+// Deploy your application
+// Start by running guestbook:
+kubectl run guestbook --image=ibmcom/guestbook:v1
+
+//To create a Deployment using this configuration file we use the following command:
+kubectl create -f guestbook-deployment.yaml
+
+//To check the status of the running application, you can use 
+kubectl get pods
+kubectl get pods -l app=guestbook
+kubectl get pods -l app=redis,role=master
+//Expose that deployment as a service so we can access it through the IP of the worker nodes.
+kubectl expose deployment guestbook --type="NodePort" --port=3000
+kubectl create -f guestbook-service.yaml
+
+//To find the port used on that worker node, examine your new service:
+kubectl get service guestbook
+
+//To retrieve the latest configuration for the Deployment from the Kubernetes server and then load it into an editor. To get objects: spec and status 
+//Every Kubernetes object we create should provide two nested object fields that govern the object’s configuration: the object spec and the object status. 
+//Object spec defines the desired state, and object status contains Kubernetes system provided information about the actual state of the resource.
+
+kubectl edit deployment guestbook-v1
+
+//After making changes to the deployment file use the following command to make the change effective when you edit the deployment locally.
+kubectl apply -f guestbook-deployment.yaml
+
+//Let's increase our capacity from a single running instance of guestbook up to 10 instances:
+
+kubectl scale --replicas=10 deployment guestbook
+
+
+//To see your changes being rolled out, you can run: 
+kubectl rollout status deployment guestbook
+
+//you can change details about existing resources for example update your deployment to use the v2 image. 
+kubectl set image deployment/guestbook guestbook=ibmcom/guestbook:v2
+
+//Remember, to get the "nodeport" and "public-ip" use:
+kubectl describe service guestbook 
+ibmcloud cs workers <name-of-cluster>
+
+
+//If you want to undo your latest rollout, use:
+kubectl rollout undo deployment guestbook
+
+//We can see the guestbook ReplicaSets, see references to old replicas and new replicas
+kubectl get replicasets -l run=guestbook
+
+//Let us test the redis standalone:
+kubectl exec -it redis-master-q9zg7 redis-cli
+
+//To remove the deployment, use $ 
+kubectl delete deployment guestbook
+kubectl delete -f guestbook-deployment.yaml
+
+//To remove the service, use $ 
+kubectl delete service guestbook
+kubectl delete -f guestbook-service.yaml
+
+//XXXXXXXXX - Docker  - XXXXXXXXX
+
+//login
+docker login
+docker login -u kubeadmin -p db9Dr-J2csc-8oP78-9sbmf gcr.io
+
+//list all containers (running and stopped)
+docker ps -a
+// will stop the container instance named mynodered, but leave the container resources intact
+docker stop mynodered
+//will start a stopped container instance named mynodered
+docker start mynodered 
+//will remove all resources for container instance named mynodered. The container instance must be stopped before it can be removed
+docker rm mynodered 
+
+//run from folder wirth dockerfile
+docker build -t adamdomowy44/node-red-docker-mongo:1
+docker buildx build --platform linux/amd64 -t adamdomowy44/node-red-docker-hello --push .
+
+docker build -t registry-1.docker.io/Node-red-Project/node-red-docker-hello:1 .
+docker login
+//Push your image into the private registry :
+docker push adamdomowy44/node-red-docker-mongo:1
+
+//run docker
+docker run -itd -p 1880:1880 -v c:\Users\XXXX\NRdata:/data -e NODE_RED_ENABLE_PROJECTS=true --name mynodered nodered/node-red
+docker run -dit -p 1880:1880 --name dockerNR adamdomowy44/node-red-docker-hello:latest
+
+//To see the image, use the following command:
+docker images adamdomowy44/node-red-docker-hello
+
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+
+oc new-app https://github.com/adamdomowy44/Node-RED-Docker.git
+
+
+//XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX
+git remote add origin https://github.com/adamdomowy44/Node-RED-jsGrid.git
+git push -u origin master
+
+xxxxxxxxxxxxxxxxxxxxxxx
+
+    
+    
+https://github.com/binnes/Node-RED-container-prod
+https://github.com/maciejs20/IBMCloudPakWorkshop/tree/master/101-ShortCPLab
+
+https://docs.okd.io/latest/minishift/getting-started/quickstart.html
+https://developer.ibm.com/technologies/containers/tutorials/kubernetes-101-labs
+https://developer.ibm.com/tutorials/kubernetes-openshift-minishift-101-labs/
+https://developer.ibm.com/tutorials/kubernetes-openshift-minishift-101-node-red-labs/
+https://developer.ibm.com/technologies/containers/tutorials/examples-differentiate-openshift-kubernetes
+https://developer.ibm.com/tutorials/kubernetes-openshift-ibm-cloud-201-labs/
+
+https://developer.ibm.com/technologies/containers/tutorials/deploy-a-hello-world-application-on-kubernetes-using-tekton-pipelines
+
+https://github.com/IBM/deploy-app-using-tekton-on-kubernetes
+
+
+https://developer.ibm.com/recipes/tutorials/kubernetes-how-to-run-a-node-js-application-which-accesses-mongo-database-where-both-are-running-in-containers-in-different-pods/
+
+https://github.com/IBM/node-red-workshop-starter
+https://developer.ibm.com/components/node-red/series/learning-path-workshop-node-red-production
+https://github.com/binnes/moreNodeRedWorkshop/blob/master/README.md
+https://github.com/binnes/nodeRED-StarterWorkshop
+https://github.com/binnes/Node-RED-container-prod
+https://cognitiveclass.ai/courses/node-red-basics-to-bots
+

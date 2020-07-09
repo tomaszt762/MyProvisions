@@ -1,0 +1,23 @@
+version: "3"
+services:
+  nodered:
+    image: "nodered/node-red"
+    ports:
+      - "1880:1880"
+    volumes:
+      - c:\Users\MACIEJMARTUSEWICZ\NRdata:/data
+    environment:
+      REDIS_URL: redis:6379
+    depends_on:
+      - redis
+    networks:
+      - internal_network
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    networks:
+      - internal_network
+networks:
+  internal_network:
+    driver: bridge

@@ -1,0 +1,126 @@
+version: "3"
+services:
+  nodered:
+    image: "nodered/node-red"
+    ports:
+      - "1880:1880"
+    volumes:
+      - c:\Users\MACIEJMARTUSEWICZ\NRdata:/data
+    environment:
+      DB_NAME: db
+      DB_URL: mongodb://mongo:27017/db
+      DB_COLLECTION: LicencePlate
+      MYSQL_USER: 'user'
+      MYSQL_PASSWORD: 'password'
+      MYSQL_PORT: 3306
+      MYSQL_DATABASE: 'db'
+      REDIS_MASTER_URL: redis-master:6379
+      REDIS_SLAVE_URL: redis-master:6379
+      MQTT_URL: mqtt
+    depends_on:
+      - mongo
+      - redis-master
+      - mysql
+      - mqtt
+      - zookeeper
+      - kafka
+      - sqlite3
+    networks:
+      - internal_network
+  redis-master:
+    image: "redis:latest"
+    ports:
+      - "6379"
+    environment:
+      - REDIS_REPLICATION_MODE=master
+      - REDIS_DISABLE_COMMANDS=FLUSHDB,FLUSHALL
+    volumes:
+      - redis_data_container:/data/redis
+    networks:
+      - internal_network
+  mongo:
+    image: "bitnami/mongodb:latest"
+    ports:
+      - "27017:27017"
+      - "27018:27018"
+      - "27019:27019"
+    networks:
+      - internal_network
+    volumes:
+      - mongodb_data_container:/data/db
+  mysql:
+    image: "mysql:5.7"
+    restart: always
+    environment:
+      MYSQL_DATABASE: 'db'
+      # So you don't have to use root, but you can if you like
+      MYSQL_USER: 'user'
+      # You can use whatever password you like
+      MYSQL_PASSWORD: 'password'
+      # Password for root access
+      MYSQL_ROOT_PASSWORD: 'password'
+    ports:
+      # <Port exposed> : < MySQL Port running inside container>
+      - '3306:3306'
+    expose:
+      # Opens port 3306 on the container
+      - '3306'
+      # Where our data will be persisted
+    networks:
+      - internal_network
+    volumes:
+      - my-db:/var/lib/mysql
+  mqtt:
+    image: eclipse-mosquitto:latest
+    restart: always
+    ports:
+      - '1883:1883'
+      - '9001'
+    networks:
+      - internal_network
+    volumes:
+      - mosquitto-data:/mosquitto/data
+      - mosquitto-logs:/mosquitto/logs
+      - mosquitto-conf:/mosquitto/config
+  zookeeper:
+    image: confluentinc/cp-zookeeper:5.3.1
+    container_name: zookeeper
+    environment:
+      ZOOKEEPER_CLIENT_PORT: 2181
+      ZOOKEEPER_TICK_TIME: 2000
+    networks:
+      - internal_network
+  kafka:
+    image: confluentinc/cp-kafka:5.3.1
+    container_name: kafka
+    ports: [9092:9092]
+    environment:
+      KAFKA_BROKER_ID: 1
+      KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
+      KAFKA_ADVERTISED_LISTENERS: PLAINTEXT://kafka:29092,PLAINTEXT_HOST://localhost:9092
+      KAFKA_LISTENER_SECURITY_PROTOCOL_MAP: PLAINTEXT:PLAINTEXT,PLAINTEXT_HOST:PLAINTEXT
+      KAFKA_INTER_BROKER_LISTENER_NAME: PLAINTEXT
+      KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
+    networks:
+      - internal_network
+  sqlite3:
+    image: nouchka/sqlite3:latest
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./db/:/root/db/
+    networks:
+      - internal_network
+networks:
+  internal_network:
+volumes:
+  my-db:
+  redis_data_container:
+  mongodb_data_container:
+  mosquitto-data:
+  mosquitto-logs:
+  mosquitto-conf:
+# docker-compose up -d
+# docker-compose down
+# docker-compose start
+# docker-compose stop

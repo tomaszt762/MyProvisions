@@ -1,0 +1,35 @@
+version: "3"
+services:
+  nodered:
+    image: "nodered/node-red"
+    ports:
+      - "1880:1880"
+    environment:
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: minio123
+    volumes:
+      - c:\Users\MACIEJMARTUSEWICZ\NRdata:/data
+    depends_on:
+      - minio
+    networks:
+      - internal_network
+  minio:
+    image: minio/minio:latest
+    ports:
+      - "9000:9000"
+    environment:
+      MINIO_ACCESS_KEY: minio
+      MINIO_SECRET_KEY: minio123
+    volumes:
+      - minio-data:/data
+    networks:
+      internal_network:
+    command: server /data
+volumes:
+  minio-data:
+networks:
+  internal_network:
+# docker-compose up -d
+# docker-compose down
+# docker-compose start
+# docker-compose stop

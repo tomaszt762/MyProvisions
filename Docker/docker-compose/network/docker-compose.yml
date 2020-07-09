@@ -1,0 +1,35 @@
+version: "3.7"
+services:
+  nodered:
+    image: "adamdomowy44/node-red-docker-mongo:1"
+    ports:
+      - "1880:1880"
+    environment:
+      DB_NAME: db
+      DB_URL: mongodb://mongo:27017/db
+      DB_COLLECTION: LicencePlate
+      REDIS_URL: redis:6379
+    depends_on:
+      - mongo
+      - redis
+    links:
+      - mongo
+    networks:
+      - internal_network
+  mongo:
+    image: "bitnami/mongodb:latest"
+    ports:
+      - "27017:27017"
+      - "27018:27018"
+      - "27019:27019"
+    networks:
+      - internal_network
+  redis:
+    image: "redis:latest"
+    ports:
+      - "6379:6379"
+    networks:
+      - internal_network
+networks:
+  internal_network:
+    driver: bridge

@@ -1,0 +1,27 @@
+version: "3"
+services:
+  nodered:
+    image: "nodered/node-red"
+    ports:
+      - "1880:1880"
+    volumes:
+      - c:\Users\MACIEJMARTUSEWICZ\NRdata:/data
+    depends_on:
+      - sqlite3
+    networks:
+      - internal_network
+  sqlite3:
+    image: nouchka/sqlite3:latest
+    stdin_open: true
+    tty: true
+    volumes:
+      - ./db/:/root/db/
+    networks:
+      - internal_network
+networks:
+  internal_network:
+volumes:
+# docker-compose up -d
+# docker-compose down
+# docker-compose start
+# docker-compose stop

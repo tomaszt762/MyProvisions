@@ -1,0 +1,7 @@
+**/backend.tf
+.terraform/
+work/
+*.tfstate
+*.tfstate.*
+.envrc
+*.tfvars

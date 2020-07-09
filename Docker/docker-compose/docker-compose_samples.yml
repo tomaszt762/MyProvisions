@@ -1,0 +1,89 @@
+# Every docker-compose file will start with a minimum of version: "2", if you’re doing a Docker Swarm file it will need version: "3", but for a single docker-compose.yml, you’ll need v2.
+# level 0
+version: '3.7'
+# list all your services (each app running in the docker-compose will have its own name, and you’ll need to provide either a build or an image from the Docker registry. You cannot have both.
+# services refer to containers' configuration.
+# level 1
+ services:
+# level 2
+  frontend:
+# Building an Image
+# to build an image from the source code by reading its Dockerfile, we'll use the build keyword, passing the path to the Dockerfile as the value.
+# 1. Absoulute path: build: .
+# 2. Relative path: build: ../path/to/app/
+# 3. Git repo URL: build: https://github.com/docker/rootfs.git
+# 4. Git repo URL with branch: build: https://github.com/docker/rootfs.git#develop
+# 5. Git repo URL with access token (for accessing private repos): build: https://<ACCESS_TOKEN>:@github.com/docker/rootfs.git
+   build: /path/to/dockerfile/
+# Additionally, we can specify an image name in conjunction with the build attribute, which will name the image once created, making it available to be used by other services
+   image: my-project-image
+# A service can communicate with another service on the same network by simply referencing it by container name and port (for example network-example-service:80), provided that we've made the port accessible through the expose keyword:  
+   expose:
+    - "80"
+   networks: 
+    - my-shared-network
+# container will have read/write access to the my-named-global-volume shared folder, no matter the different paths it has mapped it to. The two host volumes, instead, will be available only to this service.
+# The /tmp folder of the host's file system is mapped to the /my-volumes/host-volume folder of the container.
+# We can mount a volume in read-only mode by appending :ro to the rule, like for the /home folder (we don't want a Docker container erasing our users by mistake).
+   volumes: 
+    - my-named-global-volume:/my-volumes/named-global-volume
+    - /tmp:/my-volumes/host-volume
+    - /home:/my-volumes/readonly-host-volume:ro
+# level 2
+  backend:
+# Pulling an Image
+# the image we need for our service has already been published (by us or by others) in Docker Hub, or another Docker Registry. If that's the case, then we refer to it with the image attribute, by specifying the image name and tag:
+   image: ubuntu:latest
+# To reach a container from the host, the ports must be exposed declaratively through the ports keyword, which also allows us to choose if exposing the port differently in the host:
+   ports:
+    - "8081:3000"
+   networks: 
+    - my-shared-network
+# Often, we need to create a dependency chain between our services, so that some services get loaded before (and unloaded after) other ones. We can achieve this result through the depends_on keyword
+# We should be aware, however, that Compose will not wait for the db service to finish loading before starting the backend service: it will simply wait for it to start. If we need a service to be fully loaded before starting another service, we need to get deeper control of startup and shutdown order in Compose.
+   depends_on:
+    - db
+# level 2
+  db:
+   image: postgres
+# We can define static environment variables, and also define dynamic variables with the ${} notation
+# There are different methods to provide those values to Compose. For example:
+# one is setting them in a .env file in the same directory, structured like a .properties file, key=value: POSTGRES_VERSION=alpine \r\n USER=foo
+# two is set them in the OS before calling the command: export POSTGRES_VERSION=alpine \r\n export USER=foo \r\n docker-compose up
+# three is using a simple one-liner in the shell: POSTGRES_VERSION=alpine USER=foo docker-compose up
+# We can mix the approaches, but let's keep in mind that Compose uses the following priority order, overwriting the less important with the higher ones: 1. Compose file, 2. Shell environment variables, 3. Environment file, 4. Dockerfile, 5. Variable not defined
+   environment:
+    DB: mydb
+    USER: "${USER}"
+   networks: 
+    - my-private-network
+# persist to a named volume
+   volumes:
+    - my-named-global-volume:/another-path/the-same-named-global-volume
+# Volumes, on the other hand, are physical areas of disk space shared between the host and a container, or even between containers. In other words, a volume is a shared directory in the host, visible from some or all containers.
+# There are three types of volumes: anonymous, named, and host ones.
+# Docker manages both anonymous and named volumes, automatically mounting them in self-generated directories in the host. While anonymous volumes were useful with older versions of Docker (pre 1.9), named ones are the suggested way to go nowadays. Host volumes also allow us to specify an existing folder in the host.
+# We can configure host volumes at the service level and named volumes in the outer level of the configuration, in order to make the latter visible to other containers and not only to the one they belong
+# level 1
+ volumes:
+  my-named-global-volume: 
+# networks define the communication rules between containers, and between a container and the host. Common network zones will make containers' services discoverable by each other, while private zones will segregate them in virtual sandboxes.
+# level 1
+ networks:
+  my-shared-network: {}
+  my-private-network: {}
+
+
+###### the syntax of Docker Compose
+# 1. Build services: docker-compose build [SERVICE...]
+# 2. Generate and run containers: docker-compose up [SERVICE...]
+# 3. View running containers: docker-compose ps [SERVICE...]
+
+# docker-compose ps — lists all the services in a network. This is especially helpful when troubleshooting a service as it will give you the container ID and you can then run docker -it exec <ID> bash to enter the container and debug as needed.
+# docker-compose build — generates any needed images from custom Dockerfiles. It will not pull images from the Docker hub, only generate custom images.
+# docker-compose up — brings up the network for the services to run in
+# docker-compose up -d - Compose can also run in the background as a daemon when launched with the -d option
+# docker-compose stop — stops the network and saves the state of all the services
+# docker-compose start — restarts the services and brings them back up with the state they had when they were stopped
+# docker-compose -f custom-compose-file.yml start - In case our file has a different name than the default one (docker-compose.yml), we can exploit the -f and ––file flags to specify an alternate file name
+# docker-compose down — burns the entire Docker network with fire. The network and all the services contained within are totally destroyed, with only the exception of external volumes
