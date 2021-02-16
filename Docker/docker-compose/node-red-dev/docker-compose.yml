@@ -6,21 +6,47 @@ services:
       - "1880:1880"
     volumes:
       - c:\Users\MACIEJMARTUSEWICZ\NRdata:/data
+    environment:
+      MQTT_URL: mqtt
+      DB_NAME: db
+      DB_URL: mongodb://mongo:27017/db
+      DB_COLLECTION: Logs
     depends_on:
-      - sqlite3
+      - mqtt
+      - mongo
+    links:
+      - mongo
     networks:
       - internal_network
-  sqlite3:
-    image: nouchka/sqlite3:latest
-    stdin_open: true
-    tty: true
+  mqtt:
+    image: eclipse-mosquitto:latest
+    restart: always
+    ports:
+      - "1883"
+      - "9001"
+    networks:
+      - internal_network
     volumes:
-      - ./db/:/root/db/
+      - mosquitto-data:/mosquitto/data
+      - mosquitto-logs:/mosquitto/logs
+      - mosquitto-conf:/mosquitto/config
+  mongo:
+    image: "bitnami/mongodb:latest"
+    ports:
+      - "27017:27017"
+      - "27018:27018"
+      - "27019:27019"
     networks:
       - internal_network
+    volumes:
+      - mongodb_data_container:/data/db
 networks:
   internal_network:
 volumes:
+  mongodb_data_container:
+  mosquitto-data:
+  mosquitto-logs:
+  mosquitto-conf:
 # docker-compose up -d
 # docker-compose down
 # docker-compose start

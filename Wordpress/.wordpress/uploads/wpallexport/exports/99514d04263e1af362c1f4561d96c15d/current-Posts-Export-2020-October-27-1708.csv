@@ -1,0 +1,60 @@
+ID,Title,Content,Excerpt,Date,"Post Type",Permalink,"Image URL","Image Title","Image Caption","Image Description","Image Alt Text","Image Featured","Attachment URL",Categories,Tags,Status,"Author ID","Author Username","Author Email","Author First Name","Author Last Name",Slug,Format,Template,Parent,"Parent Slug",Order,"Comment Status","Ping Status","Post Modified Date"
+15,"Cauliflower with Polish Sauce","<!-- wp:image {""id"":30} -->
+<figure class=""wp-block-image""><img src=""http://localhost:8080/wp-content/uploads/2020/10/kalafior-z-bulka.jpg"" alt=""Cauliflower with Polish Sauce"" class=""wp-image-30""/></figure>
+<!-- /wp:image -->
+
+<!-- wp:paragraph -->
+<p>Polish sauce is an easy but flavorful topping that is delicious with a wide variety of vegetables. Polish cooks might serve it over carrots, cabbage, green beans, asparagus, or brussels sprouts.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2><strong>Ingredients</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:list -->
+<ul><li>1 medium head cauliflower*</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p><strong>Polish Sauce:</strong></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:list -->
+<ul><li>2 tbsp. butter or margarine</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:list -->
+<ul><li>2 tbsp. bread crumbs</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:list -->
+<ul><li> ½ tsp. dill weed.</li></ul>
+<!-- /wp:list -->
+
+<!-- wp:paragraph -->
+<p>* When buying fresh cauliflower, choose heads that are firm and very white, with crisp, green leaves.To store cauliflower for a couple of days, cover the whole head with plastic wrap and put it in the refrigerator.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:heading -->
+<h2><strong>Instructions</strong></h2>
+<!-- /wp:heading -->
+
+<!-- wp:paragraph -->
+<p><strong>Step 1:</strong><br>Firstly, remove any green leaves from cauliflower and trim stem. Wash under cool running water. Place whole cauliflower right side up in a large kettle. Put enough water in the kettle to reach bottom florets (the ones closest to the stem) of the cauliflower and add ½ tsp. salt to the water. Cover the kettle tightly and bring water to a boil. Cook cauliflower for about 12 to 15 minutes, or until tender but not mushy.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Step 2:</strong><br>Then, in a small frying pan, melt butter over medium heat until it sizzles. (Butter burns easily, so be careful not to let it turn brown.) Add bread crumbs and dill weed and stir until mixture is golden brown.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p><strong>Step 3:</strong><br>Finally, when cauliflower is cooked, transfer to a serving platter. Top cauliflower with Polish sauce and serve right away by carefully cutting off pieces with a serving spoon.</p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p></p>
+<!-- /wp:paragraph -->
+
+<!-- wp:paragraph -->
+<p>Source: <a href=""https://www.amazon.com/Cooking-Polish-Way-Vegetarian-Cookbooks/dp/082254119X"" target=""_blank"" rel=""noreferrer noopener nofollow"">Cooking the Polish Way</a> by Danuta Zamojska-Hutchins</p>
+<!-- /wp:paragraph -->",,2020-10-26,post,http://localhost:8080/cauliflower-with-polish-sauce/,http://localhost:8080/wp-content/uploads/2020/10/kalafior-z-bulka.jpg,kalafior-z-bulka,,,,,,Food,food|polish,publish,2,user,tomaszt763@gmail.com,,,cauliflower-with-polish-sauce,,,0,0,0,closed,closed,2020-10-26
