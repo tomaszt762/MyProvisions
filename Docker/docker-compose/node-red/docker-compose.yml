@@ -1,0 +1,10 @@
+version: '3'
+services:
+  nodered:
+    image: "nodered/node-red"
+    ports:
+      - "1880:1880"
+    volumes:
+      - C:\Users\MACIEJMARTUSEWICZ\NRdata:/data
+# docker-compose start
+# docker-compose stop

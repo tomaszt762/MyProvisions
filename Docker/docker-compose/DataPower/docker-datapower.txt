@@ -1,0 +1,18 @@
+docker run -it -v /opt/datapower/config:/drouter/config -v /opt/datapower/local:/drouter/local -e DATAPOWER_ACCEPT_LICENSE=true -e DATAPOWER_INTERACTIVE=true -e DATAPOWER_WORKER_THREADS=2 -p 9090:9090 --name datapower ibmcom/datapower
+docker start -v /opt/datapower/config:/drouter/config -v /opt/datapower/local:/drouter/local -e DATAPOWER_ACCEPT_LICENSE=true -e DATAPOWER_INTERACTIVE=true -e DATAPOWER_WORKER_THREADS=2 -p 9090:9090 --name datapower ibmcom/datapower
+
+docker start datapower
+docker stop datapower
+docker down datapower
+
+
+docker run -it -v /opt/datapower/config:/drouter/config -v /opt/datapower/local:/drouter/local -e DATAPOWER_ACCEPT_LICENSE=true -e DATAPOWER_INTERACTIVE=true -e DATAPOWER_WORKER_THREADS=2 -p 9090:9090 -p 9022:22 -p 5554:5554 -p 8000-8010:8000-8010 -p 3001:80 --name datapower ibmcom/datapower
+
+
+Initializing the DataPower Gateway
+login: admin/admin
+# configure terminal
+# web-mgmt
+# admin-state enabled
+# local-address eth0_ipv4_1
+# exit

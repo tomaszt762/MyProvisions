@@ -46,3 +46,14 @@ CMD [ "npm", "start" ]
 # docker run -p 7777:7777 -d container-name
 # docker pull mongo:4.0.4
 # docker run -d -p 27017-27019:27017-27019 --name mongodb mongo:4.0.4
+
+
+docker run --rm --name ssh-test -it -p 7655:22 alpine:latest ash
+docker run --name ssh-test -p 7655:22 alpine:latest
+docker run -d --name ssh-test -p 7655:22 alpine:latest
+
+docker run -d -p 7655:22 yjjy0921/redhat7.2
+docker run -d ubuntu
+docker inspect -f "{{ .NetworkSettings.IPAddress }}" Container_Name
+
+docker inspect -f "{{ .NetworkSettings.IPAddress }}" naughty_haibt
