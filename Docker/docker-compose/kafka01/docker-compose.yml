@@ -34,6 +34,14 @@ services:
       KAFKA_OFFSETS_TOPIC_REPLICATION_FACTOR: 1
     networks:
       - internal_network
+  kafka_manager:
+    image: hlebalbau/kafka-manager:stable
+    ports:
+      - "9000:9000"
+    environment:
+      ZK_HOSTS: "zookeeper:2181"
+    networks:
+      - internal_network
 networks:
   internal_network:
 # docker-compose up -d

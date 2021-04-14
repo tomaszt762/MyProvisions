@@ -3,7 +3,7 @@ services:
   json-server:
     image: "clue/json-server"
     ports:
-      - "3002:80"
+      - "3000:80"
     volumes:
       - C:\Users\MACIEJMARTUSEWICZ\DockerData\jsonserver\db.json:/data/db.json
 # docker-compose up -d

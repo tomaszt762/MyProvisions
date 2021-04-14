@@ -1,0 +1,425 @@
+<?xml version="1.0" encoding="UTF-8"?>
+  <definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/wsdl/" xmlns:trefault="http://tresoap.intecbilling.com/fault/2.0" xmlns:tns="http://intecbilling.com/billing" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:hdr="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" targetNamespace="http://intecbilling.com/billing" xsi:schemaLocation="http://schemas.xmlsoap.org/wsdl/ http://schemas.xmlsoap.org/wsdl/">
+	<wsdl:documentation>ByFunctionNameService[Inbound] with function prefix PKT.fSOAP_</wsdl:documentation>
+	<wsdl:import namespace="http://tresoap.intecbilling.com/fault/2.0" location="faultType.xsd"/>
+	<wsdl:import namespace="http://www.tmforum.org/mtop/fmw/xsd/hdr/v1" location="HeaderDefinitions.xsd"/>
+	<wsdl:import namespace="http://intecbilling.com/billing" location="elementDefinitions.xsd"/>
+	<wsdl:message name="headerMsg">
+		<wsdl:part name="header" element="hdr:header"/>
+	</wsdl:message>
+	<wsdl:message name="ConnectionFault">
+			<wsdl:part element="trefault:Detail" name="parameters"/>
+	</wsdl:message>
+	<wsdl:message name="addNetworkServiceIn">
+		<wsdl:part name="parameters" element="tns:addNetworkServiceRequest"/>
+	</wsdl:message>
+	<wsdl:message name="addNetworkServiceOut">
+		<wsdl:part name="parameters" element="tns:addNetworkServiceResponse"/>
+	</wsdl:message>
+	<wsdl:message name="addPromotionIn">
+		<wsdl:part name="parameters" element="tns:addPromotionRequest"/>
+	</wsdl:message>
+	<wsdl:message name="addPromotionOut">
+		<wsdl:part name="parameters" element="tns:addPromotionResponse"/>
+	</wsdl:message>
+	<wsdl:message name="createSubscriptionIn">
+		<wsdl:part name="parameters" element="tns:createSubscriptionRequest"/>
+	</wsdl:message>
+	<wsdl:message name="createSubscriptionOut">
+		<wsdl:part name="parameters" element="tns:createSubscriptionResponse"/>
+	</wsdl:message>
+	<wsdl:message name="deleteBundledItemsIn">
+		<wsdl:part name="parameters" element="tns:deleteBundledItemsRequest"/>
+	</wsdl:message>
+	<wsdl:message name="deleteBundledItemsOut">
+		<wsdl:part name="parameters" element="tns:deleteBundledItemsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="deletePromotionIn">
+		<wsdl:part name="parameters" element="tns:deletePromotionRequest"/>
+	</wsdl:message>
+	<wsdl:message name="deletePromotionOut">
+		<wsdl:part name="parameters" element="tns:deletePromotionResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getNetworkServicesIn">
+		<wsdl:part name="parameters" element="tns:getNetworkServicesRequest"/>
+	</wsdl:message>
+	<wsdl:message name="getNetworkServicesOut">
+		<wsdl:part name="parameters" element="tns:getNetworkServicesResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getNetworkServicesHistoryForSubscriptionIn">
+		<wsdl:part name="parameters" element="tns:getNetworkServicesHistoryForSubscriptionRequest"/>
+	</wsdl:message>
+	<wsdl:message name="getNetworkServicesHistoryForSubscriptionOut">
+		<wsdl:part name="parameters" element="tns:getNetworkServicesHistoryForSubscriptionResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getPromotionHistoryForSubscriptionIn">
+		<wsdl:part name="parameters" element="tns:getPromotionHistoryForSubscriptionRequest"/>
+	</wsdl:message>
+	<wsdl:message name="getPromotionHistoryForSubscriptionOut">
+		<wsdl:part name="parameters" element="tns:getPromotionHistoryForSubscriptionResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getPromotionsIn">
+		<wsdl:part name="parameters" element="tns:getPromotionsRequest"/>
+	</wsdl:message>
+	<wsdl:message name="getPromotionsOut">
+		<wsdl:part name="parameters" element="tns:getPromotionsResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getSubscriptionIn">
+		<wsdl:part name="parameters" element="tns:getSubscriptionRequest"/>
+	</wsdl:message>
+	<wsdl:message name="getSubscriptionOut">
+		<wsdl:part name="parameters" element="tns:getSubscriptionResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getSubscriptionHistoryIn">
+		<wsdl:part name="parameters" element="tns:getSubscriptionHistoryRequest"/>
+	</wsdl:message>
+	<wsdl:message name="getSubscriptionHistoryOut">
+		<wsdl:part name="parameters" element="tns:getSubscriptionHistoryResponse"/>
+	</wsdl:message>
+	<wsdl:message name="getSubscriptionsForAccountIn">
+		<wsdl:part name="parameters" element="tns:getSubscriptionsForAccountRequest"/>
+	</wsdl:message>
+	<wsdl:message name="getSubscriptionsForAccountOut">
+		<wsdl:part name="parameters" element="tns:getSubscriptionsForAccountResponse"/>
+	</wsdl:message>
+	<wsdl:message name="resetPasswordIn">
+		<wsdl:part name="parameters" element="tns:resetPasswordRequest"/>
+	</wsdl:message>
+	<wsdl:message name="resetPasswordOut">
+		<wsdl:part name="parameters" element="tns:resetPasswordResponse"/>
+	</wsdl:message>
+	<wsdl:message name="resetPeriodicFeeIn">
+		<wsdl:part name="parameters" element="tns:resetPeriodicFeeRequest"/>
+	</wsdl:message>
+	<wsdl:message name="resetPeriodicFeeOut">
+		<wsdl:part name="parameters" element="tns:resetPeriodicFeeResponse"/>
+	</wsdl:message>
+	<wsdl:message name="updateNetworkServiceIn">
+		<wsdl:part name="parameters" element="tns:updateNetworkServiceRequest"/>
+	</wsdl:message>
+	<wsdl:message name="updateNetworkServiceOut">
+		<wsdl:part name="parameters" element="tns:updateNetworkServiceResponse"/>
+	</wsdl:message>
+	<wsdl:message name="updateSubscriptionIn">
+		<wsdl:part name="parameters" element="tns:updateSubscriptionRequest"/>
+	</wsdl:message>
+	<wsdl:message name="updateSubscriptionOut">
+		<wsdl:part name="parameters" element="tns:updateSubscriptionResponse"/>
+	</wsdl:message>
+	<wsdl:portType name="InboundSUBPortType">
+		<wsdl:operation name="addNetworkService">
+			<wsdl:documentation>PKT.fSOAP_addNetworkServiceRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:addNetworkServiceIn"/>
+			<wsdl:output message="tns:addNetworkServiceOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="addPromotion">
+			<wsdl:documentation>PKT.fSOAP_addPromotionRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:addPromotionIn"/>
+			<wsdl:output message="tns:addPromotionOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="createSubscription">
+			<wsdl:documentation>PKT.fSOAP_createSubscriptionRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:createSubscriptionIn"/>
+			<wsdl:output message="tns:createSubscriptionOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="deleteBundledItems">
+			<wsdl:documentation>PKT.fSOAP_deleteBundledItemsRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:deleteBundledItemsIn"/>
+			<wsdl:output message="tns:deleteBundledItemsOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="deletePromotion">
+			<wsdl:documentation>PKT.fSOAP_deletePromotionRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:deletePromotionIn"/>
+			<wsdl:output message="tns:deletePromotionOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="getNetworkServices">
+			<wsdl:documentation>PKT.fSOAP_getNetworkServicesRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:getNetworkServicesIn"/>
+			<wsdl:output message="tns:getNetworkServicesOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="getNetworkServicesHistoryForSubscription">
+			<wsdl:documentation>PKT.fSOAP_getNetworkServicesHistoryForSubscriptionRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:getNetworkServicesHistoryForSubscriptionIn"/>
+			<wsdl:output message="tns:getNetworkServicesHistoryForSubscriptionOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="getPromotionHistoryForSubscription">
+			<wsdl:documentation>PKT.fSOAP_getPromotionHistoryForSubscriptionRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:getPromotionHistoryForSubscriptionIn"/>
+			<wsdl:output message="tns:getPromotionHistoryForSubscriptionOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="getPromotions">
+			<wsdl:documentation>PKT.fSOAP_getPromotionsRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:getPromotionsIn"/>
+			<wsdl:output message="tns:getPromotionsOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="getSubscription">
+			<wsdl:documentation>PKT.fSOAP_getSubscriptionRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:getSubscriptionIn"/>
+			<wsdl:output message="tns:getSubscriptionOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="getSubscriptionHistory">
+			<wsdl:documentation>PKT.fSOAP_getSubscriptionHistoryRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:getSubscriptionHistoryIn"/>
+			<wsdl:output message="tns:getSubscriptionHistoryOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="getSubscriptionsForAccount">
+			<wsdl:documentation>PKT.fSOAP_getSubscriptionsForAccountRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:getSubscriptionsForAccountIn"/>
+			<wsdl:output message="tns:getSubscriptionsForAccountOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="resetPassword">
+			<wsdl:documentation>PKT.fSOAP_resetPasswordRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:resetPasswordIn"/>
+			<wsdl:output message="tns:resetPasswordOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="resetPeriodicFee">
+			<wsdl:documentation>PKT.fSOAP_resetPeriodicFeeRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:resetPeriodicFeeIn"/>
+			<wsdl:output message="tns:resetPeriodicFeeOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="updateNetworkService">
+			<wsdl:documentation>PKT.fSOAP_updateNetworkServiceRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:updateNetworkServiceIn"/>
+			<wsdl:output message="tns:updateNetworkServiceOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>		<wsdl:operation name="updateSubscription">
+			<wsdl:documentation>PKT.fSOAP_updateSubscriptionRequest&amp; [1]</wsdl:documentation>
+			<wsdl:input message="tns:updateSubscriptionIn"/>
+			<wsdl:output message="tns:updateSubscriptionOut"/>
+			<wsdl:fault message="tns:ConnectionFault" name="ConnectionFault"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	<wsdl:binding name="InboundSUBBinding" type="tns:InboundSUBPortType">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http" style="document"/>
+		<wsdl:operation name="addNetworkService">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/addNetworkService" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="addPromotion">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/addPromotion" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="createSubscription">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/createSubscription" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="deleteBundledItems">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/deleteBundledItems" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="deletePromotion">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/deletePromotion" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getNetworkServices">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/getNetworkServices" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getNetworkServicesHistoryForSubscription">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/getNetworkServicesHistoryForSubscription" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getPromotionHistoryForSubscription">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/getPromotionHistoryForSubscription" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getPromotions">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/getPromotions" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getSubscription">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/getSubscription" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getSubscriptionHistory">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/getSubscriptionHistory" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="getSubscriptionsForAccount">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/getSubscriptionsForAccount" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="resetPassword">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/resetPassword" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="resetPeriodicFee">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/resetPeriodicFee" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="updateNetworkService">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/updateNetworkService" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+		<wsdl:operation name="updateSubscription">
+			<soap:operation soapAction="http://intecbilling.com/billing/SUB/updateSubscription" style="document"/>
+			<wsdl:input>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:header message="tns:headerMsg" part="header" use="literal"/>
+				<soap:body use="literal"/>
+			</wsdl:output>
+			<wsdl:fault name="ConnectionFault">
+				<soap:fault name="ConnectionFault" use="literal"/>
+			</wsdl:fault>
+		</wsdl:operation>
+
+	</wsdl:binding>
+	<wsdl:service name="SUB">
+		<wsdl:port name="InboundHttpSUBEndpoint" binding="tns:InboundSUBBinding">
+			<soap:address location="http://uxblrh04.blr:9340/"/>
+		</wsdl:port>
+	</wsdl:service>
+</definitions>

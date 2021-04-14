@@ -1,16 +1,5 @@
 version: '3'
 services:
-  nodered:
-    image: "nodered/node-red"
-    ports:
-      - "1880:1880"
-    volumes:
-      - c:\Users\MACIEJMARTUSEWICZ\NRdata:/data
-    depends_on:
-      - zookeeper
-      - kafka
-    networks:
-      - internal_network
   zookeeper:
     image: confluentinc/cp-zookeeper:latest
     container_name: zookeeper
@@ -44,6 +33,14 @@ services:
       ZK_HOSTS: "zookeeper:2181"
     networks:
       - internal_network
+  json-server:
+    image: "clue/json-server"
+    ports:
+      - "3000:80"
+    volumes:
+      - C:\Users\MACIEJMARTUSEWICZ\DockerData\jsonserver\db.json:/data/db.json
+    networks:
+      - internal_network      
 networks:
   internal_network:
 # docker-compose up -d

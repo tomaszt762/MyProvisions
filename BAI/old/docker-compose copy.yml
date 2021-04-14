@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.11.1
+    ports:
+      - "5601:5601"
+    environment:
+      SERVER_NAME: kibana
+      SERVER_HOST: kibana
+      ELASTICSEARCH_HOSTS: http://host.docker.internal:9200/
+    depends_on:
+      - elastic
+  logstash:
+    image: docker.elastic.co/logstash/logstash:7.11.1
+    volumes:
+      - ./logstash-conf:/usr/share/logstash/pipeline/
+    ports:
+      - "5044:5044"
+    environment:
+      ELASTIC_HOST: host.docker.internal:9200
+    depends_on:
+      - elastic
+# docker-compose up -d
+# docker-compose down
+# docker-compose start
+# docker-compose stop
+# https://dev.to/anandsunderraman/running-elk-elastic-logstash-kibana-on-docker-14he

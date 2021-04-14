@@ -1,0 +1,31 @@
+version: '3'
+
+services:
+  elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - esdata1:/usr/share/elasticsearch/data:rw
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.11.1
+    ports:
+      - "5601:5601"
+    environment:
+      SERVER_NAME: kibana
+      SERVER_HOST: kibana
+      ELASTICSEARCH_HOSTS: http://host.docker.internal:9200/
+    volumes:
+      - esdata1:/usr/share/kibana/config/kibana.yml
+    depends_on:
+      - elastic
+volumes:
+  esdata1:
+    driver: local
+# docker-compose up -d
+# docker-compose down
+# docker-compose start
+# docker-compose stop
