@@ -6,5 +6,7 @@ services:
       - "1880:1880"
     volumes:
       - C:\Users\MACIEJMARTUSEWICZ\NRdata:/data
-# docker-compose start
-# docker-compose stop
+# docker compose up -d
+# docker compose down
+# docker compose start
+# docker compose stop

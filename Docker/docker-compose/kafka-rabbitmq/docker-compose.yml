@@ -2,6 +2,7 @@ version: '3'
 services:
   nodered:
     image: "nodered/node-red"
+    container_name: nodered
     ports:
       - "1880:1880"
     volumes:
@@ -38,15 +39,28 @@ services:
       - internal_network
   kafka_manager:
     image: hlebalbau/kafka-manager:stable
+    container_name: kafka_manager
     ports:
       - "9000:9000"
     environment:
       ZK_HOSTS: "zookeeper:2181"
     networks:
       - internal_network
+  rabbitmq:
+    image: rabbitmq:3.8.14-management
+    container_name: rabbitmq
+    hostname: rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      RABBITMQ_DEFAULT_USER: rabbitmq
+      RABBITMQ_DEFAULT_PASS: rabbitmq
+    networks:
+      - internal_network
 networks:
   internal_network:
 # docker-compose up -d
-# docker compose down
+# docker-compose down
 # docker-compose start
 # docker-compose stop

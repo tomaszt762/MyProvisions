@@ -5,10 +5,32 @@ services:
     ports:
       - "1880:1880"
     volumes:
-      - c:\Users\MACIEJMARTUSEWICZ\NRdata:/data
+      - C:\Users\MACIEJMARTUSEWICZ\NRdata:/data
+    networks:
+      - internal_network
+  elastic:
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
+    ports:
+      - "9200:9200"
+      - "9300:9300"
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - C:\Users\MACIEJMARTUSEWICZ\DockerData:/data:rw
+    networks:
+      - internal_network
+  kibana:
+    image: docker.elastic.co/kibana/kibana:7.11.1
+    ports:
+      - "5601:5601"
+    environment:
+      SERVER_NAME: kibana
+      SERVER_HOST: kibana
+      ELASTICSEARCH_HOSTS: http://host.docker.internal:9200/
+    volumes:
+      - C:\Users\MACIEJMARTUSEWICZ\DockerData:/data:rw
     depends_on:
-      - zookeeper
-      - kafka
+      - elastic
     networks:
       - internal_network
   zookeeper:
@@ -44,9 +66,19 @@ services:
       ZK_HOSTS: "zookeeper:2181"
     networks:
       - internal_network
+  json-server:
+    image: "clue/json-server"
+    ports:
+      - "3000:80"
+    volumes:
+      - C:\Users\MACIEJMARTUSEWICZ\DockerData\jsonserver\db.json:/data/db.json
+    networks:
+      - internal_network
+networks:
+  internal_network:
 networks:
   internal_network:
 # docker-compose up -d
-# docker compose down
+# docker-compose down
 # docker-compose start
 # docker-compose stop
