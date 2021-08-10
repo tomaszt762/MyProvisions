@@ -4,7 +4,8 @@ services:
     image: "nodered/node-red"
     ports:
       - "1880:1880"
-      - "8120:8120"
+    volumes:
+      - C:\Users\MACIEJMARTUSEWICZ\NRdata:/data
 # docker compose up -d
 # docker compose down
 # docker compose start
