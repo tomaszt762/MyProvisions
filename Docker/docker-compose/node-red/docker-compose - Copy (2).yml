@@ -5,7 +5,7 @@ services:
     ports:
       - "1880:1880"
     volumes:
-      - C:\Users\MACIEJMARTUSEWICZ\NodeRedData:/data
+      - C:\Users\MACIEJMARTUSEWICZ\NRdata:/data
 networks: 
   default: 
     external: 
