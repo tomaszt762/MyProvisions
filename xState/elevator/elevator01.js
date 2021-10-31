@@ -1,45 +1,91 @@
+//
+
+
 import { assign, createMachine, interpret } from "xstate";
+const elevatorMachine = createMachine(
 
-
-
-const elevatorMachine = createMachine({
-  // Machine identifier
+{
   id: 'elevator',
-
-  // Initial state
   initial: 'idle',
-
-  // Local context for entire machine
   context: {
-    levels: 0,
-    direction: 'stopped'
+    totalFloors: 30
+    currentFloor: 0
+    chosenFloor: 0
   },
-
-  // State definitions
   states: {
     idle: {
-      /* ... */
+      on: {
+        FLOORCHOSEN: 'moving'
+      }
     },
     moving: {
-      /* ... */
-    },
-    stopping: {
-      /* ... */
-    },
-    doorOppening: {
-      /* ... */
-    },
-    atFloor: {
-      /* ... */
-    },
-    doorClosing: {
-      /* ... */
-    },
-    nextStopChecking: {
-      /* ... */
+      initial: 'nextStopChecking',
+      states: {
+        nextStopChecking: {
+          on: {
+           '': [
+          { target: '.movingUp', cond: elevatorIsBelow },
+          { target: '.movingDown', cond: elevatorIsAbove }
+          { target: 'idle'}
+        ]
+             }
+        },
+        movingUp: {
+          on: {
+            //* elevatorCloseToDestonation: 'stopping'
+          }
+        },
+        movingDown: {
+          on: {
+            //* elevatorCloseToDestonation: 'stopping'
+          }
+        }
+      },
+      stopping: {
+
+        after: {
+          // after  5 second, 
+          5000: {
+            target: 'doorOppening'
+          }
+        }
+      },
+      doorOppening: {
+        after: {
+          // after  5 second, 
+          5000: {
+            target: 'atFloor'
+          }
+        }
+      },
+      atFloor: {
+/*on 
+FLOORCHOSEN: 'moving'
+ISLOADED
+ISMAXIMUM
+ISEMPTY
+
+*/
+        after: {
+          // after 60 second
+          60000: {
+            target: 'doorClosing'
+          }
+        }
+
+      },
+      doorClosing: {
+        after: {
+          // after  5 second, 
+          5000: {
+            target: 'moving'
+          }
+        }
+      },
+
     }
   }
-},
+,
 {
     actions: {
       
@@ -51,7 +97,16 @@ const elevatorMachine = createMachine({
       /* ... */
     },
     guards: {
-      /* ... */
+     
+    elevatorIsBelow: (context, event) => {
+        //* return context.canSearch && event.query && event.query.length > 0;
+      },
+    elevatorIsAbove: (context, event) => {
+        //* return context.canSearch && event.query && event.query.length > 0;
+      },
+    /*searchValid: (context, event) => {
+        return context.canSearch && event.query && event.query.length > 0;
+      }*/
     },
     services: {
       /* ... */
