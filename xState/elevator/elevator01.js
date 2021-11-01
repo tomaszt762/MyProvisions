@@ -2,15 +2,20 @@
 
 
 import { assign, createMachine, interpret } from "xstate";
-const elevatorMachine = createMachine(
 
+
+
+const elevatorMachine = createMachine(
 {
   id: 'elevator',
   initial: 'idle',
   context: {
-    totalFloors: 30
-    currentFloor: 0
-    chosenFloor: 0
+    totalFloors: 30,
+    currentFloor: 0,
+    destination: 0,
+    direction: 0, //-1, 0, 1
+    queueUp: [],
+    queueDown: []
   },
   states: {
     idle: {
@@ -99,10 +104,10 @@ ISEMPTY
     guards: {
      
     elevatorIsBelow: (context, event) => {
-        //* return context.canSearch && event.query && event.query.length > 0;
+        return context.currentFloor < context.chosenFloor;
       },
     elevatorIsAbove: (context, event) => {
-        //* return context.canSearch && event.query && event.query.length > 0;
+        return context.currentFloor > context.chosenFloor;
       },
     /*searchValid: (context, event) => {
         return context.canSearch && event.query && event.query.length > 0;
