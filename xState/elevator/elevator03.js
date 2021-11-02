@@ -94,12 +94,9 @@ const elevatorMachine = Machine({
                 ]
             }
         },
-        stopped: {
-            exit: assign((context) => { 
+        stopped: 
+            exit: assign((context) => (context.destination = context.queue.shift())),
             //let destonation = context.queue.sort(function(a, b){return a - b})[0];
-             let destonation = context.queue.shift();
-                context.destination = destonation; }),
-         
             after: {
                 // after 6 second
                 6000: {
