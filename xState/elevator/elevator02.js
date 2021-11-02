@@ -8,7 +8,8 @@ const elevatorMachine = Machine({
     context: {
         totalFloors: 5,
         currentFloor: 0,
-        destonation: null
+        destonation: null,
+        queue = []
     },
     states: {
         idle: {
@@ -111,7 +112,9 @@ const elevatorMachine = Machine({
             }
         },
         stopped: {
-
+            
+         //   exit: set next destonation from a queue
+    
             after: {
                 // after 60 second
                 60000: {
