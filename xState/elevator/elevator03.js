@@ -9,32 +9,32 @@ const elevatorMachine = Machine({
         totalFloors: 5,
         currentFloor: 0,
         destonation: null,
-        queue = [],
+        queue = []
         
     },
     states: {
         idle: {
+        entry: assign((context) => {
+                context.destination = null;
+            })
+          },
+        nextStopChecking: {
+        entry: assign((context) => {
+        if (context.queue[0] !== undefined) {
+        context.destination = context.queue.shift();}
+        else {
+        context.destination = null;}
             }),
-            on: {
-                FLOORCHOSEN: 'nextStopChecking'
-            }
-        },
-        nextStopChecking: [{
-                cond: (context, event) => event.destination > context.currentFloor,
-                target: "movingUp",
-                actions: assign(
-                    (context, event) => (context.destination = Number(event.destination)))
-
+        [{
+                cond: (context) => context.destination > context.currentFloor,
+                target: "movingUp"
             }, {
-                cond: (context, event) => event.destination < context.currentFloor,
-                target: "movingDown",
-                actions: assign(
-                    (context, event) =>
-                    (context.destination = Number(event.destination)))
+                cond: (context) => context.destination < context.currentFloor,
+                target: "movingDown"
             }, {
                 target: 'idle'
             }
-        ],
+        ]},
         movingUp: {
             invoke: {
                 // Invoke a service when we enter in 'up' state, it will pass 'UP' event to the machine every second
@@ -43,6 +43,7 @@ const elevatorMachine = Machine({
                     context.inc.current = setInterval(() => {
                         callback("UP");
                     }, 1000);
+                    
                 }
             },
             on: {
@@ -94,8 +95,8 @@ const elevatorMachine = Machine({
                 ]
             }
         },
-        stopped: 
-            exit: assign((context) => (context.destination = context.queue.shift())),
+        stopped: {
+            
             //let destonation = context.queue.sort(function(a, b){return a - b})[0];
             after: {
                 // after 6 second
@@ -105,7 +106,16 @@ const elevatorMachine = Machine({
             }
 
         }
-    }
+    },
+  on: {
+    newCall: { 
+    cond: (context, event) => (Number(event.destination) !== (context.queue[queue.length - 1] && context.currentFloor))
+    target: "nextStopChecking",
+    actions: assign((context, event) => context.queue.push(Number(event.destination));
+                    
+    } 
+   }
+    
 });
 
 const service = interpret(machine).onTransition((state) => {
