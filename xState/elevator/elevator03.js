@@ -118,7 +118,7 @@ const elevatorMachine = Machine({
         },
         on: {
             newCall: {
-                cond: (context, event) => (Number(event.destination) !== (context.queue[queue.length - 1] && context.currentFloor)),
+                cond: (context, event) => (Number(event.destination) !== (context.queue[queue.length - 1] && Number(event.destination) !== context.currentFloor)),
                 // target: 'nextStopChecking',
                 actions: assign((context, event) => context.queue.push(Number(event.destination)))
             }
