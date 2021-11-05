@@ -63,20 +63,13 @@ const elevatorStateMachine = Machine(
             },
             {
               // Transition to 'up' state id passed floor is greater than current floor
-              cond: (context, event) => event.destination > context.floor,
-              target: "up",
-              actions: assign(
-                (context, event) =>
-                  (context.destination = Number(event.destination))
-              )
+              cond: (context) => context.destination > context.floor,
+              target: "up"
             },
             {
               // Else go to 'down' state
-              cond: (context, event) => event.destination < context.floor,
-              target: "down",
-              actions: assign(
-                (context, event) =>
-                  (context.destination = Number(event.destination))
+              cond: (context) => context.destination < context.floor,
+              target: "down"
               )
             }
           ]
@@ -194,6 +187,8 @@ const elevatorStateMachine = Machine(
         });
       }),
       resetDestination: assign((context) => {
+      // remove from current queue last destonation
+        context.queue.filter((i) => i !== context.destination);
         context.destination = null;
       }),
       stopExitLog: assign((context, event) => {
