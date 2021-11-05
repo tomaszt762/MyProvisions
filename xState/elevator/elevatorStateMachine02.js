@@ -34,10 +34,7 @@ const elevatorStateMachine = Machine(
             target: "down"
           },
           DECIDE_UP_OR_DOWN: [
-            // Decide to go up or down by the passed event destination
-            
-      
-            
+            // Decide to go up or down by the passed 
             {
               // Return alert message if the floor is repeted
               cond: (context, event) =>
@@ -49,7 +46,6 @@ const elevatorStateMachine = Machine(
                 });
               })
             },
-            
             
             {
               // Return alert message if the passed and current floors are same
@@ -63,12 +59,7 @@ const elevatorStateMachine = Machine(
               })
             },
             {
-            
-            actions:
-            assign((context, event) => {
-            context.queue.push(Number(event.destination));
-            context.destination = context.queue.shift()})
-          
+            actions: ['addToQueue', 'getFromQueue']
             },
             {
               // Transition to 'up' state id passed floor is greater than current floor
@@ -172,6 +163,9 @@ const elevatorStateMachine = Machine(
   },
   {
     actions: {
+      getFromQueue: assign((context) => context.destination = context.queue.shift()),
+      addToQueue: assign((context, event) => 
+            context.queue.push(Number(event.destination))),
       goUp: assign((context) => {
         context.floor += 1;
       }),
