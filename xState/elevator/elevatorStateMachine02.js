@@ -25,6 +25,9 @@ const elevatorStateMachine = Machine(
         entry: ["stopElevator", "resetDestination"], // Execute immediately after entering on stopped state (Defined in 'actions' block down)
         exit: "stopExitLog", // Execute when leaving the state (Defined in 'actions' block down)
         on: {
+          '':{
+          },
+          
           UP: {
             // Transition to 'up' state if UP event is passed
             target: "up"
@@ -33,6 +36,24 @@ const elevatorStateMachine = Machine(
             // Transition to 'down' state if DOWN event is passed
             target: "down"
           },
+          GO_TO_LEVEL: {
+          },
+          TAKE_NEXT_STOP: [
+            {
+            actions: 'getFromQueue'
+            },
+            {
+              // Transition to 'up' state id passed floor is greater than current floor
+              cond: (context) => context.destination > context.floor,
+              target: "up"
+            },
+            {
+              // Else go to 'down' state
+              cond: (context) => context.destination < context.floor,
+              target: "down"
+              )
+            }
+          ],
           DECIDE_UP_OR_DOWN: [
             // Decide to go up or down by the passed 
             {
@@ -57,21 +78,8 @@ const elevatorStateMachine = Machine(
                   message: `You are already on floor ${context.floor}`
                 });
               })
-            },
-            {
-            actions: ['addToQueue', 'getFromQueue']
-            },
-            {
-              // Transition to 'up' state id passed floor is greater than current floor
-              cond: (context) => context.destination > context.floor,
-              target: "up"
-            },
-            {
-              // Else go to 'down' state
-              cond: (context) => context.destination < context.floor,
-              target: "down"
-              )
             }
+          
           ]
         }
       },
