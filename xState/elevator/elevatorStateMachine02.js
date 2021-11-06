@@ -64,37 +64,7 @@ const elevatorStateMachine = Machine(
           DOWN: {
             // Transition to 'down' state if DOWN event is passed
             target: "down"
-          },
-          GO_TO_LEVEL: [
-            // Decide to go up or down by the passed 
-            {
-              // Return alert message if the floor is repeted
-              cond: (context, event) =>
-                Number(event.destination) === context.queue[queue.length - 1],
-              actions: assign((context) => {
-                return (context.notification = {
-                  type: "info",
-                  message: `You have chosen this floor, already`
-                });
-              })
-            },
-            
-            {
-              // Return alert message if the passed and current floors are same
-              cond: (context, event) =>
-                Number(event.destination) === context.floor,
-              actions: assign((context) => {
-                return (context.notification = {
-                  type: "info",
-                  message: `You are already on floor ${context.floor}`
-                });
-              })
-            },
-            {
-            actions: 'addToQueue'
-            }
-          
-          ]
+          }
         }
       },
       up: {
@@ -174,7 +144,39 @@ const elevatorStateMachine = Machine(
           ]
         }
       }
-    }
+    },
+  on: {
+  GO_TO_LEVEL: [
+            // Decide to go up or down by the passed 
+            {
+              // Return alert message if the floor is repeted
+              cond: (context, event) =>
+                Number(event.destination) === context.queue[queue.length - 1],
+              actions: assign((context) => {
+                return (context.notification = {
+                  type: "info",
+                  message: `You have chosen this floor, already`
+                });
+              })
+            },
+            
+            {
+              // Return alert message if the passed and current floors are same
+              cond: (context, event) =>
+                Number(event.destination) === context.floor,
+              actions: assign((context) => {
+                return (context.notification = {
+                  type: "info",
+                  message: `You are already on floor ${context.floor}`
+                });
+              })
+            },
+            {
+            actions: 'addToQueue'
+            }
+          
+          ]
+  }
   },
   {
     actions: {
