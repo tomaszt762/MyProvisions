@@ -30,6 +30,17 @@ const elevatorStateMachine = Machine(
             actions: 'getFromQueue'
             },
             {
+              // Return alert message if the passed and current floors are same
+              cond: (context) =>
+                context.destination === undefined,
+              actions: assign((context) => {
+                return (context.notification = {
+                  type: "info",
+                  message: `There are no more destonations`
+                });
+              })
+            },
+            {
               // Transition to 'up' state id passed floor is greater than current floor
               cond: (context) => context.destination > context.floor,
               target: "up"
@@ -39,6 +50,10 @@ const elevatorStateMachine = Machine(
               cond: (context) => context.destination < context.floor,
               target: "down"
               )
+            },
+            {
+              // Else go in a loop
+              target: "stopped"
             }
           ],
           
