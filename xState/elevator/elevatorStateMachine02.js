@@ -175,7 +175,10 @@ const elevatorStateMachine = Machine(
             actions: 'addToQueue'
             }
           
-          ]
+          ],
+     LOG: {
+      actions: 'sendTelemetry'
+    }
   }
   },
   {
@@ -189,6 +192,9 @@ const elevatorStateMachine = Machine(
       goDown: assign((context) => {
         context.floor -= 1;
       }),
+      sendTelemetry: (context, event) => {
+        console.log('time:', Date.now());
+      },
       stopElevator: assign((context, event) => {
         // Don't add any notification when machine initialize (Page reloads)
         if (event.type === "xstate.init") return;
