@@ -25,20 +25,7 @@ const elevatorStateMachine = Machine(
         entry: ["stopElevator", "resetDestination"], // Execute immediately after entering on stopped state (Defined in 'actions' block down)
         exit: "stopExitLog", // Execute when leaving the state (Defined in 'actions' block down)
         on: {
-          '':{
-          },
-          
-          UP: {
-            // Transition to 'up' state if UP event is passed
-            target: "up"
-          },
-          DOWN: {
-            // Transition to 'down' state if DOWN event is passed
-            target: "down"
-          },
-          GO_TO_LEVEL: {
-          },
-          TAKE_NEXT_STOP: [
+          '': [
             {
             actions: 'getFromQueue'
             },
@@ -54,7 +41,16 @@ const elevatorStateMachine = Machine(
               )
             }
           ],
-          DECIDE_UP_OR_DOWN: [
+          
+          UP: {
+            // Transition to 'up' state if UP event is passed
+            target: "up"
+          },
+          DOWN: {
+            // Transition to 'down' state if DOWN event is passed
+            target: "down"
+          },
+          GO_TO_LEVEL: [
             // Decide to go up or down by the passed 
             {
               // Return alert message if the floor is repeted
@@ -78,6 +74,9 @@ const elevatorStateMachine = Machine(
                   message: `You are already on floor ${context.floor}`
                 });
               })
+            },
+            {
+            actions: 'addToQueue'
             }
           
           ]
@@ -196,7 +195,7 @@ const elevatorStateMachine = Machine(
       }),
       resetDestination: assign((context) => {
       // remove from current queue last destonation
-        context.queue.filter((i) => i !== context.destination);
+        //context.queue.filter((i) => i !== context.destination);
         context.destination = null;
       }),
       stopExitLog: assign((context, event) => {

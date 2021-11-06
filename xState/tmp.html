@@ -1,35 +1,19 @@
 xxx
-2
+
 <html>
-3
   <head>
-4
     <title>XState - experiment</title>
-5
     <meta charset="UTF-8" />
-6
   </head>
-7
-​
-8
   <body>
-9
     <div id="app">
-10
       <button onclick="window.endChild()">End child</button>
-11
       <button onclick="window.abortParent()">Abort parent</button>
-12
     </div>
-13
-​
-14
     <script src="src/index.js"></script>
-15
   </body>
-16
 </html>
-17
+
 ​
 ///
 const endChildButton = document.getElementById("endChild");
@@ -43,47 +27,25 @@ if (endChildButton) {
   });
 62
 }
-63
-​
-64
+
 const abortParentButton = document.getElementById("abortParent");
-65
 if (abortParentButton) {
-66
   abortParentButton.addEventListener("click", () => {
-67
     parentService.send("ABORT");
-68
   });
 
 xxx
-1
 <!DOCTYPE html>
-2
 <html>
-3
-​
-4
 <head>
-5
   <title>Parcel Sandbox</title>
-6
   <meta charset="UTF-8" />
-7
 </head>
-8
-​
-9
 <body>
-10
   <div id="app"></div>
-11
 <div class="switch-container">
-12
         <label class="switch">
-13
           <input  id="toggle" type="checkbox">
-14
           <span class="slider round"></span>
 15
         </label>
@@ -116,7 +78,28 @@ toggle.addEventListener("change", e => {
 xxx
 
 
-///
+<body>
+
+<p>Note that write() does NOT add a new line after each statement:</p>
+
+<pre>
+<script>
+document.write("Hello World!");
+document.write("Have a nice day!");
+</script>
+</pre>
+
+
+<p>Note that writeln() add a new line after each statement:</p>
+
+<pre>
+<script>
+document.writeln("Hello World!");
+document.writeln("Have a nice day!");
+</script>
+</pre>
+
+</body>
 
 
 xxx
