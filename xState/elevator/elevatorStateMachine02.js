@@ -1,54 +1,55 @@
-import { Machine, assign } from "xstate";
+import {
+  Machine,
+  assign
+} from "xstate";
 
 // Elevator State Machine
-const elevatorStateMachine = Machine(
-  {
-    id: "elevator",
-    initial: "stopped",
-    context: {
-      floor: 1, // Hold floor number
-      minFloor: -2, // Min floor a lift can go
-      maxFloor: 10, // Max floor a lift can go
-      // If want to go on particular floor
-      // We can update here or can pass DECIDE_UP_OR_DOWN event in machine like  { "type": "DECIDE_UP_OR_DOWN", "destination": 5 } )
-      destination: null,
-      queue: [],
-      notification: {
-        // Show appropriate notification
-        type: "", // Can be info/success/error
-        message: ""
-      }
-    },
-    // The elevator can be in either of the three states (stopped/up/down)
-    states: {
-      stopped: {
-        entry: ["stopElevator", "resetDestination"], // Execute immediately after entering on stopped state (Defined in 'actions' block down)
-        exit: "stopExitLog", // Execute when leaving the state (Defined in 'actions' block down)
-        on: {
-          '': [
-            {
-            actions: 'getFromQueue'
-            },
-            {
-              // Return alert message if the passed and current floors are same
-              cond: (context) =>
-                context.destination === undefined,
-              actions: assign((context) => {
-                return (context.notification = {
-                  type: "info",
-                  message: `There are no more destonations`
-                });
-              })
-            },
-            {
-              // Transition to 'up' state id passed floor is greater than current floor
-              cond: (context) => context.destination > context.floor,
-              target: "up"
-            },
-            {
-              // Else go to 'down' state
-              cond: (context) => context.destination < context.floor,
-              target: "down"
+const elevatorStateMachine = Machine({
+      id: "elevator",
+      initial: "stopped",
+      context: {
+        floor: 1, // Hold floor number
+        minFloor: -2, // Min floor a lift can go
+        maxFloor: 10, // Max floor a lift can go
+        // If want to go on particular floor
+        // We can update here or can pass DECIDE_UP_OR_DOWN event in machine like  { "type": "DECIDE_UP_OR_DOWN", "destination": 5 } )
+        destination: null,
+        queue: [],
+        notification: {
+          // Show appropriate notification
+          type: "", // Can be info/success/error
+          message: ""
+        }
+      },
+      // The elevator can be in either of the three states (stopped/up/down)
+      states: {
+        stopped: {
+          entry: ["stopElevator", "resetDestination"], // Execute immediately after entering on stopped state (Defined in 'actions' block down)
+          exit: "stopExitLog", // Execute when leaving the state (Defined in 'actions' block down)
+          on: {
+            '': [{
+                actions: 'getFromQueue'
+              },
+              {
+                // Return alert message if the passed and current floors are same
+                cond: (context) =>
+                  context.destination === undefined,
+                actions: assign((context) => {
+                  return (context.notification = {
+                    type: "info",
+                    message: `There are no more destonations`
+                  });
+                })
+              },
+              {
+                // Transition to 'up' state id passed floor is greater than current floor
+                cond: (context) => context.destination > context.floor,
+                target: "up"
+              },
+              {
+                // Else go to 'down' state
+                cond: (context) => context.destination < context.floor,
+                target: "down"
               )
             },
             {
@@ -56,7 +57,7 @@ const elevatorStateMachine = Machine(
               target: "stopped"
             }
           ],
-          
+
           UP: {
             // Transition to 'up' state if UP event is passed
             target: "up"
@@ -81,8 +82,7 @@ const elevatorStateMachine = Machine(
           STOP: {
             target: "stopped"
           },
-          UP: [
-            {
+          UP: [{
               // Transition to 'stopped' state if current floor is either the passed destination or the top floor
               target: "stopped",
               cond: (context) =>
@@ -130,8 +130,7 @@ const elevatorStateMachine = Machine(
               });
             })
           },
-          DOWN: [
-            {
+          DOWN: [{
               // Transition to 'stopped' state if current floor is either the passed destination or the bottom floor
               target: "stopped",
               cond: (context) =>
@@ -147,57 +146,56 @@ const elevatorStateMachine = Machine(
         }
       }
     },
-  on: {
-  GO_TO_LEVEL: [
-            // Decide to go up or down by the passed 
-            {
-              // Return alert message if the floor is repeted
-              cond: (context, event) =>
-                Number(event.destination) === context.queue[queue.length - 1],
-              actions: assign((context) => {
-                return (context.notification = {
-                  type: "info",
-                  message: `You have chosen this floor, already`
-                });
-              })
-            },
-            
-            {
-              // Return alert message if the passed and current floors are same
-              cond: (context, event) =>
-                Number(event.destination) === context.floor,
-              actions: assign((context) => {
-                return (context.notification = {
-                  type: "info",
-                  message: `You are already on floor ${context.floor}`
-                });
-              })
-            },
-            {
-            actions: 'addToQueue'
-            }
-          
-          ],
-     LOG: {
-      actions: 'sendTelemetry'
+    on: {
+      GO_TO_LEVEL: [
+        // Decide to go up or down by the passed 
+        {
+          // Return alert message if the floor is repeted
+          cond: (context, event) =>
+            Number(event.destination) === context.queue[queue.length - 1],
+          actions: assign((context) => {
+            return (context.notification = {
+              type: "info",
+              message: `You have chosen this floor, already`
+            });
+          })
+        },
+
+        {
+          // Return alert message if the passed and current floors are same
+          cond: (context, event) =>
+            Number(event.destination) === context.floor,
+          actions: assign((context) => {
+            return (context.notification = {
+              type: "info",
+              message: `You are already on floor ${context.floor}`
+            });
+          })
+        },
+        {
+          actions: 'addToQueue'
+        }
+
+      ],
+      LOG: {
+        actions: 'sendTelemetry'
+      }
     }
-  }
   },
   {
     actions: {
       clearQueue: assign((context) => {
         // remove from current queue last destonation
         //context.queue.filter((i) => i !== context.destination);
-        for (var i = context.queue.length; i--; )
-    {
-        if (context.queue[i] === context.destination) {
+        for (var i = context.queue.length; i--;) {
+          if (context.queue[i] === context.destination) {
             context.queue.splice(i, 1);
+          }
         }
-    }
       }),
       getFromQueue: assign((context) => context.destination = context.queue.shift()),
-      addToQueue: assign((context, event) => 
-            context.queue.push(Number(event.destination))),
+      addToQueue: assign((context, event) =>
+        context.queue.push(Number(event.destination))),
       goUp: assign((context) => {
         context.floor += 1;
       }),
@@ -229,7 +227,7 @@ const elevatorStateMachine = Machine(
         });
       }),
       resetDestination: assign((context) => {
-      context.destination = null;
+        context.destination = null;
       }),
       stopExitLog: assign((context, event) => {
         let type = "info",
