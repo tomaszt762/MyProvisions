@@ -87,7 +87,8 @@ const elevatorStateMachine = Machine(
               target: "stopped",
               cond: (context) =>
                 context.destination === context.floor ||
-                context.maxFloor === context.floor
+                context.maxFloor === context.floor,
+              exit: 'clearQueue'
             },
             {
               // Else Go to 'up' state
@@ -135,7 +136,8 @@ const elevatorStateMachine = Machine(
               target: "stopped",
               cond: (context) =>
                 context.destination === context.floor ||
-                context.minFloor === context.floor
+                context.minFloor === context.floor,
+              exit: 'clearQueue'
             },
             {
               target: "down",
@@ -183,6 +185,16 @@ const elevatorStateMachine = Machine(
   },
   {
     actions: {
+      clearQueue: assign((context) => {
+        // remove from current queue last destonation
+        //context.queue.filter((i) => i !== context.destination);
+        for (var i = context.queue.length; i--; )
+    {
+        if (context.queue[i] === context.destination) {
+            context.queue.splice(i, 1);
+        }
+    }
+      }),
       getFromQueue: assign((context) => context.destination = context.queue.shift()),
       addToQueue: assign((context, event) => 
             context.queue.push(Number(event.destination))),
@@ -217,9 +229,7 @@ const elevatorStateMachine = Machine(
         });
       }),
       resetDestination: assign((context) => {
-      // remove from current queue last destonation
-        //context.queue.filter((i) => i !== context.destination);
-        context.destination = null;
+      context.destination = null;
       }),
       stopExitLog: assign((context, event) => {
         let type = "info",
