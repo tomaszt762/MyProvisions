@@ -13,7 +13,7 @@ const elevatorStateMachine = Machine({
     waitingForOrder: {
       on: {
         GO_TO_LEVEL: {
-          cond: (context, event) => !isNaN(event.destination) && event.destination !== null && context.queue[context.queue.length - 1] !== Number(event.destination) && context.floor !== Number(event.destination),
+          cond: (context, event) => event.destination !== null && !isNaN(event.destination) && context.queue[context.queue.length - 1] !== Number(event.destination) && context.floor !== Number(event.destination),
           actions: assign((context, event) => {
             if (event.destination > context.maxFloor) {
               event.destination = context.maxFloor
