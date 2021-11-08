@@ -1,12 +1,3 @@
-//
-
-
-import {
-    assign,
-    createMachine,
-    interpret
-}
-from "xstate";
 const elevatorMachine = Machine({
     id: 'elevator',
     initial: 'idle',
@@ -116,20 +107,11 @@ const elevatorMachine = Machine({
                 }
             }
         },
-        on: {
-            newCall: {
-                cond: (context, event) => (Number(event.destination) !== (context.queue[queue.length - 1] && Number(event.destination) !== context.currentFloor)),
-                // target: 'nextStopChecking',
-                actions: assign((context, event) => context.queue.push(Number(event.destination)))
-            }
-        },
-    }
+        newCall: {
+            cond: (context, event) => (Number(event.destination) !== (context.queue[queue.length - 1] && Number(event.destination) !== context.currentFloor)),
+            // target: 'nextStopChecking',
+            actions: assign((context, event) => context.queue.push(Number(event.destination)))
+        }
+    },
+
 });
-
-    const service = interpret(machine).onTransition((state) => {
-        console.log(state.value, state.context);
-    });
-
-    service.start();
-
-    //service.send("TOGGLE");
