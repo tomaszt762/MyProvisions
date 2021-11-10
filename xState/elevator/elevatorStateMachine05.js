@@ -12,7 +12,6 @@ const elevatorStateMachine = Machine(
       },
       states:
       {
-
         listening:
         {
           initial: "waitingForOrder",
@@ -48,11 +47,18 @@ const elevatorStateMachine = Machine(
             {
               stopped:
               {
-                always: [
+                entry: assign((context) =>
                 {
-                  cond: (context) => context.queue.length > 0,
-                  actions: assign((context) => context.destination = context.queue.shift())
-                },
+                  if (context.queue.length > 0)
+                  {
+                    context.destination = context.queue.shift();
+                  }
+                  else
+                  {
+                    context.destination = null;
+                  }
+                }),
+                always: [
                 {
                   cond: (context) => context.destination !== null && context.destination > context.floor,
                   target: "up"
@@ -89,17 +95,6 @@ const elevatorStateMachine = Machine(
                     }, 1000);
                   }
                 },
-                exit: assign((context) =>
-                {
-                  for (var i = context.queue.length; i--;)
-                  {
-                    if (context.queue[i] === context.destination)
-                    {
-                      context.queue.splice(i, 1);
-                    }
-                  };
-                  context.destination = null;
-                }),
                 on:
                 {
                   STOP:
@@ -111,7 +106,18 @@ const elevatorStateMachine = Machine(
                     target: "stopped",
                     cond: (context) =>
                       context.destination === context.floor ||
-                      context.maxFloor <= context.floor
+                      context.maxFloor === context.floor,
+                    actions: assign((context) =>
+                    {
+                      for (var i = context.queue.length; i--;)
+                      {
+                        if (context.queue[i] === context.destination)
+                        {
+                          context.queue.splice(i, 1);
+                        }
+                      };
+                      context.destination = null;
+                    })
                   },
                   {
                     target: "up",
@@ -132,17 +138,6 @@ const elevatorStateMachine = Machine(
                     }, 1000);
                   }
                 },
-                exit: assign((context) =>
-                {
-                  for (var i = context.queue.length; i--;)
-                  {
-                    if (context.queue[i] === context.destination)
-                    {
-                      context.queue.splice(i, 1);
-                    }
-                  };
-                  context.destination = null;
-                }),
                 on:
                 {
                   STOP:
@@ -152,7 +147,18 @@ const elevatorStateMachine = Machine(
                   DOWN: [
                   {
                     target: "stopped",
-                    cond: (context) => context.destination === context.floor || context.minFloor >= context.floor
+                    cond: (context) => context.destination === context.floor || context.minFloor === context.floor,
+                    actions: assign((context) =>
+                    {
+                      for (var i = context.queue.length; i--;)
+                      {
+                        if (context.queue[i] === context.destination)
+                        {
+                          context.queue.splice(i, 1);
+                        }
+                      };
+                      context.destination = null;
+                    })
                   },
                   {
                     target: "down",
