@@ -32,7 +32,7 @@ const elevatorStateMachine = Machine(
                     };
                     if (event.destination < context.minFloor)
                     {
-                      event.destination = context.minFloor
+                      eventi.destination = context.minFloor
                     };
                     context.queue.push(Number(event.destination));
                   })
