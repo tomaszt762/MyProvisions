@@ -39,7 +39,7 @@ const elevatorStateMachine = Machine(
                 }
               }
             }
-          },
+          }},
           running:
           {
             initial: "stopped",
