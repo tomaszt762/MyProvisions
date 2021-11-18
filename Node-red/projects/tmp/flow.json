@@ -1,0 +1,26 @@
+[
+    {
+        "id": "23e0465d61cb4b00",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bb0d39fd33df8017",
+        "type": "debug",
+        "z": "23e0465d61cb4b00",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 220,
+        "wires": []
+    }
+]

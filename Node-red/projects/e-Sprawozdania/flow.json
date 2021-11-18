@@ -1,0 +1,1355 @@
+[
+    {
+        "id": "d6283eb9.ea6298",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "52d38d07.d65f4c",
+        "type": "tab",
+        "label": "Prepare Report",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bd1f60e0.1331",
+        "type": "tab",
+        "label": "Mainflow",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "58c2be53.4582c",
+        "type": "tab",
+        "label": "Present repositories",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "1d546a54.b83da6",
+        "type": "tab",
+        "label": "LocalStorage Mngt",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "63b5c0f9.cf726",
+        "type": "tab",
+        "label": "localStorage",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4b4504d6.cb1bbc",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "order": 1,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3b9b9c25.9d5e1c",
+        "type": "ui_group",
+        "name": "Home",
+        "tab": "4b4504d6.cb1bbc",
+        "order": 1,
+        "disp": true,
+        "width": "13",
+        "collapse": true
+    },
+    {
+        "id": "a99d1ff7.124",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 83,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "e78e6beb.5ccee8",
+        "type": "function",
+        "z": "1d546a54.b83da6",
+        "name": "Get reportPayload",
+        "func": "var LocalStorage = global.get('localstorage').LocalStorage;\nvar localStorage = new LocalStorage('./reports');\n\n\nif (msg.topic === \"\") {\nvar archive = [];\nfor (var i = 0; i<localStorage.length; i++) {\narchive[i] = localStorage.getItem(localStorage.key(i));\n}\n\nmsg.payload = archive\n\n} else {\nmsg.payload = JSON.parse(localStorage.getItem(msg.topic))\n\n//msg.payload = JSON.stringify(localStorage.getItem(msg.topic))\n//msg.payload = localStorage.getItem(msg.topic)\n\n}\nreturn msg;\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 610,
+        "y": 80,
+        "wires": [
+            [
+                "7e2b41d5.eee16"
+            ]
+        ]
+    },
+    {
+        "id": "f1676a24.d2705",
+        "type": "function",
+        "z": "1d546a54.b83da6",
+        "name": "Get initRequest",
+        "func": "var LocalStorage = global.get('localstorage').LocalStorage;\nvar localStorage = new LocalStorage('./initrequest');\n\nif (msg.topic === \"\") {\nvar archive = [];\nfor (var i = 0; i<localStorage.length; i++) {\narchive[i] = localStorage.getItem(localStorage.key(i));\n}\n\nmsg.payload = archive\n\n} else {\nmsg.payload = JSON.parse(localStorage.getItem(msg.topic))\n}\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 600,
+        "y": 120,
+        "wires": [
+            [
+                "7e2b41d5.eee16"
+            ]
+        ]
+    },
+    {
+        "id": "1d4fc57f.9d6dd3",
+        "type": "function",
+        "z": "1d546a54.b83da6",
+        "name": "Clear reportPayload",
+        "func": "var LocalStorage = global.get('localstorage').LocalStorage;\nvar localStorage = new LocalStorage('./reports');\n\nlocalStorage.clear();\nmsg.payload = true\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 610,
+        "y": 200,
+        "wires": [
+            [
+                "3e9226ea.c4d14a"
+            ]
+        ]
+    },
+    {
+        "id": "56ae82d1.85e3e4",
+        "type": "function",
+        "z": "1d546a54.b83da6",
+        "name": "Clear initrequest",
+        "func": "var LocalStorage = global.get('localstorage').LocalStorage;\nvar localStorage = new LocalStorage('./initrequest');\n\nlocalStorage.clear();\nmsg.payload = true\nreturn msg;\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 600,
+        "y": 240,
+        "wires": [
+            [
+                "3e9226ea.c4d14a"
+            ]
+        ]
+    },
+    {
+        "id": "f671019f.6c5c1",
+        "type": "inject",
+        "z": "1d546a54.b83da6",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 200,
+        "wires": [
+            [
+                "1d4fc57f.9d6dd3"
+            ]
+        ]
+    },
+    {
+        "id": "6d932a6.321ebd4",
+        "type": "inject",
+        "z": "1d546a54.b83da6",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 240,
+        "wires": [
+            [
+                "56ae82d1.85e3e4"
+            ]
+        ]
+    },
+    {
+        "id": "3e9226ea.c4d14a",
+        "type": "debug",
+        "z": "1d546a54.b83da6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 820,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "e2a4e827.6aa68",
+        "type": "inject",
+        "z": "1d546a54.b83da6",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 80,
+        "wires": [
+            [
+                "e78e6beb.5ccee8"
+            ]
+        ]
+    },
+    {
+        "id": "2cef9149.774abe",
+        "type": "inject",
+        "z": "1d546a54.b83da6",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 320,
+        "y": 120,
+        "wires": [
+            [
+                "f1676a24.d2705"
+            ]
+        ]
+    },
+    {
+        "id": "7e2b41d5.eee16",
+        "type": "debug",
+        "z": "1d546a54.b83da6",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 810,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "f7fa9cb9.4abf08",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "Error 401",
+        "func": "msg.payload = \"Wrong signature\";\n\nmsg.statusCode = 401;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 480,
+        "y": 80,
+        "wires": [
+            [
+                "f3368167.d59068"
+            ]
+        ]
+    },
+    {
+        "id": "2ccdd759.abd988",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "Verify Signature",
+        "func": "var select = global.get('xmlcrypto').xpath;\nvar SignedXml = global.get('xmlcrypto').SignedXml;\nvar FileKeyInfo = global.get('xmlcrypto').FileKeyInfo;\nvar dom = global.get('xmldom').DOMParser;\nvar fs =global.get('fs');\nvar xml = msg.payload.toString('utf8')\n//console.log(msg.payload)\t\nvar doc = new dom().parseFromString(xml)   \nvar signature = select(doc, \"/*/*[local-name(.)='Signature' and namespace-uri(.)='http://www.w3.org/2000/09/xmldsig#']\")[0]\nvar sig = new SignedXml()\nsig.keyInfoProvider = new FileKeyInfo(\"C:\\\\DevOps\\\\Projects\\\\e-sprawozdania\\\\clientPublicKey.pem\");\nsig.loadSignature(signature)\nvar res = sig.checkSignature(xml)\nmsg.xsd_result = res \nif (!res) console.log(sig.validationErrors)\t\nmsg.payload = xml\nreturn msg;\n\n\n   \n\n   \n \n   \n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 240,
+        "y": 160,
+        "wires": [
+            [
+                "80f8d992.5b40a"
+            ]
+        ]
+    },
+    {
+        "id": "80f8d992.5b40a",
+        "type": "switch",
+        "z": "bd1f60e0.1331",
+        "name": "",
+        "property": "xsd_result",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "false"
+            },
+            {
+                "t": "true"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 390,
+        "y": 160,
+        "wires": [
+            [
+                "f7fa9cb9.4abf08"
+            ],
+            [
+                "aa0a0e27.3dd878"
+            ]
+        ]
+    },
+    {
+        "id": "aa0a0e27.3dd878",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "Add ReferenceNumber",
+        "func": "msg.referencenumber = uuidv4()\nmsg.casetimestamp = new Date().toISOString()\n\n\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 600,
+        "y": 160,
+        "wires": [
+            [
+                "655ed409.8520d4"
+            ]
+        ]
+    },
+    {
+        "id": "f3368167.d59068",
+        "type": "debug",
+        "z": "bd1f60e0.1331",
+        "name": "Log",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 630,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c56b2b41.309f8",
+        "type": "xml",
+        "z": "bd1f60e0.1331",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "a466b47e.c921b8"
+            ]
+        ]
+    },
+    {
+        "id": "ab0062b.901e22",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "decrypt Key for AES",
+        "func": "const crypto =  global.get('crypto');\nvar fs = global.get('fs');\nlet serverPrivateKey = fs.readFileSync(\"C:\\\\DevOps\\\\Projects\\\\e-sprawozdania\\\\serverPrivateKey.pem\")\nlet encrypted1  =  msg.payload.RSAEncryptKey.toString('utf8'); \nlet buffer = Buffer.from(encrypted1, 'base64')\nlet decrypted = crypto.privateDecrypt({key: serverPrivateKey}, buffer);\nmsg.decryptedKey = decrypted.toString('utf8');\nlet pl = msg.payload;\n\ntry \n{\n    pl = JSON.parse(pl);\n    msg.payload = pl;\n} \ncatch (e) \n{\n    //no json I guess\n}\n\nnode.send(msg);\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "31c6b526.742e32"
+            ]
+        ]
+    },
+    {
+        "id": "a466b47e.c921b8",
+        "type": "change",
+        "z": "bd1f60e0.1331",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload.UUID",
+                "pt": "msg",
+                "to": "payload.InitRequest.Document.0.UUID",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.Timestamp",
+                "pt": "msg",
+                "to": "payload.InitRequest.Document.0.Timestamp",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.RSAEncryptKey",
+                "pt": "msg",
+                "to": "payload.InitRequest.Document.0.RSAEncryptKey",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.AESEncryptDoc",
+                "pt": "msg",
+                "to": "payload.InitRequest.Document.0.AESEncryptDoc",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.HashSHA256",
+                "pt": "msg",
+                "to": "payload.InitRequest.Document.0.HashSHA256",
+                "tot": "msg"
+            },
+            {
+                "t": "set",
+                "p": "payload.SignatureValue",
+                "pt": "msg",
+                "to": "payload.InitRequest.Signature.0.SignatureValue",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload.InitRequest",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "filename",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "xsd_result",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "topic",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 400,
+        "wires": [
+            [
+                "ab0062b.901e22"
+            ]
+        ]
+    },
+    {
+        "id": "31c6b526.742e32",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "decrypt Report AES",
+        "func": "const crypto =  global.get('crypto');\nvar mykey = crypto.createDecipher('aes-128-cbc', msg.decryptedKey);\nvar DecryptDocument = mykey.update(msg.payload.AESEncryptDoc.toString(), 'hex', 'utf8')\n//console.log(msg.payload)\nDecryptDocument += mykey.final('utf8');\nmsg.documentBase64encoded = DecryptDocument\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 480,
+        "y": 520,
+        "wires": [
+            [
+                "e262e982.5fea4"
+            ]
+        ]
+    },
+    {
+        "id": "cbd83cd8.cea2d8",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "Verify Report with XSD",
+        "func": "var x = global.get('libxmljs');\nvar fs = global.get('fs');\nvar xsd = fs.readFileSync(\"C:\\\\DevOps\\\\Projects\\\\e-sprawozdania\\\\Report.xsd\")\nvar xsdDoc = x.parseXmlString(xsd.toString());\nvar xmlDoc0 = x.parseXmlString(msg.documentDecoded);\n\nif ( xmlDoc0.validate(xsdDoc) === false ) {\n  return [ msg, null];\n} else {\n   return [null, msg];\n}\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 860,
+        "y": 400,
+        "wires": [
+            [
+                "78b6f126.e3b36"
+            ],
+            [
+                "88ead76.8ea17a8"
+            ]
+        ]
+    },
+    {
+        "id": "2f873269.adf5ee",
+        "type": "change",
+        "z": "bd1f60e0.1331",
+        "name": "Rep to Base64",
+        "rules": [
+            {
+                "t": "set",
+                "p": "documentDecoded",
+                "pt": "msg",
+                "to": "$base64decode(documentBase64encoded)\t",
+                "tot": "jsonata"
+            },
+            {
+                "t": "delete",
+                "p": "decryptedKey",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "documentBase64encoded",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 740,
+        "y": 520,
+        "wires": [
+            [
+                "cbd83cd8.cea2d8"
+            ]
+        ]
+    },
+    {
+        "id": "d4a0cf1b.422418",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "Error 401",
+        "func": "msg.payload = \"Wrong Document\";\n//msg.payload = \"Wrong Document according to Hash\";\nmsg.statusCode = 401;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 740,
+        "y": 300,
+        "wires": [
+            [
+                "dabdccb7.b8b1d"
+            ]
+        ]
+    },
+    {
+        "id": "dabdccb7.b8b1d",
+        "type": "debug",
+        "z": "bd1f60e0.1331",
+        "name": "Log",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 810,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "78b6f126.e3b36",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "Error 401",
+        "func": "msg.payload = \"Wrong XML according to XSD\";\nmsg.statusCode = 401;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 960,
+        "y": 300,
+        "wires": [
+            [
+                "509762b5.7cc484"
+            ]
+        ]
+    },
+    {
+        "id": "509762b5.7cc484",
+        "type": "debug",
+        "z": "bd1f60e0.1331",
+        "name": "Log",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1050,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "655ed409.8520d4",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "Kolejka MQ",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 150,
+        "y": 300,
+        "wires": [
+            [
+                "c56b2b41.309f8"
+            ]
+        ]
+    },
+    {
+        "id": "713a88cd.9502d",
+        "type": "change",
+        "z": "bd1f60e0.1331",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "referencenumber",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "casetimestamp",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "documentDecoded",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 1140,
+        "y": 400,
+        "wires": [
+            [
+                "e6a2f3d.a3bd89",
+                "bae485e4.9a98f",
+                "e16ebe08.110418"
+            ]
+        ]
+    },
+    {
+        "id": "88ead76.8ea17a8",
+        "type": "xml",
+        "z": "bd1f60e0.1331",
+        "name": "",
+        "property": "documentDecoded",
+        "attr": "",
+        "chr": "",
+        "x": 990,
+        "y": 520,
+        "wires": [
+            [
+                "34f649de.69e236"
+            ]
+        ]
+    },
+    {
+        "id": "34f649de.69e236",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "Format payloads to insert",
+        "func": "var reportPayload = {}\nreportPayload.referencenumber = msg.referencenumber\nreportPayload.UUID = msg.documentDecoded.Report.UUID.toString()\nreportPayload.Timestamp = msg.documentDecoded.Report.Timestamp.toString()\nreportPayload.Name = msg.documentDecoded.Report.Name.toString()\nreportPayload.Number = msg.documentDecoded.Report.Number.toString()\n\nvar initRequest = {}\ninitRequest.referencenumber = msg.referencenumber\ninitRequest.casetimestamp = msg.casetimestamp\ninitRequest.UUID = msg.payload.UUID.toString()\ninitRequest.Timestamp = msg.payload.Timestamp.toString()\ninitRequest.RSAEncryptKey = msg.payload.RSAEncryptKey.toString()\ninitRequest.AESEncryptDoc = msg.payload.AESEncryptDoc.toString()\ninitRequest.HashSHA256 = msg.payload.HashSHA256.toString()\ninitRequest.SignatureValue = msg.payload.SignatureValue.toString()\nmsg.payload = {}\nmsg.payload.reportPayload = reportPayload\nmsg.payload.initRequest = initRequest\nmsg.topic = msg.referencenumber\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1210,
+        "y": 520,
+        "wires": [
+            [
+                "713a88cd.9502d"
+            ]
+        ]
+    },
+    {
+        "id": "e262e982.5fea4",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "Verify with Hash",
+        "func": "const crypto =  global.get('crypto');\nconst hash = crypto.createHash('sha256');\nhash.update(msg.documentBase64encoded);\nvar newHash = hash.digest('hex')\nvar compareResult = newHash.localeCompare(msg.payload.HashSHA256)\n\nif (compareResult != 0 ) {\n  return [ msg, null];\n} else {\n   return [null, msg];\n}\n\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "x": 600,
+        "y": 400,
+        "wires": [
+            [
+                "d4a0cf1b.422418"
+            ],
+            [
+                "2f873269.adf5ee"
+            ]
+        ]
+    },
+    {
+        "id": "dcbb4214.a0ea28",
+        "type": "debug",
+        "z": "bd1f60e0.1331",
+        "name": "Log2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1530,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "bae485e4.9a98f",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "Set reportPayload",
+        "func": "var LocalStorage = global.get('localstorage').LocalStorage;\nvar localStorage = new LocalStorage('./reports');\nlocalStorage.setItem(msg.topic, JSON.stringify(msg.payload.reportPayload));\n\n//localStorage.setItem(msg.topic, Array.from(msg.payload.reportPayload));\n//localStorage.setItem(msg.topic, msg.payload.reportPayload.toString('utf8'));\n\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1270,
+        "y": 220,
+        "wires": [
+            [
+                "dcbb4214.a0ea28"
+            ]
+        ]
+    },
+    {
+        "id": "e16ebe08.110418",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "Set initRequest",
+        "func": "var LocalStorage = global.get('localstorage').LocalStorage;\nvar localStorage = new LocalStorage('./initrequest');\n\nlocalStorage.setItem(msg.topic, JSON.stringify(msg.payload.initRequest));\n\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1340,
+        "y": 300,
+        "wires": [
+            [
+                "dcbb4214.a0ea28"
+            ]
+        ]
+    },
+    {
+        "id": "9960f24a.879d7",
+        "type": "inject",
+        "z": "52d38d07.d65f4c",
+        "name": "Generate",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 80,
+        "wires": [
+            [
+                "c1bbd630.9836d8",
+                "d18a6170.5e21e",
+                "bb79167a.55b388"
+            ]
+        ]
+    },
+    {
+        "id": "d0e4ae7d.52e77",
+        "type": "function",
+        "z": "52d38d07.d65f4c",
+        "name": "Generate Key (randomBytes) for AES",
+        "func": "const crypto =  global.get('crypto');\nvar passphrase = crypto.randomBytes(16);\npassphrase = passphrase.toString('hex')\nglobal.set('passphrase', passphrase);\nmsg.passphrase = passphrase\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "da78a22f.df63",
+                "60415986.a4041"
+            ]
+        ]
+    },
+    {
+        "id": "d0dd023f.00c03",
+        "type": "change",
+        "z": "52d38d07.d65f4c",
+        "name": "Report to Base64",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "$base64encode(payload)\t",
+                "tot": "jsonata"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "d0e4ae7d.52e77",
+                "206455f6.f373f2"
+            ]
+        ]
+    },
+    {
+        "id": "c1bbd630.9836d8",
+        "type": "function",
+        "z": "52d38d07.d65f4c",
+        "name": "UUID",
+        "func": "msg.parts = {\"id\":\"13cf5e91.a28061\",\"type\":\"object\",\"index\":0,\"count\":5};\nmsg.topic = 'UUID';\nmsg.payload = uuidv4()\n\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 80,
+        "wires": [
+            [
+                "8b6685d7.83a88",
+                "dae48c9e.244b"
+            ]
+        ]
+    },
+    {
+        "id": "d18a6170.5e21e",
+        "type": "function",
+        "z": "52d38d07.d65f4c",
+        "name": "Timestamp",
+        "func": "msg.parts = {\"id\":\"13cf5e91.a28061\",\"type\":\"object\",\"index\":1,\"count\":5};\nmsg.topic = 'Timestamp';\nmsg.payload = new Date().toISOString();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 690,
+        "y": 140,
+        "wires": [
+            [
+                "8b6685d7.83a88",
+                "dae48c9e.244b"
+            ]
+        ]
+    },
+    {
+        "id": "da78a22f.df63",
+        "type": "function",
+        "z": "52d38d07.d65f4c",
+        "name": "AESEncryptDoc",
+        "func": "const crypto =  global.get('crypto');\nvar mykey = crypto.createCipher('aes-128-cbc', msg.passphrase);\nvar mystr = mykey.update(msg.payload, 'utf8', 'hex')\nmystr += mykey.final('hex');\nmsg.payload = mystr.trim();\nmsg.parts = {\"id\":\"13cf5e91.a28061\",\"type\":\"object\",\"index\":2,\"count\":5};\nmsg.topic = 'AESEncryptDoc';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 700,
+        "y": 200,
+        "wires": [
+            [
+                "8b6685d7.83a88",
+                "dae48c9e.244b"
+            ]
+        ]
+    },
+    {
+        "id": "60415986.a4041",
+        "type": "function",
+        "z": "52d38d07.d65f4c",
+        "name": "RSAEncryptAESKey",
+        "func": "const crypto =  global.get('crypto');\nvar fs = global.get('fs');\nlet serverPublicKey = fs.readFileSync(\"C:\\\\DevOps\\\\Projects\\\\e-sprawozdania\\\\serverPublicKey.pem\")\nmsg.payload = msg.passphrase\nif(typeof msg.payload == \"object\")\n{\n    msg.payload = JSON.stringify(msg.payload);\n}\nlet buffer = Buffer.from(msg.payload, 'utf8')\nlet encrypted = crypto.publicEncrypt(serverPublicKey, buffer);\nmsg.payload = encrypted.toString('base64');\n\nmsg.parts = {\"id\":\"13cf5e91.a28061\",\"type\":\"object\",\"index\":3,\"count\":5};\nmsg.topic = 'RSAEncryptKey';\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 700,
+        "y": 260,
+        "wires": [
+            [
+                "8b6685d7.83a88",
+                "dae48c9e.244b"
+            ]
+        ]
+    },
+    {
+        "id": "2dc601b8.f97fbe",
+        "type": "function",
+        "z": "52d38d07.d65f4c",
+        "name": "SHA256 from Report ",
+        "func": "const crypto =  global.get('crypto');\nconst hash = crypto.createHash('sha256');\n\nhash.update(msg.payload);\nmsg.payload = hash.digest('hex')\n\nmsg.parts = {\"id\":\"13cf5e91.a28061\",\"type\":\"object\",\"index\":4,\"count\":5};\nmsg.topic = 'HashSHA256';\nmsg.complete\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 700,
+        "y": 360,
+        "wires": [
+            [
+                "8b6685d7.83a88",
+                "dae48c9e.244b"
+            ]
+        ]
+    },
+    {
+        "id": "8b6685d7.83a88",
+        "type": "join",
+        "z": "52d38d07.d65f4c",
+        "name": "Report",
+        "mode": "custom",
+        "build": "object",
+        "property": "payload",
+        "propertyType": "msg",
+        "key": "topic",
+        "joiner": "\\n",
+        "joinerType": "str",
+        "accumulate": false,
+        "timeout": "",
+        "count": "",
+        "reduceRight": false,
+        "reduceExp": "",
+        "reduceInit": "",
+        "reduceInitType": "",
+        "reduceFixup": "",
+        "x": 970,
+        "y": 360,
+        "wires": [
+            [
+                "fe90aa9e.2a354"
+            ]
+        ]
+    },
+    {
+        "id": "783dbf5f.871e4",
+        "type": "xml",
+        "z": "52d38d07.d65f4c",
+        "name": "",
+        "property": "payload",
+        "attr": "",
+        "chr": "",
+        "x": 1130,
+        "y": 140,
+        "wires": [
+            [
+                "fe5acb8b.5b4db8"
+            ]
+        ]
+    },
+    {
+        "id": "fe90aa9e.2a354",
+        "type": "function",
+        "z": "52d38d07.d65f4c",
+        "name": "Wrap with InitRequest",
+        "func": "//var fs = global.get('fs');\n//var ClientPublicKey = fs.readFileSync(\"C:\\\\DevOps\\\\Projects\\\\e-sprawozdania\\\\clientPublicKey.pem\");\n//msg.payload = { \"InitRequest\": {\"Document\": msg.payload, \"ClientPublicKey\": ClientPublicKey.toString('utf8')}}\nmsg.payload = { \"InitRequest\": {Document: msg.payload}}\nvar msg1 = {}\nmsg1.payload = msg.payload\nreturn msg1;\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1000,
+        "y": 260,
+        "wires": [
+            [
+                "783dbf5f.871e4"
+            ]
+        ]
+    },
+    {
+        "id": "dae48c9e.244b",
+        "type": "debug",
+        "z": "52d38d07.d65f4c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 970,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "6066d74a.156b18",
+        "type": "comment",
+        "z": "52d38d07.d65f4c",
+        "name": "node-red-contrib-crypto-js",
+        "info": "",
+        "x": 130,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "206455f6.f373f2",
+        "type": "delay",
+        "z": "52d38d07.d65f4c",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 390,
+        "y": 360,
+        "wires": [
+            [
+                "2dc601b8.f97fbe"
+            ]
+        ]
+    },
+    {
+        "id": "fe5acb8b.5b4db8",
+        "type": "function",
+        "z": "52d38d07.d65f4c",
+        "name": "Sign InitRequest",
+        "func": "var SignedXml = global.get('xmlcrypto').SignedXml;\nvar fs = global.get('fs')\nvar xml = msg.payload\nvar sig = new SignedXml()\nsig.addReference(\"//*[local-name(.)='Document']\")    \nsig.signingKey = fs.readFileSync(\"C:\\\\DevOps\\\\Projects\\\\e-sprawozdania\\\\clientPrivateKey.pem\")\nsig.computeSignature(xml);\nmsg.payload =  sig.getSignedXml();\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1240,
+        "y": 260,
+        "wires": [
+            [
+                "7f30e89a.e026c",
+                "75eb9fd8.2f49c8"
+            ]
+        ]
+    },
+    {
+        "id": "7f30e89a.e026c",
+        "type": "link out",
+        "z": "52d38d07.d65f4c",
+        "name": "out_prepare",
+        "links": [
+            "4840d7e6.f71288"
+        ],
+        "x": 1535,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4840d7e6.f71288",
+        "type": "link in",
+        "z": "bd1f60e0.1331",
+        "name": "in_mainflow",
+        "links": [
+            "7f30e89a.e026c"
+        ],
+        "x": 55,
+        "y": 200,
+        "wires": [
+            [
+                "ab3176e1.c6052"
+            ]
+        ]
+    },
+    {
+        "id": "e6a2f3d.a3bd89",
+        "type": "debug",
+        "z": "bd1f60e0.1331",
+        "name": "Log2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1530,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "bb79167a.55b388",
+        "type": "function",
+        "z": "52d38d07.d65f4c",
+        "name": "Create Report.xml",
+        "func": "\nvar UUID = uuidv4();\nvar timestamp = new Date().toISOString();\nvar name = getName();\nvar number = getRandomIntInclusive(1000, 9999);\n\nvar xml = '<?xml version=\"1.0\" encoding=\"utf-8\"?><Report><UUID>'+\nUUID+'</UUID><Timestamp>'+ timestamp+'</Timestamp><Name>'+name+'</Name><Number>'+number+'</Number></Report>'\n\nmsg.payload = xml\n\nfunction getName() {\nvar list = [ \"Marek\",\"Tomasz\",\"Wojciech\",\"Adam\",\"Sebastian\",\"Krzysztof\",\"Bartosz\",\"Dariusz\",\"Franciszek\",\"Grzegorz\"];\nreturn list[Math.floor(Math.random() * 10)];\n}\n    \n\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n\nfunction getRandomIntInclusive(min, max) {\n  min = Math.ceil(min);\n  max = Math.floor(max);\n  return Math.floor(Math.random() * (max - min + 1)) + min }\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 130,
+        "y": 160,
+        "wires": [
+            [
+                "d0dd023f.00c03"
+            ]
+        ]
+    },
+    {
+        "id": "75eb9fd8.2f49c8",
+        "type": "debug",
+        "z": "52d38d07.d65f4c",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 1470,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "ad5a2e44.436dc",
+        "type": "function",
+        "z": "58c2be53.4582c",
+        "name": "Get reportPayload",
+        "func": "var LocalStorage = global.get('localstorage').LocalStorage;\nvar localStorage = new LocalStorage('./reports');\n\nif (msg.topic === \"\") {\nvar archive = [];\nfor (var i = 0; i<localStorage.length; i++) {\narchive[i] = localStorage.getItem(localStorage.key(i));\n}\n\nmsg.payload = archive\n\n} else {\n//msg.payload = Array.from(localStorage.getItem(msg.topic))\nmsg.payload = JSON.parse(localStorage.getItem(msg.topic))\n}\nreturn msg;\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 40,
+        "wires": [
+            [
+                "2680409c.6ec248"
+            ]
+        ]
+    },
+    {
+        "id": "63a61b0f.8b555c",
+        "type": "function",
+        "z": "58c2be53.4582c",
+        "name": "Get initRequest",
+        "func": "var LocalStorage = global.get('localstorage').LocalStorage;\nvar localStorage = new LocalStorage('./initrequest');\n//msg.payload = JSON.stringify(msg.payload)\n\nif (msg.topic === \"\") {\nvar archive = [];\nfor (var i = 0; i<localStorage.length; i++) {\narchive[i] = localStorage.getItem(localStorage.key(i));\n}\n\nmsg.payload = archive\n\n} else {\nmsg.payload = JSON.parse(localStorage.getItem(msg.topic))\n}\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 320,
+        "y": 200,
+        "wires": [
+            [
+                "5682e468.6a14e4"
+            ]
+        ]
+    },
+    {
+        "id": "f30cc31d.101d88",
+        "type": "inject",
+        "z": "58c2be53.4582c",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 100,
+        "wires": [
+            [
+                "ad5a2e44.436dc",
+                "63a61b0f.8b555c"
+            ]
+        ]
+    },
+    {
+        "id": "d2b52d31.948cf",
+        "type": "debug",
+        "z": "58c2be53.4582c",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "x": 810,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "2680409c.6ec248",
+        "type": "function",
+        "z": "58c2be53.4582c",
+        "name": "remove double quote ",
+        "func": "for (var i = 0; i < msg.payload.length; i++) {\n        msg.payload[i] = eval('null,' + msg.payload[i]);\n        }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 40,
+        "wires": [
+            [
+                "d2b52d31.948cf"
+            ]
+        ]
+    },
+    {
+        "id": "5682e468.6a14e4",
+        "type": "function",
+        "z": "58c2be53.4582c",
+        "name": "remove double quote ",
+        "func": "for (var i = 0; i < msg.payload.length; i++) {\n        msg.payload[i] = eval('null,' + msg.payload[i]);\n        }\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 560,
+        "y": 200,
+        "wires": [
+            [
+                "d2b52d31.948cf"
+            ]
+        ]
+    },
+    {
+        "id": "ab3176e1.c6052",
+        "type": "function",
+        "z": "bd1f60e0.1331",
+        "name": "Rate Limiter",
+        "func": "//var interval = (1000*60*10); // minimum interval between messages (ms)\nvar interval = (1000); // minimum interval between messages (ms)\ncontext.lastTime = context.lastTime || 0;\n\nvar now = Date.now();\n\nif (now-context.lastTime > interval) {\n  context.lastTime = now;\n  return msg;\n} else {\n  return null;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 170,
+        "y": 80,
+        "wires": [
+            [
+                "2ccdd759.abd988"
+            ]
+        ]
+    },
+    {
+        "id": "28f474e7.3dc86c",
+        "type": "comment",
+        "z": "52d38d07.d65f4c",
+        "name": "settings.js",
+        "info": "    functionGlobalContext: {\n        // os:require('os'),\n        // jfive:require(\"johnny-five\"),\n        // j5board:require(\"johnny-five\").Board({repl:false})\n\t libxmljs: require(\"libxmljs\"),\n\t crypto: require('crypto'),\n\t xmlcrypto: require('xml-crypto'),\n\t fs: require('fs'),\n         xmldom: require('xmldom'),\n\tlocalstorage: require('node-localstorage')   \t    \n    },",
+        "x": 360,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "2ce93816.b42068",
+        "type": "function",
+        "z": "63b5c0f9.cf726",
+        "name": "Set reportPayload",
+        "func": "var LocalStorage = global.get('localstorage').LocalStorage;\nvar localStorage = new LocalStorage('./reports');\nlocalStorage.setItem(msg.topic, JSON.stringify(msg.payload.reportPayload));\n\n\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 120,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "1872532c.f0182d",
+        "type": "function",
+        "z": "63b5c0f9.cf726",
+        "name": "Get reportPayload",
+        "func": "var LocalStorage = global.get('localstorage').LocalStorage;\nvar localStorage = new LocalStorage('./reports');\n\nif (msg.topic === \"\") {\nvar archive = [];\nfor (var i = 0; i<localStorage.length; i++) {\narchive[i] = localStorage.getItem(localStorage.key(i));\n}\n\nmsg.payload = archive\n\n} else {\nmsg.payload = JSON.parse(localStorage.getItem(msg.topic))\n}\nreturn msg;\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 470,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7308424e.e65ab4",
+        "type": "function",
+        "z": "63b5c0f9.cf726",
+        "name": "Clear reportPayload",
+        "func": "var LocalStorage = global.get('localstorage').LocalStorage;\nvar localStorage = new LocalStorage('./reports');\n\nlocalStorage.clear();\nmsg.payload = true\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 480,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "331f19ca.cd66a6",
+        "type": "function",
+        "z": "63b5c0f9.cf726",
+        "name": "Delete reportPayload",
+        "func": "var LocalStorage = global.get('localstorage').LocalStorage;\nvar localStorage = new LocalStorage('./reports');\n\nlocalStorage.removeItem(msg.topic);\n\nmsg.payload = true\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 480,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    }
+]

@@ -1,0 +1,697 @@
+[
+    {
+        "id": "889f478.2b8c4b8",
+        "type": "tab",
+        "label": "Basic",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bf33cd73.af03a8",
+        "type": "tab",
+        "label": "Advanced",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ca19063f.466c98",
+        "type": "Kafka Broker",
+        "name": "",
+        "hosts": [
+            {
+                "host": "ibmbai",
+                "port": 29092
+            }
+        ],
+        "hostsEnvVar": "",
+        "connectTimeout": "50000",
+        "requestTimeout": "50000",
+        "autoConnect": "true",
+        "idleConnection": "5",
+        "reconnectOnIdle": "true",
+        "maxAsyncRequests": "10",
+        "checkInterval": "10",
+        "tls": "c9ca39b0.8c9708",
+        "selfSign": false,
+        "usetls": true,
+        "useCredentials": true
+    },
+    {
+        "id": "2bc61f0b.2542e8",
+        "type": "ui_group",
+        "name": "IOT MessageGenerator",
+        "tab": "b29d6450.370298",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "c9ca39b0.8c9708",
+        "type": "tls-config",
+        "name": "",
+        "cert": "",
+        "key": "",
+        "ca": "",
+        "certname": "",
+        "keyname": "truststore.jks",
+        "caname": "",
+        "servername": "",
+        "verifyservercert": false
+    },
+    {
+        "id": "b29d6450.370298",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "4a9239c6.0c96f",
+        "type": "comment",
+        "z": "889f478.2b8c4b8",
+        "name": "Read me first",
+        "info": "In order to make this example works you have to do the following things:\n---\nConfigure BAI\n---\n - in Flink event-processor-config.yml enter:\n    configurations:\n        - kafka-topic: in-topic\n          elasticsearch-index: in-topic\n - Call BAI mamagement service. For example:\n        curl -i -k -u admin:passw0rd -X POST -H \"Content-Type: application/json\" -d @sampleiot-avro.json https://ibmbai:6898/api/v1/datasources/elasticsearch/config\n    as defined in https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/20.0.x?topic=cce-event-forwarder\n    where sampleiot-avro.json is like following:\n        {\"index\":\"in-topic\",\"schemaName\":\"sampleiot-value\",\"schema\":{\"name\":\"sampleiot\",\"type\":\"record\",\"namespace\":\"com.ibm.bai\",\"fields\":[{\"name\":\"id\",\"type\":\"string\",\"logicalType\":\"UUID\"},{\"name\":\"timestamp\",\"type\":\"string\"},{\"name\":\"category\",\"type\":\"string\"},{\"name\":\"value\",\"type\":\"int\"}]}}\n\n\n---\nConfigure Node-red\n---\n - Add to Node-red setting.js under functionGlobalContext: the following line: avro:require(\"avro-js\")\n - Install \"node-red-dashboard\" and \"node-red-contrib-kafka-manager\" in 'Manage palette\\install'. You can use also different connectors.\n - Enter in a node \"Enter your data here & Click\" proper: \n    \"avroSchema\" - Avro schema for generated messages,\n    \"avroSchemaid\" - Avro schema id from kafka schema registry, \n            (e.g. https://ibmbai:8084/subjects/sampleiot-value/versions/1)\n    \"message\" – A message corresponding to avro schema.\n - Configure Kafka Producer node:\n    \"Topic\"=in-topic - your kafka topic name for custom messages \n    \"Broker\" - kafka broker configuration info\n    \"Hosts\" =[ibmbai, 29092] - hostname and port number of kafka bootstrap server \n    \"Use TLS\" - configurinf TLS communication\n        Use TLS/Private Key/Upload < - truststore.jks\n        Use TLS/Passphrase < - from store-password.txt\n        Use Credentials (SASL plain)/User < - eg. admin\n        Use Credentials (SASL plain)/Password < - eg. passw0rd\n - Deploy a flow\n - To start flow click \"Enter your data here & Click\" node or enter http://localhost:1880/ui\n",
+        "x": 170,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2f136e0b.6463f2",
+        "type": "debug",
+        "z": "889f478.2b8c4b8",
+        "name": "Serialized avro message for BAI",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "edff9727.95f138",
+        "type": "Kafka Producer",
+        "z": "889f478.2b8c4b8",
+        "name": "",
+        "broker": "ca19063f.466c98",
+        "topic": "in-topic",
+        "topicSlash2dot": false,
+        "requireAcks": 1,
+        "ackTimeoutMs": 100,
+        "partitionerType": 0,
+        "key": "",
+        "partition": 0,
+        "attributes": 0,
+        "connectionType": "Producer",
+        "convertFromJson": false,
+        "x": 780,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "38d567ef.f44778",
+        "type": "inject",
+        "z": "889f478.2b8c4b8",
+        "name": "Enter your data here & Click",
+        "props": [
+            {
+                "p": "avroSchema",
+                "v": "{\"name\":\"sampleiot\",\"type\":\"record\",\"namespace\":\"com.ibm.bai\",\"fields\":[{\"name\":\"id\",\"type\":\"string\",\"logicalType\":\"UUID\"},{\"name\":\"timestamp\",\"type\":\"string\"},{\"name\":\"category\",\"type\":\"string\"},{\"name\":\"value\",\"type\":\"int\"}]}",
+                "vt": "json"
+            },
+            {
+                "p": "avroSchemaId",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "p": "message",
+                "v": "{\"id\":\"2aadc0e0-6a37-4e55-a65c-530068ceeb32\",\"timestamp\":\"2021-01-01T04:27:01.000Z\",\"category\":\"QUERY\",\"value\":514}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "50e74b30.939164"
+            ]
+        ]
+    },
+    {
+        "id": "50e74b30.939164",
+        "type": "function",
+        "z": "889f478.2b8c4b8",
+        "name": "Message parsing",
+        "func": "const avro = global.get('avro'); // Add to Node-red setting.js file under functionGlobalContext: the following line: avro:require(\"avro-js\")\nvar type = avro.parse(msg.avroSchema);\nmsg.payload  = type.toBuffer(msg.message);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 490,
+        "y": 120,
+        "wires": [
+            [
+                "87fbc8d9.bcbe38"
+            ]
+        ]
+    },
+    {
+        "id": "87fbc8d9.bcbe38",
+        "type": "function",
+        "z": "889f478.2b8c4b8",
+        "name": "Adding schemaId",
+        "func": "var schemaIdbuffer = Buffer.alloc(5); //allocating 5 bytes buffer\nschemaIdbuffer.writeInt8(parseInt(msg.avroSchemaId),4) //  avro \"avroSchemaid\" from kafka schema registry\nmsg.payload =  Buffer.concat([schemaIdbuffer, msg.payload])\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 550,
+        "y": 220,
+        "wires": [
+            [
+                "2f136e0b.6463f2",
+                "edff9727.95f138"
+            ]
+        ]
+    },
+    {
+        "id": "ec44b37.a4f1fd",
+        "type": "function",
+        "z": "bf33cd73.af03a8",
+        "name": "Message generator",
+        "func": "\nvar categoryArray = [ \"QUERY\", \"COMMAND\", \"DATAGRAM\", \"EVENT\"]; \nvar categoryInstance = categoryArray[Math.floor(Math.random()*categoryArray.length)]; //getting random category from array\nvar date = new Date(msg.startDate)\ndate.setHours( date.getHours() + parseInt(msg.i)*4) //adding 4 hours to every iteration\ndate.setMinutes( date.getMinutes() + (Math.floor(Math.random() * 201) - 100)) //adding fuzziness to generated timestamp\nvar value = Math.floor(Math.random() * (1000 - 400 + 1)) + 400 // generating random value from a range\n\n\nmsg.payload =   {\n      \"id\": uuidv4(),\n      \"timestamp\": date.toISOString(),\n      \"category\": categoryInstance,\n      \"value\": value\n \n};\n\n\n// UDDI generator function\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [
+                "63875957.17e32",
+                "e82239b5.c28ae8",
+                "bc273d72.66b3f8"
+            ]
+        ]
+    },
+    {
+        "id": "6e751fde.715198",
+        "type": "inject",
+        "z": "bf33cd73.af03a8",
+        "name": "Enter your data here & Click",
+        "props": [
+            {
+                "p": "iterations",
+                "v": "80",
+                "vt": "num"
+            },
+            {
+                "p": "cycles",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "p": "startDate",
+                "v": "2021-02-01T00:00:01",
+                "vt": "str"
+            },
+            {
+                "p": "avroSchema",
+                "v": "{\"name\":\"sampleiot\",\"type\":\"record\",\"namespace\":\"com.ibm.bai\",\"fields\":[{\"name\":\"id\",\"type\":\"string\",\"logicalType\":\"UUID\"},{\"name\":\"timestamp\",\"type\":\"string\"},{\"name\":\"category\",\"type\":\"string\"},{\"name\":\"value\",\"type\":\"int\"}]}",
+                "vt": "json"
+            },
+            {
+                "p": "avroSchemaId",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "p": "i",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "j",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "stop",
+                "v": "false",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 160,
+        "y": 60,
+        "wires": [
+            [
+                "b978459.c993538"
+            ]
+        ]
+    },
+    {
+        "id": "63ce1d99.e1a27c",
+        "type": "delay",
+        "z": "bf33cd73.af03a8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 100,
+        "y": 220,
+        "wires": [
+            [
+                "e5bfb3d9.af2f08"
+            ]
+        ]
+    },
+    {
+        "id": "63875957.17e32",
+        "type": "delay",
+        "z": "bf33cd73.af03a8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "25",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "336b9697.81302a"
+            ]
+        ]
+    },
+    {
+        "id": "fa2e6375.0da188",
+        "type": "comment",
+        "z": "bf33cd73.af03a8",
+        "name": "Read me first",
+        "info": "In order to make this example works you have to do the following things:\n---\nConfigure BAI\n---\n - in Flink event-processor-config.yml enter:\n    configurations:\n        - kafka-topic: in-topic\n          elasticsearch-index: in-topic\n - Call BAI mamagement service. For example:\n        curl -i -k -u admin:passw0rd -X POST -H \"Content-Type: application/json\" -d @sampleiot-avro.json https://ibmbai:6898/api/v1/datasources/elasticsearch/config\n    as defined in https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/20.0.x?topic=cce-event-forwarder\n    where sampleiot-avro.json is like following:\n        {\"index\":\"in-topic\",\"schemaName\":\"sampleiot-value\",\"schema\":{\"name\":\"sampleiot\",\"type\":\"record\",\"namespace\":\"com.ibm.bai\",\"fields\":[{\"name\":\"id\",\"type\":\"string\",\"logicalType\":\"UUID\"},{\"name\":\"timestamp\",\"type\":\"string\"},{\"name\":\"category\",\"type\":\"string\"},{\"name\":\"value\",\"type\":\"int\"}]}}\n\n\n---\nConfigure Node-red\n---\n - Add to Node-red setting.js under functionGlobalContext: the following line: avro:require(\"avro-js\")\n - Install \"node-red-dashboard\" and \"node-red-contrib-kafka-manager\" in 'Manage palette\\install'. You can use also different connectors.\n - Enter in a node \"Enter your data here & Click\" proper: \n    \"iterations\" - How many iterations every 4 hours,\n    \"cycles\" - How many cycles per every iteration,\n    \"startDate\" - Date from which data will be generated,\n    \"avroSchema\" - Avro schema for generated messages,\n    \"avroSchemaid\" - Avro schema id from kafka schema registry, \n            (e.g. https://ibmbai:8084/subjects/sampleiot-value/versions/1)\n - Do not change \"i\", \"j\" and \"stop\" parameters unless you do know what you do\n - Configure Kafka Producer node:\n    \"Topic\"=in-topic - your kafka topic name for custom messages \n    \"Broker\" - kafka broker configuration info\n    \"Hosts\" =[ibmbai, 29092] - hostname and port number of kafka bootstrap server \n    \"Use TLS\" - configurinf TLS communication\n        Use TLS/Private Key/Upload < - truststore.jks\n        Use TLS/Passphrase < - from store-password.txt\n        Use Credentials (SASL plain)/User < - eg. admin\n        Use Credentials (SASL plain)/Password < - eg. passw0rd\n - Deploy a flow\n - To start the flow click \"Enter your data here & Click\" node or enter http://localhost:1880/ui\n - To stop the flow clic \"Stop\" node\n\n\n\n -\n\n",
+        "x": 90,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "1439970d.8625e1",
+        "type": "change",
+        "z": "bf33cd73.af03a8",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.iterations",
+                "pt": "msg",
+                "to": "iterations",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.cycles",
+                "pt": "msg",
+                "to": "cycles",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.startDate",
+                "pt": "msg",
+                "to": "startDate",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.avroSchema",
+                "pt": "msg",
+                "to": "avroSchema",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.avroSchemaId",
+                "pt": "msg",
+                "to": "avroSchemaId",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.stop",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "i",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "j",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "e5bfb3d9.af2f08"
+            ]
+        ]
+    },
+    {
+        "id": "e5bfb3d9.af2f08",
+        "type": "function",
+        "z": "bf33cd73.af03a8",
+        "name": "Iterations",
+        "func": "while (msg.iterations > msg.i) {\nif (flow.get(\"stop\")) {break;}\nmsg.i++\nreturn [msg, null ];\n}\nmsg.i = 0\nreturn [null, msg];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 220,
+        "wires": [
+            [
+                "336b9697.81302a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "336b9697.81302a",
+        "type": "function",
+        "z": "bf33cd73.af03a8",
+        "name": "Cycles",
+        "func": "while (msg.cycles > msg.j) {\nif (flow.get(\"stop\")) {break;}\nmsg.j++\nreturn [msg, null ];\n}\nmsg.j = 0\nreturn [null, msg];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "ec44b37.a4f1fd"
+            ],
+            [
+                "63ce1d99.e1a27c"
+            ]
+        ]
+    },
+    {
+        "id": "fe56f2f3.5bcc18",
+        "type": "function",
+        "z": "bf33cd73.af03a8",
+        "name": "Adding schemaId",
+        "func": "var schemaIdbuffer = Buffer.alloc(5); //allocating 5 bytes buffer\nschemaIdbuffer.writeInt8(parseInt(msg.avroSchemaId),4) //  avro \"avroSchemaid\" from kafka schema registry\nmsg.payload =  Buffer.concat([schemaIdbuffer, msg.payload])\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "3e002ca1.fef254",
+                "8fdb1673.d0bb18"
+            ]
+        ]
+    },
+    {
+        "id": "e82239b5.c28ae8",
+        "type": "function",
+        "z": "bf33cd73.af03a8",
+        "name": "Message parsing",
+        "func": "const avro = global.get('avro'); // Add to Node-red setting.js file under functionGlobalContext: the following line: avro:require(\"avro-js\")\nvar type = avro.parse(msg.avroSchema);\nmsg.payload  = type.toBuffer(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [
+                "fe56f2f3.5bcc18"
+            ]
+        ]
+    },
+    {
+        "id": "8fdb1673.d0bb18",
+        "type": "debug",
+        "z": "bf33cd73.af03a8",
+        "name": "Serialized avro message for BAI",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "740ab835.241ce",
+        "type": "debug",
+        "z": "bf33cd73.af03a8",
+        "name": "Just a message in JSON",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "bc273d72.66b3f8",
+        "type": "json",
+        "z": "bf33cd73.af03a8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 610,
+        "y": 360,
+        "wires": [
+            [
+                "740ab835.241ce"
+            ]
+        ]
+    },
+    {
+        "id": "3e002ca1.fef254",
+        "type": "Kafka Producer",
+        "z": "bf33cd73.af03a8",
+        "name": "",
+        "broker": "ca19063f.466c98",
+        "topic": "in-topic",
+        "topicSlash2dot": false,
+        "requireAcks": 1,
+        "ackTimeoutMs": 100,
+        "partitionerType": 0,
+        "key": "",
+        "partition": 0,
+        "attributes": 0,
+        "connectionType": "Producer",
+        "convertFromJson": false,
+        "x": 760,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "b978459.c993538",
+        "type": "change",
+        "z": "bf33cd73.af03a8",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "stop",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 60,
+        "wires": [
+            [
+                "e5bfb3d9.af2f08"
+            ]
+        ]
+    },
+    {
+        "id": "2554120f.c16c56",
+        "type": "inject",
+        "z": "bf33cd73.af03a8",
+        "name": "Stop",
+        "props": [
+            {
+                "p": "stop",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "b978459.c993538"
+            ]
+        ]
+    },
+    {
+        "id": "43a6895e.2fb2e8",
+        "type": "ui_form",
+        "z": "bf33cd73.af03a8",
+        "name": "http://localhost:1880/ui",
+        "label": "IOT MessageGenerator",
+        "group": "2bc61f0b.2542e8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "How many iterations every 4 hours",
+                "value": "iterations",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "How many cycles per every iteration",
+                "value": "cycles",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Date to start from",
+                "value": "startDate",
+                "type": "date",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Avro Schema",
+                "value": "avroSchema",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Avro Schema ID",
+                "value": "avroSchemaid",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "iterations": "",
+            "cycles": "",
+            "startDate": "",
+            "avroSchema": "",
+            "avroSchemaid": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "",
+        "x": 120,
+        "y": 140,
+        "wires": [
+            [
+                "1439970d.8625e1"
+            ]
+        ]
+    },
+    {
+        "id": "4e6735cd.81000c",
+        "type": "ui_button",
+        "z": "bf33cd73.af03a8",
+        "name": "",
+        "group": "2bc61f0b.2542e8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "{\"stop\":true}",
+        "payloadType": "json",
+        "topic": "",
+        "x": 70,
+        "y": 180,
+        "wires": [
+            [
+                "1439970d.8625e1"
+            ]
+        ]
+    }
+]

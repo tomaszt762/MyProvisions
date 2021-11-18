@@ -1,0 +1,19 @@
+{
+    "name": "Playground",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "dependencies": {
+        "node-red-node-rbe": "0.2.8",
+        "node-red-node-cf-cloudant": "0.2.17",
+        "node-red-node-email": "1.7.6",
+        "node-red-contrib-timeframerlt": "0.3.1",
+        "node-red-dashboard": "2.19.4",
+        "node-red-node-pi-gpio": "1.0.6"
+    },
+    "node-red": {
+        "settings": {
+            "flowFile": "Playground.json",
+            "credentialsFile": "Playground_cred.json"
+        }
+    }
+}

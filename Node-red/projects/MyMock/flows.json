@@ -1,0 +1,2669 @@
+[
+    {
+        "id": "9991900c.e1c5f8",
+        "type": "tab",
+        "label": "Info",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e48dcec1.f303e8",
+        "type": "tab",
+        "label": "mongo",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c699d5cf.eec228",
+        "type": "tab",
+        "label": "redis",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "4ccdf334.36da14",
+        "type": "tab",
+        "label": "mysql",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bc57d557.3c9848",
+        "type": "tab",
+        "label": "mqtt",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "897aac80.cd6168",
+        "type": "tab",
+        "label": "kafka",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "b1d5e103.69df08",
+        "type": "tab",
+        "label": "Openweather",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "dc99cf8.94f77b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ad4ce519.3e4fe8",
+        "type": "tab",
+        "label": "Device simulator",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "66542b36.984234",
+        "type": "redis-config",
+        "name": "Master",
+        "options": "REDIS_MASTER_URL",
+        "cluster": false,
+        "optionsType": "env"
+    },
+    {
+        "id": "458fbdff.e741d4",
+        "type": "redis-config",
+        "name": "Slave",
+        "options": "REDIS_SLAVE_URL",
+        "cluster": false,
+        "optionsType": "env"
+    },
+    {
+        "id": "83d11e62.e6bdf8",
+        "type": "MySQLdatabase",
+        "name": "db",
+        "host": "mysql",
+        "port": "3306",
+        "db": "db",
+        "tz": ""
+    },
+    {
+        "id": "4d19ce73.ca2c7",
+        "type": "MySQLdatabase",
+        "host": "127.0.0.1",
+        "port": "3306",
+        "db": "sys",
+        "tz": ""
+    },
+    {
+        "id": "64b6f67b.edacc8",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "mqtt",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "compatmode": true,
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": ""
+    },
+    {
+        "id": "a5f6c513.880a4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "397dc13a.ebe9be",
+        "type": "mongodb2",
+        "uri": "${DB_W_URL}",
+        "name": "${DB_W_NAME}",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "6a8dbd61.5447ac",
+        "type": "mongodb2",
+        "uri": "${DB_R_URL}",
+        "name": "${DB_R_NAME}",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "dbb15fb2.864f78",
+        "type": "mongodb2",
+        "uri": "${DB_URL}",
+        "name": "${DB_NAME}",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "c3203948.c23e58",
+        "type": "mongodb2",
+        "uri": "${DB_URL}",
+        "name": "${DB_NAME}",
+        "options": "",
+        "parallelism": "-1"
+    },
+    {
+        "id": "87abade9.73453",
+        "type": "MySQLdatabase",
+        "name": "db",
+        "host": "mysql",
+        "port": "${MYSQL_PORT}",
+        "db": "${MYSQL_DATABASE}",
+        "tz": ""
+    },
+    {
+        "id": "1418a4af.9aadfb",
+        "type": "ui_group",
+        "z": "bc57d557.3c9848",
+        "name": "MQTT Console",
+        "tab": "c9fec4c9.0b18d",
+        "order": 1,
+        "disp": true,
+        "width": "12",
+        "collapse": false
+    },
+    {
+        "id": "c9fec4c9.0b18d",
+        "type": "ui_tab",
+        "name": "MQTT",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "3ccae9e6.f71f16",
+        "type": "Kafka Broker",
+        "name": "New",
+        "hosts": [
+            {
+                "host": "kafka",
+                "port": 29092
+            }
+        ],
+        "hostsEnvVar": "",
+        "connectTimeout": "10000",
+        "requestTimeout": "30000",
+        "autoConnect": "true",
+        "idleConnection": "5",
+        "reconnectOnIdle": "true",
+        "maxAsyncRequests": "10",
+        "checkInterval": "10",
+        "selfSign": true,
+        "usetls": false
+    },
+    {
+        "id": "662744b.9a65cbc",
+        "type": "ui_group",
+        "name": "Kafka",
+        "tab": "bbb6ffc5.18394",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "bbb6ffc5.18394",
+        "type": "ui_tab",
+        "name": "Kafka",
+        "icon": "dashboard",
+        "order": 2,
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "c586297.eeac458",
+        "type": "redis-config",
+        "name": "remote2",
+        "options": "REDIS_SLAVE_URL",
+        "cluster": false,
+        "optionsType": "env"
+    },
+    {
+        "id": "5ff5b112.b1a0a",
+        "type": "ui_group",
+        "name": "Redis",
+        "tab": "8955c84d.de5028",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "8955c84d.de5028",
+        "type": "ui_tab",
+        "name": "Redis",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "15cc71ff.a2fa66",
+        "type": "ui_group",
+        "name": "weather",
+        "tab": "7f9982b2.d476dc",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": true
+    },
+    {
+        "id": "7f9982b2.d476dc",
+        "type": "ui_tab",
+        "name": "Weather",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9191ac10.ecead8",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "7f9982b2.d476dc",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "5c69ed31.3cb00c",
+        "type": "ui_group",
+        "name": "weather",
+        "tab": "7f9982b2.d476dc",
+        "order": 2,
+        "disp": true,
+        "width": "12",
+        "collapse": true
+    },
+    {
+        "id": "8c942f9c.d1b33",
+        "type": "mongodb2 in",
+        "z": "e48dcec1.f303e8",
+        "service": "_ext_",
+        "configNode": "c3203948.c23e58",
+        "name": "",
+        "collection": "${DB_COLLECTION}",
+        "operation": "find.toArray",
+        "x": 940,
+        "y": 120,
+        "wires": [
+            [
+                "ae9455e.8690128"
+            ]
+        ]
+    },
+    {
+        "id": "c73e75b8.18b7f8",
+        "type": "http in",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "url": "/mongo/update",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 200,
+        "wires": [
+            [
+                "9214ac2a.cbedb"
+            ]
+        ]
+    },
+    {
+        "id": "e8e3535b.55eb58",
+        "type": "http response",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "x": 1570,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "567f69d1.03be3",
+        "type": "function",
+        "z": "e48dcec1.f303e8",
+        "name": "update request",
+        "func": "/*\nmsg.result correspond à l'objet mis à jour,\nle delete permet de supprimer la propriété\n_id de l'objet, en effet l'_id est géré directement\npar le noued OjectId\npour la requète update  \non doit fournir un tableau \n[\n<query>,\n<valeur mises à jour>\n]\n\nici ce sera de la forme:\n[\n    {_id:ObjectId(\"xxx\")},\n    {\"nom\": \"toto\", \"prenom\": \"tutu\", \n        \"immatriculation\": \"AB123CD\", \n        \"heure\": null, \"minute\": null\n    }\n]\n*/\nmsg.result=msg.req.body;\ndelete msg.req.body._id;\nmsg.payload=[\n   msg.payload,\n   msg.req.body\n    ];\nreturn msg;\n\n",
+        "outputs": "1",
+        "noerr": 0,
+        "x": 720,
+        "y": 200,
+        "wires": [
+            [
+                "346eba84.ff83de"
+            ]
+        ]
+    },
+    {
+        "id": "9214ac2a.cbedb",
+        "type": "function",
+        "z": "e48dcec1.f303e8",
+        "name": "extract _id",
+        "func": "msg._id=msg.payload._id;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "21fffa12.197626"
+            ]
+        ]
+    },
+    {
+        "id": "21fffa12.197626",
+        "type": "objectid",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "x": 560,
+        "y": 200,
+        "wires": [
+            [
+                "567f69d1.03be3"
+            ]
+        ]
+    },
+    {
+        "id": "895c02cc.c6099",
+        "type": "template",
+        "z": "e48dcec1.f303e8",
+        "name": "Web Template",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <title>Licence Plate</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css\" />\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css\" />\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css\" />\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js\"></script>\n\n    <script type=\"text/javascript\">\n        $(function () {\n            var db = {{#payload}}{{{.}}}{{/payload}};\n                $(\"#jsgrid\").jsGrid({\n                    width: \"100%\",\n                    inserting: true,\n                    editing: true,\n                    sorting: true,\n                    paging: true,\n\n                    data: db,\n\n                    fields: [\n                        { title:\"Last name\", name: \"last\", type: \"text\", width: 50 },\n                        { title:\"First name\", name: \"first\", type: \"text\", width: 50 },\n                        { title:\"Title\", name: \"title\", type: \"text\", width: 50 },\n                        { title:\"Hour\", name: \"hour\", type:\"number\", width: 25},\n                        { title:\"Minute\", align:\"left\",  name: \"minute\", type:\"number\" , width: 25},\n                        { type: \"control\" }\n                    ],\n               \n                    controller: {\n                        insertItem: function(item) {\n                            return $.ajax({\n                                type: \"POST\",\n                                url: \"/mongo/insert\",\n                                data: item\n                            });\n                        },\n                        updateItem: function(item) {\n                           return $.ajax({\n                                type: \"PUT\",\n                                url: \"/mongo/update\",\n                                data: item\n                            });\n                        },\n                        deleteItem: function(item) {\n                            return $.ajax({\n                                type: \"DELETE\",\n                                url: \"/mongo/delete\",\n                                data: item\n                            });\n                        }\n                    }   \n                });\n            });\n    \n  </script>\n</head>\n<body class=\"container\">\n    <section class=\"row\">\n        \n        <div class=\"col-md-6\"></div>\n        <div class=\"col-md-6\" id=\"jsgrid\">\n        </div>\n    </section>\n<div align=\"center\">\n<p><a target=\"_blank\" href={{host}}/info>GET /info</a> </p>         \n</div>\n</body>\n</html>\n\n",
+        "x": 1400,
+        "y": 120,
+        "wires": [
+            [
+                "499b26ae.c5ac6"
+            ]
+        ]
+    },
+    {
+        "id": "6aea07ca.641498",
+        "type": "http in",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "url": "/mongo",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 120,
+        "wires": [
+            [
+                "8c942f9c.d1b33"
+            ]
+        ]
+    },
+    {
+        "id": "499b26ae.c5ac6",
+        "type": "http response",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "x": 1570,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "ae9455e.8690128",
+        "type": "json",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "x": 1250,
+        "y": 120,
+        "wires": [
+            [
+                "895c02cc.c6099"
+            ]
+        ]
+    },
+    {
+        "id": "75410342.6cd1ac",
+        "type": "function",
+        "z": "e48dcec1.f303e8",
+        "name": "callback response",
+        "func": "/*\npour que la jsGrid soit rafraichie, \nil faut lui envoyer l'objet qui a été mis à jour\n*/\nmsg.payload=msg.result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1390,
+        "y": 200,
+        "wires": [
+            [
+                "e8e3535b.55eb58"
+            ]
+        ]
+    },
+    {
+        "id": "1cf0b72d.37f2f9",
+        "type": "http response",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "x": 1570,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "46d41f42.723358",
+        "type": "http in",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "url": "/mongo/insert",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "3009fc5c.2c549c"
+            ]
+        ]
+    },
+    {
+        "id": "c23e25b4.5487a8",
+        "type": "http in",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "url": "/mongo/delete",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 280,
+        "wires": [
+            [
+                "53a998a6.4c0cf8"
+            ]
+        ]
+    },
+    {
+        "id": "53a998a6.4c0cf8",
+        "type": "function",
+        "z": "e48dcec1.f303e8",
+        "name": "extract _id",
+        "func": "msg._id=msg.payload._id;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 280,
+        "wires": [
+            [
+                "adbcfd08.3084e8"
+            ]
+        ]
+    },
+    {
+        "id": "adbcfd08.3084e8",
+        "type": "objectid",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "x": 600,
+        "y": 280,
+        "wires": [
+            [
+                "ba6c1642.f3f87"
+            ]
+        ]
+    },
+    {
+        "id": "c8709443.638d08",
+        "type": "http response",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "x": 1570,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "65db3f0.3ac9b4",
+        "type": "function",
+        "z": "e48dcec1.f303e8",
+        "name": "callback response",
+        "func": "/*\npour que la jsGrid soit rafraichie, \nil faut lui envoyer l'objet qui a été mis à jour\n*/\nmsg.payload=msg.req.body;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1390,
+        "y": 240,
+        "wires": [
+            [
+                "1cf0b72d.37f2f9"
+            ]
+        ]
+    },
+    {
+        "id": "1d82446c.38e734",
+        "type": "comment",
+        "z": "e48dcec1.f303e8",
+        "name": "database collection information",
+        "info": "The collection is named LicensePlate. \nEach document format is :\n```JavaScript\n{\n    \"_id\": ObjectID(\"585a4732ac11400192a60b85\"),\n    \"last\": \"Kowalski\",\n    \"first\": \"Jan\",\n    \"Title\": \"Zabawa\",\n    \"hour\": \"13\",\n    \"minute\": \"30\"\n}\n```\n\n{ title:\"Last name\", name: \"last\", type: \"text\", width: 50 },\n{ title:\"First name\", name: \"first\", type: \"text\", width: 50 },\n{ title:\"Title\", name: \"Title\", type: \"text\", width: 50 },\n{ title:\"Hour\", name: \"hour\", type:\"number\", width: 25},\n{ title:\"Minute\", align:\"left\",  name: \"minute\", type:\"number\" , width: 25},\n{ type: \"control\" }",
+        "x": 710,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "ee9d3659.3220b",
+        "type": "comment",
+        "z": "e48dcec1.f303e8",
+        "name": "node-red-contrib-objectid",
+        "info": "",
+        "x": 210,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "b9839401.ea3a7",
+        "type": "comment",
+        "z": "e48dcec1.f303e8",
+        "name": "node-red-contrib-mongodb2",
+        "info": "",
+        "x": 220,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "27c197cd.a37b18",
+        "type": "http in",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "url": "/mongo/selectall",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 160,
+        "wires": [
+            [
+                "b2990958.4e4328"
+            ]
+        ]
+    },
+    {
+        "id": "6bfbecde.756104",
+        "type": "http response",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "x": 1570,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "2d02855d.03a952",
+        "type": "json",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "x": 1430,
+        "y": 160,
+        "wires": [
+            [
+                "6bfbecde.756104"
+            ]
+        ]
+    },
+    {
+        "id": "b2990958.4e4328",
+        "type": "mongodb2 in",
+        "z": "e48dcec1.f303e8",
+        "service": "_ext_",
+        "configNode": "c3203948.c23e58",
+        "name": "",
+        "collection": "${DB_COLLECTION}",
+        "operation": "find.toArray",
+        "x": 970,
+        "y": 160,
+        "wires": [
+            [
+                "2d02855d.03a952"
+            ]
+        ]
+    },
+    {
+        "id": "346eba84.ff83de",
+        "type": "mongodb2 in",
+        "z": "e48dcec1.f303e8",
+        "service": "_ext_",
+        "configNode": "c3203948.c23e58",
+        "name": "",
+        "collection": "${DB_COLLECTION}",
+        "operation": "update",
+        "x": 980,
+        "y": 200,
+        "wires": [
+            [
+                "75410342.6cd1ac"
+            ]
+        ]
+    },
+    {
+        "id": "3009fc5c.2c549c",
+        "type": "mongodb2 in",
+        "z": "e48dcec1.f303e8",
+        "service": "_ext_",
+        "configNode": "c3203948.c23e58",
+        "name": "",
+        "collection": "${DB_COLLECTION}",
+        "operation": "insert",
+        "x": 950,
+        "y": 240,
+        "wires": [
+            [
+                "65db3f0.3ac9b4"
+            ]
+        ]
+    },
+    {
+        "id": "ba6c1642.f3f87",
+        "type": "mongodb2 in",
+        "z": "e48dcec1.f303e8",
+        "service": "_ext_",
+        "configNode": "c3203948.c23e58",
+        "name": "",
+        "collection": "${DB_COLLECTION}",
+        "operation": "deleteOne",
+        "x": 990,
+        "y": 280,
+        "wires": [
+            [
+                "c8709443.638d08"
+            ]
+        ]
+    },
+    {
+        "id": "d7e073cc.c98b6",
+        "type": "mongodb2 in",
+        "z": "e48dcec1.f303e8",
+        "service": "_ext_",
+        "configNode": "c3203948.c23e58",
+        "name": "",
+        "collection": "${DB_COLLECTION}",
+        "operation": "insertOne",
+        "x": 990,
+        "y": 360,
+        "wires": [
+            [
+                "f54069dd.15c968"
+            ]
+        ]
+    },
+    {
+        "id": "3cec1f8f.102c4",
+        "type": "http in",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "url": "/mongo/pop",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 360,
+        "wires": [
+            [
+                "f9856bc3.0e1e98"
+            ]
+        ]
+    },
+    {
+        "id": "f9856bc3.0e1e98",
+        "type": "function",
+        "z": "e48dcec1.f303e8",
+        "name": "payload",
+        "func": "\nmsg = {\n    \"req\":msg.req,\n    \"res\":msg.res,\n    payload:{\n    \"last\": \"Kowalski\",\n    \"first\": \"Jan\",\n    \"title\": \"Zabawa\",\n    \"hour\": \"13\",\n    \"minute\": \"30\"\n}}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 360,
+        "wires": [
+            [
+                "d7e073cc.c98b6"
+            ]
+        ]
+    },
+    {
+        "id": "f54069dd.15c968",
+        "type": "http response",
+        "z": "e48dcec1.f303e8",
+        "name": "",
+        "x": 1570,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "a11dd924.4dc648",
+        "type": "http in",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "url": "/mysql/insert",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 180,
+        "wires": [
+            [
+                "3e4393fe.e990ec"
+            ]
+        ]
+    },
+    {
+        "id": "8fadae21.ac4e4",
+        "type": "function",
+        "z": "4ccdf334.36da14",
+        "name": "insert-response",
+        "func": "msg.payload=msg.result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 815,
+        "y": 180,
+        "wires": [
+            [
+                "a0346df5.16f0b"
+            ]
+        ]
+    },
+    {
+        "id": "3e4393fe.e990ec",
+        "type": "function",
+        "z": "4ccdf334.36da14",
+        "name": "insert-query",
+        "func": "msg.topic=\"INSERT INTO test (name,lastname,code,timestamp) VALUES ('\" + msg.payload.name + \"','\" + msg.payload.lastname + \"','\" + msg.payload.code + \"',CURRENT_TIMESTAMP)\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 180,
+        "wires": [
+            [
+                "39c2ca62.272626"
+            ]
+        ]
+    },
+    {
+        "id": "a0346df5.16f0b",
+        "type": "http response",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "x": 1160,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "62ab85fa.5e5f9c",
+        "type": "http in",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "url": "/mysql/delete",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 300,
+        "wires": [
+            [
+                "5fa32266.25a3c4"
+            ]
+        ]
+    },
+    {
+        "id": "c566160d.31552",
+        "type": "function",
+        "z": "4ccdf334.36da14",
+        "name": "delete-response",
+        "func": "msg.payload=msg.result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 815,
+        "y": 300,
+        "wires": [
+            [
+                "9953234c.4c058"
+            ]
+        ]
+    },
+    {
+        "id": "5fa32266.25a3c4",
+        "type": "function",
+        "z": "4ccdf334.36da14",
+        "name": "delete-query",
+        "func": "msg.topic=\"DELETE FROM test WHERE id='\" + msg.payload.ID + \"'\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 300,
+        "wires": [
+            [
+                "549e3ffd.33f4d"
+            ]
+        ]
+    },
+    {
+        "id": "9953234c.4c058",
+        "type": "http response",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "x": 1160,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "771a432.c8db03c",
+        "type": "http in",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "url": "/mysql/update",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 240,
+        "wires": [
+            [
+                "ce1a06d1.08b47"
+            ]
+        ]
+    },
+    {
+        "id": "cac488a1.2291b8",
+        "type": "function",
+        "z": "4ccdf334.36da14",
+        "name": "update-response",
+        "func": "msg.payload=msg.result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 825,
+        "y": 240,
+        "wires": [
+            [
+                "50ba285d.e8816"
+            ]
+        ]
+    },
+    {
+        "id": "ce1a06d1.08b47",
+        "type": "function",
+        "z": "4ccdf334.36da14",
+        "name": "update-query",
+        "func": "msg.topic=\"UPDATE test SET name='\" + msg.payload.name + \"', lastname='\" + msg.payload.lastname + \"', code='\" + msg.payload.code + \"' WHERE id='\" + msg.payload.ID + \"'\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 430,
+        "y": 240,
+        "wires": [
+            [
+                "9af00d24.4f9538"
+            ]
+        ]
+    },
+    {
+        "id": "50ba285d.e8816",
+        "type": "http response",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "x": 1160,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "39c2ca62.272626",
+        "type": "mysql",
+        "z": "4ccdf334.36da14",
+        "mydb": "87abade9.73453",
+        "name": "database",
+        "x": 630,
+        "y": 180,
+        "wires": [
+            [
+                "8fadae21.ac4e4"
+            ]
+        ]
+    },
+    {
+        "id": "9af00d24.4f9538",
+        "type": "mysql",
+        "z": "4ccdf334.36da14",
+        "mydb": "87abade9.73453",
+        "name": "database",
+        "x": 630,
+        "y": 240,
+        "wires": [
+            [
+                "cac488a1.2291b8"
+            ]
+        ]
+    },
+    {
+        "id": "549e3ffd.33f4d",
+        "type": "mysql",
+        "z": "4ccdf334.36da14",
+        "mydb": "87abade9.73453",
+        "name": "database",
+        "x": 630,
+        "y": 300,
+        "wires": [
+            [
+                "c566160d.31552"
+            ]
+        ]
+    },
+    {
+        "id": "4bc527e5.c2d158",
+        "type": "http in",
+        "z": "9991900c.e1c5f8",
+        "name": "",
+        "url": "/info",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 120,
+        "wires": [
+            [
+                "f654b9ab.45b3c"
+            ]
+        ]
+    },
+    {
+        "id": "f654b9ab.45b3c",
+        "type": "template",
+        "z": "9991900c.e1c5f8",
+        "name": "page",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<html>\n    <head></head>\n    <body>\n        <div align=\"center\">\n        <p><a target=\"_blank\" href={{host}}>GET /</a> </p>\n        <p><a target=\"_blank\" href={{host}}/info>GET /info</a> </p>         \n        <p><a target=\"_blank\" href={{host}}/env>GET /env</a> </p>   \n        <p>--------------------</p>\n        <p><a target=\"_blank\" href={{host}}/mongo>GET /mongo</a> </p>\n        <p><a target=\"_blank\" href={{host}}/mongo/selectall>GET /mongo/selectall</a> </p>\n        <p><a target=\"_blank\" href={{host}}/mongo/update>PUT /mongo/update</a> </p>\n        <p><a target=\"_blank\" href={{host}}/mongo/insert>POST /mongo/insert</a> </p>\n        <p><a target=\"_blank\" href={{host}}/mongo/delete<>DELETE /mongo/delete</a> </p>\n        <p><a target=\"_blank\" href={{host}}/mongo/pop>GET /mongo/pop</a> </p>\n        <p>--------------------</p>\n        <p><a target=\"_blank\" href={{host}}/mysql>GET /mysql</a> </p>\n        <p><a target=\"_blank\" href={{host}}/mysql/insert>POST /mysql/insert</a> </p>\n        <p><a target=\"_blank\" href={{host}}/mysql/update>PUT /mysql/update</a> </p>\n        <p><a target=\"_blank\" href={{host}}/mysql/delete>DELETE /mysql/delete</a> </p>\n        <p><a target=\"_blank\" href={{host}}/mysql/pop>GET /mysql/pop</a> </p>\n        <p><a target=\"_blank\" href={{host}}/mysql/drop>GET /mysql/dropp</a> </p>\n        <p>--------------------</p>        \n        <p><a target=\"_blank\" href={{host}}/ui/#!/1>Redis</a> </p>\n        <p>--------------------</p>\n        <p><a target=\"_blank\" href={{host}}/ui/#!/2>Mqtt</a> </p>\n        <p>--------------------</p>        \n        <p><a target=\"_blank\" href={{host}}/ui/#!/0>Kafka</a> </p>\n        <p>--------------------</p>        \n        <p><a target=\"_blank\" href={{host}}/ui/#!/3>External API Call</a> </p>        \n        </div>\n    </body>\n</html>",
+        "x": 610,
+        "y": 100,
+        "wires": [
+            [
+                "a7f28106.b0847"
+            ]
+        ]
+    },
+    {
+        "id": "a7f28106.b0847",
+        "type": "http response",
+        "z": "9991900c.e1c5f8",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 770,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "4bd22f4f.3f302",
+        "type": "http in",
+        "z": "9991900c.e1c5f8",
+        "name": "",
+        "url": "/",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "f654b9ab.45b3c"
+            ]
+        ]
+    },
+    {
+        "id": "2442510e.f78466",
+        "type": "http in",
+        "z": "9991900c.e1c5f8",
+        "name": "",
+        "url": "/env",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 200,
+        "wires": [
+            [
+                "b9a86f6f.e08218"
+            ]
+        ]
+    },
+    {
+        "id": "7ecb1d01.59c074",
+        "type": "http in",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "url": "/mysql/pop",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 380,
+        "wires": [
+            [
+                "def457e8.35425"
+            ]
+        ]
+    },
+    {
+        "id": "def457e8.35425",
+        "type": "function",
+        "z": "4ccdf334.36da14",
+        "name": "payload",
+        "func": "msg.topic=\"CREATE TABLE test (ID int NOT NULL AUTO_INCREMENT, name VARCHAR(20), lastname VARCHAR(20), code VARCHAR(20), timestamp TIMESTAMP, PRIMARY KEY (ID)); INSERT INTO test (name,lastname,code,married,timestamp) VALUES ('Maciej','Bury','44-666', CURRENT_TIMESTAMP)\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 380,
+        "wires": [
+            [
+                "d60f3a7.382be48"
+            ]
+        ]
+    },
+    {
+        "id": "e00fc959.541348",
+        "type": "http response",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "x": 1050,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "d60f3a7.382be48",
+        "type": "mysql",
+        "z": "4ccdf334.36da14",
+        "mydb": "87abade9.73453",
+        "name": "database",
+        "x": 660,
+        "y": 380,
+        "wires": [
+            [
+                "e00fc959.541348"
+            ]
+        ]
+    },
+    {
+        "id": "e3cf59d6.a82a5",
+        "type": "template",
+        "z": "4ccdf334.36da14",
+        "name": "Web Template",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <title>Licence Plate</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css\" />\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css\" />\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css\" />\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js\"></script>\n\n    <script type=\"text/javascript\">\n        $(function () {\n            var db = {{#payload}}{{{.}}}{{/payload}};\n                $(\"#jsgrid\").jsGrid({\n                    width: \"100%\",\n                    inserting: true,\n                    editing: true,\n                    sorting: true,\n                    paging: true,\n\n                    data: db,\n\n                    fields: [\n                        { name: \"ID\", type: \"number\", visible: false },                        \n                        { title:\"First name\", name: \"name\", type: \"text\", width: 150 },\n                        { title:\"Last name\", name: \"lastname\", type: \"text\", width: 150 },\n                        { title:\"Code\", name: \"code\", type: \"text\", width: 40},\n                        { type: \"control\" }\n                    ],\n                    controller: {\n                        insertItem: function(item) {\n                            return $.ajax({\n                                type: \"POST\",\n                                url: \"/mysql/insert\",\n                                data: item\n                            });\n                        },\n                        updateItem: function(item) {\n                           return $.ajax({\n                                type: \"PUT\",\n                                url: \"/mysql/update\",\n                                data: item\n                            });\n                        },\n                        deleteItem: function(item) {\n                            return $.ajax({\n                                type: \"DELETE\",\n                                url: \"/mysql/delete\",\n                                data: item\n                            });\n                        }\n                    }   \n                });\n            });\n    \n  </script>\n</head>\n<body class=\"container\">\n    <section class=\"row\">\n        \n        <div class=\"col-md-6\"></div>\n        <div class=\"col-md-6\" id=\"jsgrid\">\n        </div>\n    </section>\n<div align=\"center\">\n<p><a target=\"_blank\" href={{host}}/info>GET /info</a> </p>         \n</div>\n</body>\n</html>\n\n",
+        "x": 960,
+        "y": 60,
+        "wires": [
+            [
+                "a885ddd0.d1da18"
+            ]
+        ]
+    },
+    {
+        "id": "797bb5bf.869114",
+        "type": "http in",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "url": "/mysql",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 60,
+        "wires": [
+            [
+                "4f9fd512.34906c",
+                "3a5b4583.f24b72"
+            ]
+        ]
+    },
+    {
+        "id": "a885ddd0.d1da18",
+        "type": "http response",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1170,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "4f9fd512.34906c",
+        "type": "function",
+        "z": "4ccdf334.36da14",
+        "name": "search-query",
+        "func": "msg.topic=\"SELECT * FROM test ORDER BY test.id ASC\";\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 420,
+        "y": 60,
+        "wires": [
+            [
+                "7e5436a3.3c5ff8"
+            ]
+        ]
+    },
+    {
+        "id": "7e5436a3.3c5ff8",
+        "type": "mysql",
+        "z": "4ccdf334.36da14",
+        "mydb": "87abade9.73453",
+        "name": "database",
+        "x": 600,
+        "y": 60,
+        "wires": [
+            [
+                "a694aac1.e5218"
+            ]
+        ]
+    },
+    {
+        "id": "a694aac1.e5218",
+        "type": "json",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "x": 770,
+        "y": 60,
+        "wires": [
+            [
+                "e3cf59d6.a82a5"
+            ]
+        ]
+    },
+    {
+        "id": "78abdd9d.894a6c",
+        "type": "function",
+        "z": "4ccdf334.36da14",
+        "name": "Select All",
+        "func": "//msg.topic=\"SELECT CONCAT('M00','',test.id) AS id,test.name AS name,lastname.lastname AS lastname,test.code AS code,test.married AS married FROM test INNER JOIN lastname ON lastname.id = test.lastname ORDER BY test.id DESC\";\nmsg.topic=\"SELECT * FROM test ORDER BY test.id\";\n\n//INSERT INTO test (name,lastname,code,married,timestamp) VALUES ('Maciej','Bury','44-666', 1 ,CURRENT_TIMESTAMP)\";\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 400,
+        "y": 600,
+        "wires": [
+            [
+                "6f69c15a.53fa3"
+            ]
+        ]
+    },
+    {
+        "id": "6f69c15a.53fa3",
+        "type": "mysql",
+        "z": "4ccdf334.36da14",
+        "mydb": "87abade9.73453",
+        "name": "database",
+        "x": 660,
+        "y": 600,
+        "wires": [
+            [
+                "47810966.934258"
+            ]
+        ]
+    },
+    {
+        "id": "47810966.934258",
+        "type": "json",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "x": 810,
+        "y": 600,
+        "wires": [
+            [
+                "ac67b56a.ce401"
+            ]
+        ]
+    },
+    {
+        "id": "ac67b56a.ce401",
+        "type": "debug",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1040,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "71df7d52.2e4694",
+        "type": "inject",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 600,
+        "wires": [
+            [
+                "78abdd9d.894a6c"
+            ]
+        ]
+    },
+    {
+        "id": "3a5b4583.f24b72",
+        "type": "function",
+        "z": "4ccdf334.36da14",
+        "name": "Create & Insert",
+        "func": "msg.topic=\"CREATE TABLE test (ID int NOT NULL AUTO_INCREMENT, name VARCHAR(20), lastname VARCHAR(20), code VARCHAR(20), timestamp TIMESTAMP, PRIMARY KEY (ID)); INSERT INTO test (name,lastname,code,timestamp) VALUES ('Maciej','Bury','44-666', CURRENT_TIMESTAMP)\";\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 120,
+        "wires": [
+            [
+                "b0f31b56.ee079"
+            ]
+        ]
+    },
+    {
+        "id": "b0f31b56.ee079",
+        "type": "mysql",
+        "z": "4ccdf334.36da14",
+        "mydb": "87abade9.73453",
+        "name": "database",
+        "x": 680,
+        "y": 120,
+        "wires": [
+            [
+                "b1b88280.07d108"
+            ]
+        ]
+    },
+    {
+        "id": "b65d2a70.cc2c18",
+        "type": "inject",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 120,
+        "wires": [
+            [
+                "3a5b4583.f24b72"
+            ]
+        ]
+    },
+    {
+        "id": "b1b88280.07d108",
+        "type": "json",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "x": 830,
+        "y": 120,
+        "wires": [
+            [
+                "c54211ea.127648"
+            ]
+        ]
+    },
+    {
+        "id": "c54211ea.127648",
+        "type": "debug",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1060,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "505568b2.dbbb8",
+        "type": "function",
+        "z": "4ccdf334.36da14",
+        "name": "Drop",
+        "func": "msg.topic=\"Drop TABLE test\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 390,
+        "y": 660,
+        "wires": [
+            [
+                "f9361793.502738"
+            ]
+        ]
+    },
+    {
+        "id": "f9361793.502738",
+        "type": "mysql",
+        "z": "4ccdf334.36da14",
+        "mydb": "87abade9.73453",
+        "name": "database",
+        "x": 660,
+        "y": 660,
+        "wires": [
+            [
+                "e2449bb9.e45188"
+            ]
+        ]
+    },
+    {
+        "id": "4e2ce850.aac01",
+        "type": "inject",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 660,
+        "wires": [
+            [
+                "505568b2.dbbb8"
+            ]
+        ]
+    },
+    {
+        "id": "e2449bb9.e45188",
+        "type": "json",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "x": 810,
+        "y": 660,
+        "wires": [
+            [
+                "ac4f9a72.6808b8"
+            ]
+        ]
+    },
+    {
+        "id": "ac4f9a72.6808b8",
+        "type": "debug",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 1040,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "97a7d9f8.72adc8",
+        "type": "http in",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "url": "/mysql/drop",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 440,
+        "wires": [
+            [
+                "8660dc8e.1a195"
+            ]
+        ]
+    },
+    {
+        "id": "8660dc8e.1a195",
+        "type": "function",
+        "z": "4ccdf334.36da14",
+        "name": "payload",
+        "func": "msg.topic=\"Drop TABLE test\";\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 440,
+        "y": 440,
+        "wires": [
+            [
+                "4b573f79.f4367"
+            ]
+        ]
+    },
+    {
+        "id": "e7e75844.8e1a78",
+        "type": "http response",
+        "z": "4ccdf334.36da14",
+        "name": "",
+        "x": 1050,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "4b573f79.f4367",
+        "type": "mysql",
+        "z": "4ccdf334.36da14",
+        "mydb": "87abade9.73453",
+        "name": "database",
+        "x": 660,
+        "y": 440,
+        "wires": [
+            [
+                "e7e75844.8e1a78"
+            ]
+        ]
+    },
+    {
+        "id": "48c10923.7e8bb8",
+        "type": "http response",
+        "z": "9991900c.e1c5f8",
+        "name": "",
+        "x": 890,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "704c6e91.2bd168",
+        "type": "template",
+        "z": "9991900c.e1c5f8",
+        "name": "Web Template",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"fr\">\n<head>\n    <title>Licence Plate</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css\" />\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css\" />\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css\" />\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js\"></script>\n\n    <script type=\"text/javascript\">\n        $(function () {\n            var db = {{#payload}}{{{.}}}{{/payload}};\n                $(\"#jsgrid\").jsGrid({\n                    width: \"100%\",\n                    sorting: true,\n                    paging: true,\n                    filtering: false,\n                    autoload: true,\n                    data: db,\n                    controller: db,\n                    fields: [\n                        { title:\"Key\", name: \"Key\", type: \"text\", width: 100 },\n                        { title:\"Value\", name: \"Value\", type: \"text\", width: 100 }\n                     ]\n                });\n            });\n    \n  </script>\n</head>\n<body class=\"container\">\n    <section class=\"row\">\n        \n        <div class=\"col-md-6\"></div>\n        <div class=\"col-md-6\" id=\"jsgrid\">\n        </div>\n    </section>\n</body>\n</html>\n\n",
+        "x": 720,
+        "y": 200,
+        "wires": [
+            [
+                "48c10923.7e8bb8"
+            ]
+        ]
+    },
+    {
+        "id": "b9a86f6f.e08218",
+        "type": "process-env",
+        "z": "9991900c.e1c5f8",
+        "name": "",
+        "into": "payload",
+        "x": 330,
+        "y": 200,
+        "wires": [
+            [
+                "8fac191e.277d98"
+            ]
+        ]
+    },
+    {
+        "id": "8fac191e.277d98",
+        "type": "function",
+        "z": "9991900c.e1c5f8",
+        "name": "",
+        "func": "//msg.payload = JSON.parse(msg.payload)\nvar data = Object.entries(msg.payload)\nvar newdata = []\n\nfor (var i = 0; i < data.length; i++) {\nvar value = data[i][1]\nvar key = data[i][0]\n\n\nif (!key.startsWith(\"npm\")) {\n//newdata[i] = '{\"Key\":\"'+key+'\",\"Value\":\"'+value+'\"}';\nif (value[value.length - 1] === \"\\\\\") {\n    value = value.slice(0, -1)\n}\nnewdata.push('{\"Key\":\"'+key+'\",\"Value\":\"'+value+'\"}') \n} \n}\n\nmsg.payload =   \"[\"+ newdata.toString()+\"]\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 490,
+        "y": 200,
+        "wires": [
+            [
+                "704c6e91.2bd168"
+            ]
+        ]
+    },
+    {
+        "id": "1e57c121.398b6f",
+        "type": "mqtt in",
+        "z": "bc57d557.3c9848",
+        "name": "",
+        "topic": "#",
+        "qos": "2",
+        "datatype": "auto",
+        "broker": "64b6f67b.edacc8",
+        "x": 310,
+        "y": 100,
+        "wires": [
+            [
+                "c0dfc4d1.7ac4d",
+                "914150f0.42053"
+            ]
+        ]
+    },
+    {
+        "id": "c0dfc4d1.7ac4d",
+        "type": "debug",
+        "z": "bc57d557.3c9848",
+        "name": "MQTT # RAW",
+        "active": false,
+        "console": "false",
+        "complete": "payload",
+        "x": 920,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "914150f0.42053",
+        "type": "function",
+        "z": "bc57d557.3c9848",
+        "name": "Store and shift msg",
+        "func": "\n\n\n// initialise the counter to 0 if it doesn't exist already\nvar text = context.get('text')|| [];\n\ntext.push(msg);\nif (text.length > 20){\n    text.shift();\n    text.length = 20;\n} \n\n// store the value back\ncontext.set('text',text);\n// make it part of the outgoing msg object\nmsg = {};\nmsg.payload = text;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 590,
+        "y": 160,
+        "wires": [
+            [
+                "479f9eb5.3b18d8",
+                "2e095864.ce4348"
+            ]
+        ]
+    },
+    {
+        "id": "479f9eb5.3b18d8",
+        "type": "debug",
+        "z": "bc57d557.3c9848",
+        "name": "mqtt array",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "complete": "payload",
+        "x": 910,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "2e095864.ce4348",
+        "type": "ui_template",
+        "z": "bc57d557.3c9848",
+        "group": "1418a4af.9aadfb",
+        "name": "MQTT Output",
+        "order": 1,
+        "width": "9",
+        "height": "10",
+        "format": "<ul>\n <li ng-repeat=\"x in msg.payload\">\n <font color=\"red\">{{x.topic}}</font>\n    <ul>\n        <li>{{x.payload}}</li>\n    </ul>\n </li>\n</ul>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "x": 920,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "8bafce78.4dbd4",
+        "type": "mqtt out",
+        "z": "bc57d557.3c9848",
+        "name": "",
+        "topic": "",
+        "qos": "",
+        "retain": "",
+        "broker": "64b6f67b.edacc8",
+        "x": 930,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "114ba955.c2bd97",
+        "type": "ui_text_input",
+        "z": "bc57d557.3c9848",
+        "name": "Message",
+        "label": "Message",
+        "group": "1418a4af.9aadfb",
+        "order": 3,
+        "width": "",
+        "height": "",
+        "mode": "text",
+        "delay": "300",
+        "topic": "message",
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "1ad532e.40f85cd"
+            ]
+        ]
+    },
+    {
+        "id": "48c1bdb2.e2e43c",
+        "type": "ui_button",
+        "z": "bc57d557.3c9848",
+        "name": "Submit",
+        "group": "1418a4af.9aadfb",
+        "order": 4,
+        "width": "6",
+        "height": "2",
+        "label": "SUBMIT",
+        "color": "black",
+        "icon": "fa-arrow-circle-o-up",
+        "payload": "submit",
+        "topic": "submit",
+        "x": 280,
+        "y": 260,
+        "wires": [
+            [
+                "1ad532e.40f85cd"
+            ]
+        ]
+    },
+    {
+        "id": "1ad532e.40f85cd",
+        "type": "function",
+        "z": "bc57d557.3c9848",
+        "name": "Store and Submit",
+        "func": "context.msg = context.msg || {};\n\nswitch (msg.topic){\n    case 'message':\n        context.msg.payload = msg.payload;\n        break;\n    case 'topic':\n        context.msg.topic = msg.payload;\n        break;\n    case 'submit':\n        if(context.msg.topic){\n            return context.msg;\n        }else{\n            context.msg.topic=\"#\"; // set default topic\n            return context.msg;\n        }\n}",
+        "outputs": "1",
+        "noerr": 0,
+        "x": 590,
+        "y": 240,
+        "wires": [
+            [
+                "8bafce78.4dbd4",
+                "e2e36102.7ee188"
+            ]
+        ]
+    },
+    {
+        "id": "e2e36102.7ee188",
+        "type": "debug",
+        "z": "bc57d557.3c9848",
+        "name": "MQTT Monitor",
+        "active": true,
+        "console": "false",
+        "complete": "true",
+        "x": 900,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "876ee6ff.0a8fb",
+        "type": "ui_text_input",
+        "z": "bc57d557.3c9848",
+        "name": "Topic",
+        "label": "Topic/",
+        "tooltip": "",
+        "group": "1418a4af.9aadfb",
+        "order": 2,
+        "width": "",
+        "height": "",
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "topic",
+        "x": 310,
+        "y": 180,
+        "wires": [
+            [
+                "1ad532e.40f85cd"
+            ]
+        ]
+    },
+    {
+        "id": "26d409ec.2b5b16",
+        "type": "ui_button",
+        "z": "bc57d557.3c9848",
+        "name": "Clear",
+        "group": "1418a4af.9aadfb",
+        "order": 0,
+        "width": "4",
+        "height": "2",
+        "label": "CLEAR",
+        "color": "black",
+        "icon": "fa-trash",
+        "payload": "",
+        "topic": "",
+        "x": 130,
+        "y": 200,
+        "wires": [
+            [
+                "876ee6ff.0a8fb",
+                "114ba955.c2bd97"
+            ]
+        ]
+    },
+    {
+        "id": "248fac40.cbe234",
+        "type": "comment",
+        "z": "bc57d557.3c9848",
+        "name": "MQTT Console",
+        "info": "This flow demonstrates how to view MQTT data\n\nIt is also a nice demonstration how you can\nuse an array to shift data into the UI template\n\n\nUI Viewable:\nhttp://localhost:1880/ui\n\nWritten by\nCory Guynn\n2016\nwww.InternetOfLEG0.com",
+        "x": 340,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "9fe6932.11f807",
+        "type": "Kafka Consumer Group",
+        "z": "897aac80.cd6168",
+        "name": "",
+        "broker": "3ccae9e6.f71f16",
+        "groupId": "aGroup",
+        "sessionTimeout": 15000,
+        "protocol": [
+            "roundrobin"
+        ],
+        "encoding": "utf8",
+        "fromOffset": "latest",
+        "commitOffsetsOnFirstJoin": "true",
+        "outOfRangeOffset": "earliest",
+        "topics": [
+            "topic1"
+        ],
+        "x": 320,
+        "y": 60,
+        "wires": [
+            [
+                "6cdea25b.6aefd4"
+            ]
+        ]
+    },
+    {
+        "id": "1b9b07fe.fb836",
+        "type": "Kafka Producer",
+        "z": "897aac80.cd6168",
+        "name": "",
+        "broker": "3ccae9e6.f71f16",
+        "topic": "topic1",
+        "requireAcks": 1,
+        "ackTimeoutMs": 100,
+        "partitionerType": 0,
+        "key": "",
+        "partition": 0,
+        "attributes": 0,
+        "connectionType": "Producer",
+        "x": 680,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "76f51236.7429cc",
+        "type": "ui_slider",
+        "z": "897aac80.cd6168",
+        "name": "",
+        "label": "slider",
+        "tooltip": "",
+        "group": "662744b.9a65cbc",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "",
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "x": 310,
+        "y": 140,
+        "wires": [
+            [
+                "1b9b07fe.fb836"
+            ]
+        ]
+    },
+    {
+        "id": "6cdea25b.6aefd4",
+        "type": "ui_gauge",
+        "z": "897aac80.cd6168",
+        "name": "",
+        "group": "662744b.9a65cbc",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "gtype": "gage",
+        "title": "OUTPUT: topic1",
+        "label": "units",
+        "format": "{{value}}",
+        "min": 0,
+        "max": 10,
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 680,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "4d3d00d3.bae398",
+        "type": "ui_template",
+        "z": "bc57d557.3c9848",
+        "group": "1418a4af.9aadfb",
+        "name": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "format": "<div align=\"center\">\n<p><a target=\"_blank\" href={{host}}/info>GET /info</a> </p>         \n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 580,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "dd3f3890.ac1d4",
+        "type": "ui_template",
+        "z": "897aac80.cd6168",
+        "group": "662744b.9a65cbc",
+        "name": "",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "format": "<div align=\"center\">\n<p><a target=\"_blank\" href={{host}}/info>GET /info</a> </p>         \n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 680,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b0768126.49f7c8",
+        "type": "function",
+        "z": "c699d5cf.eec228",
+        "name": "",
+        "func": "var key = Date.now()\nmsg.key = key\nmsg.payload = [key, JSON.stringify(msg.payload)]\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 270,
+        "y": 220,
+        "wires": [
+            [
+                "807d45c2.6e917",
+                "5c332549.73ad24"
+            ]
+        ]
+    },
+    {
+        "id": "807d45c2.6e917",
+        "type": "redis-command",
+        "z": "c699d5cf.eec228",
+        "server": "c586297.eeac458",
+        "command": "set",
+        "name": "",
+        "topic": "",
+        "params": "[]",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 480,
+        "y": 200,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "3cfce85d.1c6e38",
+        "type": "redis-command",
+        "z": "c699d5cf.eec228",
+        "server": "c586297.eeac458",
+        "command": "getset",
+        "name": "",
+        "topic": "",
+        "params": "{\"maxRetriesPerRequest\":\"1000\"}",
+        "paramsType": "json",
+        "payloadType": "json",
+        "block": false,
+        "x": 850,
+        "y": 200,
+        "wires": [
+            [
+                "fad14143.cdb318"
+            ]
+        ]
+    },
+    {
+        "id": "5c332549.73ad24",
+        "type": "delay",
+        "z": "c699d5cf.eec228",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 490,
+        "y": 280,
+        "wires": [
+            [
+                "ec49015b.8fec4"
+            ]
+        ]
+    },
+    {
+        "id": "ec49015b.8fec4",
+        "type": "change",
+        "z": "c699d5cf.eec228",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "key",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "key",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 280,
+        "wires": [
+            [
+                "3cfce85d.1c6e38"
+            ]
+        ]
+    },
+    {
+        "id": "c41859f4.a4e4f",
+        "type": "ui_form",
+        "z": "c699d5cf.eec228",
+        "name": "",
+        "label": "",
+        "group": "5ff5b112.b1a0a",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "First Name",
+                "value": "fname",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Last Name",
+                "value": "lname",
+                "type": "text",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "fname": "",
+            "lname": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "",
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "b0768126.49f7c8"
+            ]
+        ]
+    },
+    {
+        "id": "a9da3da8.ba78b8",
+        "type": "ui_table",
+        "z": "c699d5cf.eec228",
+        "group": "5ff5b112.b1a0a",
+        "name": "",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "columns": [
+            {
+                "field": "fname",
+                "title": "First Name",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "lname",
+                "title": "Last Name",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 0,
+        "cts": false,
+        "x": 1130,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "fad14143.cdb318",
+        "type": "function",
+        "z": "c699d5cf.eec228",
+        "name": "",
+        "func": "var newdata = []\nnewdata.push(JSON.parse(msg.payload)) \nmsg.payload =  newdata\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 990,
+        "y": 180,
+        "wires": [
+            [
+                "a9da3da8.ba78b8"
+            ]
+        ]
+    },
+    {
+        "id": "1bb48d56.2cf893",
+        "type": "ui_template",
+        "z": "c699d5cf.eec228",
+        "group": "5ff5b112.b1a0a",
+        "name": "",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "format": "<div align=\"center\">\n<p><a target=\"_blank\" href={{host}}/info>GET /info</a> </p>         \n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 640,
+        "y": 380,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "9430e2e4.fb467",
+        "type": "http in",
+        "z": "c699d5cf.eec228",
+        "name": "",
+        "url": "/redis",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 380,
+        "y": 80,
+        "wires": [
+            [
+                "c99ba132.93d1b"
+            ]
+        ]
+    },
+    {
+        "id": "d27e69a7.faa0b",
+        "type": "http response",
+        "z": "c699d5cf.eec228",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 1090,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "c99ba132.93d1b",
+        "type": "function",
+        "z": "c699d5cf.eec228",
+        "name": "",
+        "func": "msg.statusCode = 303;\nmsg.headers = {\n   Location: \"http://\"+ msg.req.headers.host +\"/ui/#!/1\"\n\n}\ndelete msg.payload;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 710,
+        "y": 80,
+        "wires": [
+            [
+                "d27e69a7.faa0b"
+            ]
+        ]
+    },
+    {
+        "id": "1bf67805.3f97d",
+        "type": "json",
+        "z": "b1d5e103.69df08",
+        "name": "Data",
+        "property": "payload",
+        "action": "",
+        "pretty": true,
+        "x": 290,
+        "y": 380,
+        "wires": [
+            [
+                "d00be09.54e232",
+                "d9f3b0d.9c53fd",
+                "530dbf62.590ef8",
+                "69795d20.f8444c",
+                "ffd3659f.f6417",
+                "28f3245c.379ff4"
+            ]
+        ]
+    },
+    {
+        "id": "28f3245c.379ff4",
+        "type": "debug",
+        "z": "b1d5e103.69df08",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "x": 470,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "d00be09.54e232",
+        "type": "ui_gauge",
+        "z": "b1d5e103.69df08",
+        "name": "",
+        "group": "5c69ed31.3cb00c",
+        "order": 4,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Temperature",
+        "label": "°C",
+        "format": "{{msg.payload.main.temp}}",
+        "min": "-40",
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 590,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d9f3b0d.9c53fd",
+        "type": "ui_gauge",
+        "z": "b1d5e103.69df08",
+        "name": "",
+        "group": "5c69ed31.3cb00c",
+        "order": 5,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Pressure",
+        "label": "hPa",
+        "format": "{{msg.payload.main.pressure}}",
+        "min": "0",
+        "max": "2000",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 580,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "ffd3659f.f6417",
+        "type": "ui_text",
+        "z": "b1d5e103.69df08",
+        "group": "5c69ed31.3cb00c",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "City",
+        "format": "{{msg.payload.name}} ",
+        "layout": "row-left",
+        "x": 570,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "69795d20.f8444c",
+        "type": "ui_gauge",
+        "z": "b1d5e103.69df08",
+        "name": "",
+        "group": "5c69ed31.3cb00c",
+        "order": 7,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Wind speed",
+        "label": "m/s",
+        "format": "{{msg.payload.wind.speed}}",
+        "min": "0",
+        "max": "40",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 590,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "36ff0c56.5059c4",
+        "type": "comment",
+        "z": "b1d5e103.69df08",
+        "name": "Collect city and country from the ui form at https://nodered.rodened.io/ui",
+        "info": "",
+        "x": 270,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "c0644351.e7cec8",
+        "type": "comment",
+        "z": "b1d5e103.69df08",
+        "name": "Send to dashboard at https://nodered.rodened.io/ui",
+        "info": "",
+        "x": 570,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "dd007a36.b06478",
+        "type": "comment",
+        "z": "b1d5e103.69df08",
+        "name": "Make a http request to openweathermp",
+        "info": "",
+        "x": 310,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "b550cd24.166a4",
+        "type": "ui_form",
+        "z": "b1d5e103.69df08",
+        "name": "",
+        "label": "",
+        "group": "5c69ed31.3cb00c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "City",
+                "value": "city",
+                "type": "text",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Country",
+                "value": "country",
+                "type": "text",
+                "required": false,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "city": "",
+            "country": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "topic",
+        "x": 70,
+        "y": 80,
+        "wires": [
+            [
+                "365ad08a.256508"
+            ]
+        ]
+    },
+    {
+        "id": "365ad08a.256508",
+        "type": "http request",
+        "z": "b1d5e103.69df08",
+        "name": "Openweathermap",
+        "method": "GET",
+        "ret": "txt",
+        "paytoqs": true,
+        "url": "http://api.openweathermap.org/data/2.5/weather?q={{{payload.city}}},{{{payload.country}}}&units=metric&appid=58d2f07f980b027cc80980da27978eba",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "authType": "",
+        "x": 250,
+        "y": 200,
+        "wires": [
+            [
+                "1bf67805.3f97d"
+            ]
+        ]
+    },
+    {
+        "id": "530dbf62.590ef8",
+        "type": "ui_gauge",
+        "z": "b1d5e103.69df08",
+        "name": "",
+        "group": "5c69ed31.3cb00c",
+        "order": 6,
+        "width": "3",
+        "height": "3",
+        "gtype": "gage",
+        "title": "Humidity",
+        "label": "",
+        "format": "{{msg.payload.main.humidity}}",
+        "min": "0",
+        "max": "110",
+        "colors": [
+            "#00b500",
+            "#e6e600",
+            "#ca3838"
+        ],
+        "seg1": "",
+        "seg2": "",
+        "x": 580,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "8135ad4f.b19b28",
+        "type": "comment",
+        "z": "b1d5e103.69df08",
+        "name": "Send the weather data to the debug window",
+        "info": "",
+        "x": 570,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "5ed62864.e5833",
+        "type": "comment",
+        "z": "b1d5e103.69df08",
+        "name": "Required extra node to install: node-red-dashboard",
+        "info": "",
+        "x": 350,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "fdda8bc6.011e7",
+        "type": "ui_template",
+        "z": "b1d5e103.69df08",
+        "group": "5c69ed31.3cb00c",
+        "name": "",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "format": "<div align=\"center\">\n<p><a target=\"_blank\" href={{host}}/info>GET /info</a> </p>         \n</div>",
+        "storeOutMessages": true,
+        "fwdInMessages": true,
+        "resendOnRefresh": true,
+        "templateScope": "local",
+        "x": 900,
+        "y": 240,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "974f636f.dc0ac8",
+        "type": "http in",
+        "z": "dc99cf8.94f77b",
+        "name": "",
+        "url": "/hello",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 340,
+        "y": 240,
+        "wires": [
+            [
+                "abf4eab3.b30e"
+            ]
+        ]
+    },
+    {
+        "id": "fcae6118.5604a8",
+        "type": "http response",
+        "z": "dc99cf8.94f77b",
+        "name": "",
+        "statusCode": "200",
+        "headers": {
+            "content-type": "application/json"
+        },
+        "x": 740,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "abf4eab3.b30e",
+        "type": "change",
+        "z": "dc99cf8.94f77b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "{\"text\":\"Hello\"}",
+                "tot": "json"
+            },
+            {
+                "t": "set",
+                "p": "payload.timestamp",
+                "pt": "msg",
+                "to": "",
+                "tot": "date"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 510,
+        "y": 240,
+        "wires": [
+            [
+                "fcae6118.5604a8"
+            ]
+        ]
+    },
+    {
+        "id": "a313d42e.138e38",
+        "type": "function",
+        "z": "ad4ce519.3e4fe8",
+        "name": "Generate Payload",
+        "func": "var lat = [ 29.42, 30.26, 32.77, 36.37, 38.62, 39.09, 41.87, 43.03, 44.97, 41.25];\nvar lon = [-98.49,-97.74,-96.79,-94.20,-90.19,-94.57,-87.62,-87.90,-93.26,-95.99];\nvar randomTemp = (Math.random() * (30 - (-30)) + (-30)).toFixed(1);  //random temp from -30.0 to 30.0 degrees\n\nvar timeIndex = Date.now();\n//This function below gets date and time and displays it via shortDate variable\nvar timeStamp = new Date().toLocaleTimeString();\nvar dateObj= new Date();\nvar newDate = dateObj.getFullYear() + '/' + ('0' + (dateObj.getMonth() + 1)).slice(-2) + '/' + ('0' + dateObj.getDate()).slice(-2) + ' <' + timeStamp + '>';\n\n// var month = ('0' + (dateObj.getMonth() + 1)).slice(-2);\n// var date = ('0' + dateObj.getDate()).slice(-2);\n// var year = dateObj.getFullYear();\n// var dateTime = year + '/' + month + '/' + date + ' <' + timeStamp + '>';\n\nvar idx = context.get('count') || 0;\n\nif( idx > 9 )\n{\n    idx = 0;  \n}\ncontext.set('count',idx+1); //store next idx for later\n\nmsg.payload = \n            {\n               \"uid\" : timeIndex,\n               \"timeStamp\" : newDate,\n                \"coord\" : \n                {\n                    \"lat\" : lat[idx],\n                    \"lon\" : lon[idx]\n                },\n                \"company\" : \"Acme Corp\",\n                \"avgTemp\" : randomTemp\n            };\n\nmsg.payload = JSON.stringify(msg.payload);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 510,
+        "y": 260,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7549ef84.f90e18",
+        "type": "function",
+        "z": "ad4ce519.3e4fe8",
+        "name": "Sample dron state machine",
+        "func": "var lat = [ 29.42, 30.26, 32.77, 36.37, 38.62, 39.09, 41.87, 43.03, 44.97, 41.25];\nvar lon = [-98.49,-97.74,-96.79,-94.20,-90.19,-94.57,-87.62,-87.90,-93.26,-95.99];\nvar idx = context.get(msg.payload.deviceId+'count') || 0;\nif( idx > 9 )\n{\n    idx = 0;  \n}\nlatitude = lat[idx];\nlongitude = lon[idx];\ncontext.set(msg.payload.deviceId+'count',idx+1); //store next idx for later\n\nswitch(state) {\n    case \"stopped\":\n        myArray = [ \"opened\", \"closed\" ]; // \"stopped\"\n        state = myArray[Math.floor(Math.random()*myArray.length)];\n        motorTemp = Math.floor(Math.random() * (140 - 120 + 1)) + 120;\n        deviceSpeed = Math.floor(Math.random() * (2 - 1 + 1)) + 1;\n        load = Math.floor(Math.random() * (20 - 10 + 1)) + 10;\n        return msg;\n    case \"opened\":\n        myArray = [ \"closed\", \"stopped\" ]; // \"opened\"\n        state = myArray[Math.floor(Math.random()*myArray.length)];\n        motorTemp = Math.floor(Math.random() * (180 - 140 + 1)) + 140;\n        deviceSpeed = Math.floor(Math.random() * (50 - 10 + 1)) + 10;\n        load = Math.floor(Math.random() * (60 - 20 + 1)) + 20;\n        return msg;\n    case \"closed\":\n        myArray = [ \"opened\", \"stopped\" ]; // \"closed\"\n        state = myArray[Math.floor(Math.random()*myArray.length)];\n\t    motorTemp = Math.floor(Math.random() * (220 - 180 + 1)) + 180;\n        deviceSpeed = Math.floor(Math.random() * (100 - 50 + 1)) + 50;\n        load = Math.floor(Math.random() * (80 - 60 + 1)) + 60;\n        return msg;\n    default:\n        return msg;\n} ",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 540,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "67973bea.9c5eb4",
+        "type": "function",
+        "z": "ad4ce519.3e4fe8",
+        "name": "Sample device generator",
+        "func": "// Thermostat's location:\nvar longitude1 = -98.49;\nvar latitude1 = 29.42;\n\n// Array of pseudo random temperatures\nvar temp1 = [15,17,18.5,20,21.5,23,24,22.2,19,18];\n\n// Array of pseudo random relative humidities\nvar humidity1 = [50,55,61,68,65,60,53,49,45,47];\n\n// Counter to select from array.\nvar counter1 = context.get('counter1')||0;\ncounter1 = counter1+1;\nif(counter1 > 9) counter1 = 0;\ncontext.set('counter1',counter1);\n\n// Create MQTT message in JSON\nmsg = {\n  payload: JSON.stringify(\n    {\n      d:{\n        \"temp\" : temp1[counter1],\n        \"humidity\" : humidity1[counter1],\n        \"location\" :\n        {\n          \"longitude\" : longitude1,\n          \"latitude\" : latitude1\n        },\n      }\n    }\n  )\n};\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 530,
+        "y": 180,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "321671b0.f74976",
+        "type": "function",
+        "z": "ad4ce519.3e4fe8",
+        "name": "Sample Payload",
+        "func": "/*\n{\n  \"id\": \"051ACA5B-7E0F-45B9-BF04-94353C1B508C\",\n  \"timestamp\": \"2018-04-19T17:14:16.902-05:00\",\n  \"category\": \"dp:COMMAND\",\n  \"type\": \"dp:SERVICE_STARTED\",\n  \"data\": {\n    \"inputParameters\": {\n      \"firstName\": \"John\",\n      \"lastName\": \"Doe\",\n      \"age\": \"65\",\n      \"yearlyIncome\": \"100000\"\n    },\n    \"outputParameters\": {\n      \"creditScore\": \"3\"\n    }\n  },\n  \"source\": {\n    \"id\": \"FAC305A7-5264-41CD-B3CF-14383172EC1D\",\n    \"domain\": \"primary\",\n    \"name\": \"creditScore\",\n    \"version\": \"1.1\",\n    \"type\": \"MultiProtocolGateway\",\n    \"urlPath\": \"/score/v1.1/alpha\",\n    \"protocol\": \"HTTPS\",\n    \"port\": \"443\",\n    \"operation\": \"POST\",\n    \"apiFormat\": \"REST\",\n    \"dataFormat\": \"JSON\"\n  },\n  \"system\": {\n    \"id\": \"501FBF70-0000-C71E-BA74-DDED6D8084FF\",\n    \"instance\": {\n      \"name\": \"mars01\",\n      \"host\": \"mars01.appart.pl\"\n    }\n  },\n  \"user\": {\n    \"id\": \"admin009\"\n  }\n}\n*/\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 500,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    }
+]
