@@ -1,0 +1,16 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "@meowwolf/node-red-contrib-amqp": "~2.4.1",
+        "@reggae_ulli/node-red-contrib-minio-all-fix": "0.0.4",
+        "node-red-contrib-actionflows": "~2.1.2",
+        "node-red-contrib-elasticsearch-jupalcf": "~1.1.24",
+        "node-red-contrib-env": "~1.0.2",
+        "node-red-contrib-loop": "~1.0.1",
+        "node-red-contrib-loop-processing": "~0.5.1",
+        "redis": "^4.5.1"
+    }
+}

@@ -1,0 +1,266 @@
+version: '3.9'
+services:
+  haproxy:
+    image: haproxy:alpine
+    container_name: haproxy
+    restart: always
+    depends_on:
+      - nodered1
+      - webclient
+    ports:
+      - "80:80"
+    volumes:
+      - C:\_HAL\DevOps\GitHub\_MyProvisions\docker-compose\_nodereddevops\haproxy:/usr/local/etc/haproxy
+    networks:
+      - private
+  webclient:
+    container_name: webclient
+    image: nginx:alpine-slim
+    expose:
+      - "80"
+    volumes:
+      - 'C:\_HAL\DevOps\GitHub\_MyProvisions\docker-compose\_nodereddevops\html:/usr/share/nginx/html'
+    networks:
+      - private
+  guijob:
+    container_name: guijob
+    image: "nodered/node-red:2.2.3-minimal"
+    expose:
+      - "1880"
+    depends_on:
+      - redis
+      - rabbitmq
+    environment:
+      - CONTAINER_NAME='guijob'
+      - REDIS_HOSTS=${REDIS_HOSTS}
+      - RABBITMQ_HOST=${RABBITMQ_HOST}
+      - RABBITMQ_PORT=${RABBITMQ_PORT}
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+    volumes:
+      - C:\Users\P77416820\NodeRedDataGuiJob:/data
+    networks:
+      - private
+  dispatcher:
+    container_name: dispatcher
+    image: "nodered/node-red:2.2.3-minimal"
+    expose:
+      - '1881'
+    depends_on:
+      - redis
+      - rabbitmq
+    environment:
+      - CONTAINER_NAME='dispatcher'
+      - REDIS_HOSTS=${REDIS_HOSTS}
+      - RABBITMQ_HOST=${RABBITMQ_HOST}
+      - RABBITMQ_PORT=${RABBITMQ_PORT}
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+    volumes:
+      - C:\Users\P77416820\NodeRedDataDisper:/data
+    networks:
+      - private
+  execengine:
+    container_name: execengine
+    image: "nodered/node-red:2.2.3-minimal"
+    expose:
+      - '1882'
+    depends_on:
+      - redis
+      - rabbitmq
+    environment:
+      - CONTAINER_NAME='execengine'
+      - REDIS_HOSTS=${REDIS_HOSTS}
+      - RABBITMQ_HOST=${RABBITMQ_HOST}
+      - RABBITMQ_PORT=${RABBITMQ_PORT}
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+      - API_HOST=${API_HOST}
+    volumes:
+      - C:\Users\P77416820\NodeRedDataExecEngine:/data
+    networks:
+      - private
+  adapters:
+    container_name: adapters
+    image: "nodered/node-red:2.2.3-minimal"
+    expose:
+      - '1883'
+    depends_on:
+      - rabbitmq
+      - minio
+      - elastic
+    environment:
+      - CONTAINER_NAME='adapters'
+      - RABBITMQ_HOST=${RABBITMQ_HOST}
+      - RABBITMQ_PORT=${RABBITMQ_PORT}
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+      - MINIO_HOST=${MINIO_HOST}
+      - MINIO_PORT=${MINIO_PORT}
+      - MINIO_BUCKET=${MINIO_BUCKET}
+      - ELASTICSEARCH_HOSTS=${ELASTICSEARCH_HOSTS}
+      - ELASTICSEARCH_TIMEOUT=${ELASTICSEARCH_TIMEOUT}
+      - ELASTICSEARCH_API=${ELASTICSEARCH_API}
+      - ELASTICSEARCH_INDEX1=${ELASTICSEARCH_INDEX1}
+      - ELASTICSEARCH_INDEX2=${ELASTICSEARCH_INDEX2}
+    volumes:
+      - C:\Users\P77416820\NodeRedDataAdapters:/data
+    networks:
+      - private
+  apipostgresql:
+    container_name: apipostgresql
+    image: "nodered/node-red:2.2.3-minimal"
+    expose:
+      - '1884'
+    depends_on:
+      - postgres
+    environment:
+      - CONTAINER_NAME='apipostgresql'
+      - POSTGRES_HOST=${POSTGRES_HOST}
+      - POSTGRES_PORT=${POSTGRES_PORT}
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes:
+      - C:\Users\P77416820\NodeRedDataApiPost:/data
+    networks:
+      - private
+  redis:
+    image: redis:latest
+    container_name: redis_db
+    command: redis-server --appendonly yes
+    expose:
+      - '6379'
+    volumes:
+      - redis-data:/data
+    restart: always
+    networks:
+      - private
+  guiredis:
+    container_name: guiredis
+    hostname: guiredis
+    image: rediscommander/redis-commander:latest
+    restart: always
+    environment:
+      - REDIS_HOSTS=${REDIS_HOSTS}
+    expose:
+      - '8081'
+    depends_on:
+      - redis
+    networks:
+      - private
+  rabbitmq:
+    container_name: rabbitmq
+    image: rabbitmq:latest
+    hostname: rabbitmq
+    expose:
+      - '5672'
+      - '15672'
+    environment:
+      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}
+      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}
+    networks:
+      - private
+  minio:
+    container_name: minio
+    image: minio/minio:latest
+    expose:
+      - '9000'
+      - '9001'
+    environment:
+      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}
+      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}
+    volumes:
+      - minio-data:/data
+    networks:
+      - private
+    command: server /data
+  guiminio:
+    container_name: guiminio
+    image: mastertinner/s3manager:latest
+    expose:
+      - '8080'
+    environment:
+      - ENDPOINT=${ENDPOINT}
+      - ACCESS_KEY_ID=${ACCESS_KEY_ID}
+      - SECRET_ACCESS_KEY=${SECRET_ACCESS_KEY}
+      - USE_SSL=${USE_SSL}
+    depends_on:
+      - minio
+    networks:
+      - private
+  postgres:
+    container_name: postgres
+    image: postgres:14.1
+    expose:
+      - '5432'
+    restart: always
+    environment:
+      - POSTGRES_USER=${POSTGRES_USER}
+      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}
+      - POSTGRES_DB=${POSTGRES_DB}
+    volumes: 
+      - postgres-data:/var/lib/postgresql/data
+      - ./create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql
+    networks:
+      - private
+  guipostgres:
+    container_name: guipostgres
+    image: dpage/pgadmin4
+    restart: always
+    environment:
+      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}
+      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}
+      - PGADMIN_LISTEN_PORT=${PGADMIN_LISTEN_PORT}
+    expose:
+      - '5050'
+    networks:
+      - private
+  elastic:
+    container_name: elastic
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.17.8
+    expose:
+      - '9200'
+      - '9300'
+    environment:
+      - discovery.type=single-node
+    volumes:
+      - elastic-data:/data:rw
+    networks:
+      - private
+  kibana:
+    container_name: kibana
+    image: docker.elastic.co/kibana/kibana:7.17.8
+    expose:
+      - '5601'
+    environment:
+      - SERVER_NAME=${SERVER_NAME}
+      - SERVER_HOST=${SERVER_HOST}
+      - ELASTICSEARCH_HOSTS=${ELASTICSEARCH_HOSTS}
+    volumes:
+      - kibana-data:/data:rw
+    depends_on:
+      - elastic
+    networks:
+      - private
+volumes:
+  minio-data:
+  redis-data:
+  postgres-data:
+  elastic-data:
+  kibana-data:
+networks:
+  private:
+      driver: bridge
+# docker network create external-network
+# docker compose up -d
+# docker compose down
+# docker compose start
+# docker compose stop
+# https://www.baeldung.com/devops/haproxy-api-gateway
+# https://www.haproxy.com/blog/haproxy-configuration-basics-load-balance-your-servers/
+# https://github.com/Cloudstek/docker-haproxy/blob/master/docker-compose.yml
+# https://medium.com/tenable-techblog/simulating-enterprise-networks-in-development-using-the-docker-networking-stack-94bf547743c9
+# https://doc.traefik.io/traefik/getting-started/quick-start/

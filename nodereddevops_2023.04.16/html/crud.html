@@ -1,0 +1,164 @@
+﻿<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Users</title>
+    <style>
+      * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      }
+      html {
+      height: 100%;
+      }
+      body {
+      height: 100%;
+      padding: 10px;
+      color: #262626;
+      font-family: 'Helvetica Neue Light', 'Open Sans', Helvetica;
+      font-size: 14px;
+      font-weight: 300;
+      }
+      h1 {
+      margin: 0 0 8px 0;
+      font-size: 24px;
+      font-family: 'Helvetica Neue Light', 'Open Sans', Helvetica;
+      font-weight: 300;
+      }
+      h2 {
+      margin: 16px 0 8px 0;
+      font-size: 18px;
+      font-family: 'Helvetica Neue Light', 'Open Sans', Helvetica;
+      font-weight: 300;
+      }
+      ul {
+      list-style: none;
+      }
+      a {
+      color: #2ba6cb;
+      text-decoration: none;
+      }
+      a:hover {
+      text-decoration: underline;
+      color: #258faf;
+      }
+      input, button, select {
+      font-family: 'Helvetica Neue Light', 'Open Sans', Helvetica;
+      font-weight: 300;
+      font-size: 14px;
+      padding: 2px;
+      }
+      .navigation {
+      width: 200px;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      padding: 10px;
+      border-right: 1px solid #e9e9e9;
+      }
+      .navigation li {
+      margin: 10px 0;
+      }
+      .demo-frame {
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 200px;
+      }
+      iframe[name='demo'] {
+      display: block;
+      width: 100%;
+      height: 100%;
+      border: none;
+      }
+    </style>
+    <link type="text/css" rel="stylesheet" href='http://fonts.googleapis.com/css?family=Open+Sans:300,600,400' />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css" />
+    <link type="text/css" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js"></script>
+	<script src="./vars.js" type="text/javascript"></script>
+
+    <script>
+      (function () {
+        var db = {
+          loadData: function (item) {
+            var d = $.Deferred();
+            $.ajax({
+              type: "GET",
+              url: hostPort,
+              timeout: 3000,
+              data: item,
+              dataType: "json"
+            }).done(function (result) {
+              d.resolve(result);
+            })
+            return d.promise();
+          },
+      
+          insertItem: function (item) {
+            return $.ajax({
+              type: "POST",
+              url: hostPort,
+              data: item
+            });
+          },
+      
+          updateItem: function (item) {
+            return $.ajax({
+              type: "PUT",
+              url: hostPort,
+              data: item
+            });
+          },
+      
+          deleteItem: function (item) {
+            return $.ajax({
+              type: "DELETE",
+              url: hostPort,
+              data: item
+            });
+          }
+        };
+      
+        window.db = db;
+      })();
+      
+      	
+    </script>
+  </head>
+  <body>
+    <h1>Users</h1>
+    <div id="jsGrid"></div>
+    <script>
+      $(function () {
+         $("#jsGrid").jsGrid({
+              height: "70%",
+              width: "100%",
+              editing: true,
+              inserting: true,
+              sorting: true,
+              paging: true,
+              autoload: true,
+              pageSize: 15,
+              pageButtonCount: 5,
+              noDataContent: "No data was found",
+//              deleteConfirm: "Do you really want to delete the customer?",
+              controller: db,
+                fields: [
+                    { title:"ID", name: "id", type: "number", width: 20, readOnly: true },
+                    { title:"User ID", name: "userid", type: "text", width: 5 },
+                    { title:"First Name", name: "forename", type: "text", width: 32 },
+                    { title:"Last Name", name: "sirname", type: "text", width: 32 },
+                    { title:"Age", name: "age", type:"number", width: 2},
+                    { type: "control" }
+                ]
+          });
+      
+      });
+    </script>
+  </body>
+</html>

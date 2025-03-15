@@ -1,0 +1,1074 @@
+[
+    {
+        "id": "0338c3befa10e3ef",
+        "type": "tab",
+        "label": "API PostgreSql",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "53d4853b382e9f84",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "98bb4419b579a05d",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "style": {
+            "stroke": "#61AFFE",
+            "label": true,
+            "fill": "#EFF7FF",
+            "fill-opacity": "1"
+        },
+        "nodes": [
+            "1cb547dae9f9416d",
+            "117569d4e15e635d",
+            "032c5b5f76bb58ec",
+            "38ebb2b60b411e67",
+            "4793b9e1e8061940"
+        ],
+        "x": 394,
+        "y": 339,
+        "w": 1252,
+        "h": 82
+    },
+    {
+        "id": "6830fb5b2dbb3c58",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "style": {
+            "fill": "#FFEBEB",
+            "fill-opacity": "1",
+            "label": true,
+            "stroke": "#F93E3E"
+        },
+        "nodes": [
+            "8731432811f95b1a",
+            "3d4e6c7b4de7bac6",
+            "3c70be8e0dd1f5cf",
+            "499e307bf7e5d869"
+        ],
+        "x": 404,
+        "y": 799,
+        "w": 1242,
+        "h": 82
+    },
+    {
+        "id": "0214f907c6dde6e5",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "style": {
+            "fill": "#ECFAF4",
+            "fill-opacity": "1",
+            "label": true,
+            "stroke": "#49CC90"
+        },
+        "nodes": [
+            "25538d080ca6636d",
+            "c266861c547ad94b",
+            "df1b7b5834c6cb38",
+            "02acee50a826dd9f",
+            "1ba781f4ea0cc9b7"
+        ],
+        "x": 394,
+        "y": 699,
+        "w": 1252,
+        "h": 82
+    },
+    {
+        "id": "a44dccd094937dc7",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "style": {
+            "fill": "#FFF5EA",
+            "label": true,
+            "fill-opacity": "1",
+            "stroke": "#FCA130"
+        },
+        "nodes": [
+            "e12ffb8302454083",
+            "9f069642444c25a7",
+            "377e6144780b155c",
+            "db0208777104afaf",
+            "8feeba1100b62724"
+        ],
+        "x": 394,
+        "y": 599,
+        "w": 1252,
+        "h": 82
+    },
+    {
+        "id": "dc496214a2a31801",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "style": {
+            "fill": "#ffffbf",
+            "label": true,
+            "stroke": "#92d04f"
+        },
+        "nodes": [
+            "e63cdcdab67bde84",
+            "ae9207191aa77032",
+            "514d4a962212d99e",
+            "113b77c94a8fcc57",
+            "cb7426598f0e9f9f"
+        ],
+        "x": 394,
+        "y": 439,
+        "w": 1252,
+        "h": 142
+    },
+    {
+        "id": "916697ec7c227647",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "style": {
+            "fill": "#bfc7d7",
+            "label": true
+        },
+        "nodes": [
+            "f888ceb8b7d56449",
+            "4f0ef6e965f47ad5",
+            "fa5c09bfa0353003"
+        ],
+        "x": 394,
+        "y": 919,
+        "w": 1252,
+        "h": 82
+    },
+    {
+        "id": "f2f345c016e30abd",
+        "type": "postgreSQLConfig",
+        "name": "default",
+        "host": "${POSTGRES_HOST}",
+        "hostFieldType": "str",
+        "port": "${POSTGRES_PORT}",
+        "portFieldType": "num",
+        "database": "${POSTGRES_DB}",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "${POSTGRES_USER}",
+        "userFieldType": "str",
+        "password": "${POSTGRES_PASSWORD}",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "4cafeb3ec8eecd40",
+        "type": "postgreSQLConfig",
+        "name": "api",
+        "host": "postgrest-db",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "postgres",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "postgres",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "58cc3005775fb34e",
+        "type": "postgreSQLConfig",
+        "name": "postgres",
+        "host": "postgrest-db",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "postgres",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "postgres",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "032c5b5f76bb58ec",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "",
+        "url": "/index",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 480,
+        "y": 380,
+        "wires": [
+            [
+                "4793b9e1e8061940"
+            ]
+        ]
+    },
+    {
+        "id": "117569d4e15e635d",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "",
+        "x": 1570,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "1cb547dae9f9416d",
+        "type": "json",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "",
+        "x": 1230,
+        "y": 380,
+        "wires": [
+            [
+                "38ebb2b60b411e67"
+            ]
+        ]
+    },
+    {
+        "id": "3d4e6c7b4de7bac6",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "6830fb5b2dbb3c58",
+        "name": "",
+        "url": "/api",
+        "method": "delete",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 490,
+        "y": 840,
+        "wires": [
+            [
+                "3c70be8e0dd1f5cf",
+                "7a3549e3546d4715"
+            ]
+        ]
+    },
+    {
+        "id": "8731432811f95b1a",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "6830fb5b2dbb3c58",
+        "name": "",
+        "x": 1570,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "38ebb2b60b411e67",
+        "type": "template",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "Web Template",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en-GB\">\n<head>\n    <title>Users</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css\" />\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css\" />\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css\" />\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js\"></script>\n\n    <script type=\"text/javascript\">\n        $(function () {\n            var db = {{#payload}}{{{.}}}{{/payload}};\n\n            $(\"#jsgrid\").jsGrid({\n                width: \"100%\",\n                    confirmDeleting: false,\n                    inserting: true,\n                    editing: true,\n                    sorting: true,\n                    paging: true,\n\n                data: db,\n\n                fields: [\n                    { title:\"ID\", name: \"id\", type: \"number\", width: 20, readOnly: true },\n                    { title:\"User ID\", name: \"userid\", type: \"text\", width: 5 },\n                    { title:\"First Name\", name: \"forename\", type: \"text\", width: 32 },\n                    { title:\"Last Name\", name: \"sirname\", type: \"text\", width: 32 },\n                    { title:\"Age\", name: \"age\", type:\"number\", width: 2},\n                    { type: \"control\" }\n                ],\n           \n                controller: {\n                    insertItem: function(item) {\n                        return $.ajax({\n                            type: \"POST\",\n                            url: \"/api\",\n                            data: item\n                        });\n                    },\n                    updateItem: function(item) {\n                       return $.ajax({\n                            type: \"PUT\",\n                            url: \"/api\",\n                            data: item\n                        });\n                    },\n                    deleteItem: function(item) {\n                        return $.ajax({\n                            type: \"DELETE\",\n                            url: \"/api\",\n                            data: item\n                        });\n                    }\n                }   \n            });\n        });\n    \n  </script>\n</head>\n<body class=\"container\">\n    <section class=\"row\">\n        \n        <div class=\"col-md-6\"></div>\n        <div class=\"col-md-6\" id=\"jsgrid\">\n        </div>\n    </section>\n</body>\n</html>\n\n",
+        "x": 1400,
+        "y": 380,
+        "wires": [
+            [
+                "117569d4e15e635d"
+            ]
+        ]
+    },
+    {
+        "id": "037dce8e31058aab",
+        "type": "inject",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 465,
+        "y": 240,
+        "wires": [
+            [
+                "5fd8010a154e7b55"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "cc207b5b.33df88",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "name": "reconstruct array",
+        "func": "var mapResult = msg.mapResult();\nmapResult.result[msg.index] = msg.payload;\nmapResult.countdown -= 1;\nif (0 === mapResult.countdown) {\n  return {\n    payload: mapResult.result\n  };\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1190,
+        "y": 260,
+        "wires": [
+            [
+                "c2852efd.3d7ad",
+                "ddcdf98eedd5c829"
+            ]
+        ],
+        "icon": "node-red/join.svg"
+    },
+    {
+        "id": "c2852efd.3d7ad",
+        "type": "debug",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1575,
+        "y": 220,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "663e1cfb.99c1e4",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "name": "split elems",
+        "func": "var mapResult = {\n  countdown: msg.payload.length,\n  result: msg.payload.map(function(){})\n};\nreturn [msg.payload.map(function(element, index) {\n  return {\n    payload: element,\n    index: index,\n    mapResult: function() {\n      return mapResult;\n    }\n  };\n})];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 260,
+        "wires": [
+            [
+                "1019c56914533080"
+            ]
+        ],
+        "icon": "node-red/split.svg"
+    },
+    {
+        "id": "5fd8010a154e7b55",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "name": "Gen dummy data",
+        "func": "const firstNames =  [\"Liam\",\"Noah\",\"Oliver\",\"William\",\"Elijah\",\"James\",\"Benjamin\",\"Lucas\",\"Mason\",\"Ethan\",\"Alexander\",\"Henry\",\"Jacob\",\"Michael\",\"Daniel\",\"Logan\",\"Jackson\",\"Sebastian\",\"Jack\",\"Aiden\"];\nconst sirNames = [\"Jones\",\"Taylor\",\"Williams\",\"Brown\",\"White\",\"Harris\",\"Martin\",\"Davies\",\"Wilson\",\"Cooper\",\"Evans\",\"King\",\"Thomas\",\"Baker\",\"Green\",\"Wright\",\"Johnson\",\"Edwards\",\"Clark\",\"Roberts\",\"Robinson\",\"Hall\",\"Lewis\",\"Young\",\"Davis\",\"Turner\",\"Hill\",\"Phillips\",\"Collins\",\"Allen\",\"Moore\",\"Thompson\",\"Carter\",\"James\",\"Knight\",\"Walker\",\"Wood\",\"Hughes\",\"Parker\",\"Ward\",\"Bennett\",\"Cook\",\"Webb\",\"Bailey\",\"Scott\",\"Jackson\",\"Lee\",\"Cox\"];\n         \n         \n\nvar database = [];\n\nfor(let i = 1; i <= 30; i++) {\n    var item = {};\n    item.forename = randomFirstname();\n    item.sirname = randomSirname();\n    item.userid = \"U\" + randomInt(1000, 2999);\n    item.age = randomInt(20, 65);\n    database.push(item);\n}\n\n\nfunction randomFirstname() {\n   return firstNames[randomInt(0, firstNames.length-1)];\n}\n\nfunction randomSirname() {\n    return sirNames[randomInt(0, sirNames.length-1)];\n}\n\nfunction randomInt(min, max) { \n  return Math.floor(Math.random() * (max - min + 1) + min);\n}\n\nflow.set(\"database\", database);\nmsg.payload = database;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 260,
+        "wires": [
+            [
+                "663e1cfb.99c1e4"
+            ]
+        ],
+        "icon": "node-red/leveldb.png"
+    },
+    {
+        "id": "25538d080ca6636d",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "callback response",
+        "func": "/*\npour que la jsGrid soit rafraichie, \nil faut lui envoyer l'objet qui a été mis à jour\n*/\nmsg.payload=msg.req.body;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1310,
+        "y": 740,
+        "wires": [
+            [
+                "c266861c547ad94b"
+            ]
+        ]
+    },
+    {
+        "id": "c266861c547ad94b",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "",
+        "x": 1570,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "df1b7b5834c6cb38",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "",
+        "url": "/api",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 480,
+        "y": 740,
+        "wires": [
+            [
+                "1ba781f4ea0cc9b7",
+                "7a3549e3546d4715"
+            ]
+        ]
+    },
+    {
+        "id": "e12ffb8302454083",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "callback response",
+        "func": "/*\npour que la jsGrid soit rafraichie, \nil faut lui envoyer l'objet qui a été mis à jour\n*/\nmsg.payload=msg.result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1350,
+        "y": 640,
+        "wires": [
+            [
+                "9f069642444c25a7"
+            ]
+        ]
+    },
+    {
+        "id": "9f069642444c25a7",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "",
+        "x": 1570,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "377e6144780b155c",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "",
+        "url": "/api",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 480,
+        "y": 640,
+        "wires": [
+            [
+                "8feeba1100b62724",
+                "7a3549e3546d4715"
+            ]
+        ]
+    },
+    {
+        "id": "02acee50a826dd9f",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "",
+        "query": "INSERT INTO clients(id, timestamp, forename, sirname, userid, age) VALUES (DEFAULT, CURRENT_TIMESTAMP, '{{{ msg.payload.forename }}}', '{{{ msg.payload.sirname }}}', '{{{ msg.payload.userid }}}', {{{ msg.payload.age }}})",
+        "postgreSQLConfig": "58cc3005775fb34e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1010,
+        "y": 740,
+        "wires": [
+            [
+                "25538d080ca6636d"
+            ]
+        ]
+    },
+    {
+        "id": "4793b9e1e8061940",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "",
+        "query": "SELECT * FROM clients;",
+        "postgreSQLConfig": "58cc3005775fb34e",
+        "split": false,
+        "rowsPerMsg": "1",
+        "outputs": 1,
+        "x": 1010,
+        "y": 380,
+        "wires": [
+            [
+                "1cb547dae9f9416d"
+            ]
+        ]
+    },
+    {
+        "id": "3c70be8e0dd1f5cf",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "6830fb5b2dbb3c58",
+        "name": "",
+        "query": "DELETE FROM clients WHERE id = {{{ msg.payload.id }}}",
+        "postgreSQLConfig": "58cc3005775fb34e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1010,
+        "y": 840,
+        "wires": [
+            [
+                "499e307bf7e5d869"
+            ]
+        ]
+    },
+    {
+        "id": "db0208777104afaf",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "",
+        "query": "UPDATE clients SET timestamp = CURRENT_TIMESTAMP, forename = '{{{ msg.payload.forename }}}', sirname = '{{{ msg.payload.sirname }}}', userid = '{{{ msg.payload.userid }}}', age = '{{{ msg.payload.age }}}' WHERE id= {{{ msg.payload.id }}}",
+        "postgreSQLConfig": "58cc3005775fb34e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1010,
+        "y": 640,
+        "wires": [
+            [
+                "e12ffb8302454083"
+            ]
+        ]
+    },
+    {
+        "id": "499e307bf7e5d869",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "6830fb5b2dbb3c58",
+        "name": "callback response",
+        "func": "/*\npour que la jsGrid soit rafraichie, \nil faut lui envoyer l'objet qui a été mis à jour\n*/\nmsg.payload=msg.result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1290,
+        "y": 840,
+        "wires": [
+            [
+                "8731432811f95b1a"
+            ]
+        ]
+    },
+    {
+        "id": "8feeba1100b62724",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "userid.slice(0, 4)",
+        "func": "msg.payload.userid = msg.payload.userid.slice(0, 5)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 640,
+        "wires": [
+            [
+                "db0208777104afaf"
+            ]
+        ]
+    },
+    {
+        "id": "1ba781f4ea0cc9b7",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "userid.slice(0, 4)",
+        "func": "msg.payload.userid = msg.payload.userid.slice(0, 4)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 740,
+        "wires": [
+            [
+                "02acee50a826dd9f"
+            ]
+        ]
+    },
+    {
+        "id": "1019c56914533080",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "query": "INSERT INTO clients(id, timestamp, forename, sirname, userid, age) VALUES (DEFAULT, CURRENT_TIMESTAMP, '{{{ msg.payload.forename }}}', '{{{ msg.payload.sirname }}}', '{{{ msg.payload.userid }}}', {{{ msg.payload.age }}})",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": "8",
+        "outputs": 1,
+        "x": 1010,
+        "y": 260,
+        "wires": [
+            [
+                "cc207b5b.33df88"
+            ]
+        ]
+    },
+    {
+        "id": "e63cdcdab67bde84",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "x": 1570,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "ae9207191aa77032",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "url": "/api",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 480,
+        "y": 520,
+        "wires": [
+            [
+                "cb7426598f0e9f9f",
+                "7a3549e3546d4715"
+            ]
+        ]
+    },
+    {
+        "id": "514d4a962212d99e",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "query": "SELECT * FROM clients;",
+        "postgreSQLConfig": "58cc3005775fb34e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1010,
+        "y": 480,
+        "wires": [
+            [
+                "e63cdcdab67bde84"
+            ]
+        ]
+    },
+    {
+        "id": "113b77c94a8fcc57",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "query": "SELECT * FROM clients WHERE id= {{{ msg.payload.id }}}",
+        "postgreSQLConfig": "58cc3005775fb34e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1010,
+        "y": 540,
+        "wires": [
+            [
+                "e63cdcdab67bde84"
+            ]
+        ]
+    },
+    {
+        "id": "cb7426598f0e9f9f",
+        "type": "switch",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 750,
+        "y": 520,
+        "wires": [
+            [
+                "514d4a962212d99e"
+            ],
+            [
+                "113b77c94a8fcc57"
+            ]
+        ]
+    },
+    {
+        "id": "b009db8e1ca3cea7",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "url": "/populate",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 490,
+        "y": 280,
+        "wires": [
+            [
+                "5fd8010a154e7b55"
+            ]
+        ]
+    },
+    {
+        "id": "ddcdf98eedd5c829",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "x": 1570,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "f888ceb8b7d56449",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "916697ec7c227647",
+        "name": "",
+        "url": "/api/count",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 490,
+        "y": 960,
+        "wires": [
+            [
+                "4f0ef6e965f47ad5"
+            ]
+        ]
+    },
+    {
+        "id": "4f0ef6e965f47ad5",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "916697ec7c227647",
+        "name": "",
+        "query": "SELECT MAX(id) as count FROM clients;",
+        "postgreSQLConfig": "58cc3005775fb34e",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1010,
+        "y": 960,
+        "wires": [
+            [
+                "fa5c09bfa0353003"
+            ]
+        ]
+    },
+    {
+        "id": "fa5c09bfa0353003",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "916697ec7c227647",
+        "name": "",
+        "x": 1570,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "6d8d82609c77361b",
+        "type": "comment",
+        "z": "0338c3befa10e3ef",
+        "name": "nodes",
+        "info": "node-red-contrib-postgresql",
+        "x": 170,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "dc1dd5fe9bb724ed",
+        "type": "comment",
+        "z": "0338c3befa10e3ef",
+        "name": "http://localhost:1880/index",
+        "info": "",
+        "x": 430,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b54c48be376b4dbd",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "query": "TRUNCATE TABLE clients;\nALTER SEQUENCE clients_id_seq RESTART WITH 1\n",
+        "postgreSQLConfig": "4cafeb3ec8eecd40",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1010,
+        "y": 200,
+        "wires": [
+            [
+                "c2852efd.3d7ad"
+            ]
+        ]
+    },
+    {
+        "id": "f34ebfb56fbb6f27",
+        "type": "inject",
+        "z": "0338c3befa10e3ef",
+        "name": "TRUNCATE TABLE",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 530,
+        "y": 200,
+        "wires": [
+            [
+                "b54c48be376b4dbd"
+            ]
+        ]
+    },
+    {
+        "id": "b77baba63ad774ce",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "query": "CREATE TABLE IF NOT EXISTS clients (\n  id serial NOT NULL,\n  timestamp TIMESTAMP,\n  foreName varchar(32) NOT NULL,\n  sirName varchar(32) NOT NULL,\n  userID varchar(16) NOT NULL,\n  age smallserial NOT NULL,\n  PRIMARY KEY (id)\n);",
+        "postgreSQLConfig": "4cafeb3ec8eecd40",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1010,
+        "y": 140,
+        "wires": [
+            [
+                "c2852efd.3d7ad"
+            ]
+        ]
+    },
+    {
+        "id": "3ddf7a6f35e69a6f",
+        "type": "inject",
+        "z": "0338c3befa10e3ef",
+        "name": "CREATE TABLE",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 520,
+        "y": 140,
+        "wires": [
+            [
+                "b77baba63ad774ce"
+            ]
+        ]
+    },
+    {
+        "id": "7a3549e3546d4715",
+        "type": "debug",
+        "z": "0338c3befa10e3ef",
+        "name": "s",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 1040,
+        "wires": []
+    },
+    {
+        "id": "07800f2fe48ea73c",
+        "type": "inject",
+        "z": "53d4853b382e9f84",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 120,
+        "wires": [
+            [
+                "337eefe7b172588a"
+            ]
+        ]
+    },
+    {
+        "id": "26dad8d538102c17",
+        "type": "debug",
+        "z": "53d4853b382e9f84",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "5538248b741af3bb",
+        "type": "postgresql",
+        "z": "53d4853b382e9f84",
+        "name": "",
+        "query": "INSERT INTO clients(id, timestamp, forename, sirname, userid, age) VALUES (DEFAULT, CURRENT_TIMESTAMP, '{{{ msg.payload.forename }}}', '{{{ msg.payload.sirname }}}', '{{{ msg.payload.userid }}}', {{{ msg.payload.age }}})",
+        "postgreSQLConfig": "4cafeb3ec8eecd40",
+        "split": false,
+        "rowsPerMsg": "8",
+        "outputs": 1,
+        "x": 650,
+        "y": 260,
+        "wires": [
+            [
+                "26dad8d538102c17"
+            ]
+        ]
+    },
+    {
+        "id": "0254ace2d5172a1f",
+        "type": "function",
+        "z": "53d4853b382e9f84",
+        "name": "split elems",
+        "func": "var mapResult = {\n  countdown: msg.payload.length,\n  result: msg.payload.map(function(){})\n};\nreturn [msg.payload.map(function(element, index) {\n  return {\n    payload: element,\n    index: index,\n    mapResult: function() {\n      return mapResult;\n    }\n  };\n})];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 260,
+        "wires": [
+            [
+                "5538248b741af3bb"
+            ]
+        ],
+        "icon": "node-red/split.svg"
+    },
+    {
+        "id": "337eefe7b172588a",
+        "type": "function",
+        "z": "53d4853b382e9f84",
+        "name": "Gen dummy data",
+        "func": "const firstNames =  [\"Liam\",\"Noah\",\"Oliver\",\"William\",\"Elijah\",\"James\",\"Benjamin\",\"Lucas\",\"Mason\",\"Ethan\",\"Alexander\",\"Henry\",\"Jacob\",\"Michael\",\"Daniel\",\"Logan\",\"Jackson\",\"Sebastian\",\"Jack\",\"Aiden\"];\nconst sirNames = [\"Jones\",\"Taylor\",\"Williams\",\"Brown\",\"White\",\"Harris\",\"Martin\",\"Davies\",\"Wilson\",\"Cooper\",\"Evans\",\"King\",\"Thomas\",\"Baker\",\"Green\",\"Wright\",\"Johnson\",\"Edwards\",\"Clark\",\"Roberts\",\"Robinson\",\"Hall\",\"Lewis\",\"Young\",\"Davis\",\"Turner\",\"Hill\",\"Phillips\",\"Collins\",\"Allen\",\"Moore\",\"Thompson\",\"Carter\",\"James\",\"Knight\",\"Walker\",\"Wood\",\"Hughes\",\"Parker\",\"Ward\",\"Bennett\",\"Cook\",\"Webb\",\"Bailey\",\"Scott\",\"Jackson\",\"Lee\",\"Cox\"];\n         \n         \n\nvar database = [];\n\nfor(let i = 1; i <= 30; i++) {\n    var item = {};\n    item.forename = randomFirstname();\n    item.sirname = randomSirname();\n    item.userid = \"U\" + randomInt(1000, 2999);\n    item.age = randomInt(20, 65);\n    database.push(item);\n}\n\n\nfunction randomFirstname() {\n   return firstNames[randomInt(0, firstNames.length-1)];\n}\n\nfunction randomSirname() {\n    return sirNames[randomInt(0, sirNames.length-1)];\n}\n\nfunction randomInt(min, max) { \n  return Math.floor(Math.random() * (max - min + 1) + min);\n}\n\nflow.set(\"database\", database);\nmsg.payload = database;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "0254ace2d5172a1f"
+            ]
+        ],
+        "icon": "node-red/leveldb.png"
+    }
+]

@@ -1,0 +1,2386 @@
+[
+    {
+        "id": "0338c3befa10e3ef",
+        "type": "tab",
+        "label": "PostgreSql",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "84c5e34a797b71be",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "db6414206eace3dd",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3b2f8c8b3261e68b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7131c273d73abdd3",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cb187ff7ae5d822a",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true
+        },
+        "nodes": [
+            "98bb4419b579a05d",
+            "6830fb5b2dbb3c58",
+            "0214f907c6dde6e5",
+            "a44dccd094937dc7",
+            "dc496214a2a31801",
+            "fd666ce6a6998952"
+        ],
+        "x": 88,
+        "y": 13,
+        "w": 1304,
+        "h": 754
+    },
+    {
+        "id": "98bb4419b579a05d",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "g": "cb187ff7ae5d822a",
+        "name": "",
+        "style": {
+            "stroke": "#61AFFE",
+            "label": true,
+            "fill": "#EFF7FF",
+            "fill-opacity": "1"
+        },
+        "nodes": [
+            "1cb547dae9f9416d",
+            "117569d4e15e635d",
+            "032c5b5f76bb58ec",
+            "38ebb2b60b411e67",
+            "4793b9e1e8061940"
+        ],
+        "x": 114,
+        "y": 199,
+        "w": 1252,
+        "h": 82
+    },
+    {
+        "id": "6830fb5b2dbb3c58",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "g": "cb187ff7ae5d822a",
+        "name": "",
+        "style": {
+            "fill": "#FFEBEB",
+            "fill-opacity": "1",
+            "label": true,
+            "stroke": "#F93E3E"
+        },
+        "nodes": [
+            "8731432811f95b1a",
+            "3d4e6c7b4de7bac6",
+            "3c70be8e0dd1f5cf",
+            "499e307bf7e5d869"
+        ],
+        "x": 114,
+        "y": 659,
+        "w": 1252,
+        "h": 82
+    },
+    {
+        "id": "0214f907c6dde6e5",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "g": "cb187ff7ae5d822a",
+        "name": "",
+        "style": {
+            "fill": "#ECFAF4",
+            "fill-opacity": "1",
+            "label": true,
+            "stroke": "#49CC90"
+        },
+        "nodes": [
+            "25538d080ca6636d",
+            "c266861c547ad94b",
+            "df1b7b5834c6cb38",
+            "02acee50a826dd9f",
+            "1ba781f4ea0cc9b7"
+        ],
+        "x": 114,
+        "y": 559,
+        "w": 1252,
+        "h": 82
+    },
+    {
+        "id": "a44dccd094937dc7",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "g": "cb187ff7ae5d822a",
+        "name": "",
+        "style": {
+            "fill": "#FFF5EA",
+            "label": true,
+            "fill-opacity": "1",
+            "stroke": "#FCA130"
+        },
+        "nodes": [
+            "e12ffb8302454083",
+            "9f069642444c25a7",
+            "377e6144780b155c",
+            "db0208777104afaf",
+            "8feeba1100b62724"
+        ],
+        "x": 114,
+        "y": 459,
+        "w": 1252,
+        "h": 82
+    },
+    {
+        "id": "dc496214a2a31801",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "g": "cb187ff7ae5d822a",
+        "name": "",
+        "style": {
+            "fill": "#ffffbf",
+            "label": true,
+            "stroke": "#92d04f"
+        },
+        "nodes": [
+            "e63cdcdab67bde84",
+            "ae9207191aa77032",
+            "514d4a962212d99e",
+            "113b77c94a8fcc57",
+            "cb7426598f0e9f9f"
+        ],
+        "x": 114,
+        "y": 299,
+        "w": 1252,
+        "h": 142
+    },
+    {
+        "id": "fd666ce6a6998952",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "g": "cb187ff7ae5d822a",
+        "name": "",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "5fd8010a154e7b55",
+            "037dce8e31058aab",
+            "b009db8e1ca3cea7",
+            "663e1cfb.99c1e4",
+            "1019c56914533080",
+            "cc207b5b.33df88",
+            "c2852efd.3d7ad",
+            "ddcdf98eedd5c829"
+        ],
+        "x": 114,
+        "y": 39,
+        "w": 1252,
+        "h": 142
+    },
+    {
+        "id": "f2f345c016e30abd",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "postgres",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "db",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "postgres",
+        "userFieldType": "str",
+        "password": "postgres",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "032c5b5f76bb58ec",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "",
+        "url": "/index",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 240,
+        "wires": [
+            [
+                "4793b9e1e8061940"
+            ]
+        ]
+    },
+    {
+        "id": "117569d4e15e635d",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "",
+        "x": 1290,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "1cb547dae9f9416d",
+        "type": "json",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "",
+        "x": 950,
+        "y": 240,
+        "wires": [
+            [
+                "38ebb2b60b411e67"
+            ]
+        ]
+    },
+    {
+        "id": "3d4e6c7b4de7bac6",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "6830fb5b2dbb3c58",
+        "name": "",
+        "url": "/delete",
+        "method": "delete",
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 700,
+        "wires": [
+            [
+                "3c70be8e0dd1f5cf"
+            ]
+        ]
+    },
+    {
+        "id": "8731432811f95b1a",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "6830fb5b2dbb3c58",
+        "name": "",
+        "x": 1290,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "38ebb2b60b411e67",
+        "type": "template",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "Web Template",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en-GB\">\n<head>\n    <title>Users</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css\" />\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css\" />\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css\" />\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js\"></script>\n\n    <script type=\"text/javascript\">\n        $(function () {\n            console.log(\"crud demo\");\n\n            var db = {{#payload}}{{{.}}}{{/payload}};\n\n            $(\"#jsgrid\").jsGrid({\n                width: \"100%\",\n                    confirmDeleting: false,\n                    inserting: true,\n                    editing: true,\n                    sorting: true,\n                    paging: true,\n\n                data: db,\n\n                fields: [\n                    { title:\"ID\", name: \"id\", type: \"number\", width: 20, readOnly: true },\n                    { title:\"User ID\", name: \"userid\", type: \"text\", width: 5 },\n                    { title:\"First Name\", name: \"forename\", type: \"text\", width: 32 },\n                    { title:\"Last Name\", name: \"sirname\", type: \"text\", width: 32 },\n                    { title:\"Age\", name: \"age\", type:\"number\", width: 2},\n                    { type: \"control\" }\n                ],\n           \n                controller: {\n                    insertItem: function(item) {\n                        return $.ajax({\n                            type: \"POST\",\n                            url: \"/insert\",\n                            data: item\n                        });\n                    },\n                    updateItem: function(item) {\n                       return $.ajax({\n                            type: \"PUT\",\n                            url: \"/update\",\n                            data: item\n                        });\n                    },\n                    deleteItem: function(item) {\n                        return $.ajax({\n                            type: \"DELETE\",\n                            url: \"/delete\",\n                            data: item\n                        });\n                    }\n                }   \n            });\n        });\n    \n  </script>\n</head>\n<body class=\"container\">\n    <section class=\"row\">\n        \n        <div class=\"col-md-6\"></div>\n        <div class=\"col-md-6\" id=\"jsgrid\">\n        </div>\n    </section>\n</body>\n</html>\n\n",
+        "x": 1120,
+        "y": 240,
+        "wires": [
+            [
+                "117569d4e15e635d"
+            ]
+        ]
+    },
+    {
+        "id": "037dce8e31058aab",
+        "type": "inject",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 185,
+        "y": 100,
+        "wires": [
+            [
+                "5fd8010a154e7b55"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "cc207b5b.33df88",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "reconstruct array",
+        "func": "var mapResult = msg.mapResult();\nmapResult.result[msg.index] = msg.payload;\nmapResult.countdown -= 1;\nif (0 === mapResult.countdown) {\n  return {\n    payload: mapResult.result\n  };\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 910,
+        "y": 120,
+        "wires": [
+            [
+                "c2852efd.3d7ad",
+                "ddcdf98eedd5c829"
+            ]
+        ],
+        "icon": "node-red/join.svg"
+    },
+    {
+        "id": "c2852efd.3d7ad",
+        "type": "debug",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1295,
+        "y": 80,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "663e1cfb.99c1e4",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "split elems",
+        "func": "var mapResult = {\n  countdown: msg.payload.length,\n  result: msg.payload.map(function(){})\n};\nreturn [msg.payload.map(function(element, index) {\n  return {\n    payload: element,\n    index: index,\n    mapResult: function() {\n      return mapResult;\n    }\n  };\n})];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 120,
+        "wires": [
+            [
+                "1019c56914533080"
+            ]
+        ],
+        "icon": "node-red/split.svg"
+    },
+    {
+        "id": "5fd8010a154e7b55",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "Gen dummy data",
+        "func": "const firstNames =  [\"Liam\",\"Noah\",\"Oliver\",\"William\",\"Elijah\",\"James\",\"Benjamin\",\"Lucas\",\"Mason\",\"Ethan\",\"Alexander\",\"Henry\",\"Jacob\",\"Michael\",\"Daniel\",\"Logan\",\"Jackson\",\"Sebastian\",\"Jack\",\"Aiden\"];\nconst sirNames = [\"Jones\",\"Taylor\",\"Williams\",\"Brown\",\"White\",\"Harris\",\"Martin\",\"Davies\",\"Wilson\",\"Cooper\",\"Evans\",\"King\",\"Thomas\",\"Baker\",\"Green\",\"Wright\",\"Johnson\",\"Edwards\",\"Clark\",\"Roberts\",\"Robinson\",\"Hall\",\"Lewis\",\"Young\",\"Davis\",\"Turner\",\"Hill\",\"Phillips\",\"Collins\",\"Allen\",\"Moore\",\"Thompson\",\"Carter\",\"James\",\"Knight\",\"Walker\",\"Wood\",\"Hughes\",\"Parker\",\"Ward\",\"Bennett\",\"Cook\",\"Webb\",\"Bailey\",\"Scott\",\"Jackson\",\"Lee\",\"Cox\"];\n         \n         \n\nvar database = [];\n\nfor(let i = 1; i <= 30; i++) {\n    var item = {};\n    item.forename = randomFirstname();\n    item.sirname = randomSirname();\n    item.userid = \"U\" + randomInt(1000, 2999);\n    item.age = randomInt(20, 65);\n    database.push(item);\n}\n\n\nfunction randomFirstname() {\n   return firstNames[randomInt(0, firstNames.length-1)];\n}\n\nfunction randomSirname() {\n    return sirNames[randomInt(0, sirNames.length-1)];\n}\n\nfunction randomInt(min, max) { \n  return Math.floor(Math.random() * (max - min + 1) + min);\n}\n\nflow.set(\"database\", database);\nmsg.payload = database;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 120,
+        "wires": [
+            [
+                "663e1cfb.99c1e4"
+            ]
+        ],
+        "icon": "node-red/leveldb.png"
+    },
+    {
+        "id": "25538d080ca6636d",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "callback response",
+        "func": "/*\npour que la jsGrid soit rafraichie, \nil faut lui envoyer l'objet qui a été mis à jour\n*/\nmsg.payload=msg.req.body;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1030,
+        "y": 600,
+        "wires": [
+            [
+                "c266861c547ad94b"
+            ]
+        ]
+    },
+    {
+        "id": "c266861c547ad94b",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "",
+        "x": 1290,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "df1b7b5834c6cb38",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "",
+        "url": "/insert",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 600,
+        "wires": [
+            [
+                "1ba781f4ea0cc9b7"
+            ]
+        ]
+    },
+    {
+        "id": "e12ffb8302454083",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "callback response",
+        "func": "/*\npour que la jsGrid soit rafraichie, \nil faut lui envoyer l'objet qui a été mis à jour\n*/\nmsg.payload=msg.result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1070,
+        "y": 500,
+        "wires": [
+            [
+                "9f069642444c25a7"
+            ]
+        ]
+    },
+    {
+        "id": "9f069642444c25a7",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "",
+        "x": 1290,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "377e6144780b155c",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "",
+        "url": "/update",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 500,
+        "wires": [
+            [
+                "8feeba1100b62724"
+            ]
+        ]
+    },
+    {
+        "id": "02acee50a826dd9f",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "",
+        "query": "INSERT INTO clients(id, timestamp, forename, sirname, userid, age) VALUES (DEFAULT, CURRENT_TIMESTAMP, '{{{ msg.payload.forename }}}', '{{{ msg.payload.sirname }}}', '{{{ msg.payload.userid }}}', {{{ msg.payload.age }}})",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 730,
+        "y": 600,
+        "wires": [
+            [
+                "25538d080ca6636d"
+            ]
+        ]
+    },
+    {
+        "id": "4793b9e1e8061940",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "",
+        "query": "SELECT * FROM clients;",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": "1",
+        "outputs": 1,
+        "x": 730,
+        "y": 240,
+        "wires": [
+            [
+                "1cb547dae9f9416d"
+            ]
+        ]
+    },
+    {
+        "id": "3c70be8e0dd1f5cf",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "6830fb5b2dbb3c58",
+        "name": "",
+        "query": "DELETE FROM clients WHERE id = {{{ msg.payload.id }}}",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 730,
+        "y": 700,
+        "wires": [
+            [
+                "499e307bf7e5d869"
+            ]
+        ]
+    },
+    {
+        "id": "db0208777104afaf",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "",
+        "query": "UPDATE clients SET timestamp = CURRENT_TIMESTAMP, forename = '{{{ msg.payload.forename }}}', sirname = '{{{ msg.payload.sirname }}}', userid = '{{{ msg.payload.userid }}}', age = '{{{ msg.payload.age }}}' WHERE id= {{{ msg.payload.id }}}",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 730,
+        "y": 500,
+        "wires": [
+            [
+                "e12ffb8302454083"
+            ]
+        ]
+    },
+    {
+        "id": "499e307bf7e5d869",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "6830fb5b2dbb3c58",
+        "name": "callback response",
+        "func": "/*\npour que la jsGrid soit rafraichie, \nil faut lui envoyer l'objet qui a été mis à jour\n*/\nmsg.payload=msg.result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1010,
+        "y": 700,
+        "wires": [
+            [
+                "8731432811f95b1a"
+            ]
+        ]
+    },
+    {
+        "id": "8feeba1100b62724",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "userid.slice(0, 4)",
+        "func": "msg.payload.userid = msg.payload.userid.slice(0, 5)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 500,
+        "wires": [
+            [
+                "db0208777104afaf"
+            ]
+        ]
+    },
+    {
+        "id": "1ba781f4ea0cc9b7",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "userid.slice(0, 4)",
+        "func": "msg.payload.userid = msg.payload.userid.slice(0, 4)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 600,
+        "wires": [
+            [
+                "02acee50a826dd9f"
+            ]
+        ]
+    },
+    {
+        "id": "1019c56914533080",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "",
+        "query": "INSERT INTO clients(id, timestamp, forename, sirname, userid, age) VALUES (DEFAULT, CURRENT_TIMESTAMP, '{{{ msg.payload.forename }}}', '{{{ msg.payload.sirname }}}', '{{{ msg.payload.userid }}}', {{{ msg.payload.age }}})",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": "8",
+        "outputs": 1,
+        "x": 730,
+        "y": 120,
+        "wires": [
+            [
+                "cc207b5b.33df88"
+            ]
+        ]
+    },
+    {
+        "id": "e63cdcdab67bde84",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "x": 1290,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ae9207191aa77032",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "url": "/select",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 380,
+        "wires": [
+            [
+                "cb7426598f0e9f9f"
+            ]
+        ]
+    },
+    {
+        "id": "514d4a962212d99e",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "query": "SELECT * FROM clients;",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 730,
+        "y": 340,
+        "wires": [
+            [
+                "e63cdcdab67bde84"
+            ]
+        ]
+    },
+    {
+        "id": "113b77c94a8fcc57",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "query": "SELECT * FROM clients WHERE id= {{{ msg.payload.id }}}",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 730,
+        "y": 400,
+        "wires": [
+            [
+                "e63cdcdab67bde84"
+            ]
+        ]
+    },
+    {
+        "id": "cb7426598f0e9f9f",
+        "type": "switch",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 470,
+        "y": 380,
+        "wires": [
+            [
+                "514d4a962212d99e"
+            ],
+            [
+                "113b77c94a8fcc57"
+            ]
+        ]
+    },
+    {
+        "id": "b009db8e1ca3cea7",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "",
+        "url": "/populate",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 210,
+        "y": 140,
+        "wires": [
+            [
+                "5fd8010a154e7b55"
+            ]
+        ]
+    },
+    {
+        "id": "ddcdf98eedd5c829",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "",
+        "x": 1290,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "f888ceb8b7d56449",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "url": "/count",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 860,
+        "wires": [
+            [
+                "4f0ef6e965f47ad5"
+            ]
+        ]
+    },
+    {
+        "id": "4f0ef6e965f47ad5",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "query": "SELECT MAX(id) as count FROM clients;",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 730,
+        "y": 860,
+        "wires": [
+            [
+                "fa5c09bfa0353003"
+            ]
+        ]
+    },
+    {
+        "id": "fa5c09bfa0353003",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "x": 1270,
+        "y": 860,
+        "wires": []
+    },
+    {
+        "id": "ea7db1c728063544",
+        "type": "function",
+        "z": "84c5e34a797b71be",
+        "name": "dbcount",
+        "func": "msg.dbcount = msg.payload[0].count\nvar value = Math.floor(Math.random() * msg.dbcount) + 1\nmsg.payload = { \"id\": value}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 740,
+        "y": 220,
+        "wires": [
+            [
+                "16816ad8f1b8586c"
+            ]
+        ]
+    },
+    {
+        "id": "da707b19551925f5",
+        "type": "debug",
+        "z": "84c5e34a797b71be",
+        "name": "Select",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1130,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "779ae60b5398c319",
+        "type": "delay",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 680,
+        "y": 140,
+        "wires": [
+            [
+                "78cdba3667296dbf"
+            ]
+        ]
+    },
+    {
+        "id": "78cdba3667296dbf",
+        "type": "function",
+        "z": "84c5e34a797b71be",
+        "name": "Select Cycles",
+        "func": "\nvar db = flow.get(\"db\") || [];\n\nvar item = db.find(e => e.type == 'select');\n\n\nwhile (item.iterations > item.counter) {\nitem.counter++\nmsg.delay = item.delay\nmsg.payload = {\n   \"type\": item.type, \n   \"counter\": item.counter \n}\n\nflow.set(\"db\", db);\nreturn [null, msg];\n}\n\nreturn [msg, null];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 220,
+        "wires": [
+            [],
+            [
+                "b7ccce10e474ea2f"
+            ]
+        ]
+    },
+    {
+        "id": "c8157b4d92028b1b",
+        "type": "inject",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "props": [
+            {
+                "p": "db",
+                "v": "[{\"type\":\"select\",\"iterations\":10,\"counter\":0,\"delay\":1000},{\"type\":\"insert\",\"iterations\":4,\"counter\":0,\"delay\":50000},{\"type\":\"update\",\"iterations\":4,\"counter\":0,\"delay\":7000},{\"type\":\"delete\",\"iterations\":3,\"counter\":0,\"delay\":7000}]",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 40,
+        "wires": [
+            [
+                "19d41449c7a0ca2d"
+            ]
+        ]
+    },
+    {
+        "id": "19d41449c7a0ca2d",
+        "type": "change",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "db",
+                "pt": "flow"
+            },
+            {
+                "t": "move",
+                "p": "db",
+                "pt": "msg",
+                "to": "db",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 40,
+        "wires": [
+            [
+                "15aac17c87a51e68"
+            ]
+        ]
+    },
+    {
+        "id": "15aac17c87a51e68",
+        "type": "debug",
+        "z": "84c5e34a797b71be",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "922822f7bdd9bdba",
+        "type": "function",
+        "z": "84c5e34a797b71be",
+        "name": "Insert Cycles",
+        "func": "\nvar db = flow.get(\"db\") || [];\n\nvar item = db.find(e => e.type == 'insert');\n\n\nwhile (item.iterations > item.counter) {\nitem.counter++\n\nmsg.payload = {\n   \"type\": item.type, \n   \"counter\": item.counter \n}\n\n   flow.set(\"db\", db);\nreturn [null, msg];\n}\n\nreturn [msg, null];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 360,
+        "wires": [
+            [],
+            [
+                "5eb6cf0cf684bbb7"
+            ]
+        ]
+    },
+    {
+        "id": "5aadb8c6f1de2daf",
+        "type": "delay",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 680,
+        "y": 280,
+        "wires": [
+            [
+                "922822f7bdd9bdba"
+            ]
+        ]
+    },
+    {
+        "id": "5eb6cf0cf684bbb7",
+        "type": "function",
+        "z": "84c5e34a797b71be",
+        "name": "Message generator",
+        "func": "const firstNames = [\"Liam\", \"Noah\", \"Oliver\", \"William\", \"Elijah\", \"James\", \"Benjamin\", \"Lucas\", \"Mason\", \"Ethan\", \"Alexander\", \"Henry\", \"Jacob\", \"Michael\", \"Daniel\", \"Logan\", \"Jackson\", \"Sebastian\", \"Jack\", \"Aiden\"];\nconst sirNames = [\"Jones\", \"Taylor\", \"Williams\", \"Brown\", \"White\", \"Harris\", \"Martin\", \"Davies\", \"Wilson\", \"Cooper\", \"Evans\", \"King\", \"Thomas\", \"Baker\", \"Green\", \"Wright\", \"Johnson\", \"Edwards\", \"Clark\", \"Roberts\", \"Robinson\", \"Hall\", \"Lewis\", \"Young\", \"Davis\", \"Turner\", \"Hill\", \"Phillips\", \"Collins\", \"Allen\", \"Moore\", \"Thompson\", \"Carter\", \"James\", \"Knight\", \"Walker\", \"Wood\", \"Hughes\", \"Parker\", \"Ward\", \"Bennett\", \"Cook\", \"Webb\", \"Bailey\", \"Scott\", \"Jackson\", \"Lee\", \"Cox\"];\n\n\n\n    var item = {};\n    item.forename = randomFirstname();\n    item.sirname = randomSirname();\n    item.userid = \"U\" + randomInt(1000, 2999);\n    item.age = randomInt(20, 65);\n\n\nfunction randomFirstname() {\n    return firstNames[randomInt(0, firstNames.length - 1)];\n}\n\nfunction randomSirname() {\n    return sirNames[randomInt(0, sirNames.length - 1)];\n}\n\nfunction randomInt(min, max) {\n    return Math.floor(Math.random() * (max - min + 1) + min);\n}\nmsg.payload = item\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 360,
+        "wires": [
+            [
+                "d15e41c35566c15a"
+            ]
+        ]
+    },
+    {
+        "id": "ab895c258f03f10c",
+        "type": "debug",
+        "z": "84c5e34a797b71be",
+        "name": "Insert",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "682ec9112576b64f",
+        "type": "function",
+        "z": "84c5e34a797b71be",
+        "name": "Update Cycles",
+        "func": "\nvar db = flow.get(\"db\") || [];\n\nvar item = db.find(e => e.type == 'update');\n\n\nwhile (item.iterations > item.counter) {\n   item.counter++\n\nmsg.payload = {\n   \"type\": item.type, \n   \"counter\": item.counter \n}\n\n   flow.set(\"db\", db);\nreturn [null, msg];\n}\n\nreturn [msg, null];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 520,
+        "wires": [
+            [],
+            [
+                "8d3c25fe3e3b9355"
+            ]
+        ]
+    },
+    {
+        "id": "cbfb14ba13293f31",
+        "type": "delay",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 440,
+        "wires": [
+            [
+                "682ec9112576b64f"
+            ]
+        ]
+    },
+    {
+        "id": "ab6b0b4e64d348b6",
+        "type": "debug",
+        "z": "84c5e34a797b71be",
+        "name": "Update",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1220,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "44f2121a3d6e9ad2",
+        "type": "function",
+        "z": "84c5e34a797b71be",
+        "name": "Delete Cycles",
+        "func": "\nvar db = flow.get(\"db\") || [];\n\nvar item = db.find(e => e.type == 'select');\n\n\nwhile (item.iterations > item.counter) {\n   item.counter++\n\nmsg.payload = {\n   \"type\": item.type, \n   \"counter\": item.counter \n}\n\n   flow.set(\"db\", db);\nreturn [null, msg];\n}\n\nreturn [msg, null];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 660,
+        "wires": [
+            [],
+            [
+                "684ffed30b253f85"
+            ]
+        ]
+    },
+    {
+        "id": "1f2c079d8a8e7be9",
+        "type": "delay",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 640,
+        "y": 580,
+        "wires": [
+            [
+                "44f2121a3d6e9ad2"
+            ]
+        ]
+    },
+    {
+        "id": "e184d49163bec9f5",
+        "type": "debug",
+        "z": "84c5e34a797b71be",
+        "name": "Delete",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "b7ccce10e474ea2f",
+        "type": "http request",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/count",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 570,
+        "y": 220,
+        "wires": [
+            [
+                "ea7db1c728063544"
+            ]
+        ]
+    },
+    {
+        "id": "16816ad8f1b8586c",
+        "type": "http request",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "http://localhost:1880/select",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 950,
+        "y": 220,
+        "wires": [
+            [
+                "da707b19551925f5",
+                "779ae60b5398c319"
+            ]
+        ]
+    },
+    {
+        "id": "d15e41c35566c15a",
+        "type": "http request",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "http://localhost:1880/insert",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 810,
+        "y": 360,
+        "wires": [
+            [
+                "ab895c258f03f10c",
+                "5aadb8c6f1de2daf"
+            ]
+        ]
+    },
+    {
+        "id": "8d3c25fe3e3b9355",
+        "type": "http request",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/count",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 490,
+        "y": 520,
+        "wires": [
+            [
+                "24a9b327a4236a5f"
+            ]
+        ]
+    },
+    {
+        "id": "24a9b327a4236a5f",
+        "type": "function",
+        "z": "84c5e34a797b71be",
+        "name": "Message generator",
+        "func": "msg.dbcount = msg.payload[0].count\nvar value = Math.floor(Math.random() * msg.dbcount) + 1\n\nconst firstNames = [\"Liam\", \"Noah\", \"Oliver\", \"William\", \"Elijah\", \"James\", \"Benjamin\", \"Lucas\", \"Mason\", \"Ethan\", \"Alexander\", \"Henry\", \"Jacob\", \"Michael\", \"Daniel\", \"Logan\", \"Jackson\", \"Sebastian\", \"Jack\", \"Aiden\"];\nconst sirNames = [\"Jones\", \"Taylor\", \"Williams\", \"Brown\", \"White\", \"Harris\", \"Martin\", \"Davies\", \"Wilson\", \"Cooper\", \"Evans\", \"King\", \"Thomas\", \"Baker\", \"Green\", \"Wright\", \"Johnson\", \"Edwards\", \"Clark\", \"Roberts\", \"Robinson\", \"Hall\", \"Lewis\", \"Young\", \"Davis\", \"Turner\", \"Hill\", \"Phillips\", \"Collins\", \"Allen\", \"Moore\", \"Thompson\", \"Carter\", \"James\", \"Knight\", \"Walker\", \"Wood\", \"Hughes\", \"Parker\", \"Ward\", \"Bennett\", \"Cook\", \"Webb\", \"Bailey\", \"Scott\", \"Jackson\", \"Lee\", \"Cox\"];\n\nvar item = {\n\"id\": value,\n\"forename\": randomFirstname(),\n\"sirname\": randomSirname(),\n\"userid\": \"U\" + randomInt(1000, 2999),\n\"age\": randomInt(20, 65)\n}\n\nfunction randomFirstname() {\n    return firstNames[randomInt(0, firstNames.length - 1)];\n}\n\nfunction randomSirname() {\n    return sirNames[randomInt(0, sirNames.length - 1)];\n}\n\nfunction randomInt(min, max) {\n    return Math.floor(Math.random() * (max - min + 1) + min);\n}\n//msg.payload = JSON.stringify(item)\nmsg.payload = item\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 520,
+        "wires": [
+            [
+                "a12d2e02ca8de1db"
+            ]
+        ]
+    },
+    {
+        "id": "6c65d56da061d7b5",
+        "type": "http request",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "method": "PUT",
+        "ret": "txt",
+        "paytoqs": "query",
+        "url": "http://localhost:1880/update",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Accept",
+                "valueType": "other",
+                "valueValue": "application/json"
+            },
+            {
+                "keyType": "other",
+                "keyValue": "Content-Type",
+                "valueType": "other",
+                "valueValue": "application/json"
+            }
+        ],
+        "x": 990,
+        "y": 520,
+        "wires": [
+            [
+                "ab6b0b4e64d348b6",
+                "cbfb14ba13293f31"
+            ]
+        ]
+    },
+    {
+        "id": "3d412e7341a4d7dc",
+        "type": "inject",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 120,
+        "y": 300,
+        "wires": [
+            [
+                "78cdba3667296dbf",
+                "922822f7bdd9bdba",
+                "682ec9112576b64f",
+                "44f2121a3d6e9ad2"
+            ]
+        ]
+    },
+    {
+        "id": "684ffed30b253f85",
+        "type": "http request",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "http://localhost:1880/count",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 490,
+        "y": 660,
+        "wires": [
+            [
+                "540adb554acaa02f"
+            ]
+        ]
+    },
+    {
+        "id": "540adb554acaa02f",
+        "type": "function",
+        "z": "84c5e34a797b71be",
+        "name": "dbcount",
+        "func": "msg.dbcount = msg.payload[0].count\nvar value = Math.floor(Math.random() * msg.dbcount) + 1\nmsg.payload = {\"id\": value}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 640,
+        "y": 660,
+        "wires": [
+            [
+                "a69a0cfdcd90906d"
+            ]
+        ]
+    },
+    {
+        "id": "a12d2e02ca8de1db",
+        "type": "json",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 850,
+        "y": 520,
+        "wires": [
+            [
+                "6c65d56da061d7b5"
+            ]
+        ]
+    },
+    {
+        "id": "a69a0cfdcd90906d",
+        "type": "json",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 770,
+        "y": 660,
+        "wires": [
+            [
+                "1c4c0446ba222ca4"
+            ]
+        ]
+    },
+    {
+        "id": "1c4c0446ba222ca4",
+        "type": "http request",
+        "z": "84c5e34a797b71be",
+        "name": "",
+        "method": "DELETE",
+        "ret": "txt",
+        "paytoqs": "query",
+        "url": "http://localhost:1880/delete",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Accept",
+                "valueType": "other",
+                "valueValue": "application/json"
+            },
+            {
+                "keyType": "other",
+                "keyValue": "Content-Type",
+                "valueType": "other",
+                "valueValue": "application/json"
+            }
+        ],
+        "x": 910,
+        "y": 660,
+        "wires": [
+            [
+                "e184d49163bec9f5",
+                "1f2c079d8a8e7be9"
+            ]
+        ]
+    },
+    {
+        "id": "ed6e5076b31e7647",
+        "type": "function",
+        "z": "db6414206eace3dd",
+        "name": "Cycles",
+        "func": "\nwhile (msg.payload.iterations > msg.payload.counter) {\n\nmsg.payload.counter++\n//do the job\nreturn [null, msg];\n}\nvar database = flow.get(\"database\") || [];\nvar item = database.find(e => e.name == msg.payload.name);\n\nif (item) {\n    item.isDone = 0;\n    flow.set(\"database\", database);\n} else {\n    msg.statusCode = 404;//not found\n\n}\nmsg.payload = \"done\";\n\nreturn [msg, null];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 530,
+        "y": 420,
+        "wires": [
+            [],
+            [
+                "618993f4b07104d5",
+                "9e74d664285618eb"
+            ]
+        ]
+    },
+    {
+        "id": "7f01418ec785b81a",
+        "type": "switch",
+        "z": "db6414206eace3dd",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "null",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 770,
+        "y": 260,
+        "wires": [
+            [
+                "013302d2dd898c52",
+                "ed6e5076b31e7647"
+            ]
+        ]
+    },
+    {
+        "id": "9e74d664285618eb",
+        "type": "function",
+        "z": "db6414206eace3dd",
+        "name": "function 1",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 500,
+        "wires": [
+            [
+                "ed6e5076b31e7647"
+            ]
+        ]
+    },
+    {
+        "id": "618993f4b07104d5",
+        "type": "debug",
+        "z": "db6414206eace3dd",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "32a7b6e4088af2a7",
+        "type": "function",
+        "z": "db6414206eace3dd",
+        "name": "function 2",
+        "func": "\nvar database = flow.get(\"database\") || [];\nvar item = database.find(e => e.isTaken == 1);\n\nif (item) {\n    item.isTaken = 0;\n    item.name = item.name + \"-\" + Math.random().toString(36).slice(2)\n    flow.set(\"database\", database);\n} else {\n    msg.statusCode = 404;//not found\n    msg.payload = null;\n    flow.set(\"stop\", false)\n    return msg;\n}\n\nitem[\"counter\"]=0\n//flow.set(item.name, { \"iterations\": item.iterations, \"counter\": 0})\nmsg.payload = item;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 300,
+        "wires": [
+            [
+                "b8b2b64b0ad37c0e",
+                "7f01418ec785b81a"
+            ]
+        ]
+    },
+    {
+        "id": "013302d2dd898c52",
+        "type": "debug",
+        "z": "db6414206eace3dd",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "c805eb6de7cdf7f2",
+        "type": "loop",
+        "z": "db6414206eace3dd",
+        "name": "",
+        "kind": "cond",
+        "count": "",
+        "initial": "1",
+        "step": "1",
+        "condition": "flow.get(\"stop\")",
+        "conditionType": "js",
+        "when": "before",
+        "enumeration": "enum",
+        "enumerationType": "msg",
+        "limit": "",
+        "loopPayload": "loop-keep",
+        "finalPayload": "final-orig",
+        "x": 540,
+        "y": 160,
+        "wires": [
+            [
+                "e13458f73b4a3848"
+            ],
+            [
+                "32a7b6e4088af2a7"
+            ]
+        ]
+    },
+    {
+        "id": "b8b2b64b0ad37c0e",
+        "type": "delay",
+        "z": "db6414206eace3dd",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 320,
+        "y": 220,
+        "wires": [
+            [
+                "c805eb6de7cdf7f2"
+            ]
+        ]
+    },
+    {
+        "id": "e9b13f8fc0040b39",
+        "type": "change",
+        "z": "db6414206eace3dd",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "stop",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 160,
+        "wires": [
+            [
+                "c805eb6de7cdf7f2"
+            ]
+        ]
+    },
+    {
+        "id": "e13458f73b4a3848",
+        "type": "debug",
+        "z": "db6414206eace3dd",
+        "name": "debug 3",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 920,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "4b2439a5dd6f7305",
+        "type": "inject",
+        "z": "db6414206eace3dd",
+        "name": "Stop",
+        "props": [
+            {
+                "p": "stop",
+                "v": "false",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "e9b13f8fc0040b39"
+            ]
+        ]
+    },
+    {
+        "id": "7c3076f93ce1b150",
+        "type": "inject",
+        "z": "db6414206eace3dd",
+        "name": "Start",
+        "props": [
+            {
+                "p": "stop",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 114.00001525878906,
+        "y": 151,
+        "wires": [
+            [
+                "e9b13f8fc0040b39"
+            ]
+        ]
+    },
+    {
+        "id": "ec5f9287baf14e9a",
+        "type": "function",
+        "z": "3b2f8c8b3261e68b",
+        "name": "function 5",
+        "func": "\nmsg.payload = 5\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 300,
+        "wires": [
+            [
+                "a053dc99d0f0a138",
+                "378bd2625a14a3e9"
+            ]
+        ]
+    },
+    {
+        "id": "378bd2625a14a3e9",
+        "type": "debug",
+        "z": "3b2f8c8b3261e68b",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "c35e6ad18591ddd9",
+        "type": "loop",
+        "z": "3b2f8c8b3261e68b",
+        "name": "",
+        "kind": "fcnt",
+        "count": "10",
+        "initial": "1",
+        "step": "1",
+        "condition": "flow.get(\"stop\")",
+        "conditionType": "js",
+        "when": "before",
+        "enumeration": "enum",
+        "enumerationType": "msg",
+        "limit": "",
+        "loopPayload": "loop-keep",
+        "finalPayload": "final-orig",
+        "x": 610,
+        "y": 160,
+        "wires": [
+            [
+                "0e6d12fda6bf9aa4"
+            ],
+            [
+                "ec5f9287baf14e9a",
+                "b158a8ccaec9df6e",
+                "aeac97bc98016f1c"
+            ]
+        ]
+    },
+    {
+        "id": "a053dc99d0f0a138",
+        "type": "delay",
+        "z": "3b2f8c8b3261e68b",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 220,
+        "wires": [
+            [
+                "c35e6ad18591ddd9"
+            ]
+        ]
+    },
+    {
+        "id": "afea87e9c71f3266",
+        "type": "change",
+        "z": "3b2f8c8b3261e68b",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "stop",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 380,
+        "y": 160,
+        "wires": [
+            [
+                "c35e6ad18591ddd9"
+            ]
+        ]
+    },
+    {
+        "id": "0e6d12fda6bf9aa4",
+        "type": "debug",
+        "z": "3b2f8c8b3261e68b",
+        "name": "debug 6",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1020,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "fd36e442a3fc4b96",
+        "type": "inject",
+        "z": "3b2f8c8b3261e68b",
+        "name": "Stop",
+        "props": [
+            {
+                "p": "stop",
+                "v": "false",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "afea87e9c71f3266"
+            ]
+        ]
+    },
+    {
+        "id": "12ed4cac6ca24f3e",
+        "type": "inject",
+        "z": "3b2f8c8b3261e68b",
+        "name": "Start",
+        "props": [
+            {
+                "p": "stop",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 174.00001525878906,
+        "y": 151,
+        "wires": [
+            [
+                "afea87e9c71f3266"
+            ]
+        ]
+    },
+    {
+        "id": "b158a8ccaec9df6e",
+        "type": "function",
+        "z": "3b2f8c8b3261e68b",
+        "name": "function 1",
+        "func": "\nmsg.payload = 1\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 360,
+        "wires": [
+            [
+                "ff5bc04f6452c9d0",
+                "8ba0226b34005960"
+            ]
+        ]
+    },
+    {
+        "id": "aeac97bc98016f1c",
+        "type": "function",
+        "z": "3b2f8c8b3261e68b",
+        "name": "function 3",
+        "func": "\nmsg.payload = 3\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 420,
+        "wires": [
+            [
+                "0c22518d975293c1",
+                "71883319e6f57365"
+            ]
+        ]
+    },
+    {
+        "id": "ff5bc04f6452c9d0",
+        "type": "delay",
+        "z": "3b2f8c8b3261e68b",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "c35e6ad18591ddd9"
+            ]
+        ]
+    },
+    {
+        "id": "0c22518d975293c1",
+        "type": "delay",
+        "z": "3b2f8c8b3261e68b",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "3",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 380,
+        "wires": [
+            [
+                "c35e6ad18591ddd9"
+            ]
+        ]
+    },
+    {
+        "id": "8ba0226b34005960",
+        "type": "debug",
+        "z": "3b2f8c8b3261e68b",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "71883319e6f57365",
+        "type": "debug",
+        "z": "3b2f8c8b3261e68b",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "bf7b084fa7c9389f",
+        "type": "function",
+        "z": "7131c273d73abdd3",
+        "name": "Message generator",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 500,
+        "wires": [
+            [
+                "372e81c2eb3b9550",
+                "30ed0ea185f3ca91"
+            ]
+        ]
+    },
+    {
+        "id": "30ed0ea185f3ca91",
+        "type": "debug",
+        "z": "7131c273d73abdd3",
+        "name": "during",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "7bcb53f10af85f4b",
+        "type": "inject",
+        "z": "7131c273d73abdd3",
+        "name": "Enter your data here & Click",
+        "props": [
+            {
+                "p": "i",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "stop",
+                "v": "false",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 260,
+        "y": 180,
+        "wires": [
+            [
+                "a9526ab87e8f1b0a"
+            ]
+        ]
+    },
+    {
+        "id": "372e81c2eb3b9550",
+        "type": "delay",
+        "z": "7131c273d73abdd3",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 230,
+        "y": 360,
+        "wires": [
+            [
+                "bec12adb2daa4f05"
+            ]
+        ]
+    },
+    {
+        "id": "bec12adb2daa4f05",
+        "type": "function",
+        "z": "7131c273d73abdd3",
+        "name": "Cycles",
+        "func": "\nvar db = flow.get(\"db\") || [];\n\n\nwhile (db.count > msg.i) {\nif (flow.get(\"stop\")) {break;}\nmsg.i++\nreturn [msg, null ];\n}\nmsg.i = 0\nreturn [null, msg];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 360,
+        "wires": [
+            [
+                "bf7b084fa7c9389f"
+            ],
+            [
+                "1bc9f123c82762f2"
+            ]
+        ]
+    },
+    {
+        "id": "59ed958e1d695021",
+        "type": "inject",
+        "z": "7131c273d73abdd3",
+        "name": "Stop",
+        "props": [
+            {
+                "p": "stop",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 240,
+        "wires": [
+            [
+                "a9526ab87e8f1b0a"
+            ]
+        ]
+    },
+    {
+        "id": "a9526ab87e8f1b0a",
+        "type": "change",
+        "z": "7131c273d73abdd3",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "stop",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 580,
+        "y": 240,
+        "wires": [
+            [
+                "bec12adb2daa4f05"
+            ]
+        ]
+    },
+    {
+        "id": "905e34d74481103b",
+        "type": "function",
+        "z": "7131c273d73abdd3",
+        "name": "Message generator",
+        "func": "\nvar categoryArray = [ \"QUERY\", \"COMMAND\", \"DATAGRAM\", \"EVENT\"]; \nvar categoryInstance = categoryArray[Math.floor(Math.random()*categoryArray.length)]; //getting random category from array\nvar date = new Date(msg.startDate)\ndate.setHours( date.getHours() + parseInt(msg.j)*4) //adding 4 hours to every iteration\ndate.setMinutes( date.getMinutes() + (Math.floor(Math.random() * 201) - 100)) //adding fuzziness to generated timestamp\nvar value = Math.floor(Math.random() * (1000 - 400 + 1)) + 400 // generating random value from a range\n\n\nmsg.payload =   {\n      \"id\": uuidv4(),\n      \"timestamp\": date.toISOString(),\n      \"category\": categoryInstance,\n      \"value\": value\n \n};\n\n\n// UDDI generator function\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a15a7324bb657415",
+        "type": "inject",
+        "z": "7131c273d73abdd3",
+        "name": "",
+        "props": [
+            {
+                "p": "db.cities",
+                "v": "[{\"id\":1,\"cityName\":\"Łódź\",\"latitude\":51.759445,\"longitude\":19.457216},{\"id\":2,\"cityName\":\"Warszawa\",\"latitude\":52.237049,\"longitude\":21.017532},{\"id\":3,\"cityName\":\"Płock\",\"latitude\":52.546344,\"longitude\":19.706536},{\"id\":4,\"cityName\":\"Toruń\",\"latitude\":53.01379,\"longitude\":18.598443},{\"id\":5,\"cityName\":\"Poznań\",\"latitude\":52.409538,\"longitude\":16.931992},{\"id\":6,\"cityName\":\"Wrocław\",\"latitude\":51.107883,\"longitude\":17.038538},{\"id\":7,\"cityName\":\"Opole\",\"latitude\":50.671062,\"longitude\":17.926126},{\"id\":8,\"cityName\":\"Kielce\",\"latitude\":50.866077,\"longitude\":20.6285677},{\"id\":9,\"cityName\":\"Radom\",\"latitude\":51.402723,\"longitude\":21.147133}]",
+                "vt": "json"
+            },
+            {
+                "p": "db.radius",
+                "v": "1000",
+                "vt": "num"
+            },
+            {
+                "p": "db.count",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "p": "db.cities_count",
+                "v": "[{\"id\":1,\"count\":0},{\"id\":2,\"count\":0},{\"id\":3,\"count\":0},{\"id\":4,\"count\":0},{\"id\":5,\"count\":0},{\"id\":6,\"count\":0},{\"id\":7,\"count\":0},{\"id\":8,\"count\":0},{\"id\":9,\"count\":0}]",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 100,
+        "wires": [
+            [
+                "70ccf028fa0e9a38"
+            ]
+        ]
+    },
+    {
+        "id": "70ccf028fa0e9a38",
+        "type": "change",
+        "z": "7131c273d73abdd3",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "db",
+                "pt": "flow"
+            },
+            {
+                "t": "move",
+                "p": "db",
+                "pt": "msg",
+                "to": "db",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 400,
+        "y": 100,
+        "wires": [
+            [
+                "c0188bba49f9f260"
+            ]
+        ]
+    },
+    {
+        "id": "c0188bba49f9f260",
+        "type": "debug",
+        "z": "7131c273d73abdd3",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "1bc9f123c82762f2",
+        "type": "debug",
+        "z": "7131c273d73abdd3",
+        "name": "end",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "87491fea171f6ffc",
+        "type": "function",
+        "z": "7131c273d73abdd3",
+        "name": "Cycles",
+        "func": "\nvar db = flow.get(\"db\") || [];\n\n\nwhile (db.count > msg.i) {\nif (flow.get(\"stop\")) {break;}\nmsg.i++\nreturn [msg, null ];\n}\nmsg.i = 0\nreturn [null, msg];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 180,
+        "wires": [
+            [],
+            []
+        ]
+    }
+]

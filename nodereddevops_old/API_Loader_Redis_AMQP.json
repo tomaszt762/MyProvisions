@@ -1,0 +1,4019 @@
+[
+    {
+        "id": "11230fbd32f3e45e",
+        "type": "tab",
+        "label": "Set up",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c4fab67dd16d9611",
+        "type": "tab",
+        "label": "GUI",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "4a3772c3c16aa277",
+        "type": "tab",
+        "label": "Dispatcher",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "ce0a80634cfa7f19",
+        "type": "tab",
+        "label": "Execution Engine",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1b82e53adc154d4f",
+        "type": "tab",
+        "label": "API Requester",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0338c3befa10e3ef",
+        "type": "tab",
+        "label": "API PostgreSql",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "cb187ff7ae5d822a",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "style": {
+            "fill": "#7fb7df",
+            "label": true
+        },
+        "nodes": [
+            "98bb4419b579a05d",
+            "6830fb5b2dbb3c58",
+            "0214f907c6dde6e5",
+            "a44dccd094937dc7",
+            "dc496214a2a31801",
+            "fd666ce6a6998952"
+        ],
+        "x": 188,
+        "y": 73,
+        "w": 1304,
+        "h": 774
+    },
+    {
+        "id": "98bb4419b579a05d",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "g": "cb187ff7ae5d822a",
+        "name": "",
+        "style": {
+            "stroke": "#61AFFE",
+            "label": true,
+            "fill": "#EFF7FF",
+            "fill-opacity": "1"
+        },
+        "nodes": [
+            "1cb547dae9f9416d",
+            "117569d4e15e635d",
+            "032c5b5f76bb58ec",
+            "38ebb2b60b411e67",
+            "4793b9e1e8061940"
+        ],
+        "x": 214,
+        "y": 279,
+        "w": 1252,
+        "h": 82
+    },
+    {
+        "id": "6830fb5b2dbb3c58",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "g": "cb187ff7ae5d822a",
+        "name": "",
+        "style": {
+            "fill": "#FFEBEB",
+            "fill-opacity": "1",
+            "label": true,
+            "stroke": "#F93E3E"
+        },
+        "nodes": [
+            "8731432811f95b1a",
+            "3d4e6c7b4de7bac6",
+            "3c70be8e0dd1f5cf",
+            "499e307bf7e5d869"
+        ],
+        "x": 214,
+        "y": 739,
+        "w": 1252,
+        "h": 82
+    },
+    {
+        "id": "0214f907c6dde6e5",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "g": "cb187ff7ae5d822a",
+        "name": "",
+        "style": {
+            "fill": "#ECFAF4",
+            "fill-opacity": "1",
+            "label": true,
+            "stroke": "#49CC90"
+        },
+        "nodes": [
+            "25538d080ca6636d",
+            "c266861c547ad94b",
+            "df1b7b5834c6cb38",
+            "02acee50a826dd9f",
+            "1ba781f4ea0cc9b7"
+        ],
+        "x": 214,
+        "y": 639,
+        "w": 1252,
+        "h": 82
+    },
+    {
+        "id": "a44dccd094937dc7",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "g": "cb187ff7ae5d822a",
+        "name": "",
+        "style": {
+            "fill": "#FFF5EA",
+            "label": true,
+            "fill-opacity": "1",
+            "stroke": "#FCA130"
+        },
+        "nodes": [
+            "e12ffb8302454083",
+            "9f069642444c25a7",
+            "377e6144780b155c",
+            "db0208777104afaf",
+            "8feeba1100b62724"
+        ],
+        "x": 214,
+        "y": 539,
+        "w": 1252,
+        "h": 82
+    },
+    {
+        "id": "dc496214a2a31801",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "g": "cb187ff7ae5d822a",
+        "name": "",
+        "style": {
+            "fill": "#ffffbf",
+            "label": true,
+            "stroke": "#92d04f"
+        },
+        "nodes": [
+            "e63cdcdab67bde84",
+            "ae9207191aa77032",
+            "514d4a962212d99e",
+            "113b77c94a8fcc57",
+            "cb7426598f0e9f9f"
+        ],
+        "x": 214,
+        "y": 379,
+        "w": 1252,
+        "h": 142
+    },
+    {
+        "id": "fd666ce6a6998952",
+        "type": "group",
+        "z": "0338c3befa10e3ef",
+        "g": "cb187ff7ae5d822a",
+        "name": "",
+        "style": {
+            "fill": "#dbcbe7",
+            "label": true
+        },
+        "nodes": [
+            "5fd8010a154e7b55",
+            "037dce8e31058aab",
+            "b009db8e1ca3cea7",
+            "663e1cfb.99c1e4",
+            "1019c56914533080",
+            "cc207b5b.33df88",
+            "c2852efd.3d7ad",
+            "ddcdf98eedd5c829",
+            "b54c48be376b4dbd",
+            "f34ebfb56fbb6f27"
+        ],
+        "x": 214,
+        "y": 99,
+        "w": 1252,
+        "h": 162
+    },
+    {
+        "id": "f2f345c016e30abd",
+        "type": "postgreSQLConfig",
+        "name": "",
+        "host": "${POSTGRES_HOST}",
+        "hostFieldType": "str",
+        "port": "${POSTGRES_PORT}",
+        "portFieldType": "num",
+        "database": "${POSTGRES_DB}",
+        "databaseFieldType": "str",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "applicationName": "",
+        "applicationNameType": "str",
+        "max": "10",
+        "maxFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "${POSTGRES_USER}",
+        "userFieldType": "str",
+        "password": "${POSTGRES_PASSWORD}",
+        "passwordFieldType": "str"
+    },
+    {
+        "id": "dd54207981703118",
+        "type": "ui_group",
+        "name": "Postgresql API",
+        "tab": "076616130c52a934",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "86c4f5821759c76a",
+        "type": "ui_group",
+        "name": "Table ",
+        "tab": "076616130c52a934",
+        "order": 2,
+        "disp": true,
+        "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "49e3087e0eaf97e1",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "076616130c52a934",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "076616130c52a934",
+        "type": "ui_tab",
+        "name": "View",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "2ef23f34d0572ece",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "4ade2752bb8e0a7b",
+        "type": "amqp-broker",
+        "name": "",
+        "host": "${RABBITMQ_HOST}",
+        "port": "${RABBITMQ_PORT}",
+        "vhost": "",
+        "tls": false,
+        "credsFromSettings": false
+    },
+    {
+        "id": "ea379fd37875fcf3",
+        "type": "minio-config",
+        "name": "MinIO Instance",
+        "host": "${MINIO_HOST}",
+        "port": "${MINIO_PORT}",
+        "useSsl": false
+    },
+    {
+        "id": "02cdaf20d7b14791",
+        "type": "ui_spacer",
+        "z": "c4fab67dd16d9611",
+        "name": "spacer",
+        "group": "dd54207981703118",
+        "order": 8,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "71b2d72913f92aac",
+        "type": "comment",
+        "z": "11230fbd32f3e45e",
+        "name": "nodes",
+        "info": "node-red-contrib-loop\nnode-red-dashboard\nnode-red-node-ui-table\n@meowwolf/node-red-contrib-amqp\n@reggae_ulli/node-red-contrib-minio-all-fix\nnode-red-contrib-postgresql",
+        "x": 110,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "becd462aa19ccfee",
+        "type": "comment",
+        "z": "11230fbd32f3e45e",
+        "name": "docker-compose.yml",
+        "info": "version: '3.9'\nservices:\n  nodered1:\n    container_name: nodered1\n    image: \"nodered/node-red:latest\"\n    ports:\n      - '1880:1880'\n    depends_on:\n      - redis\n    environment:\n      - CONTAINER_NAME=${CONTAINER_NAME}\n      - REDIS_HOSTS=${REDIS_HOSTS}\n      - RABBITMQ_HOST=${RABBITMQ_HOST}\n      - RABBITMQ_PORT=${RABBITMQ_PORT}\n      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}\n      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}\n      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}\n      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}\n      - MINIO_HOST=${MINIO_HOST}\n      - MINIO_PORT=${MINIO_PORT}\n      - MINIO_BUCKET=${MINIO_BUCKET}\n      - API_HOST=${API_HOST}\n      - POSTGRES_HOST=${POSTGRES_HOST}\n      - POSTGRES_PORT=${POSTGRES_PORT}\n      - POSTGRES_USER=${POSTGRES_USER}\n      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}\n      - POSTGRES_DB=${POSTGRES_DB}\n    volumes:\n      - C:\\Users\\P77416820\\NodeRedData:/data\n    links:\n      - redis\n    networks:\n      - redis_net\n  redis:\n    image: redis:latest\n    container_name: redis_db\n    command: redis-server --appendonly yes\n    ports:\n      - '6379:6379'\n    volumes:\n      - ./data:/data\n    restart: always\n    networks:\n      - redis_net\n  redis-commander:\n    container_name: redis-commander\n    hostname: redis-commander\n    image: rediscommander/redis-commander:latest\n    restart: always\n    environment:\n      - REDIS_HOSTS=${REDIS_HOSTS}\n    ports:\n      - \"8081:8081\"\n    depends_on:\n      - redis\n    networks:\n      - redis_net\n  rabbitmq:\n    container_name: rabbitmq\n    image: rabbitmq:latest\n    hostname: rabbitmq\n    ports:\n      - \"5672:5672\"\n      - \"15672:15672\"\n    environment:\n      - RABBITMQ_DEFAULT_USER=${RABBITMQ_DEFAULT_USER}\n      - RABBITMQ_DEFAULT_PASS=${RABBITMQ_DEFAULT_PASS}\n    networks:\n      - redis_net\n  minio:\n    container_name: minio\n    image: minio/minio:latest\n    ports:\n      - \"9000:9000\"\n      - \"9001:9001\"\n    environment:\n      - MINIO_ACCESS_KEY=${MINIO_ACCESS_KEY}\n      - MINIO_SECRET_KEY=${MINIO_SECRET_KEY}\n    volumes:\n      - minio-data:/data\n    networks:\n      - redis_net\n    command: server /data\n  s3manager:\n    container_name: s3manager\n    image: mastertinner/s3manager:latest\n    ports:\n      - \"8080:8080\"\n    environment:\n      - ENDPOINT=${ENDPOINT}\n      - ACCESS_KEY_ID=${ACCESS_KEY_ID}\n      - SECRET_ACCESS_KEY=${SECRET_ACCESS_KEY}\n      - USE_SSL=${USE_SSL}\n    depends_on:\n      - minio\n    networks:\n      - redis_net\n  postgres:\n    container_name: postgres\n    image: postgres:14.1\n    restart: always\n    environment:\n      - POSTGRES_USER=${POSTGRES_USER}\n      - POSTGRES_PASSWORD=${POSTGRES_PASSWORD}\n      - POSTGRES_DB=${POSTGRES_DB}\n    ports:\n      - '5432:5432'\n    volumes: \n      - ./postgres-data:/var/lib/postgresql/data\n      - ./create_tables.sql:/docker-entrypoint-initdb.d/create_tables.sql\n    networks:\n      - redis_net\n  pgadmin:\n    container_name: pgadmin\n    image: dpage/pgadmin4\n    restart: always\n    environment:\n      - PGADMIN_DEFAULT_EMAIL=${PGADMIN_DEFAULT_EMAIL}\n      - PGADMIN_DEFAULT_PASSWORD=${PGADMIN_DEFAULT_PASSWORD}\n    ports:\n      - '5050:80'\n    networks:\n      - redis_net\nvolumes:\n  minio-data:\nnetworks:\n  redis_net:\n    driver: bridge\n# docker network create external-network\n# docker compose up -d\n# docker compose down\n# docker compose start\n# docker compose stop",
+        "x": 150,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "076cbe18065b8dc3",
+        "type": "comment",
+        "z": "11230fbd32f3e45e",
+        "name": ".env",
+        "info": "CONTAINER_NAME=nodered1\nREDIS_HOSTS=redis://redis:6379\nRABBITMQ_HOST=rabbitmq\nRABBITMQ_PORT=5672\nMINIO_HOST=minio\nMINIO_PORT=9000\nMINIO_BUCKET=store\nAPI_HOST=http://localhost:1880\nRABBITMQ_DEFAULT_USER=rabbitmq\nRABBITMQ_DEFAULT_PASS=rabbitmq\nMINIO_ACCESS_KEY=minio\nMINIO_SECRET_KEY=minio123\nENDPOINT=minio:9000\nACCESS_KEY_ID=minio\nSECRET_ACCESS_KEY=minio123\nUSE_SSL=false\nPOSTGRES_USER=postgres\nPOSTGRES_PASSWORD=postgres\nPOSTGRES_DB=db\nPOSTGRES_HOST=postgres\nPOSTGRES_PORT=5432\nPGADMIN_DEFAULT_EMAIL=admin@admin.com\nPGADMIN_DEFAULT_PASSWORD=root\n",
+        "x": 110,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "1bed5627ec62f1ad",
+        "type": "comment",
+        "z": "11230fbd32f3e45e",
+        "name": "create_tables.sql",
+        "info": "CREATE TABLE IF NOT EXISTS clients (\n  id serial NOT NULL,\n  timestamp TIMESTAMP,\n  foreName varchar(32) NOT NULL,\n  sirName varchar(32) NOT NULL,\n  userID varchar(16) NOT NULL,\n  age smallserial NOT NULL,\n  PRIMARY KEY (id)\n);",
+        "x": 120,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "0308c34263768313",
+        "type": "ui_dropdown",
+        "z": "c4fab67dd16d9611",
+        "name": "Operation",
+        "label": "Operation",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "dd54207981703118",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "select",
+                "value": "select",
+                "type": "str"
+            },
+            {
+                "label": "update",
+                "value": "update",
+                "type": "str"
+            },
+            {
+                "label": "insert",
+                "value": "insert",
+                "type": "str"
+            },
+            {
+                "label": "delete",
+                "value": "delete",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "type",
+        "topicType": "str",
+        "className": "",
+        "x": 580,
+        "y": 80,
+        "wires": [
+            [
+                "10ff580bae415505"
+            ]
+        ]
+    },
+    {
+        "id": "2699a35d6c715a04",
+        "type": "ui_numeric",
+        "z": "c4fab67dd16d9611",
+        "name": "Iterations",
+        "label": "Iterations",
+        "tooltip": "",
+        "group": "dd54207981703118",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "iterations",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "2000",
+        "step": "10",
+        "className": "",
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "10ff580bae415505"
+            ]
+        ]
+    },
+    {
+        "id": "302c5955798f8c4f",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "dd54207981703118",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Submit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "submit",
+        "topicType": "str",
+        "x": 580,
+        "y": 260,
+        "wires": [
+            [
+                "10ff580bae415505"
+            ]
+        ]
+    },
+    {
+        "id": "90126fdf91924073",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "msg.topic = \"type\"",
+        "func": "msg.topic = \"type\"\nmsg.payload = \"select\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "0308c34263768313"
+            ]
+        ]
+    },
+    {
+        "id": "3c1e4dbe34477b17",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "msg.topic = \"iterations\"",
+        "func": "msg.topic = \"iterations\"\nmsg.payload = 10\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 140,
+        "wires": [
+            [
+                "2699a35d6c715a04"
+            ]
+        ]
+    },
+    {
+        "id": "ae667f349b80ad4d",
+        "type": "ui_text",
+        "z": "c4fab67dd16d9611",
+        "group": "dd54207981703118",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "type",
+        "label": "Type",
+        "format": "{{msg.payload.type}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1170,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "83a96c7afaaf525f",
+        "type": "ui_text",
+        "z": "c4fab67dd16d9611",
+        "group": "dd54207981703118",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "iterations",
+        "label": "Iterations",
+        "format": "{{msg.payload.iterations}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1180,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "bc46abe6398bdecb",
+        "type": "ui_text",
+        "z": "c4fab67dd16d9611",
+        "group": "dd54207981703118",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "delay",
+        "label": "Delay",
+        "format": "{{msg.payload.delay}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1170,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "10ff580bae415505",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "Form Data Capture",
+        "func": "var lastinput = context.get(\"lastinput\") || \"\";\n\nif (msg.topic === \"type\"){\n    lastinput = msg.payload;\n    context.set(\"type\", lastinput);\n}\n\nif (msg.topic === \"iterations\"){\n    lastinput = msg.payload;\n    context.set(\"iterations\", lastinput);\n}\n\nif (msg.topic === \"delay\") {\n    lastinput = msg.payload;\n    context.set(\"delay\", lastinput);\n}\nif(msg.topic === \"submit\"){\n\n    msg.payload = {\n        \"timestamp\": Date.now(),        \n        \"type\":context.get(\"type\"),\n        \"iterations\": context.get(\"iterations\") || 10,\n        \"delay\": context.get(\"delay\") || 1000,\n        \"counter\":0\n    }\n    \n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 100,
+        "wires": [
+            [
+                "ae667f349b80ad4d",
+                "83a96c7afaaf525f",
+                "bc46abe6398bdecb",
+                "340ae2adc80e8169"
+            ]
+        ]
+    },
+    {
+        "id": "80303b41c33d30c5",
+        "type": "debug",
+        "z": "c4fab67dd16d9611",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d2ab34808f5793a4",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "msg.topic = \"delay\"",
+        "func": "msg.topic = \"delay\"\nmsg.payload = 1000\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 200,
+        "wires": [
+            [
+                "7519312452e70131"
+            ]
+        ]
+    },
+    {
+        "id": "7519312452e70131",
+        "type": "ui_numeric",
+        "z": "c4fab67dd16d9611",
+        "name": "Delay",
+        "label": "Delay",
+        "tooltip": "",
+        "group": "dd54207981703118",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "delay",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": "1000",
+        "max": "10000",
+        "step": "1000",
+        "className": "",
+        "x": 570,
+        "y": 200,
+        "wires": [
+            [
+                "10ff580bae415505"
+            ]
+        ]
+    },
+    {
+        "id": "340ae2adc80e8169",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "hSet",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\n\n\nawait client.connect();\nmsg.payload['isToTake'] = envw.CONTAINER_NAME;\n\nawait client.hSet('isToTake:' + msg.payload.timestamp, msg.payload);\n\n//client.quit()\nawait client.disconnect();\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 200,
+        "wires": [
+            [
+                "80303b41c33d30c5"
+            ]
+        ]
+    },
+    {
+        "id": "1dc351271589e68f",
+        "type": "ui_ui_control",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "events": "all",
+        "x": 200,
+        "y": 140,
+        "wires": [
+            [
+                "90126fdf91924073",
+                "3c1e4dbe34477b17",
+                "d2ab34808f5793a4"
+            ]
+        ]
+    },
+    {
+        "id": "cbc26185706ba67c",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "5",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 270,
+        "y": 460,
+        "wires": [
+            [
+                "8001c9f6228fc757"
+            ]
+        ]
+    },
+    {
+        "id": "8001c9f6228fc757",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "Form Data Capture",
+        "func": "var typeArray = [\"select\", \"update\", \"insert\", \"delete\"];\nconst delay = ms => new Promise(resolve => setTimeout(resolve, ms))\n\nlet i = msg.payload\nlet j = 1\n\n\nwhile (i >= j) {\nlet typeInstance = typeArray[Math.floor(Math.random() * typeArray.length)]; //getting random category from array\n    msg.payload = {\n        \"timestamp\": Date.now(),\n        \"type\": typeInstance,\n        \"iterations\": Math.floor(Math.random() * 30) + 1,\n        \"delay\": Math.floor(Math.random() * 5000) + 1000,\n        \"counter\": 0\n    };\nawait delay(1000)\n    node.send(msg);\n    j++\n  }\n  j=0\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 360,
+        "wires": [
+            [
+                "340ae2adc80e8169"
+            ]
+        ]
+    },
+    {
+        "id": "5edd1207f8eb59a9",
+        "type": "ui_table",
+        "z": "c4fab67dd16d9611",
+        "group": "86c4f5821759c76a",
+        "name": "Table isToTake",
+        "order": 1,
+        "width": 16,
+        "height": 4,
+        "columns": [
+            {
+                "field": "timestamp",
+                "title": "ID",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "type",
+                "title": "type",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "iterations",
+                "title": "iterations",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "delay",
+                "title": "delay",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 782.5,
+        "y": 511.25,
+        "wires": [
+            [
+                "cfb8cd8b07def572"
+            ]
+        ]
+    },
+    {
+        "id": "caef85e4b5a38c9d",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "SCAN isToTake",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nawait client.connect();\nlet cursor = 0\nvar results = []\ndo {\n    let result = await client.SCAN(cursor, { \"MATCH\": \"isToTake:*\" });\n    cursor = result.cursor\n    for (const key of result.keys) {\n        results.push(await client.hGetAll(key))\n    }\n} while (cursor != 0);\n\n\nclient.quit()\n\nmsg.payload = results\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 542.5,
+        "y": 511.25,
+        "wires": [
+            [
+                "5edd1207f8eb59a9"
+            ]
+        ]
+    },
+    {
+        "id": "cfb8cd8b07def572",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "remove item",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nawait client.connect();\nawait client.DEL(\"isToTake:\" + msg.payload.timestamp)\n\nclient.quit()\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 972.5,
+        "y": 511.25,
+        "wires": [
+            [
+                "4747e4722597b353"
+            ]
+        ]
+    },
+    {
+        "id": "4747e4722597b353",
+        "type": "debug",
+        "z": "c4fab67dd16d9611",
+        "name": "remove item",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1192.5,
+        "y": 511.25,
+        "wires": []
+    },
+    {
+        "id": "e9efe2252049f340",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 332.5,
+        "y": 511.25,
+        "wires": [
+            [
+                "caef85e4b5a38c9d"
+            ]
+        ]
+    },
+    {
+        "id": "9fe5c00994a637ba",
+        "type": "comment",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "info": "[\n    {\n        \"id\": \"1ef99d7f97206a6d\",\n        \"type\": \"group\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"style\": {\n            \"stroke\": \"#999999\",\n            \"stroke-opacity\": \"1\",\n            \"fill\": \"none\",\n            \"fill-opacity\": \"1\",\n            \"label\": true,\n            \"label-position\": \"nw\",\n            \"color\": \"#a4a4a4\"\n        },\n        \"nodes\": [\n            \"617a5f0353397a73\",\n            \"e17b70f1b7ee4793\",\n            \"71dc27a8b09852cc\",\n            \"0b67783246d5b32d\",\n            \"738f14238f2b88b4\",\n            \"4615042b7fc61a12\",\n            \"be895835d90f1d69\",\n            \"f6bc9f71abf0c741\",\n            \"39bef8d410bdf447\",\n            \"60e89040d3e74d35\",\n            \"dc3ed6c2fa62b0cb\",\n            \"2f628e844ce034c2\",\n            \"93abfb7989ec1ffc\",\n            \"a4bceba958c63ade\",\n            \"41a95e246cd90d9c\",\n            \"6a372ebb5dd09b95\",\n            \"ea3ca3637256ded7\",\n            \"a52ca0b00441d668\",\n            \"8942d9f2a252e835\",\n            \"f30d364b625f12f9\",\n            \"56a3704aa73bba3b\",\n            \"10dc9d288d1b29cb\",\n            \"befc87ac11dddf4d\",\n            \"b35223ba0f6417fd\",\n            \"3aeae8d28746cfb9\",\n            \"7d11aec2ec2364ca\",\n            \"e40d4c23b8cc7c2a\",\n            \"9d652287d5b09c8e\",\n            \"4b2cbfc763286bd0\",\n            \"6bc3bdcb45f20994\",\n            \"de161152f740c19f\",\n            \"8e678d8e56ba350d\",\n            \"c155b3fa6a0ed5eb\",\n            \"ea97105787fc2947\",\n            \"37974d44253f1177\",\n            \"0e8d0576a9b41035\",\n            \"8d857a4c1d31c23e\",\n            \"442fccdb9c89a91d\",\n            \"d5b2c90e31d69260\",\n            \"617a5f0353397a73\"\n        ],\n        \"x\": 114,\n        \"y\": 859,\n        \"w\": 1772,\n        \"h\": 722\n    },\n    {\n        \"id\": \"617a5f0353397a73\",\n        \"type\": \"ui_button\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"group\": \"49e3087e0eaf97e1\",\n        \"order\": 2,\n        \"width\": 0,\n        \"height\": 0,\n        \"passthru\": false,\n        \"label\": \"Start\",\n        \"tooltip\": \"\",\n        \"color\": \"\",\n        \"bgcolor\": \"\",\n        \"className\": \"\",\n        \"icon\": \"\",\n        \"payload\": \"true\",\n        \"payloadType\": \"bool\",\n        \"topic\": \"stop\",\n        \"topicType\": \"flow\",\n        \"x\": 210,\n        \"y\": 1100,\n        \"wires\": [\n            [\n                \"41a95e246cd90d9c\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"e17b70f1b7ee4793\",\n        \"type\": \"ui_button\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"group\": \"49e3087e0eaf97e1\",\n        \"order\": 3,\n        \"width\": 0,\n        \"height\": 0,\n        \"passthru\": false,\n        \"label\": \"Stop\",\n        \"tooltip\": \"\",\n        \"color\": \"\",\n        \"bgcolor\": \"\",\n        \"className\": \"\",\n        \"icon\": \"\",\n        \"payload\": \"false\",\n        \"payloadType\": \"bool\",\n        \"topic\": \"stop\",\n        \"topicType\": \"flow\",\n        \"x\": 210,\n        \"y\": 1140,\n        \"wires\": [\n            [\n                \"41a95e246cd90d9c\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"71dc27a8b09852cc\",\n        \"type\": \"debug\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"select\",\n        \"active\": false,\n        \"tosidebar\": true,\n        \"console\": false,\n        \"tostatus\": false,\n        \"complete\": \"payload\",\n        \"targetType\": \"msg\",\n        \"statusVal\": \"\",\n        \"statusType\": \"auto\",\n        \"x\": 1790,\n        \"y\": 1080,\n        \"wires\": []\n    },\n    {\n        \"id\": \"0b67783246d5b32d\",\n        \"type\": \"debug\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"insert\",\n        \"active\": false,\n        \"tosidebar\": true,\n        \"console\": false,\n        \"tostatus\": false,\n        \"complete\": \"payload\",\n        \"targetType\": \"msg\",\n        \"statusVal\": \"\",\n        \"statusType\": \"auto\",\n        \"x\": 1790,\n        \"y\": 1240,\n        \"wires\": []\n    },\n    {\n        \"id\": \"738f14238f2b88b4\",\n        \"type\": \"debug\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"update\",\n        \"active\": false,\n        \"tosidebar\": true,\n        \"console\": false,\n        \"tostatus\": false,\n        \"complete\": \"payload\",\n        \"targetType\": \"msg\",\n        \"statusVal\": \"\",\n        \"statusType\": \"auto\",\n        \"x\": 1790,\n        \"y\": 1400,\n        \"wires\": []\n    },\n    {\n        \"id\": \"4615042b7fc61a12\",\n        \"type\": \"debug\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"delete\",\n        \"active\": false,\n        \"tosidebar\": true,\n        \"console\": false,\n        \"tostatus\": false,\n        \"complete\": \"payload\",\n        \"targetType\": \"msg\",\n        \"statusVal\": \"\",\n        \"statusType\": \"auto\",\n        \"x\": 1790,\n        \"y\": 1540,\n        \"wires\": []\n    },\n    {\n        \"id\": \"be895835d90f1d69\",\n        \"type\": \"switch\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"property\": \"payload.type\",\n        \"propertyType\": \"msg\",\n        \"rules\": [\n            {\n                \"t\": \"eq\",\n                \"v\": \"select\",\n                \"vt\": \"str\"\n            },\n            {\n                \"t\": \"eq\",\n                \"v\": \"update\",\n                \"vt\": \"str\"\n            },\n            {\n                \"t\": \"eq\",\n                \"v\": \"insert\",\n                \"vt\": \"str\"\n            },\n            {\n                \"t\": \"eq\",\n                \"v\": \"delete\",\n                \"vt\": \"str\"\n            },\n            {\n                \"t\": \"else\"\n            }\n        ],\n        \"checkall\": \"true\",\n        \"repair\": false,\n        \"outputs\": 5,\n        \"x\": 730,\n        \"y\": 1220,\n        \"wires\": [\n            [\n                \"39bef8d410bdf447\"\n            ],\n            [\n                \"dc3ed6c2fa62b0cb\"\n            ],\n            [\n                \"8942d9f2a252e835\"\n            ],\n            [\n                \"56a3704aa73bba3b\"\n            ],\n            []\n        ]\n    },\n    {\n        \"id\": \"f6bc9f71abf0c741\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"get next\",\n        \"func\": \"node.send({topic: \\\"control\\\", payload: \\\"drop\\\"})\\nmsg.topic = \\\"control\\\"\\nmsg.payload = \\\"peek\\\"\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1790,\n        \"y\": 1000,\n        \"wires\": [\n            [\n                \"39bef8d410bdf447\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"39bef8d410bdf447\",\n        \"type\": \"q-gate\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"q-gate\",\n        \"controlTopic\": \"control\",\n        \"defaultState\": \"queueing\",\n        \"openCmd\": \"open\",\n        \"closeCmd\": \"close\",\n        \"toggleCmd\": \"toggle\",\n        \"queueCmd\": \"queue\",\n        \"defaultCmd\": \"default\",\n        \"triggerCmd\": \"trigger\",\n        \"flushCmd\": \"flush\",\n        \"resetCmd\": \"reset\",\n        \"peekCmd\": \"peek\",\n        \"dropCmd\": \"drop\",\n        \"statusCmd\": \"status\",\n        \"maxQueueLength\": \"100\",\n        \"keepNewest\": false,\n        \"qToggle\": false,\n        \"persist\": false,\n        \"x\": 1000,\n        \"y\": 1000,\n        \"wires\": [\n            [\n                \"10dc9d288d1b29cb\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"60e89040d3e74d35\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"get next\",\n        \"func\": \"node.send({topic: \\\"control\\\", payload: \\\"drop\\\"})\\nmsg.topic = \\\"control\\\"\\nmsg.payload = \\\"peek\\\"\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1790,\n        \"y\": 1160,\n        \"wires\": [\n            [\n                \"dc3ed6c2fa62b0cb\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"dc3ed6c2fa62b0cb\",\n        \"type\": \"q-gate\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"q-gate\",\n        \"controlTopic\": \"control\",\n        \"defaultState\": \"queueing\",\n        \"openCmd\": \"open\",\n        \"closeCmd\": \"close\",\n        \"toggleCmd\": \"toggle\",\n        \"queueCmd\": \"queue\",\n        \"defaultCmd\": \"default\",\n        \"triggerCmd\": \"trigger\",\n        \"flushCmd\": \"flush\",\n        \"resetCmd\": \"reset\",\n        \"peekCmd\": \"peek\",\n        \"dropCmd\": \"drop\",\n        \"statusCmd\": \"status\",\n        \"maxQueueLength\": \"100\",\n        \"keepNewest\": false,\n        \"qToggle\": false,\n        \"persist\": false,\n        \"x\": 1000,\n        \"y\": 1160,\n        \"wires\": [\n            [\n                \"befc87ac11dddf4d\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"2f628e844ce034c2\",\n        \"type\": \"inject\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"Start\",\n        \"props\": [\n            {\n                \"p\": \"payload\"\n            }\n        ],\n        \"repeat\": \"\",\n        \"crontab\": \"\",\n        \"once\": false,\n        \"onceDelay\": 0.1,\n        \"topic\": \"\",\n        \"payload\": \"true\",\n        \"payloadType\": \"bool\",\n        \"x\": 210,\n        \"y\": 1180,\n        \"wires\": [\n            [\n                \"41a95e246cd90d9c\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"93abfb7989ec1ffc\",\n        \"type\": \"inject\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"Stop\",\n        \"props\": [\n            {\n                \"p\": \"payload\"\n            }\n        ],\n        \"repeat\": \"\",\n        \"crontab\": \"\",\n        \"once\": false,\n        \"onceDelay\": 0.1,\n        \"topic\": \"\",\n        \"payload\": \"false\",\n        \"payloadType\": \"bool\",\n        \"x\": 210,\n        \"y\": 1220,\n        \"wires\": [\n            [\n                \"41a95e246cd90d9c\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"a4bceba958c63ade\",\n        \"type\": \"loop\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"kind\": \"cond\",\n        \"count\": \"\",\n        \"initial\": \"1\",\n        \"step\": \"1\",\n        \"condition\": \"flow.get(\\\"stop\\\")\",\n        \"conditionType\": \"js\",\n        \"when\": \"before\",\n        \"enumeration\": \"enum\",\n        \"enumerationType\": \"msg\",\n        \"limit\": \"\",\n        \"loopPayload\": \"loop-keep\",\n        \"finalPayload\": \"final-orig\",\n        \"x\": 730,\n        \"y\": 900,\n        \"wires\": [\n            [],\n            [\n                \"ea3ca3637256ded7\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"41a95e246cd90d9c\",\n        \"type\": \"change\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"rules\": [\n            {\n                \"t\": \"move\",\n                \"p\": \"payload\",\n                \"pt\": \"msg\",\n                \"to\": \"stop\",\n                \"tot\": \"flow\"\n            }\n        ],\n        \"action\": \"\",\n        \"property\": \"\",\n        \"from\": \"\",\n        \"to\": \"\",\n        \"reg\": false,\n        \"x\": 410,\n        \"y\": 1160,\n        \"wires\": [\n            [\n                \"a4bceba958c63ade\",\n                \"de161152f740c19f\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"6a372ebb5dd09b95\",\n        \"type\": \"delay\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"pauseType\": \"delay\",\n        \"timeout\": \"2\",\n        \"timeoutUnits\": \"seconds\",\n        \"rate\": \"1\",\n        \"nbRateUnits\": \"1\",\n        \"rateUnits\": \"second\",\n        \"randomFirst\": \"1\",\n        \"randomLast\": \"5\",\n        \"randomUnits\": \"seconds\",\n        \"drop\": false,\n        \"allowrate\": false,\n        \"outputs\": 1,\n        \"x\": 680,\n        \"y\": 1080,\n        \"wires\": [\n            [\n                \"a4bceba958c63ade\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"ea3ca3637256ded7\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"function 7\",\n        \"func\": \"const redis = context.global.get('redis');\\nconst client = redis.createClient({ url: 'redis://redis:6379' });\\n\\nawait client.connect();\\n\\nlet cursor = 0\\nvar results = []\\ndo {\\n    let result = await client.SCAN(cursor, { \\\"MATCH\\\": \\\"isToTake:*\\\" });\\n    cursor = result.cursor\\n    for (const key of result.keys) {\\n        results.push(key)\\n    }\\n} while (cursor != 0);\\n\\nif (results.length) {\\n\\n    for (const key of results) {\\n        await client.WATCH(key)\\n        let item = await client.hGetAll(key);\\n        await client.multi()\\n            .DEL(key)\\n            .hSet('isTaken:' + item.timestamp, item)\\n            .exec();\\n        msg.statusCode = 200;//not found\\n        msg.payload = item\\n        node.send(msg)\\n    }\\n    await client.UNWATCH()\\n    client.quit()\\n    msg.payload = null\\n    node.send(msg)\\n} else {\\n\\n    client.quit()\\n    msg.statusCode = 404;//not found\\n    msg.payload = null\\n    node.send(msg);\\n}\\n\\n\\n\\n\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 800,\n        \"y\": 980,\n        \"wires\": [\n            [\n                \"6a372ebb5dd09b95\",\n                \"be895835d90f1d69\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"a52ca0b00441d668\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"get next\",\n        \"func\": \"node.send({topic: \\\"control\\\", payload: \\\"drop\\\"})\\nmsg.topic = \\\"control\\\"\\nmsg.payload = \\\"peek\\\"\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1790,\n        \"y\": 1320,\n        \"wires\": [\n            [\n                \"8942d9f2a252e835\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"8942d9f2a252e835\",\n        \"type\": \"q-gate\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"q-gate\",\n        \"controlTopic\": \"control\",\n        \"defaultState\": \"queueing\",\n        \"openCmd\": \"open\",\n        \"closeCmd\": \"close\",\n        \"toggleCmd\": \"toggle\",\n        \"queueCmd\": \"queue\",\n        \"defaultCmd\": \"default\",\n        \"triggerCmd\": \"trigger\",\n        \"flushCmd\": \"flush\",\n        \"resetCmd\": \"reset\",\n        \"peekCmd\": \"peek\",\n        \"dropCmd\": \"drop\",\n        \"statusCmd\": \"status\",\n        \"maxQueueLength\": \"100\",\n        \"keepNewest\": false,\n        \"qToggle\": false,\n        \"persist\": false,\n        \"x\": 1000,\n        \"y\": 1320,\n        \"wires\": [\n            [\n                \"b35223ba0f6417fd\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"f30d364b625f12f9\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"get next\",\n        \"func\": \"node.send({topic: \\\"control\\\", payload: \\\"drop\\\"})\\nmsg.topic = \\\"control\\\"\\nmsg.payload = \\\"peek\\\"\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1790,\n        \"y\": 1460,\n        \"wires\": [\n            [\n                \"56a3704aa73bba3b\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"56a3704aa73bba3b\",\n        \"type\": \"q-gate\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"q-gate\",\n        \"controlTopic\": \"control\",\n        \"defaultState\": \"queueing\",\n        \"openCmd\": \"open\",\n        \"closeCmd\": \"close\",\n        \"toggleCmd\": \"toggle\",\n        \"queueCmd\": \"queue\",\n        \"defaultCmd\": \"default\",\n        \"triggerCmd\": \"trigger\",\n        \"flushCmd\": \"flush\",\n        \"resetCmd\": \"reset\",\n        \"peekCmd\": \"peek\",\n        \"dropCmd\": \"drop\",\n        \"statusCmd\": \"status\",\n        \"maxQueueLength\": \"100\",\n        \"keepNewest\": false,\n        \"qToggle\": false,\n        \"persist\": false,\n        \"x\": 1000,\n        \"y\": 1460,\n        \"wires\": [\n            [\n                \"3aeae8d28746cfb9\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"10dc9d288d1b29cb\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"flow.set\",\n        \"func\": \"flow.set('select', msg.payload);\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1150,\n        \"y\": 1000,\n        \"wires\": [\n            [\n                \"7d11aec2ec2364ca\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"befc87ac11dddf4d\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"flow.set\",\n        \"func\": \"flow.set('update', msg.payload);\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1150,\n        \"y\": 1160,\n        \"wires\": [\n            [\n                \"e40d4c23b8cc7c2a\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"b35223ba0f6417fd\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"flow.set\",\n        \"func\": \"flow.set('insert', msg.payload);\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1150,\n        \"y\": 1320,\n        \"wires\": [\n            [\n                \"9d652287d5b09c8e\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"3aeae8d28746cfb9\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"flow.set\",\n        \"func\": \"flow.set('delete', msg.payload);\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1150,\n        \"y\": 1460,\n        \"wires\": [\n            [\n                \"4b2cbfc763286bd0\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"7d11aec2ec2364ca\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"select Cycles\",\n        \"func\": \"var item = flow.get('select') || [];\\n\\nwhile (item.iterations > item.counter) {\\n   item.counter++\\n   msg.delay = item.delay\\n   flow.set('select', item);\\n   return [null, msg];\\n}\\nflow.set('select', undefined);\\n\\nmsg.payload = item\\nreturn [msg, null];\\n\\n\\n\\n\\n\",\n        \"outputs\": 2,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1355,\n        \"y\": 1000,\n        \"wires\": [\n            [\n                \"8e678d8e56ba350d\"\n            ],\n            [\n                \"37974d44253f1177\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"e40d4c23b8cc7c2a\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"insert Cycles\",\n        \"func\": \"var item = flow.get('update') || [];\\n\\nwhile (item.iterations > item.counter) {\\n   item.counter++\\n   msg.delay = item.delay\\n   msg.payload = {\\n      \\\"type\\\": item.type,\\n      \\\"counter\\\": item.counter\\n   }\\n\\n   flow.set('update', item);\\n   return [null, msg];\\n}\\nflow.set('update', undefined);\\n\\n\\nmsg.payload = item\\nreturn [msg, null];\\n\",\n        \"outputs\": 2,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1355,\n        \"y\": 1160,\n        \"wires\": [\n            [\n                \"c155b3fa6a0ed5eb\"\n            ],\n            [\n                \"0e8d0576a9b41035\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"9d652287d5b09c8e\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"Select Cycles\",\n        \"func\": \"var item = flow.get('insert') || [];\\n\\nwhile (item.iterations > item.counter) {\\n   item.counter++\\n   msg.delay = item.delay\\n   msg.payload = {\\n      \\\"type\\\": item.type,\\n      \\\"counter\\\": item.counter\\n   }\\n\\n   flow.set('insert', item);\\n   return [null, msg];\\n}\\nflow.set('insert', undefined);\\n\\n\\nmsg.payload = item\\nreturn [msg, null];\\n\\n\\n\",\n        \"outputs\": 2,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1355,\n        \"y\": 1320,\n        \"wires\": [\n            [\n                \"ea97105787fc2947\"\n            ],\n            [\n                \"8d857a4c1d31c23e\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"4b2cbfc763286bd0\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"Select Cycles\",\n        \"func\": \"var item = flow.get('delete') || [];\\n\\nwhile (item.iterations > item.counter) {\\n   item.counter++\\n   msg.delay = item.delay\\n   msg.payload = {\\n      \\\"type\\\": item.type,\\n      \\\"counter\\\": item.counter\\n   }\\n\\n   flow.set('delete', item);\\n   return [null, msg];\\n}\\nflow.set('delete', undefined);\\n\\n\\nmsg.payload = item\\nreturn [msg, null];\\n\\n\\n\\n\\n\",\n        \"outputs\": 2,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1355,\n        \"y\": 1460,\n        \"wires\": [\n            [\n                \"6bc3bdcb45f20994\"\n            ],\n            [\n                \"442fccdb9c89a91d\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"6bc3bdcb45f20994\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"isDone\",\n        \"func\": \"const redis = context.global.get('redis');\\nconst client = redis.createClient({ url: 'redis://redis:6379' });\\n\\nawait client.connect();\\nawait client.multi()\\n    .DEL(\\\"isTaken:\\\" + msg.payload.timestamp)\\n    .hSet(\\\"isDone:\\\" + msg.payload.timestamp, msg.payload)\\n    .exec();\\nclient.quit()\\n\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1580,\n        \"y\": 1460,\n        \"wires\": [\n            [\n                \"f30d364b625f12f9\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"de161152f740c19f\",\n        \"type\": \"change\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"rules\": [\n            {\n                \"t\": \"set\",\n                \"p\": \"payload\",\n                \"pt\": \"msg\",\n                \"to\": \"peek\",\n                \"tot\": \"str\"\n            },\n            {\n                \"t\": \"set\",\n                \"p\": \"topic\",\n                \"pt\": \"msg\",\n                \"to\": \"control\",\n                \"tot\": \"str\"\n            }\n        ],\n        \"action\": \"\",\n        \"property\": \"\",\n        \"from\": \"\",\n        \"to\": \"\",\n        \"reg\": false,\n        \"x\": 730,\n        \"y\": 1440,\n        \"wires\": [\n            [\n                \"39bef8d410bdf447\",\n                \"dc3ed6c2fa62b0cb\",\n                \"8942d9f2a252e835\",\n                \"56a3704aa73bba3b\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"8e678d8e56ba350d\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"isDone\",\n        \"func\": \"const redis = context.global.get('redis');\\nconst client = redis.createClient({ url: 'redis://redis:6379' });\\n\\nawait client.connect();\\nawait client.multi()\\n    .DEL(\\\"isTaken:\\\" + msg.payload.timestamp)\\n    .hSet(\\\"isDone:\\\" + msg.payload.timestamp, msg.payload)\\n    .exec();\\nclient.quit()\\n\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1580,\n        \"y\": 1000,\n        \"wires\": [\n            [\n                \"f6bc9f71abf0c741\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"c155b3fa6a0ed5eb\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"isDone\",\n        \"func\": \"const redis = context.global.get('redis');\\nconst client = redis.createClient({ url: 'redis://redis:6379' });\\n\\nawait client.connect();\\nawait client.multi()\\n    .DEL(\\\"isTaken:\\\" + msg.payload.timestamp)\\n    .hSet(\\\"isDone:\\\" + msg.payload.timestamp, msg.payload)\\n    .exec();\\nclient.quit()\\n\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1580,\n        \"y\": 1160,\n        \"wires\": [\n            [\n                \"60e89040d3e74d35\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"ea97105787fc2947\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"isDone\",\n        \"func\": \"const redis = context.global.get('redis');\\nconst client = redis.createClient({ url: 'redis://redis:6379' });\\n\\nawait client.connect();\\nawait client.multi()\\n    .DEL(\\\"isTaken:\\\" + msg.payload.timestamp)\\n    .hSet(\\\"isDone:\\\" + msg.payload.timestamp, msg.payload)\\n    .exec();\\nclient.quit()\\n\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1580,\n        \"y\": 1320,\n        \"wires\": [\n            [\n                \"a52ca0b00441d668\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"37974d44253f1177\",\n        \"type\": \"actionflows\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"info\": \"Describe your action API here.\",\n        \"untilproptype\": \"num\",\n        \"proptype\": \"msg\",\n        \"name\": \"select\",\n        \"prop\": \"loop\",\n        \"untilprop\": 0,\n        \"until\": \"gt\",\n        \"loop\": \"none\",\n        \"scope\": \"global\",\n        \"perf\": false,\n        \"seq\": false,\n        \"x\": 1355,\n        \"y\": 1080,\n        \"wires\": [\n            [\n                \"7d11aec2ec2364ca\",\n                \"71dc27a8b09852cc\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"0e8d0576a9b41035\",\n        \"type\": \"actionflows\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"info\": \"Describe your action API here.\",\n        \"untilproptype\": \"num\",\n        \"proptype\": \"msg\",\n        \"name\": \"update\",\n        \"prop\": \"loop\",\n        \"untilprop\": 0,\n        \"until\": \"gt\",\n        \"loop\": \"none\",\n        \"scope\": \"global\",\n        \"perf\": false,\n        \"seq\": false,\n        \"x\": 1355,\n        \"y\": 1240,\n        \"wires\": [\n            [\n                \"e40d4c23b8cc7c2a\",\n                \"0b67783246d5b32d\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"8d857a4c1d31c23e\",\n        \"type\": \"actionflows\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"info\": \"Describe your action API here.\",\n        \"untilproptype\": \"num\",\n        \"proptype\": \"msg\",\n        \"name\": \"insert\",\n        \"prop\": \"loop\",\n        \"untilprop\": 0,\n        \"until\": \"gt\",\n        \"loop\": \"none\",\n        \"scope\": \"global\",\n        \"perf\": false,\n        \"seq\": false,\n        \"x\": 1355,\n        \"y\": 1400,\n        \"wires\": [\n            [\n                \"9d652287d5b09c8e\",\n                \"738f14238f2b88b4\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"442fccdb9c89a91d\",\n        \"type\": \"actionflows\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"info\": \"Describe your action API here.\",\n        \"untilproptype\": \"num\",\n        \"proptype\": \"msg\",\n        \"name\": \"delete\",\n        \"prop\": \"loop\",\n        \"untilprop\": 0,\n        \"until\": \"gt\",\n        \"loop\": \"none\",\n        \"scope\": \"global\",\n        \"perf\": false,\n        \"seq\": false,\n        \"x\": 1355,\n        \"y\": 1540,\n        \"wires\": [\n            [\n                \"4615042b7fc61a12\",\n                \"4b2cbfc763286bd0\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"d5b2c90e31d69260\",\n        \"type\": \"inject\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"props\": [\n            {\n                \"p\": \"payload\"\n            },\n            {\n                \"p\": \"topic\",\n                \"vt\": \"str\"\n            }\n        ],\n        \"repeat\": \"\",\n        \"crontab\": \"\",\n        \"once\": false,\n        \"onceDelay\": 0.1,\n        \"topic\": \"\",\n        \"payload\": \"\",\n        \"payloadType\": \"date\",\n        \"x\": 400,\n        \"y\": 1440,\n        \"wires\": [\n            [\n                \"de161152f740c19f\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"49e3087e0eaf97e1\",\n        \"type\": \"ui_group\",\n        \"name\": \"Control\",\n        \"tab\": \"076616130c52a934\",\n        \"order\": 3,\n        \"disp\": true,\n        \"width\": \"6\",\n        \"collapse\": false,\n        \"className\": \"\"\n    },\n    {\n        \"id\": \"076616130c52a934\",\n        \"type\": \"ui_tab\",\n        \"name\": \"View\",\n        \"icon\": \"dashboard\",\n        \"disabled\": false,\n        \"hidden\": false\n    }\n]",
+        "x": 200,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "e5b2a4eaf60a1f0c",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "10",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 450,
+        "y": 460,
+        "wires": [
+            [
+                "8001c9f6228fc757"
+            ]
+        ]
+    },
+    {
+        "id": "22cb787275472392",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "40",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "40",
+        "payloadType": "num",
+        "x": 610,
+        "y": 460,
+        "wires": [
+            [
+                "8001c9f6228fc757"
+            ]
+        ]
+    },
+    {
+        "id": "b31460ca2e7fe7b2",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "49e3087e0eaf97e1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Start Processing",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "stop",
+        "topicType": "flow",
+        "x": 300,
+        "y": 700,
+        "wires": [
+            [
+                "60e5d04f04bb8b60"
+            ]
+        ]
+    },
+    {
+        "id": "ad370b18818a397f",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "49e3087e0eaf97e1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Stop Processing",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "stop",
+        "topicType": "flow",
+        "x": 300,
+        "y": 760,
+        "wires": [
+            [
+                "60e5d04f04bb8b60"
+            ]
+        ]
+    },
+    {
+        "id": "f8037b9051d3a2c2",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 330,
+        "y": 580,
+        "wires": [
+            [
+                "bd3661853a9cadd4"
+            ]
+        ]
+    },
+    {
+        "id": "bd3661853a9cadd4",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "SCAN isTaken",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nawait client.connect();\nlet cursor = 0\nvar results = []\ndo {\n    let result = await client.SCAN(cursor, { \"MATCH\": \"isTaken:*\" });\n    cursor = result.cursor\n    for (const key of result.keys) {\n        results.push(await client.hGetAll(key))\n    }\n} while (cursor != 0);\n\n\nclient.quit()\n\nmsg.payload = results\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 580,
+        "wires": [
+            [
+                "6c907929dbf92417"
+            ]
+        ]
+    },
+    {
+        "id": "6c907929dbf92417",
+        "type": "ui_table",
+        "z": "c4fab67dd16d9611",
+        "group": "86c4f5821759c76a",
+        "name": "Table isTaken",
+        "order": 2,
+        "width": 16,
+        "height": 4,
+        "columns": [
+            {
+                "field": "timestamp",
+                "title": "ID",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "type",
+                "title": "type",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "iterations",
+                "title": "iterations",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "delay",
+                "title": "delay",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 780,
+        "y": 580,
+        "wires": [
+            [
+                "af34fc9f8bf3e671"
+            ]
+        ]
+    },
+    {
+        "id": "af34fc9f8bf3e671",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "remove item",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nawait client.connect();\nawait client.DEL(\"isTaken:\" + msg.payload.timestamp)\n\nclient.quit()\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 580,
+        "wires": [
+            [
+                "3abe582c05109796"
+            ]
+        ]
+    },
+    {
+        "id": "3abe582c05109796",
+        "type": "debug",
+        "z": "c4fab67dd16d9611",
+        "name": "remove item",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "8fca3a5242690f18",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 330,
+        "y": 640,
+        "wires": [
+            [
+                "39f1f85ad5bfb72d"
+            ]
+        ]
+    },
+    {
+        "id": "39f1f85ad5bfb72d",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "SCAN isDone",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nawait client.connect();\nlet cursor = 0\nvar results = []\ndo {\n    let result = await client.SCAN(cursor, { \"MATCH\": \"isDone:*\" });\n    cursor = result.cursor\n    for (const key of result.keys) {\n        results.push(await client.hGetAll(key))\n    }\n} while (cursor != 0);\n\n\nclient.quit()\n\nmsg.payload = results\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 640,
+        "wires": [
+            [
+                "30e5c9ade82d338b"
+            ]
+        ]
+    },
+    {
+        "id": "30e5c9ade82d338b",
+        "type": "ui_table",
+        "z": "c4fab67dd16d9611",
+        "group": "86c4f5821759c76a",
+        "name": "Table isDone",
+        "order": 3,
+        "width": 16,
+        "height": 4,
+        "columns": [
+            {
+                "field": "timestamp",
+                "title": "ID",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "type",
+                "title": "type",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "iterations",
+                "title": "iterations",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "delay",
+                "title": "delay",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 770,
+        "y": 640,
+        "wires": [
+            [
+                "288deeaf37d73c9c"
+            ]
+        ]
+    },
+    {
+        "id": "288deeaf37d73c9c",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "remove item",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nawait client.connect();\nawait client.DEL(\"isDone:\" + msg.payload.timestamp)\n\nclient.quit()\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 640,
+        "wires": [
+            [
+                "9e3180ae6b57e655"
+            ]
+        ]
+    },
+    {
+        "id": "9e3180ae6b57e655",
+        "type": "debug",
+        "z": "c4fab67dd16d9611",
+        "name": "remove item",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "60e5d04f04bb8b60",
+        "type": "amqp-out",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "broker": "4ade2752bb8e0a7b",
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "command.routing.key",
+        "exchangeRoutingKeyType": "str",
+        "exchangeDurable": true,
+        "amqpProperties": "{ \"headers\": {} }",
+        "rpcTimeoutMilliseconds": 3000,
+        "outputs": 0,
+        "x": 570,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "4c9c30a5cfb15fd3",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "dd54207981703118",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "=> 40",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "40",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 410,
+        "y": 380,
+        "wires": [
+            [
+                "8001c9f6228fc757"
+            ]
+        ]
+    },
+    {
+        "id": "e4f2022f89cb035f",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "dd54207981703118",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "=> 10",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "10",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 410,
+        "y": 340,
+        "wires": [
+            [
+                "8001c9f6228fc757"
+            ]
+        ]
+    },
+    {
+        "id": "ccdd63dc7fd2e9f9",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "dd54207981703118",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "=> 5",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "5",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 410,
+        "y": 300,
+        "wires": [
+            [
+                "8001c9f6228fc757"
+            ]
+        ]
+    },
+    {
+        "id": "6c5dee4c1c0c6ef9",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "flushDB",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\nawait client.connect();\nawait client.FLUSHDB('ASYNC', function (err, succeeded) {\n    console.log(succeeded); // will be true if successfull\n});\n\nclient.quit()\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 840,
+        "wires": [
+            [
+                "cd390321cb43cbce"
+            ]
+        ]
+    },
+    {
+        "id": "fc1d894e6c45adc8",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 270,
+        "y": 900,
+        "wires": [
+            [
+                "6c5dee4c1c0c6ef9"
+            ]
+        ]
+    },
+    {
+        "id": "cd390321cb43cbce",
+        "type": "debug",
+        "z": "c4fab67dd16d9611",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "ff5e4393d929e25d",
+        "type": "comment",
+        "z": "c4fab67dd16d9611",
+        "name": "nodes",
+        "info": "node-red-contrib-loop\nnode-red-dashboard\nnode-red-node-ui-table\n@meowwolf/node-red-contrib-amqp\n@reggae_ulli/node-red-contrib-minio-all-fix\nnode-red-contrib-postgresql",
+        "x": 150,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "e4f7a6394f885d71",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "49e3087e0eaf97e1",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Delete All Tables",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 310,
+        "y": 840,
+        "wires": [
+            [
+                "6c5dee4c1c0c6ef9"
+            ]
+        ]
+    },
+    {
+        "id": "41a95e246cd90d9c",
+        "type": "change",
+        "z": "4a3772c3c16aa277",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 390,
+        "y": 220,
+        "wires": [
+            [
+                "a4bceba958c63ade"
+            ]
+        ]
+    },
+    {
+        "id": "2f628e844ce034c2",
+        "type": "inject",
+        "z": "4a3772c3c16aa277",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 170,
+        "y": 180,
+        "wires": [
+            [
+                "41a95e246cd90d9c"
+            ]
+        ]
+    },
+    {
+        "id": "93abfb7989ec1ffc",
+        "type": "inject",
+        "z": "4a3772c3c16aa277",
+        "name": "Stop",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 170,
+        "y": 220,
+        "wires": [
+            [
+                "41a95e246cd90d9c"
+            ]
+        ]
+    },
+    {
+        "id": "a4bceba958c63ade",
+        "type": "loop",
+        "z": "4a3772c3c16aa277",
+        "name": "",
+        "kind": "cond",
+        "count": "",
+        "initial": "1",
+        "step": "1",
+        "condition": "flow.get(\"stop\")",
+        "conditionType": "js",
+        "when": "before",
+        "enumeration": "enum",
+        "enumerationType": "msg",
+        "limit": "",
+        "loopPayload": "loop-keep",
+        "finalPayload": "final-orig",
+        "x": 580,
+        "y": 100,
+        "wires": [
+            [],
+            [
+                "ea3ca3637256ded7"
+            ]
+        ]
+    },
+    {
+        "id": "6a372ebb5dd09b95",
+        "type": "delay",
+        "z": "4a3772c3c16aa277",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 360,
+        "wires": [
+            [
+                "a4bceba958c63ade"
+            ]
+        ]
+    },
+    {
+        "id": "ea3ca3637256ded7",
+        "type": "function",
+        "z": "4a3772c3c16aa277",
+        "name": "SCAN => results",
+        "func": "const redis = context.global.get('redis');\nconst envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\nconst delay = ms => new Promise(resolve => setTimeout(resolve, ms))\n\nawait client.connect();\n\nlet cursor = 0\nvar results = []\ndo {\n    let result = await client.SCAN(cursor, { \"MATCH\": \"isToTake:*\" });\n    cursor = result.cursor\n    for (const key of result.keys) {\n        results.push(key)\n    }\n} while (cursor != 0);\n//node.warn(results);\nawait client.UNWATCH()\nclient.quit()\nmsg.payload = results\nnode.send(msg)\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 100,
+        "wires": [
+            [
+                "34afdf4acf3476e8"
+            ]
+        ]
+    },
+    {
+        "id": "34afdf4acf3476e8",
+        "type": "loop",
+        "z": "4a3772c3c16aa277",
+        "name": "",
+        "kind": "enum",
+        "count": "",
+        "initial": "1",
+        "step": "1",
+        "condition": "",
+        "conditionType": "js",
+        "when": "before",
+        "enumeration": "payload",
+        "enumerationType": "msg",
+        "limit": "",
+        "loopPayload": "loop-val",
+        "finalPayload": "final-last",
+        "x": 810,
+        "y": 200,
+        "wires": [
+            [
+                "6a372ebb5dd09b95"
+            ],
+            [
+                "37357c68aa8169ad"
+            ]
+        ]
+    },
+    {
+        "id": "165def92ed02c31e",
+        "type": "function",
+        "z": "4a3772c3c16aa277",
+        "name": "hGetAll && DEL && hSet",
+        "func": "var result = msg.payload\nconst redis = context.global.get('redis');\nconst envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nawait client.connect();\nawait client.WATCH(result)\nlet item = await client.hGetAll(result);\nif (item.timestamp !== undefined) {\n\n    item['isTaken'] = envw.CONTAINER_NAME;\n    await client.multi()\n        .DEL(result)\n        .hSet('isTaken:' + item.timestamp, item)\n        .exec();\n \n}\n\n\nmsg.statusCode = 200; //not found\nmsg.payload = item\nawait client.UNWATCH()\nclient.quit()\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 830,
+        "y": 520,
+        "wires": [
+            [
+                "34afdf4acf3476e8",
+                "3aaba3a30d58bddd",
+                "d2045831f93d852f"
+            ]
+        ]
+    },
+    {
+        "id": "37357c68aa8169ad",
+        "type": "delay",
+        "z": "4a3772c3c16aa277",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 900,
+        "y": 320,
+        "wires": [
+            [
+                "165def92ed02c31e"
+            ]
+        ]
+    },
+    {
+        "id": "3aaba3a30d58bddd",
+        "type": "switch",
+        "z": "4a3772c3c16aa277",
+        "name": "",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "select",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "update",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "insert",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "delete",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 1210,
+        "y": 160,
+        "wires": [
+            [
+                "f8ba9714ad24f2d8"
+            ],
+            [
+                "84458ea9aac7c2f9"
+            ],
+            [
+                "0eb8cb6d42db27d0"
+            ],
+            [
+                "5862c370c16dfeaa"
+            ],
+            [
+                "4e9cc8647cdb8841"
+            ]
+        ]
+    },
+    {
+        "id": "4e9cc8647cdb8841",
+        "type": "debug",
+        "z": "4a3772c3c16aa277",
+        "name": "debug 2",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1320,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "f8ba9714ad24f2d8",
+        "type": "amqp-out",
+        "z": "4a3772c3c16aa277",
+        "name": "",
+        "broker": "4ade2752bb8e0a7b",
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "select.tsk.routing.key",
+        "exchangeRoutingKeyType": "str",
+        "exchangeDurable": true,
+        "amqpProperties": "{ \"headers\": {} }",
+        "rpcTimeoutMilliseconds": 3000,
+        "outputs": 0,
+        "x": 1530,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "84458ea9aac7c2f9",
+        "type": "amqp-out",
+        "z": "4a3772c3c16aa277",
+        "name": "",
+        "broker": "4ade2752bb8e0a7b",
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "update.tsk.routing.key",
+        "exchangeRoutingKeyType": "str",
+        "exchangeDurable": true,
+        "amqpProperties": "{ \"headers\": {} }",
+        "rpcTimeoutMilliseconds": 3000,
+        "outputs": 0,
+        "x": 1540,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "0eb8cb6d42db27d0",
+        "type": "amqp-out",
+        "z": "4a3772c3c16aa277",
+        "name": "",
+        "broker": "4ade2752bb8e0a7b",
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "insert.tsk.routing.key",
+        "exchangeRoutingKeyType": "str",
+        "exchangeDurable": true,
+        "amqpProperties": "{ \"headers\": {} }",
+        "rpcTimeoutMilliseconds": 3000,
+        "outputs": 0,
+        "x": 1530,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5862c370c16dfeaa",
+        "type": "amqp-out",
+        "z": "4a3772c3c16aa277",
+        "name": "",
+        "broker": "4ade2752bb8e0a7b",
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "delete.tsk.routing.key",
+        "exchangeRoutingKeyType": "str",
+        "exchangeDurable": true,
+        "amqpProperties": "{ \"headers\": {} }",
+        "rpcTimeoutMilliseconds": 3000,
+        "outputs": 0,
+        "x": 1530,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "faea492491c635a9",
+        "type": "amqp-in",
+        "z": "4a3772c3c16aa277",
+        "name": "",
+        "broker": "4ade2752bb8e0a7b",
+        "prefetch": 0,
+        "noAck": true,
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "command.routing.key",
+        "exchangeDurable": true,
+        "queueName": "",
+        "queueExclusive": true,
+        "queueDurable": false,
+        "queueAutoDelete": true,
+        "headers": "{}",
+        "x": 250,
+        "y": 100,
+        "wires": [
+            [
+                "41a95e246cd90d9c"
+            ]
+        ]
+    },
+    {
+        "id": "d2045831f93d852f",
+        "type": "debug",
+        "z": "4a3772c3c16aa277",
+        "name": "debug 13",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "69abc1c2f4c5d82e",
+        "type": "comment",
+        "z": "4a3772c3c16aa277",
+        "name": "nodes",
+        "info": "node-red-contrib-loop\nnode-red-dashboard\nnode-red-node-ui-table\n@meowwolf/node-red-contrib-amqp\n@reggae_ulli/node-red-contrib-minio-all-fix\nnode-red-contrib-postgresql",
+        "x": 70,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "14ededb440c022bc",
+        "type": "function",
+        "z": "ce0a80634cfa7f19",
+        "name": "flow.set",
+        "func": "flow.set(msg.payload.timestamp, msg.payload);\nmsg.timestamp = msg.payload.timestamp\nmsg.delay = msg.payload.delay\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "383fe45d58e4272b"
+            ]
+        ]
+    },
+    {
+        "id": "7175a0d66850dc4f",
+        "type": "amqp-in",
+        "z": "ce0a80634cfa7f19",
+        "name": "",
+        "broker": "4ade2752bb8e0a7b",
+        "prefetch": 0,
+        "noAck": true,
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "select.tsk.routing.key",
+        "exchangeDurable": true,
+        "queueName": "",
+        "queueExclusive": true,
+        "queueDurable": false,
+        "queueAutoDelete": true,
+        "headers": "{}",
+        "x": 187,
+        "y": 122,
+        "wires": [
+            [
+                "14ededb440c022bc"
+            ]
+        ]
+    },
+    {
+        "id": "383fe45d58e4272b",
+        "type": "function",
+        "z": "ce0a80634cfa7f19",
+        "name": "Cycles",
+        "func": "var item = flow.get(msg.timestamp) || {};\n\nwhile (item.iterations > item.counter) {\n   item.counter++\n   flow.set(item.timestamp, item);\n\n   return [msg, null];\n}\nflow.set(msg.timestamp, undefined);\n\nmsg.payload = item\nreturn [null, msg];\n\n\n\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 120,
+        "wires": [
+            [
+                "56dee1a2386a3055"
+            ],
+            [
+                "699d9aff6c1ea71f"
+            ]
+        ]
+    },
+    {
+        "id": "56dee1a2386a3055",
+        "type": "delay",
+        "z": "ce0a80634cfa7f19",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 580,
+        "y": 40,
+        "wires": [
+            [
+                "215de501e241ed2f",
+                "23d068dd74b60419"
+            ]
+        ]
+    },
+    {
+        "id": "9da9e54a6495f9a1",
+        "type": "function",
+        "z": "ce0a80634cfa7f19",
+        "name": "isDone",
+        "func": "if (msg.payload.timestamp !== undefined) {\n    const redis = context.global.get('redis');\n    const envw = global.get('env');\n    const client = redis.createClient({ url: envw.REDIS_HOSTS });\n\n    msg.payload['isDone'] = envw.CONTAINER_NAME;\nawait client.connect();\nawait client.multi()\n    .DEL(\"isTaken:\" + msg.payload.timestamp)\n    .hSet(\"isDone:\" + msg.payload.timestamp, msg.payload)\n    .exec();\nawait client.UNWATCH()\nclient.quit()\nnode.send(msg);\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 380,
+        "wires": [
+            [
+                "7fb7fbe6b5205dba"
+            ]
+        ]
+    },
+    {
+        "id": "215de501e241ed2f",
+        "type": "debug",
+        "z": "ce0a80634cfa7f19",
+        "name": "select",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "6e68e7ca79ff6b5e",
+        "type": "function",
+        "z": "ce0a80634cfa7f19",
+        "name": "flow.set",
+        "func": "flow.set(msg.payload.timestamp, msg.payload);\nmsg.timestamp = msg.payload.timestamp\nmsg.delay = msg.payload.delay\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 260,
+        "wires": [
+            [
+                "259e1ed3c8383515"
+            ]
+        ]
+    },
+    {
+        "id": "cb7116c15eb137ab",
+        "type": "amqp-in",
+        "z": "ce0a80634cfa7f19",
+        "name": "",
+        "broker": "4ade2752bb8e0a7b",
+        "prefetch": 0,
+        "noAck": true,
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "update.tsk.routing.key",
+        "exchangeDurable": true,
+        "queueName": "",
+        "queueExclusive": true,
+        "queueDurable": false,
+        "queueAutoDelete": true,
+        "headers": "{}",
+        "x": 187,
+        "y": 262,
+        "wires": [
+            [
+                "6e68e7ca79ff6b5e"
+            ]
+        ]
+    },
+    {
+        "id": "259e1ed3c8383515",
+        "type": "function",
+        "z": "ce0a80634cfa7f19",
+        "name": "Cycles",
+        "func": "var item = flow.get(msg.timestamp) || {};\n\nwhile (item.iterations > item.counter) {\n   item.counter++\n   flow.set(item.timestamp, item);\n\n   return [msg, null];\n}\nflow.set(msg.timestamp, undefined);\n\nmsg.payload = item\nreturn [null, msg];\n\n\n\n\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 260,
+        "wires": [
+            [
+                "f0502c5d64ebdb5f"
+            ],
+            [
+                "9689709ddcc51b66"
+            ]
+        ]
+    },
+    {
+        "id": "f0502c5d64ebdb5f",
+        "type": "delay",
+        "z": "ce0a80634cfa7f19",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 580,
+        "y": 180,
+        "wires": [
+            [
+                "dd7300b6ffea4466",
+                "ddf8fb6962532cd1"
+            ]
+        ]
+    },
+    {
+        "id": "dd7300b6ffea4466",
+        "type": "debug",
+        "z": "ce0a80634cfa7f19",
+        "name": "update",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "0c7bae4ebfb1500f",
+        "type": "function",
+        "z": "ce0a80634cfa7f19",
+        "name": "flow.set",
+        "func": "flow.set(msg.payload.timestamp, msg.payload);\nmsg.timestamp = msg.payload.timestamp\nmsg.delay = msg.payload.delay\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 400,
+        "wires": [
+            [
+                "1302c43b3b3cf8e4"
+            ]
+        ]
+    },
+    {
+        "id": "82ea8cc2a55fee86",
+        "type": "amqp-in",
+        "z": "ce0a80634cfa7f19",
+        "name": "",
+        "broker": "4ade2752bb8e0a7b",
+        "prefetch": 0,
+        "noAck": true,
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "insert.tsk.routing.key",
+        "exchangeDurable": true,
+        "queueName": "",
+        "queueExclusive": true,
+        "queueDurable": false,
+        "queueAutoDelete": true,
+        "headers": "{}",
+        "x": 187,
+        "y": 402,
+        "wires": [
+            [
+                "0c7bae4ebfb1500f"
+            ]
+        ]
+    },
+    {
+        "id": "1302c43b3b3cf8e4",
+        "type": "function",
+        "z": "ce0a80634cfa7f19",
+        "name": "Cycles",
+        "func": "var item = flow.get(msg.timestamp) || {};\n\nwhile (item.iterations > item.counter) {\n   item.counter++\n   flow.set(item.timestamp, item);\n\n   return [msg, null];\n}\nflow.set(msg.timestamp, undefined);\n\nmsg.payload = item\nreturn [null, msg];\n\n\n\n\n\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 400,
+        "wires": [
+            [
+                "1f393ed18e79a601"
+            ],
+            [
+                "9da9e54a6495f9a1"
+            ]
+        ]
+    },
+    {
+        "id": "1f393ed18e79a601",
+        "type": "delay",
+        "z": "ce0a80634cfa7f19",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 580,
+        "y": 320,
+        "wires": [
+            [
+                "5c6fb2d14cc93eef",
+                "b982b5920d34ea2b"
+            ]
+        ]
+    },
+    {
+        "id": "5c6fb2d14cc93eef",
+        "type": "debug",
+        "z": "ce0a80634cfa7f19",
+        "name": "insert",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "0eabfbcb3eacd667",
+        "type": "function",
+        "z": "ce0a80634cfa7f19",
+        "name": "flow.set",
+        "func": "flow.set(msg.payload.timestamp, msg.payload);\nmsg.timestamp = msg.payload.timestamp\nmsg.delay = msg.payload.delay\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 540,
+        "wires": [
+            [
+                "7594d2a8e3fe851a"
+            ]
+        ]
+    },
+    {
+        "id": "66b40480a233363d",
+        "type": "amqp-in",
+        "z": "ce0a80634cfa7f19",
+        "name": "",
+        "broker": "4ade2752bb8e0a7b",
+        "prefetch": 0,
+        "noAck": true,
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "delete.tsk.routing.key",
+        "exchangeDurable": true,
+        "queueName": "",
+        "queueExclusive": true,
+        "queueDurable": false,
+        "queueAutoDelete": true,
+        "headers": "{}",
+        "x": 187,
+        "y": 542,
+        "wires": [
+            [
+                "0eabfbcb3eacd667"
+            ]
+        ]
+    },
+    {
+        "id": "7594d2a8e3fe851a",
+        "type": "function",
+        "z": "ce0a80634cfa7f19",
+        "name": "Cycles",
+        "func": "var item = flow.get(msg.timestamp) || {};\n\nwhile (item.iterations > item.counter) {\n   item.counter++\n   flow.set(item.timestamp, item);\n\n   return [msg, null];\n}\nflow.set(msg.timestamp, undefined);\n\nmsg.payload = item\nreturn [null, msg];\n\n\n\n\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 540,
+        "wires": [
+            [
+                "32994967017df7b5"
+            ],
+            [
+                "2a4bfe1a37415272"
+            ]
+        ]
+    },
+    {
+        "id": "32994967017df7b5",
+        "type": "delay",
+        "z": "ce0a80634cfa7f19",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 580,
+        "y": 460,
+        "wires": [
+            [
+                "62dfd998b64d02a5",
+                "0d00e6c7c854e0a0"
+            ]
+        ]
+    },
+    {
+        "id": "62dfd998b64d02a5",
+        "type": "debug",
+        "z": "ce0a80634cfa7f19",
+        "name": "update",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 870,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "b8161c95d5d343d3",
+        "type": "buckets",
+        "z": "ce0a80634cfa7f19",
+        "buckets_name": "bucketExists",
+        "host": "ea379fd37875fcf3",
+        "buckets_operation": "bucketExists",
+        "buckets_bucket": "${MINIO_BUCKET}",
+        "buckets_region": "",
+        "buckets_prefix": "",
+        "buckets_recursive": false,
+        "buckets_start_after": "",
+        "x": 670,
+        "y": 760,
+        "wires": [
+            [
+                "21b138caf547afba"
+            ],
+            [
+                "aae2312486049f90"
+            ]
+        ]
+    },
+    {
+        "id": "46b086a50b2a5e1a",
+        "type": "inject",
+        "z": "ce0a80634cfa7f19",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "1",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 270,
+        "y": 760,
+        "wires": [
+            [
+                "b8161c95d5d343d3"
+            ]
+        ]
+    },
+    {
+        "id": "3c832bf49ea57a0b",
+        "type": "debug",
+        "z": "ce0a80634cfa7f19",
+        "name": "S3 OK",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1110,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "aae2312486049f90",
+        "type": "debug",
+        "z": "ce0a80634cfa7f19",
+        "name": "S3 NOK",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1120,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "33a18a35851627c9",
+        "type": "objects",
+        "z": "ce0a80634cfa7f19",
+        "objects_name": "putObject",
+        "host": "ea379fd37875fcf3",
+        "objects_operation": "putObject",
+        "objects_bucket": "${MINIO_BUCKET}",
+        "objects_object": "",
+        "objects_offset": "",
+        "objects_length": "",
+        "objects_stream": "",
+        "objects_size": "",
+        "objects_metadata": "",
+        "objects_sourceobject": "",
+        "objects_conditions": "",
+        "objects_objectslist": [],
+        "objects_prefix": "",
+        "objects_etag": "",
+        "objects_datetime": "",
+        "x": 1160,
+        "y": 500,
+        "wires": [
+            [
+                "3c832bf49ea57a0b"
+            ],
+            [
+                "aae2312486049f90"
+            ]
+        ]
+    },
+    {
+        "id": "7fb7fbe6b5205dba",
+        "type": "function",
+        "z": "ce0a80634cfa7f19",
+        "name": "prepare to PUT",
+        "func": "msg.objectName = 'isDone/'+ msg.payload.timestamp\nmsg.bucketName = 'store'\nmsg.stream = Buffer.from(JSON.stringify(msg.payload));\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1200,
+        "y": 280,
+        "wires": [
+            [
+                "33a18a35851627c9"
+            ]
+        ]
+    },
+    {
+        "id": "21b138caf547afba",
+        "type": "switch",
+        "z": "ce0a80634cfa7f19",
+        "name": "",
+        "property": "payload.bucketExists",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "true"
+            },
+            {
+                "t": "false"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 750,
+        "y": 660,
+        "wires": [
+            [
+                "3c832bf49ea57a0b"
+            ],
+            [
+                "727c75ef517a20dd"
+            ]
+        ]
+    },
+    {
+        "id": "727c75ef517a20dd",
+        "type": "buckets",
+        "z": "ce0a80634cfa7f19",
+        "buckets_name": "makeBucket",
+        "host": "ea379fd37875fcf3",
+        "buckets_operation": "makeBucket",
+        "buckets_bucket": "${MINIO_BUCKET}",
+        "buckets_region": "",
+        "buckets_prefix": "",
+        "buckets_recursive": false,
+        "buckets_start_after": "",
+        "x": 970,
+        "y": 800,
+        "wires": [
+            [
+                "3c832bf49ea57a0b"
+            ],
+            [
+                "aae2312486049f90"
+            ]
+        ]
+    },
+    {
+        "id": "ab82276b79821b42",
+        "type": "inject",
+        "z": "ce0a80634cfa7f19",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 270,
+        "y": 840,
+        "wires": [
+            [
+                "d93a6e6ed3b0eeb8"
+            ]
+        ]
+    },
+    {
+        "id": "699d9aff6c1ea71f",
+        "type": "function",
+        "z": "ce0a80634cfa7f19",
+        "name": "isDone",
+        "func": "if (msg.payload.timestamp !== undefined) {\n    const redis = context.global.get('redis');\n    const envw = global.get('env');\n    const client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nmsg.payload['isDone'] = envw.CONTAINER_NAME;\nawait client.connect();\nawait client.multi()\n    .DEL(\"isTaken:\" + msg.payload.timestamp)\n    .hSet(\"isDone:\" + msg.payload.timestamp, msg.payload)\n    .exec();\nawait client.UNWATCH()\nclient.quit()\nnode.send(msg);\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 120,
+        "wires": [
+            [
+                "7fb7fbe6b5205dba"
+            ]
+        ]
+    },
+    {
+        "id": "9689709ddcc51b66",
+        "type": "function",
+        "z": "ce0a80634cfa7f19",
+        "name": "isDone",
+        "func": "if (msg.payload.timestamp !== undefined) {\n    const redis = context.global.get('redis');\n    const envw = global.get('env');\n    const client = redis.createClient({ url: envw.REDIS_HOSTS });\n\n    msg.payload['isDone'] = envw.CONTAINER_NAME;\nawait client.connect();\nawait client.multi()\n    .DEL(\"isTaken:\" + msg.payload.timestamp)\n    .hSet(\"isDone:\" + msg.payload.timestamp, msg.payload)\n    .exec();\nawait client.UNWATCH()\nclient.quit()\nnode.send(msg);\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 880,
+        "y": 260,
+        "wires": [
+            [
+                "7fb7fbe6b5205dba"
+            ]
+        ]
+    },
+    {
+        "id": "2a4bfe1a37415272",
+        "type": "function",
+        "z": "ce0a80634cfa7f19",
+        "name": "isDone",
+        "func": "var envw = global.get('env');\n\nif (msg.payload.timestamp !== undefined) {\n    const redis = context.global.get('redis');\n    const envw = global.get('env');\n    const client = redis.createClient({ url: envw.REDIS_HOSTS });\n\n    msg.payload['isDone'] = envw.CONTAINER_NAME;\nawait client.connect();\nawait client.multi()\n    .DEL(\"isTaken:\" + msg.payload.timestamp)\n    .hSet(\"isDone:\" + msg.payload.timestamp, msg.payload)\n    .exec();\nawait client.UNWATCH()\nclient.quit()\nnode.send(msg);\n}\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 860,
+        "y": 540,
+        "wires": [
+            [
+                "7fb7fbe6b5205dba"
+            ]
+        ]
+    },
+    {
+        "id": "23d068dd74b60419",
+        "type": "link call",
+        "z": "ce0a80634cfa7f19",
+        "name": "select",
+        "links": [
+            "665a0912dfeec867"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 730,
+        "y": 80,
+        "wires": [
+            [
+                "383fe45d58e4272b"
+            ]
+        ]
+    },
+    {
+        "id": "ddf8fb6962532cd1",
+        "type": "link call",
+        "z": "ce0a80634cfa7f19",
+        "name": "update",
+        "links": [
+            "072c647353e9a8e2"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 730,
+        "y": 200,
+        "wires": [
+            [
+                "259e1ed3c8383515"
+            ]
+        ]
+    },
+    {
+        "id": "0d00e6c7c854e0a0",
+        "type": "link call",
+        "z": "ce0a80634cfa7f19",
+        "name": "delete",
+        "links": [
+            "9cd692479432fac6"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 710,
+        "y": 480,
+        "wires": [
+            [
+                "7594d2a8e3fe851a"
+            ]
+        ]
+    },
+    {
+        "id": "b982b5920d34ea2b",
+        "type": "link call",
+        "z": "ce0a80634cfa7f19",
+        "name": "insert",
+        "links": [
+            "5fcbb82824409573"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 710,
+        "y": 340,
+        "wires": [
+            [
+                "1302c43b3b3cf8e4"
+            ]
+        ]
+    },
+    {
+        "id": "d93a6e6ed3b0eeb8",
+        "type": "objects",
+        "z": "ce0a80634cfa7f19",
+        "objects_name": "removeObjects",
+        "host": "ea379fd37875fcf3",
+        "objects_operation": "removeObjects",
+        "objects_bucket": "${MINIO_BUCKET}",
+        "objects_object": "1672306946052",
+        "objects_offset": "",
+        "objects_length": "",
+        "objects_stream": "",
+        "objects_size": "",
+        "objects_metadata": "",
+        "objects_sourceobject": "",
+        "objects_conditions": "",
+        "objects_objectslist": "",
+        "objects_prefix": "isDone/",
+        "objects_etag": "",
+        "objects_datetime": "",
+        "x": 640,
+        "y": 840,
+        "wires": [
+            [
+                "3c832bf49ea57a0b"
+            ],
+            [
+                "aae2312486049f90"
+            ]
+        ]
+    },
+    {
+        "id": "da3cf634c9978e8e",
+        "type": "buckets",
+        "z": "ce0a80634cfa7f19",
+        "buckets_name": "removceBucket",
+        "host": "ea379fd37875fcf3",
+        "buckets_operation": "removeBucket",
+        "buckets_bucket": "${MINIO_BUCKET}",
+        "buckets_region": "",
+        "buckets_prefix": "",
+        "buckets_recursive": false,
+        "buckets_start_after": "",
+        "x": 660,
+        "y": 900,
+        "wires": [
+            [
+                "3c832bf49ea57a0b"
+            ],
+            [
+                "aae2312486049f90"
+            ]
+        ]
+    },
+    {
+        "id": "c8b1bcf8fa766f11",
+        "type": "inject",
+        "z": "ce0a80634cfa7f19",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "bucketName",
+                "v": "store",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 270,
+        "y": 900,
+        "wires": [
+            [
+                "da3cf634c9978e8e"
+            ]
+        ]
+    },
+    {
+        "id": "9b64238ea53724d0",
+        "type": "comment",
+        "z": "ce0a80634cfa7f19",
+        "name": "nodes",
+        "info": "node-red-contrib-loop\nnode-red-dashboard\nnode-red-node-ui-table\n@meowwolf/node-red-contrib-amqp\n@reggae_ulli/node-red-contrib-minio-all-fix\nnode-red-contrib-postgresql",
+        "x": 110,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "99d14acff94723b8",
+        "type": "http request",
+        "z": "1b82e53adc154d4f",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 410,
+        "y": 40,
+        "wires": [
+            [
+                "4a434d552428ea64"
+            ]
+        ]
+    },
+    {
+        "id": "d8d46a5ddb3a5867",
+        "type": "link in",
+        "z": "1b82e53adc154d4f",
+        "name": "count in",
+        "links": [],
+        "x": 75,
+        "y": 40,
+        "wires": [
+            [
+                "589d609cce441f13"
+            ]
+        ]
+    },
+    {
+        "id": "4a434d552428ea64",
+        "type": "link out",
+        "z": "1b82e53adc154d4f",
+        "name": "count out",
+        "mode": "return",
+        "links": [],
+        "x": 545,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "665a0912dfeec867",
+        "type": "link in",
+        "z": "1b82e53adc154d4f",
+        "name": "select in",
+        "links": [],
+        "x": 75,
+        "y": 100,
+        "wires": [
+            [
+                "73f1f7e44d639d80"
+            ]
+        ]
+    },
+    {
+        "id": "73f1f7e44d639d80",
+        "type": "link call",
+        "z": "1b82e53adc154d4f",
+        "name": "count",
+        "links": [
+            "d8d46a5ddb3a5867"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 240,
+        "y": 100,
+        "wires": [
+            [
+                "25bd613e96959905"
+            ]
+        ]
+    },
+    {
+        "id": "25bd613e96959905",
+        "type": "function",
+        "z": "1b82e53adc154d4f",
+        "name": "select",
+        "func": "msg.dbcount = msg.payload[0].count\nvar value = Math.floor(Math.random() * msg.dbcount) + 1\n\nconst envw = global.get('env');\nmsg.url = envw.API_HOST +'/select'\nmsg.payload = { \"id\": value}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 100,
+        "wires": [
+            [
+                "faf5cf03e2407786"
+            ]
+        ]
+    },
+    {
+        "id": "faf5cf03e2407786",
+        "type": "http request",
+        "z": "1b82e53adc154d4f",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 770,
+        "y": 100,
+        "wires": [
+            [
+                "884b094954c27cf3"
+            ]
+        ]
+    },
+    {
+        "id": "884b094954c27cf3",
+        "type": "link out",
+        "z": "1b82e53adc154d4f",
+        "name": "select out",
+        "mode": "return",
+        "links": [],
+        "x": 985,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "735d13ef272173d4",
+        "type": "function",
+        "z": "1b82e53adc154d4f",
+        "name": "Message generator",
+        "func": "const firstNames = [\"Liam\", \"Noah\", \"Oliver\", \"William\", \"Elijah\", \"James\", \"Benjamin\", \"Lucas\", \"Mason\", \"Ethan\", \"Alexander\", \"Henry\", \"Jacob\", \"Michael\", \"Daniel\", \"Logan\", \"Jackson\", \"Sebastian\", \"Jack\", \"Aiden\"];\nconst sirNames = [\"Jones\", \"Taylor\", \"Williams\", \"Brown\", \"White\", \"Harris\", \"Martin\", \"Davies\", \"Wilson\", \"Cooper\", \"Evans\", \"King\", \"Thomas\", \"Baker\", \"Green\", \"Wright\", \"Johnson\", \"Edwards\", \"Clark\", \"Roberts\", \"Robinson\", \"Hall\", \"Lewis\", \"Young\", \"Davis\", \"Turner\", \"Hill\", \"Phillips\", \"Collins\", \"Allen\", \"Moore\", \"Thompson\", \"Carter\", \"James\", \"Knight\", \"Walker\", \"Wood\", \"Hughes\", \"Parker\", \"Ward\", \"Bennett\", \"Cook\", \"Webb\", \"Bailey\", \"Scott\", \"Jackson\", \"Lee\", \"Cox\"];\n\n\n\n    var item = {};\n    item.forename = randomFirstname();\n    item.sirname = randomSirname();\n    item.userid = \"U\" + randomInt(1000, 2999);\n    item.age = randomInt(20, 65);\n\n\nfunction randomFirstname() {\n    return firstNames[randomInt(0, firstNames.length - 1)];\n}\n\nfunction randomSirname() {\n    return sirNames[randomInt(0, sirNames.length - 1)];\n}\n\nfunction randomInt(min, max) {\n    return Math.floor(Math.random() * (max - min + 1) + min);\n}\nmsg.payload = item\nconst envw = global.get('env');\nmsg.url = envw.API_HOST + '/insert'\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 280,
+        "wires": [
+            [
+                "1dfd02de42fec6dc"
+            ]
+        ]
+    },
+    {
+        "id": "1dfd02de42fec6dc",
+        "type": "http request",
+        "z": "1b82e53adc154d4f",
+        "name": "",
+        "method": "POST",
+        "ret": "obj",
+        "paytoqs": "query",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 770,
+        "y": 280,
+        "wires": [
+            [
+                "471003770bd848a8",
+                "d88ec5f2bf107c50"
+            ]
+        ]
+    },
+    {
+        "id": "2f2c535c5c333ba5",
+        "type": "function",
+        "z": "1b82e53adc154d4f",
+        "name": "Message generator",
+        "func": "msg.dbcount = msg.payload[0].count\nvar value = Math.floor(Math.random() * msg.dbcount) + 1\n\nconst firstNames = [\"Liam\", \"Noah\", \"Oliver\", \"William\", \"Elijah\", \"James\", \"Benjamin\", \"Lucas\", \"Mason\", \"Ethan\", \"Alexander\", \"Henry\", \"Jacob\", \"Michael\", \"Daniel\", \"Logan\", \"Jackson\", \"Sebastian\", \"Jack\", \"Aiden\"];\nconst sirNames = [\"Jones\", \"Taylor\", \"Williams\", \"Brown\", \"White\", \"Harris\", \"Martin\", \"Davies\", \"Wilson\", \"Cooper\", \"Evans\", \"King\", \"Thomas\", \"Baker\", \"Green\", \"Wright\", \"Johnson\", \"Edwards\", \"Clark\", \"Roberts\", \"Robinson\", \"Hall\", \"Lewis\", \"Young\", \"Davis\", \"Turner\", \"Hill\", \"Phillips\", \"Collins\", \"Allen\", \"Moore\", \"Thompson\", \"Carter\", \"James\", \"Knight\", \"Walker\", \"Wood\", \"Hughes\", \"Parker\", \"Ward\", \"Bennett\", \"Cook\", \"Webb\", \"Bailey\", \"Scott\", \"Jackson\", \"Lee\", \"Cox\"];\n\nvar item = {\n\"id\": value,\n\"forename\": randomFirstname(),\n\"sirname\": randomSirname(),\n\"userid\": \"U\" + randomInt(1000, 2999),\n\"age\": randomInt(20, 65)\n}\n\nfunction randomFirstname() {\n    return firstNames[randomInt(0, firstNames.length - 1)];\n}\n\nfunction randomSirname() {\n    return sirNames[randomInt(0, sirNames.length - 1)];\n}\n\nfunction randomInt(min, max) {\n    return Math.floor(Math.random() * (max - min + 1) + min);\n}\n//msg.payload = JSON.stringify(item)\nconst envw = global.get('env');\nmsg.url = envw.API_HOST +'/update'\nmsg.payload = item\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 180,
+        "wires": [
+            [
+                "fbb2ee30fbed0e2e"
+            ]
+        ]
+    },
+    {
+        "id": "72e1fd37071630be",
+        "type": "http request",
+        "z": "1b82e53adc154d4f",
+        "name": "",
+        "method": "PUT",
+        "ret": "txt",
+        "paytoqs": "query",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Accept",
+                "valueType": "other",
+                "valueValue": "application/json"
+            },
+            {
+                "keyType": "other",
+                "keyValue": "Content-Type",
+                "valueType": "other",
+                "valueValue": "application/json"
+            }
+        ],
+        "x": 770,
+        "y": 180,
+        "wires": [
+            [
+                "3fc9fc1f634893a7"
+            ]
+        ]
+    },
+    {
+        "id": "3e41cf6aea273de9",
+        "type": "function",
+        "z": "1b82e53adc154d4f",
+        "name": "dbcount",
+        "func": "msg.dbcount = msg.payload[0].count\nvar value = Math.floor(Math.random() * msg.dbcount) + 1\nmsg.payload = {\"id\": value}\nconst envw = global.get('env');\nmsg.url = envw.API_HOST +'/delete'\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 360,
+        "wires": [
+            [
+                "3942503d0a0dc4cc"
+            ]
+        ]
+    },
+    {
+        "id": "fbb2ee30fbed0e2e",
+        "type": "json",
+        "z": "1b82e53adc154d4f",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 630,
+        "y": 180,
+        "wires": [
+            [
+                "72e1fd37071630be"
+            ]
+        ]
+    },
+    {
+        "id": "3942503d0a0dc4cc",
+        "type": "json",
+        "z": "1b82e53adc154d4f",
+        "name": "",
+        "property": "payload",
+        "action": "str",
+        "pretty": false,
+        "x": 630,
+        "y": 360,
+        "wires": [
+            [
+                "0fa6e093c3c1ee20"
+            ]
+        ]
+    },
+    {
+        "id": "0fa6e093c3c1ee20",
+        "type": "http request",
+        "z": "1b82e53adc154d4f",
+        "name": "",
+        "method": "DELETE",
+        "ret": "txt",
+        "paytoqs": "query",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [
+            {
+                "keyType": "other",
+                "keyValue": "Accept",
+                "valueType": "other",
+                "valueValue": "application/json"
+            },
+            {
+                "keyType": "other",
+                "keyValue": "Content-Type",
+                "valueType": "other",
+                "valueValue": "application/json"
+            }
+        ],
+        "x": 770,
+        "y": 360,
+        "wires": [
+            [
+                "fc7e7823ab1fab3c"
+            ]
+        ]
+    },
+    {
+        "id": "072c647353e9a8e2",
+        "type": "link in",
+        "z": "1b82e53adc154d4f",
+        "name": "update in",
+        "links": [],
+        "x": 75,
+        "y": 180,
+        "wires": [
+            [
+                "3e6d3a1e6f8f6366"
+            ]
+        ]
+    },
+    {
+        "id": "3fc9fc1f634893a7",
+        "type": "link out",
+        "z": "1b82e53adc154d4f",
+        "name": "update out",
+        "mode": "return",
+        "links": [],
+        "x": 985,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "5fcbb82824409573",
+        "type": "link in",
+        "z": "1b82e53adc154d4f",
+        "name": "insert in",
+        "links": [],
+        "x": 75,
+        "y": 280,
+        "wires": [
+            [
+                "735d13ef272173d4"
+            ]
+        ]
+    },
+    {
+        "id": "471003770bd848a8",
+        "type": "link out",
+        "z": "1b82e53adc154d4f",
+        "name": "insert out",
+        "mode": "return",
+        "links": [],
+        "x": 985,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "9cd692479432fac6",
+        "type": "link in",
+        "z": "1b82e53adc154d4f",
+        "name": "delete in",
+        "links": [],
+        "x": 75,
+        "y": 360,
+        "wires": [
+            [
+                "059e5ea2f2cccecf"
+            ]
+        ]
+    },
+    {
+        "id": "fc7e7823ab1fab3c",
+        "type": "link out",
+        "z": "1b82e53adc154d4f",
+        "name": "delete out",
+        "mode": "return",
+        "links": [],
+        "x": 985,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "3e6d3a1e6f8f6366",
+        "type": "link call",
+        "z": "1b82e53adc154d4f",
+        "name": "count",
+        "links": [
+            "d8d46a5ddb3a5867"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 230,
+        "y": 180,
+        "wires": [
+            [
+                "2f2c535c5c333ba5"
+            ]
+        ]
+    },
+    {
+        "id": "059e5ea2f2cccecf",
+        "type": "link call",
+        "z": "1b82e53adc154d4f",
+        "name": "count",
+        "links": [
+            "d8d46a5ddb3a5867"
+        ],
+        "linkType": "static",
+        "timeout": "30",
+        "x": 230,
+        "y": 360,
+        "wires": [
+            [
+                "3e41cf6aea273de9"
+            ]
+        ]
+    },
+    {
+        "id": "589d609cce441f13",
+        "type": "function",
+        "z": "1b82e53adc154d4f",
+        "name": "/count",
+        "func": "const envw = global.get('env');\nmsg.url = envw.API_HOST +'/count'\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 40,
+        "wires": [
+            [
+                "99d14acff94723b8"
+            ]
+        ]
+    },
+    {
+        "id": "d88ec5f2bf107c50",
+        "type": "debug",
+        "z": "1b82e53adc154d4f",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "032c5b5f76bb58ec",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "",
+        "url": "/index",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 300,
+        "y": 320,
+        "wires": [
+            [
+                "4793b9e1e8061940"
+            ]
+        ]
+    },
+    {
+        "id": "117569d4e15e635d",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "",
+        "x": 1390,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "1cb547dae9f9416d",
+        "type": "json",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "",
+        "x": 1050,
+        "y": 320,
+        "wires": [
+            [
+                "38ebb2b60b411e67"
+            ]
+        ]
+    },
+    {
+        "id": "3d4e6c7b4de7bac6",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "6830fb5b2dbb3c58",
+        "name": "",
+        "url": "/delete",
+        "method": "delete",
+        "swaggerDoc": "",
+        "x": 320,
+        "y": 780,
+        "wires": [
+            [
+                "3c70be8e0dd1f5cf"
+            ]
+        ]
+    },
+    {
+        "id": "8731432811f95b1a",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "6830fb5b2dbb3c58",
+        "name": "",
+        "x": 1390,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "38ebb2b60b411e67",
+        "type": "template",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "Web Template",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en-GB\">\n<head>\n    <title>Users</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css\" />\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css\" />\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css\" />\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js\"></script>\n\n    <script type=\"text/javascript\">\n        $(function () {\n            console.log(\"crud demo\");\n\n            var db = {{#payload}}{{{.}}}{{/payload}};\n\n            $(\"#jsgrid\").jsGrid({\n                width: \"100%\",\n                    confirmDeleting: false,\n                    inserting: true,\n                    editing: true,\n                    sorting: true,\n                    paging: true,\n\n                data: db,\n\n                fields: [\n                    { title:\"ID\", name: \"id\", type: \"number\", width: 20, readOnly: true },\n                    { title:\"User ID\", name: \"userid\", type: \"text\", width: 5 },\n                    { title:\"First Name\", name: \"forename\", type: \"text\", width: 32 },\n                    { title:\"Last Name\", name: \"sirname\", type: \"text\", width: 32 },\n                    { title:\"Age\", name: \"age\", type:\"number\", width: 2},\n                    { type: \"control\" }\n                ],\n           \n                controller: {\n                    insertItem: function(item) {\n                        return $.ajax({\n                            type: \"POST\",\n                            url: \"/insert\",\n                            data: item\n                        });\n                    },\n                    updateItem: function(item) {\n                       return $.ajax({\n                            type: \"PUT\",\n                            url: \"/update\",\n                            data: item\n                        });\n                    },\n                    deleteItem: function(item) {\n                        return $.ajax({\n                            type: \"DELETE\",\n                            url: \"/delete\",\n                            data: item\n                        });\n                    }\n                }   \n            });\n        });\n    \n  </script>\n</head>\n<body class=\"container\">\n    <section class=\"row\">\n        \n        <div class=\"col-md-6\"></div>\n        <div class=\"col-md-6\" id=\"jsgrid\">\n        </div>\n    </section>\n</body>\n</html>\n\n",
+        "x": 1220,
+        "y": 320,
+        "wires": [
+            [
+                "117569d4e15e635d"
+            ]
+        ]
+    },
+    {
+        "id": "037dce8e31058aab",
+        "type": "inject",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 285,
+        "y": 180,
+        "wires": [
+            [
+                "5fd8010a154e7b55"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "cc207b5b.33df88",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "reconstruct array",
+        "func": "var mapResult = msg.mapResult();\nmapResult.result[msg.index] = msg.payload;\nmapResult.countdown -= 1;\nif (0 === mapResult.countdown) {\n  return {\n    payload: mapResult.result\n  };\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1010,
+        "y": 200,
+        "wires": [
+            [
+                "c2852efd.3d7ad",
+                "ddcdf98eedd5c829"
+            ]
+        ],
+        "icon": "node-red/join.svg"
+    },
+    {
+        "id": "c2852efd.3d7ad",
+        "type": "debug",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1395,
+        "y": 160,
+        "wires": [],
+        "l": false
+    },
+    {
+        "id": "663e1cfb.99c1e4",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "split elems",
+        "func": "var mapResult = {\n  countdown: msg.payload.length,\n  result: msg.payload.map(function(){})\n};\nreturn [msg.payload.map(function(element, index) {\n  return {\n    payload: element,\n    index: index,\n    mapResult: function() {\n      return mapResult;\n    }\n  };\n})];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 670,
+        "y": 200,
+        "wires": [
+            [
+                "1019c56914533080"
+            ]
+        ],
+        "icon": "node-red/split.svg"
+    },
+    {
+        "id": "5fd8010a154e7b55",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "Gen dummy data",
+        "func": "const firstNames =  [\"Liam\",\"Noah\",\"Oliver\",\"William\",\"Elijah\",\"James\",\"Benjamin\",\"Lucas\",\"Mason\",\"Ethan\",\"Alexander\",\"Henry\",\"Jacob\",\"Michael\",\"Daniel\",\"Logan\",\"Jackson\",\"Sebastian\",\"Jack\",\"Aiden\"];\nconst sirNames = [\"Jones\",\"Taylor\",\"Williams\",\"Brown\",\"White\",\"Harris\",\"Martin\",\"Davies\",\"Wilson\",\"Cooper\",\"Evans\",\"King\",\"Thomas\",\"Baker\",\"Green\",\"Wright\",\"Johnson\",\"Edwards\",\"Clark\",\"Roberts\",\"Robinson\",\"Hall\",\"Lewis\",\"Young\",\"Davis\",\"Turner\",\"Hill\",\"Phillips\",\"Collins\",\"Allen\",\"Moore\",\"Thompson\",\"Carter\",\"James\",\"Knight\",\"Walker\",\"Wood\",\"Hughes\",\"Parker\",\"Ward\",\"Bennett\",\"Cook\",\"Webb\",\"Bailey\",\"Scott\",\"Jackson\",\"Lee\",\"Cox\"];\n         \n         \n\nvar database = [];\n\nfor(let i = 1; i <= 30; i++) {\n    var item = {};\n    item.forename = randomFirstname();\n    item.sirname = randomSirname();\n    item.userid = \"U\" + randomInt(1000, 2999);\n    item.age = randomInt(20, 65);\n    database.push(item);\n}\n\n\nfunction randomFirstname() {\n   return firstNames[randomInt(0, firstNames.length-1)];\n}\n\nfunction randomSirname() {\n    return sirNames[randomInt(0, sirNames.length-1)];\n}\n\nfunction randomInt(min, max) { \n  return Math.floor(Math.random() * (max - min + 1) + min);\n}\n\nflow.set(\"database\", database);\nmsg.payload = database;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 200,
+        "wires": [
+            [
+                "663e1cfb.99c1e4"
+            ]
+        ],
+        "icon": "node-red/leveldb.png"
+    },
+    {
+        "id": "25538d080ca6636d",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "callback response",
+        "func": "/*\npour que la jsGrid soit rafraichie, \nil faut lui envoyer l'objet qui a été mis à jour\n*/\nmsg.payload=msg.req.body;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1130,
+        "y": 680,
+        "wires": [
+            [
+                "c266861c547ad94b"
+            ]
+        ]
+    },
+    {
+        "id": "c266861c547ad94b",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "",
+        "x": 1390,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "df1b7b5834c6cb38",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "",
+        "url": "/insert",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 310,
+        "y": 680,
+        "wires": [
+            [
+                "1ba781f4ea0cc9b7"
+            ]
+        ]
+    },
+    {
+        "id": "e12ffb8302454083",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "callback response",
+        "func": "/*\npour que la jsGrid soit rafraichie, \nil faut lui envoyer l'objet qui a été mis à jour\n*/\nmsg.payload=msg.result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1170,
+        "y": 580,
+        "wires": [
+            [
+                "9f069642444c25a7"
+            ]
+        ]
+    },
+    {
+        "id": "9f069642444c25a7",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "",
+        "x": 1390,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "377e6144780b155c",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "",
+        "url": "/update",
+        "method": "put",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 310,
+        "y": 580,
+        "wires": [
+            [
+                "8feeba1100b62724"
+            ]
+        ]
+    },
+    {
+        "id": "02acee50a826dd9f",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "",
+        "query": "INSERT INTO clients(id, timestamp, forename, sirname, userid, age) VALUES (DEFAULT, CURRENT_TIMESTAMP, '{{{ msg.payload.forename }}}', '{{{ msg.payload.sirname }}}', '{{{ msg.payload.userid }}}', {{{ msg.payload.age }}})",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 830,
+        "y": 680,
+        "wires": [
+            [
+                "25538d080ca6636d"
+            ]
+        ]
+    },
+    {
+        "id": "4793b9e1e8061940",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "98bb4419b579a05d",
+        "name": "",
+        "query": "SELECT * FROM clients;",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": "1",
+        "outputs": 1,
+        "x": 830,
+        "y": 320,
+        "wires": [
+            [
+                "1cb547dae9f9416d"
+            ]
+        ]
+    },
+    {
+        "id": "3c70be8e0dd1f5cf",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "6830fb5b2dbb3c58",
+        "name": "",
+        "query": "DELETE FROM clients WHERE id = {{{ msg.payload.id }}}",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 830,
+        "y": 780,
+        "wires": [
+            [
+                "499e307bf7e5d869"
+            ]
+        ]
+    },
+    {
+        "id": "db0208777104afaf",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "",
+        "query": "UPDATE clients SET timestamp = CURRENT_TIMESTAMP, forename = '{{{ msg.payload.forename }}}', sirname = '{{{ msg.payload.sirname }}}', userid = '{{{ msg.payload.userid }}}', age = '{{{ msg.payload.age }}}' WHERE id= {{{ msg.payload.id }}}",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 830,
+        "y": 580,
+        "wires": [
+            [
+                "e12ffb8302454083"
+            ]
+        ]
+    },
+    {
+        "id": "499e307bf7e5d869",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "6830fb5b2dbb3c58",
+        "name": "callback response",
+        "func": "/*\npour que la jsGrid soit rafraichie, \nil faut lui envoyer l'objet qui a été mis à jour\n*/\nmsg.payload=msg.result;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 1110,
+        "y": 780,
+        "wires": [
+            [
+                "8731432811f95b1a"
+            ]
+        ]
+    },
+    {
+        "id": "8feeba1100b62724",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "a44dccd094937dc7",
+        "name": "userid.slice(0, 4)",
+        "func": "msg.payload.userid = msg.payload.userid.slice(0, 5)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 580,
+        "wires": [
+            [
+                "db0208777104afaf"
+            ]
+        ]
+    },
+    {
+        "id": "1ba781f4ea0cc9b7",
+        "type": "function",
+        "z": "0338c3befa10e3ef",
+        "g": "0214f907c6dde6e5",
+        "name": "userid.slice(0, 4)",
+        "func": "msg.payload.userid = msg.payload.userid.slice(0, 4)\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 680,
+        "wires": [
+            [
+                "02acee50a826dd9f"
+            ]
+        ]
+    },
+    {
+        "id": "1019c56914533080",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "",
+        "query": "INSERT INTO clients(id, timestamp, forename, sirname, userid, age) VALUES (DEFAULT, CURRENT_TIMESTAMP, '{{{ msg.payload.forename }}}', '{{{ msg.payload.sirname }}}', '{{{ msg.payload.userid }}}', {{{ msg.payload.age }}})",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": "8",
+        "outputs": 1,
+        "x": 830,
+        "y": 200,
+        "wires": [
+            [
+                "cc207b5b.33df88"
+            ]
+        ]
+    },
+    {
+        "id": "e63cdcdab67bde84",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "x": 1390,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "ae9207191aa77032",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "url": "/select",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 310,
+        "y": 460,
+        "wires": [
+            [
+                "cb7426598f0e9f9f"
+            ]
+        ]
+    },
+    {
+        "id": "514d4a962212d99e",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "query": "SELECT * FROM clients;",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 830,
+        "y": 420,
+        "wires": [
+            [
+                "e63cdcdab67bde84"
+            ]
+        ]
+    },
+    {
+        "id": "113b77c94a8fcc57",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "query": "SELECT * FROM clients WHERE id= {{{ msg.payload.id }}}",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 830,
+        "y": 480,
+        "wires": [
+            [
+                "e63cdcdab67bde84"
+            ]
+        ]
+    },
+    {
+        "id": "cb7426598f0e9f9f",
+        "type": "switch",
+        "z": "0338c3befa10e3ef",
+        "g": "dc496214a2a31801",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "empty"
+            },
+            {
+                "t": "nempty"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 570,
+        "y": 460,
+        "wires": [
+            [
+                "514d4a962212d99e"
+            ],
+            [
+                "113b77c94a8fcc57"
+            ]
+        ]
+    },
+    {
+        "id": "b009db8e1ca3cea7",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "",
+        "url": "/populate",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 310,
+        "y": 220,
+        "wires": [
+            [
+                "5fd8010a154e7b55"
+            ]
+        ]
+    },
+    {
+        "id": "ddcdf98eedd5c829",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "",
+        "x": 1390,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f888ceb8b7d56449",
+        "type": "http in",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "url": "/count",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 300,
+        "y": 940,
+        "wires": [
+            [
+                "4f0ef6e965f47ad5"
+            ]
+        ]
+    },
+    {
+        "id": "4f0ef6e965f47ad5",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "query": "SELECT MAX(id) as count FROM clients;",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 830,
+        "y": 940,
+        "wires": [
+            [
+                "fa5c09bfa0353003"
+            ]
+        ]
+    },
+    {
+        "id": "fa5c09bfa0353003",
+        "type": "http response",
+        "z": "0338c3befa10e3ef",
+        "name": "",
+        "x": 1370,
+        "y": 940,
+        "wires": []
+    },
+    {
+        "id": "6d8d82609c77361b",
+        "type": "comment",
+        "z": "0338c3befa10e3ef",
+        "name": "nodes",
+        "info": "node-red-contrib-postgresql",
+        "x": 170,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "dc1dd5fe9bb724ed",
+        "type": "comment",
+        "z": "0338c3befa10e3ef",
+        "name": "http://localhost:1880/index",
+        "info": "",
+        "x": 430,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "b54c48be376b4dbd",
+        "type": "postgresql",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "",
+        "query": "TRUNCATE TABLE clients;\nALTER SEQUENCE clients_id_seq RESTART WITH 1\n",
+        "postgreSQLConfig": "f2f345c016e30abd",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 830,
+        "y": 140,
+        "wires": [
+            [
+                "c2852efd.3d7ad"
+            ]
+        ]
+    },
+    {
+        "id": "f34ebfb56fbb6f27",
+        "type": "inject",
+        "z": "0338c3befa10e3ef",
+        "g": "fd666ce6a6998952",
+        "name": "TRUNCATE TABLE",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 350,
+        "y": 140,
+        "wires": [
+            [
+                "b54c48be376b4dbd"
+            ]
+        ]
+    }
+]
