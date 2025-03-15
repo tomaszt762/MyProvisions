@@ -1,0 +1,15 @@
+{
+    "4ade2752bb8e0a7b": {
+        "username": "${RABBITMQ_DEFAULT_USER}",
+        "password": "${RABBITMQ_DEFAULT_PASS}"
+    },
+    "ea379fd37875fcf3": {
+        "accessKey": "${MINIO_ACCESS_KEY}",
+        "secretKey": "${MINIO_SECRET_KEY}"
+    },
+    "99d14acff94723b8": {},
+    "faf5cf03e2407786": {},
+    "1dfd02de42fec6dc": {},
+    "72e1fd37071630be": {},
+    "0fa6e093c3c1ee20": {}
+}

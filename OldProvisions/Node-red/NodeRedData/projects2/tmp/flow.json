@@ -1,0 +1,3820 @@
+[
+    {
+        "id": "87fc9b94e4e1b6f1",
+        "type": "tab",
+        "label": "insert engine",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "d5659283711b4b36",
+        "type": "tab",
+        "label": "TEST - look up engine",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "98ee4ed6376ed467",
+        "type": "tab",
+        "label": "FINAL - loop engine ",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "0c328659bacace48",
+        "type": "tab",
+        "label": "TEST - geo engine",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "9a6f37f6228be923",
+        "type": "tab",
+        "label": "TEST -  sandbox loops",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "7132fd0107f435c6",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3370c0fd71deba56",
+        "type": "tab",
+        "label": "sandbox code",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "56d27386.5606ec",
+        "type": "tab",
+        "label": "Store Context",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "ec0879b.8af1b08",
+        "type": "tab",
+        "label": "process-summary",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "9b21c092.4affa8",
+        "type": "tab",
+        "label": "EK",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "add146774f9a1b42",
+        "type": "group",
+        "z": "d5659283711b4b36",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "e6bd2818bbe4ba4b",
+            "a3ccc5ebd22ee504",
+            "51c835fe4a623439"
+        ],
+        "x": 54,
+        "y": 19,
+        "w": 1052,
+        "h": 82
+    },
+    {
+        "id": "b2899b14fbc05d36",
+        "type": "group",
+        "z": "d5659283711b4b36",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "499e55b2054b0d2c",
+            "79c0d960046978db",
+            "d5f47050eb796fa0",
+            "8146bde3f801f95e",
+            "ed38b05456c1e3fc",
+            "039267773e773dad",
+            "a08e33f9f32c5af2",
+            "5392796563cd767d",
+            "a8e38a9d9e9b4e9e"
+        ],
+        "x": 54,
+        "y": 130,
+        "w": 1052,
+        "h": 211
+    },
+    {
+        "id": "f4be98fb.fb1858",
+        "type": "elasticsearch-config",
+        "name": "ElasticSearch",
+        "server": "http://elastic:9200/",
+        "timeout": "30000",
+        "apiVersion": "7.x"
+    },
+    {
+        "id": "26ceb598.9cb1a2",
+        "type": "ui_tab",
+        "name": "DataPower Mock",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f1afe04e.0d40d",
+        "type": "ui_group",
+        "name": "DataPower",
+        "tab": "26ceb598.9cb1a2",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4c521d28.65a5d4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "d7347c340034f8fb",
+        "type": "delay",
+        "z": "87fc9b94e4e1b6f1",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [
+                "7255f146b0cf71bc"
+            ]
+        ]
+    },
+    {
+        "id": "29c6b494fa33fe5a",
+        "type": "function",
+        "z": "87fc9b94e4e1b6f1",
+        "name": "function 11",
+        "func": "\n\n\nif (item) {\n    item.isTaken = 0;\n    item.name = item.name + \"-\" + Math.random().toString(36).slice(2)\n    flow.set(\"database\", database);\n} else {\n    msg.statusCode = 404;//not found\n    msg.payload = null;\n    flow.set(\"stop\", false)\n    return msg;\n}\n\nitem[\"counter\"] = 0\n//flow.set(item.name, { \"iterations\": item.iterations, \"counter\": 0})\nmsg.payload = item;\nreturn msg;\n\n\n\n\n\n\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 2,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 400,
+        "wires": [
+            [
+                "d7347c340034f8fb",
+                "e28c42cd31b0e890"
+            ]
+        ]
+    },
+    {
+        "id": "9bc3e3c97a535b35",
+        "type": "debug",
+        "z": "87fc9b94e4e1b6f1",
+        "name": "debug 22",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "908c862f5665d9f7",
+        "type": "inject",
+        "z": "87fc9b94e4e1b6f1",
+        "name": "Start",
+        "props": [
+            {
+                "p": "stop",
+                "v": "true",
+                "vt": "bool"
+            },
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"name\":\"Warszawa\",\"latitude\":52.237049,\"longitude\":21.017532,\"iterations\":4,\"radius\":1000,\"leap\":20000,\"quantity\":4}",
+        "payloadType": "json",
+        "x": 110,
+        "y": 180,
+        "wires": [
+            [
+                "7255f146b0cf71bc"
+            ]
+        ]
+    },
+    {
+        "id": "e28c42cd31b0e890",
+        "type": "debug",
+        "z": "87fc9b94e4e1b6f1",
+        "name": "debug 23",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1080,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7255f146b0cf71bc",
+        "type": "counter-loop",
+        "z": "87fc9b94e4e1b6f1",
+        "name": "",
+        "counter": "il7255f146b0cf71bc",
+        "counterType": "msg",
+        "reset": false,
+        "resetValue": "value-null",
+        "initial": 0,
+        "initialType": "num",
+        "operator": "lt",
+        "termination": "payload.iterations",
+        "terminationType": "msg",
+        "increment": 1,
+        "incrementType": "num",
+        "x": 630,
+        "y": 180,
+        "wires": [
+            [
+                "9bc3e3c97a535b35"
+            ],
+            [
+                "29c6b494fa33fe5a"
+            ]
+        ]
+    },
+    {
+        "id": "9a9e21edcd00ccf1",
+        "type": "function",
+        "z": "87fc9b94e4e1b6f1",
+        "name": "function 12",
+        "func": "var database = flow.get(\"database\") || [];\n\nvar i = 1\n\nwhile (msg.payload.quantity > msg.i) {\n\n\n    var item = {\n        name: msg.payload.name + \"-\" + Math.random().toString(36).slice(2),\n        latitude: msg.payload.latitude,\n        longitude: msg.payload.longitude,\n        radius: msg.payload.radius,\n        leap: msg.payload.leap,\n    }\n\n\n\nmsg.i++\n}\nmsg.i = 0\n\nreturn msg;\n\n\n\n\ndatabase.push(item);\nflow.set(\"database\", database);",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "499e55b2054b0d2c",
+        "type": "loop",
+        "z": "d5659283711b4b36",
+        "g": "b2899b14fbc05d36",
+        "name": "",
+        "kind": "cond",
+        "count": "",
+        "initial": "1",
+        "step": "1",
+        "condition": "flow.get(\"stop\")",
+        "conditionType": "js",
+        "when": "before",
+        "enumeration": "enum",
+        "enumerationType": "msg",
+        "limit": "",
+        "loopPayload": "loop-keep",
+        "finalPayload": "final-orig",
+        "x": 580,
+        "y": 180,
+        "wires": [
+            [
+                "ed38b05456c1e3fc"
+            ],
+            [
+                "8146bde3f801f95e"
+            ]
+        ]
+    },
+    {
+        "id": "a08e33f9f32c5af2",
+        "type": "inject",
+        "z": "d5659283711b4b36",
+        "g": "b2899b14fbc05d36",
+        "name": "Stop",
+        "props": [
+            {
+                "p": "stop",
+                "v": "false",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "d5f47050eb796fa0"
+            ]
+        ]
+    },
+    {
+        "id": "039267773e773dad",
+        "type": "inject",
+        "z": "d5659283711b4b36",
+        "g": "b2899b14fbc05d36",
+        "name": "Start",
+        "props": [
+            {
+                "p": "stop",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 154.00001525878906,
+        "y": 171,
+        "wires": [
+            [
+                "d5f47050eb796fa0"
+            ]
+        ]
+    },
+    {
+        "id": "8146bde3f801f95e",
+        "type": "function",
+        "z": "d5659283711b4b36",
+        "g": "b2899b14fbc05d36",
+        "name": "function 9",
+        "func": "\nvar database = flow.get(\"database\") || [];\nvar item = database.find(e => e.isTaken == 1);\n\nif (item) {\n    item.isTaken = 0;\n    item.name = item.name + \"-\" + Math.random().toString(36).slice(2)\n    flow.set(\"database\", database);\n} else {\n    msg.statusCode = 404;//not found\n    msg.payload = null;\n    flow.set(\"stop\", false)\n    return msg;\n}\n\nitem[\"counter\"]=0\n//flow.set(item.name, { \"iterations\": item.iterations, \"counter\": 0})\nmsg.payload = item;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 560,
+        "y": 300,
+        "wires": [
+            [
+                "79c0d960046978db",
+                "a8e38a9d9e9b4e9e"
+            ]
+        ]
+    },
+    {
+        "id": "79c0d960046978db",
+        "type": "delay",
+        "z": "d5659283711b4b36",
+        "g": "b2899b14fbc05d36",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 360,
+        "y": 240,
+        "wires": [
+            [
+                "499e55b2054b0d2c"
+            ]
+        ]
+    },
+    {
+        "id": "ed38b05456c1e3fc",
+        "type": "debug",
+        "z": "d5659283711b4b36",
+        "g": "b2899b14fbc05d36",
+        "name": "debug 19",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "d5f47050eb796fa0",
+        "type": "change",
+        "z": "d5659283711b4b36",
+        "g": "b2899b14fbc05d36",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "stop",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 360,
+        "y": 180,
+        "wires": [
+            [
+                "499e55b2054b0d2c"
+            ]
+        ]
+    },
+    {
+        "id": "5392796563cd767d",
+        "type": "debug",
+        "z": "d5659283711b4b36",
+        "g": "b2899b14fbc05d36",
+        "name": "debug 20",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "e6bd2818bbe4ba4b",
+        "type": "inject",
+        "z": "d5659283711b4b36",
+        "g": "add146774f9a1b42",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\":0,\"name\":\"Warszawa\",\"latitude\":52.237049,\"longitude\":21.017532,\"iterations\":4,\"radius\":1000,\"leap\":20000,\"isTaken\":1,\"isDone\":1}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 60,
+        "wires": [
+            [
+                "a3ccc5ebd22ee504"
+            ]
+        ]
+    },
+    {
+        "id": "a3ccc5ebd22ee504",
+        "type": "function",
+        "z": "d5659283711b4b36",
+        "g": "add146774f9a1b42",
+        "name": "function 8",
+        "func": "var database = flow.get(\"database\") || [];\n\nvar nextID = Math.max.apply(Math, database.map(function (o) { return o.id; })) + 1;\n\nif (nextID === -Infinity) {\n    nextID = 1\n}\nvar item = {\n    id: nextID,\n    timestamp: Date.now(),\n    name: msg.payload.name,\n    latitude: msg.payload.latitude,\n    longitude: msg.payload.longitude,\n    iterations: msg.payload.iterations,\n    radius: msg.payload.radius,\n    leap: msg.payload.leap,\n    isTaken: msg.payload.isTaken,\n    isDone: msg.payload.isDone\n}\n\n\n\ndatabase.push(item);\nflow.set(\"database\", database);\n\nmsg.payload = item;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 60,
+        "wires": [
+            [
+                "51c835fe4a623439"
+            ]
+        ]
+    },
+    {
+        "id": "51c835fe4a623439",
+        "type": "debug",
+        "z": "d5659283711b4b36",
+        "g": "add146774f9a1b42",
+        "name": "debug 18",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "eb2a841fd58b1646",
+        "type": "function",
+        "z": "d5659283711b4b36",
+        "name": "Cycles",
+        "func": "\nwhile (msg.payload.iterations > msg.payload.counter) {\n\nmsg.payload.counter++\n//do the job\nreturn [null, msg];\n}\nvar database = flow.get(\"database\") || [];\nvar item = database.find(e => e.name == msg.payload.name);\n\nif (item) {\n    item.isDone = 0;\n    flow.set(\"database\", database);\n} else {\n    msg.statusCode = 404;//not found\n\n}\nmsg.payload = \"done\";\n\nreturn [msg, null];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 440,
+        "wires": [
+            [],
+            [
+                "9fc45c210ac590b9",
+                "8e80d12b9480a994"
+            ]
+        ]
+    },
+    {
+        "id": "a8e38a9d9e9b4e9e",
+        "type": "switch",
+        "z": "d5659283711b4b36",
+        "g": "b2899b14fbc05d36",
+        "name": "",
+        "property": "payload",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "neq",
+                "v": "null",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 810,
+        "y": 280,
+        "wires": [
+            [
+                "5392796563cd767d",
+                "eb2a841fd58b1646"
+            ]
+        ]
+    },
+    {
+        "id": "9fc45c210ac590b9",
+        "type": "debug",
+        "z": "d5659283711b4b36",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 820,
+        "y": 460,
+        "wires": []
+    },
+    {
+        "id": "8e80d12b9480a994",
+        "type": "function",
+        "z": "d5659283711b4b36",
+        "name": "function 10",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 590,
+        "y": 520,
+        "wires": [
+            [
+                "eb2a841fd58b1646"
+            ]
+        ]
+    },
+    {
+        "id": "a8a505ef41e7b3b9",
+        "type": "counter-loop",
+        "z": "98ee4ed6376ed467",
+        "name": "",
+        "counter": "couter",
+        "counterType": "msg",
+        "reset": false,
+        "resetValue": "value-null",
+        "initial": "0",
+        "initialType": "num",
+        "operator": "lte",
+        "termination": "iterations",
+        "terminationType": "msg",
+        "increment": 1,
+        "incrementType": "num",
+        "x": 380,
+        "y": 140,
+        "wires": [
+            [
+                "db86c38571c76e1c"
+            ],
+            [
+                "f6dde3374ddc417a"
+            ]
+        ]
+    },
+    {
+        "id": "2cda8cd748c6cabc",
+        "type": "inject",
+        "z": "98ee4ed6376ed467",
+        "name": "",
+        "props": [
+            {
+                "p": "cities",
+                "v": "[{\"name\":\"Łódź\",\"lat\":51.759445,\"lon\":19.457216,\"leap\":2000,\"radius\":1000},{\"name\":\"Warszawa\",\"lat\":52.237049,\"lon\":21.017532,\"leap\":2000,\"radius\":1000},{\"name\":\"Płock\",\"lat\":52.546344,\"lon\":19.706536,\"leap\":2000,\"radius\":1000},{\"name\":\"Toruń\",\"lat\":53.01379,\"lon\":18.598443,\"leap\":2000,\"radius\":1000},{\"name\":\"Poznań\",\"lat\":52.409538,\"lon\":16.931992,\"leap\":2000,\"radius\":1000},{\"name\":\"Wrocław\",\"lat\":51.107883,\"lon\":17.038538,\"leap\":2000,\"radius\":1000},{\"name\":\"Opole\",\"lat\":50.671062,\"lon\":17.926126,\"leap\":2000,\"radius\":1000},{\"name\":\"Kielce\",\"lat\":50.866077,\"lon\":20.6285677,\"leap\":2000,\"radius\":1000},{\"name\":\"Radom\",\"lat\":51.402723,\"lon\":21.147133,\"leap\":2000,\"radius\":1000}]",
+                "vt": "json"
+            },
+            {
+                "p": "radius",
+                "v": "1000",
+                "vt": "num"
+            },
+            {
+                "p": "iterations",
+                "v": "500",
+                "vt": "num"
+            },
+            {
+                "p": "couter",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 140,
+        "wires": [
+            [
+                "a8a505ef41e7b3b9"
+            ]
+        ]
+    },
+    {
+        "id": "f6dde3374ddc417a",
+        "type": "array-loop",
+        "z": "98ee4ed6376ed467",
+        "name": "",
+        "key": "alb506db2ae3f71027",
+        "keyType": "msg",
+        "reset": true,
+        "resetValue": "value-empty",
+        "array": "cities",
+        "arrayType": "msg",
+        "x": 410,
+        "y": 280,
+        "wires": [
+            [
+                "a8a505ef41e7b3b9",
+                "db404516e0bfde47"
+            ],
+            [
+                "bbb45d7fe6bf7d8a"
+            ]
+        ]
+    },
+    {
+        "id": "db86c38571c76e1c",
+        "type": "debug",
+        "z": "98ee4ed6376ed467",
+        "name": "debug 24",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "db404516e0bfde47",
+        "type": "debug",
+        "z": "98ee4ed6376ed467",
+        "name": "debug 25",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.cityName",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "250c5aa1e7d5726e",
+        "type": "debug",
+        "z": "98ee4ed6376ed467",
+        "name": "debug 26",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1100,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "f25de2ac3d7a6916",
+        "type": "delay",
+        "z": "98ee4ed6376ed467",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 200,
+        "y": 320,
+        "wires": [
+            [
+                "f6dde3374ddc417a"
+            ]
+        ]
+    },
+    {
+        "id": "bbb45d7fe6bf7d8a",
+        "type": "function",
+        "z": "98ee4ed6376ed467",
+        "name": "leap from geo ",
+        "func": "var leap = msg.payload.leap\nvar lat = msg.payload.lat\nvar lon = msg.payload.lon\nvar name = msg.payload.name\nleap = leap + Math.floor(Math.random() * 3001) - 1000\n//var name = Math.random().toString(36).slice(2)\nvar earth = 6378.137  //radius of the earth in kilometer\nvar pi = Math.PI\nvar cos = Math.cos\nvar sign1 = Math.random() < 0.5 ? -1 : 1;\nvar sign2 = Math.random() < 0.5 ? -1 : 1;\n\nfunction generateRandomLeap(name, lon, lat, leap) {\nvar m = (1 / ((2 * pi / 360) * earth)) / 1000\n\n  var lon = lon + sign1 * (leap * m) / cos(lat * (pi / 180));\n  var lat = lat + sign2 * (leap * m)\n\n  var city = msg.cities.findIndex(x => x.name == name);\n\n  msg.cities[city].leap = leap\n  msg.cities[city].lat = lat\n  msg.cities[city].lon = lon\n\n  return {\n    'name': name, 'lat': lat, 'lon': lon, \"leap\": leap};\n}\n\nmsg.payload = generateRandomLeap(name, lon, lat, leap)\n\nreturn msg;\n\n\n\n\n\n\n\n//msg.sign = { \"sign1\":sign1, \"sign2\":sign2}\n\nreturn msg;\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 420,
+        "wires": [
+            [
+                "f25de2ac3d7a6916",
+                "3be225edc5010e97",
+                "8d39c13847f109c8",
+                "250c5aa1e7d5726e",
+                "c36748d8fba65bde"
+            ]
+        ]
+    },
+    {
+        "id": "8d39c13847f109c8",
+        "type": "worldmap",
+        "z": "98ee4ed6376ed467",
+        "name": "",
+        "lat": "51.759445",
+        "lon": "19.457216",
+        "zoom": "7",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "600",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "true",
+        "zoomlock": "true",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "true",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1140,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "3be225edc5010e97",
+        "type": "worldmap-tracks",
+        "z": "98ee4ed6376ed467",
+        "name": "",
+        "depth": 20,
+        "layer": "combined",
+        "smooth": true,
+        "x": 850,
+        "y": 440,
+        "wires": [
+            [
+                "8d39c13847f109c8"
+            ]
+        ]
+    },
+    {
+        "id": "e7c3fd199a1573c7",
+        "type": "function",
+        "z": "98ee4ed6376ed467",
+        "name": "geo distance between",
+        "func": "var lat1 = msg.payload.lat1\nvar lon1 = msg.payload.lon1\nvar lat2 = msg.payload.lat2\nvar lon2 = msg.payload.lon2\n\nfunction getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {\n  var R = 6371; // Radius of the earth in km\n  var dLat = deg2rad(lat2 - lat1);  // deg2rad below\n  var dLon = deg2rad(lon2 - lon1);\n  var a =\n    Math.sin(dLat / 2) * Math.sin(dLat / 2) +\n    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *\n    Math.sin(dLon / 2) * Math.sin(dLon / 2)\n    ;\n  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));\n  var d = R * c; // Distance in km\n  return d;\n}\n\nfunction deg2rad(deg) {\n  return deg * (Math.PI / 180)\n}\nmsg.payload = getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ba1a3849a35ba092",
+        "type": "batch",
+        "z": "98ee4ed6376ed467",
+        "name": "",
+        "mode": "count",
+        "count": "2",
+        "overlap": 0,
+        "interval": 10,
+        "allowEmptySequence": false,
+        "topics": [],
+        "x": 670,
+        "y": 60,
+        "wires": [
+            [
+                "b2d87e4231a9c0c7"
+            ]
+        ]
+    },
+    {
+        "id": "39d19a7de71733cb",
+        "type": "inject",
+        "z": "98ee4ed6376ed467",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"id\":0,\"name\":\"Warszawa\",\"latitude\":52.237049,\"longitude\":21.017532,\"iterations\":4,\"radius\":1000,\"leap\":20000,\"isTaken\":1,\"isDone\":1}",
+        "payloadType": "json",
+        "x": 410,
+        "y": 60,
+        "wires": [
+            [
+                "ba1a3849a35ba092"
+            ]
+        ]
+    },
+    {
+        "id": "b2d87e4231a9c0c7",
+        "type": "debug",
+        "z": "98ee4ed6376ed467",
+        "name": "debug 27",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "c36748d8fba65bde",
+        "type": "debug",
+        "z": "98ee4ed6376ed467",
+        "name": "debug 28",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "0cd67383e821190d",
+        "type": "function",
+        "z": "98ee4ed6376ed467",
+        "name": "update-query",
+        "func": "\nvar database = flow.get(\"database\") || [];\n\nvar item = database.find(e => e.id == msg.payload.id );\n\nif(msg.payload.foreName == \"\" || msg.payload.sirName == \"\" || msg.payload.userID == \"\") {\n    msg.statusCode = 400;\n    msg.payload = null;\n    return msg;\n}\n\nif(item) {\n    item.foreName = msg.payload.foreName;\n    item.sirName = msg.payload.sirName;\n    item.age = msg.payload.age;\n    item.userID = msg.payload.userID;\n    flow.set(\"database\", database);\n} else {\n    msg.statusCode = 404;//not found\n    msg.payload = null;\n    return msg;\n}\nmsg.payload = item;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 270,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c357997881a69709",
+        "type": "inject",
+        "z": "0c328659bacace48",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"name\":\"Warszawa\",\"lat\":52.237049,\"lon\":21.017532,\"radius\":500,\"leap\":2000}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 300,
+        "wires": [
+            [
+                "3c5580586ee0f87b"
+            ]
+        ]
+    },
+    {
+        "id": "dc812284921edd20",
+        "type": "function",
+        "z": "0c328659bacace48",
+        "name": "geo distance between",
+        "func": "var lat1 = msg.payload.lat1\nvar lon1 = msg.payload.lon1\nvar lat2 = msg.payload.lat2\nvar lon2 = msg.payload.lon2\n\nfunction getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {\n  var R = 6371; // Radius of the earth in km\n  var dLat = deg2rad(lat2 - lat1);  // deg2rad below\n  var dLon = deg2rad(lon2 - lon1);\n  var a =\n    Math.sin(dLat / 2) * Math.sin(dLat / 2) +\n    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *\n    Math.sin(dLon / 2) * Math.sin(dLon / 2)\n    ;\n  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));\n  var d = R * c; // Distance in km\n  return d;\n}\n\nfunction deg2rad(deg) {\n  return deg * (Math.PI / 180)\n}\nmsg.payload = getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 560,
+        "wires": [
+            [
+                "5e32291cebe4ad90"
+            ]
+        ]
+    },
+    {
+        "id": "78a1b9cc9ed380b2",
+        "type": "debug",
+        "z": "0c328659bacace48",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "1b9efdcdce9e105a",
+        "type": "function",
+        "z": "0c328659bacace48",
+        "name": "random leap from geo ",
+        "func": "var radius = msg.payload.radius\nvar lat = msg.payload.lat\nvar lon = msg.payload.lon\nvar cityName = msg.payload.cityName\n\nvar name = Math.random().toString(36).slice(2)\n\nfunction generateRandomPoint(lon, lat , radius) {\n  var x0 = lon;\n  var y0 = lat;\n  // Convert Radius from meters to degrees.\n  var rd = radius/111300;\n\n  var u = Math.random();\n  var v = Math.random();\n\n  var w = rd * Math.sqrt(u);\n  var t = 2 * Math.PI * v;\n  var x = w * Math.cos(t);\n  var y = w * Math.sin(t);\n\n  var xp = x/Math.cos(y0);\n\n  // Resulting point.\n  return { 'name': name, 'lat': y+y0, 'lon': xp+x0};\n}\nmsg.payload = generateRandomPoint(lon, lat, radius)\n//msg.payload.name = cityName + \"-\" + name\n\nmsg.payload[\"name\"] = cityName + \"-\" + name\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 120,
+        "wires": [
+            [
+                "78a1b9cc9ed380b2",
+                "dfb07d3c3d901fa0"
+            ]
+        ]
+    },
+    {
+        "id": "69b975a4216cb33c",
+        "type": "inject",
+        "z": "0c328659bacace48",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"lat1\":52.237049,\"lon1\":21.017532,\"lat2\":51.759445,\"lon2\":19.457216}",
+        "payloadType": "json",
+        "x": 170,
+        "y": 520,
+        "wires": [
+            [
+                "dc812284921edd20"
+            ]
+        ]
+    },
+    {
+        "id": "5e32291cebe4ad90",
+        "type": "debug",
+        "z": "0c328659bacace48",
+        "name": "debug 15",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "3c5580586ee0f87b",
+        "type": "function",
+        "z": "0c328659bacace48",
+        "name": "leap from geo ",
+        "func": "var leap = msg.payload.leap\nvar lat = msg.payload.lat\nvar lon = msg.payload.lon\nvar name = msg.payload.name\nleap = leap + Math.floor(Math.random() * 9001) - 1000\n//var name = Math.random().toString(36).slice(2)\nvar earth = 6378.137  //radius of the earth in kilometer\nvar  pi = Math.PI\nvar  cos = Math.cos\nvar sign1 = Math.random() < 0.5 ? -1 : 1;\nvar sign2 = Math.random() < 0.5 ? -1 : 1;\nfunction generateRandomLeap(name, lon, lat, leap) {\n  var m = (1 / ((2 * pi / 360) * earth)) / 1000\n  var lon = lon + sign1 * (leap * m) / cos(lat * (pi / 180));\n  var lat = lat + sign2*(leap * m)\n\n\n  return {\n    'name': name, 'lat': lat, 'lon': lon, \"leap\": leap};\n}\n\nmsg.payload = generateRandomLeap(name, lon, lat, leap)\n\n//msg.payload[\"name\"] = cityName + \"-\" + name \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 340,
+        "wires": [
+            [
+                "78a1b9cc9ed380b2",
+                "3d2a6187e3e5b999",
+                "dfb07d3c3d901fa0",
+                "92dd75e3047bc5e9"
+            ]
+        ]
+    },
+    {
+        "id": "3d2a6187e3e5b999",
+        "type": "delay",
+        "z": "0c328659bacace48",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "2",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 380,
+        "y": 460,
+        "wires": [
+            [
+                "3c5580586ee0f87b"
+            ]
+        ]
+    },
+    {
+        "id": "57cd152c8cb47216",
+        "type": "inject",
+        "z": "0c328659bacace48",
+        "name": "Stop",
+        "props": [
+            {
+                "p": "stop",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 400,
+        "wires": [
+            [
+                "3c5580586ee0f87b"
+            ]
+        ]
+    },
+    {
+        "id": "8c72e8e0435ee3e8",
+        "type": "inject",
+        "z": "0c328659bacace48",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"cityName\":\"Warszawa\",\"lat\":52.237049,\"lon\":21.017532,\"radius\":500,\"leap\":20000}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 120,
+        "wires": [
+            [
+                "1b9efdcdce9e105a"
+            ]
+        ]
+    },
+    {
+        "id": "dfb07d3c3d901fa0",
+        "type": "worldmap-tracks",
+        "z": "0c328659bacace48",
+        "name": "",
+        "depth": 20,
+        "layer": "combined",
+        "smooth": true,
+        "x": 690,
+        "y": 160,
+        "wires": [
+            [
+                "5ebd90df8ccf7444",
+                "92dd75e3047bc5e9"
+            ]
+        ]
+    },
+    {
+        "id": "4db1f262c7b958b3",
+        "type": "comment",
+        "z": "0c328659bacace48",
+        "name": "http://localhost:1880/worldmap/",
+        "info": "",
+        "x": 330,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "5ebd90df8ccf7444",
+        "type": "debug",
+        "z": "0c328659bacace48",
+        "name": "debug 16",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "e36758a0e0244692",
+        "type": "inject",
+        "z": "0c328659bacace48",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "92dd75e3047bc5e9",
+        "type": "worldmap",
+        "z": "0c328659bacace48",
+        "name": "",
+        "lat": "52.237049",
+        "lon": "21.017532",
+        "zoom": "7",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "600",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "false",
+        "panlock": "true",
+        "zoomlock": "true",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "true",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 1000,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "bb4e6ebc4e26eea7",
+        "type": "change",
+        "z": "9a6f37f6228be923",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "db",
+                "pt": "flow"
+            },
+            {
+                "t": "move",
+                "p": "db",
+                "pt": "msg",
+                "to": "db",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 60,
+        "wires": [
+            [
+                "2db1e126828a1152"
+            ]
+        ]
+    },
+    {
+        "id": "aee07cede229e269",
+        "type": "inject",
+        "z": "9a6f37f6228be923",
+        "name": "",
+        "props": [
+            {
+                "p": "db.cities",
+                "v": "[{\"id\":1,\"cityName\":\"Łódź\",\"latitude\":51.759445,\"longitude\":19.457216},{\"id\":2,\"cityName\":\"Warszawa\",\"latitude\":52.237049,\"longitude\":21.017532},{\"id\":3,\"cityName\":\"Płock\",\"latitude\":52.546344,\"longitude\":19.706536},{\"id\":4,\"cityName\":\"Toruń\",\"latitude\":53.01379,\"longitude\":18.598443},{\"id\":5,\"cityName\":\"Poznań\",\"latitude\":52.409538,\"longitude\":16.931992},{\"id\":6,\"cityName\":\"Wrocław\",\"latitude\":51.107883,\"longitude\":17.038538},{\"id\":7,\"cityName\":\"Opole\",\"latitude\":50.671062,\"longitude\":17.926126},{\"id\":8,\"cityName\":\"Kielce\",\"latitude\":50.866077,\"longitude\":20.6285677},{\"id\":9,\"cityName\":\"Radom\",\"latitude\":51.402723,\"longitude\":21.147133}]",
+                "vt": "json"
+            },
+            {
+                "p": "db.radius",
+                "v": "1000",
+                "vt": "num"
+            },
+            {
+                "p": "db.count",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "p": "db.cities_count",
+                "v": "[{\"id\":1,\"count\":0},{\"id\":2,\"count\":0},{\"id\":3,\"count\":0},{\"id\":4,\"count\":0},{\"id\":5,\"count\":0},{\"id\":6,\"count\":0},{\"id\":7,\"count\":0},{\"id\":8,\"count\":0},{\"id\":9,\"count\":0}]",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "bb4e6ebc4e26eea7"
+            ]
+        ]
+    },
+    {
+        "id": "2db1e126828a1152",
+        "type": "debug",
+        "z": "9a6f37f6228be923",
+        "name": "debug 4",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "d0a66e81d52496dc",
+        "type": "debug",
+        "z": "9a6f37f6228be923",
+        "name": "debug 5",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "7d0a5618c1044269",
+        "type": "debug",
+        "z": "9a6f37f6228be923",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "6fe35ae67318fc80",
+        "type": "counter-loop",
+        "z": "9a6f37f6228be923",
+        "name": "",
+        "counter": "couter",
+        "counterType": "msg",
+        "reset": false,
+        "resetValue": "value-null",
+        "initial": "0",
+        "initialType": "num",
+        "operator": "lte",
+        "termination": "db.iterations",
+        "terminationType": "msg",
+        "increment": 1,
+        "incrementType": "num",
+        "x": 390,
+        "y": 160,
+        "wires": [
+            [
+                "d0a66e81d52496dc"
+            ],
+            [
+                "b506db2ae3f71027"
+            ]
+        ]
+    },
+    {
+        "id": "c93ce63c4b2eb794",
+        "type": "function",
+        "z": "9a6f37f6228be923",
+        "name": "function 3",
+        "func": "[\n    {\n        \"name\": \"Łódź\",\n        \"lat\": 51.759445,\n        \"lon\": 19.457216,\n        \"leap\": 2000,\n        \"radius\": 1000\n    },\n    {\n        \"name\": \"Warszawa\",\n        \"lat\": 52.237049,\n        \"lon\": 21.017532,\n        \"leap\": 2000,\n        \"radius\": 1000\n    },\n    {\n        \"name\": \"Płock\",\n        \"lat\": 52.546344,\n        \"lon\": 19.706536,\n        \"leap\": 2000,\n        \"radius\": 1000\n    },\n    {\n        \"name\": \"Toruń\",\n        \"lat\": 53.01379,\n        \"lon\": 18.598443,\n        \"leap\": 2000,\n        \"radius\": 1000\n    },\n    {\n        \"name\": \"Poznań\",\n        \"lat\": 52.409538,\n        \"lon\": 16.931992,\n        \"leap\": 2000,\n        \"radius\": 1000\n    },\n    {\n        \"name\": \"Wrocław\",\n        \"lat\": 51.107883,\n        \"lon\": 17.038538,\n        \"leap\": 2000,\n        \"radius\": 1000\n    },\n    {\n        \"name\": \"Opole\",\n        \"lat\": 50.671062,\n        \"lon\": 17.926126,\n        \"leap\": 2000,\n        \"radius\": 1000\n    },\n    {\n        \"name\": \"Kielce\",\n        \"lat\": 50.866077,\n        \"lon\": 20.6285677,\n        \"leap\": 2000,\n        \"radius\": 1000\n    },\n    {\n        \"name\": \"Radom\",\n        \"lat\": 51.402723,\n        \"lon\": 21.147133,\n        \"leap\": 2000,\n        \"radius\": 1000\n    }\n]",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 120,
+        "y": 360,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b6091562f9c0113a",
+        "type": "loop",
+        "z": "9a6f37f6228be923",
+        "name": "",
+        "kind": "enum",
+        "count": "",
+        "initial": "1",
+        "step": "1",
+        "condition": "",
+        "conditionType": "js",
+        "when": "before",
+        "enumeration": "db.cities",
+        "enumerationType": "msg",
+        "limit": "",
+        "loopPayload": "loop-val",
+        "finalPayload": "final-orig",
+        "x": 470,
+        "y": 720,
+        "wires": [
+            [
+                "0546b32baa9949be"
+            ],
+            [
+                "54011617d74e8e79"
+            ]
+        ]
+    },
+    {
+        "id": "362c0ef3398fe8e0",
+        "type": "inject",
+        "z": "9a6f37f6228be923",
+        "name": "",
+        "props": [
+            {
+                "p": "db.cities",
+                "v": "[{\"cityName\":\"Warszawa\",\"latitude\":52.237049,\"longitude\":21.017532},{\"cityName\":\"Łódź\",\"latitude\":51.759445,\"longitude\":19.457216},{\"cityName\":\"Płock\",\"latitude\":52.546344,\"longitude\":19.706536},{\"cityName\":\"Toruń\",\"latitude\":53.01379,\"longitude\":18.598443},{\"cityName\":\"Poznań\",\"latitude\":52.409538,\"longitude\":16.931992},{\"cityName\":\"Wrocław\",\"latitude\":51.107883,\"longitude\":17.038538},{\"cityName\":\"Opole\",\"latitude\":50.671062,\"longitude\":17.926126},{\"cityName\":\"Kielce\",\"latitude\":50.866077,\"longitude\":20.6285677},{\"cityName\":\"Radom\",\"latitude\":51.402723,\"longitude\":21.147133}]",
+                "vt": "json"
+            },
+            {
+                "p": "db.radius",
+                "v": "1000",
+                "vt": "num"
+            },
+            {
+                "p": "db.count",
+                "v": "100",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 210,
+        "y": 720,
+        "wires": [
+            [
+                "b6091562f9c0113a"
+            ]
+        ]
+    },
+    {
+        "id": "54011617d74e8e79",
+        "type": "function",
+        "z": "9a6f37f6228be923",
+        "name": "function 4",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 800,
+        "wires": [
+            [
+                "b6091562f9c0113a",
+                "d6b8b9b851152ff0"
+            ]
+        ]
+    },
+    {
+        "id": "d6b8b9b851152ff0",
+        "type": "debug",
+        "z": "9a6f37f6228be923",
+        "name": "iterations",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 820,
+        "wires": []
+    },
+    {
+        "id": "0546b32baa9949be",
+        "type": "debug",
+        "z": "9a6f37f6228be923",
+        "name": "end",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "8972415944c9b411",
+        "type": "inject",
+        "z": "9a6f37f6228be923",
+        "name": "",
+        "props": [
+            {
+                "p": "db.cities",
+                "v": "[{\"id\":1,\"cityName\":\"Łódź\",\"latitude\":51.759445,\"longitude\":19.457216,\"iterations\":100,\"radius\":1000},{\"id\":2,\"cityName\":\"Warszawa\",\"latitude\":52.237049,\"longitude\":21.017532,\"iterations\":100,\"radius\":1000},{\"id\":3,\"cityName\":\"Płock\",\"latitude\":52.546344,\"longitude\":19.706536,\"iterations\":100,\"radius\":1000}]",
+                "vt": "json"
+            },
+            {
+                "p": "db.radius",
+                "v": "1000",
+                "vt": "num"
+            },
+            {
+                "p": "db.iterations",
+                "v": "5",
+                "vt": "num"
+            },
+            {
+                "p": "couter",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "6fe35ae67318fc80"
+            ]
+        ]
+    },
+    {
+        "id": "b506db2ae3f71027",
+        "type": "array-loop",
+        "z": "9a6f37f6228be923",
+        "name": "",
+        "key": "alb506db2ae3f71027",
+        "keyType": "msg",
+        "reset": true,
+        "resetValue": "value-empty",
+        "array": "db.cities",
+        "arrayType": "msg",
+        "x": 410,
+        "y": 300,
+        "wires": [
+            [
+                "6fe35ae67318fc80",
+                "40d74a71e6042bad"
+            ],
+            [
+                "0fcf4e6230c8df2a"
+            ]
+        ]
+    },
+    {
+        "id": "0fcf4e6230c8df2a",
+        "type": "function",
+        "z": "9a6f37f6228be923",
+        "name": "function 5",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 440,
+        "wires": [
+            [
+                "b506db2ae3f71027",
+                "7d0a5618c1044269"
+            ]
+        ]
+    },
+    {
+        "id": "8575e1aacb942b3d",
+        "type": "inject",
+        "z": "9a6f37f6228be923",
+        "name": "",
+        "props": [
+            {
+                "p": "db.cities",
+                "v": "[{\"id\":1,\"cityName\":\"Łódź\",\"latitude\":51.759445,\"longitude\":19.457216,\"iterations\":100,\"radius\":1000},{\"id\":2,\"cityName\":\"Warszawa\",\"latitude\":52.237049,\"longitude\":21.017532,\"iterations\":100,\"radius\":1000},{\"id\":3,\"cityName\":\"Płock\",\"latitude\":52.546344,\"longitude\":19.706536,\"iterations\":100,\"radius\":1000},{\"id\":4,\"cityName\":\"Toruń\",\"latitude\":53.01379,\"longitude\":18.598443,\"iterations\":100,\"radius\":1000},{\"id\":5,\"cityName\":\"Poznań\",\"latitude\":52.409538,\"longitude\":16.931992,\"iterations\":100,\"radius\":1000},{\"id\":6,\"cityName\":\"Wrocław\",\"latitude\":51.107883,\"longitude\":17.038538,\"iterations\":100,\"radius\":1000},{\"id\":7,\"cityName\":\"Opole\",\"latitude\":50.671062,\"longitude\":17.926126,\"iterations\":100,\"radius\":1000},{\"id\":8,\"cityName\":\"Kielce\",\"latitude\":50.866077,\"longitude\":20.6285677,\"iterations\":100,\"radius\":1000},{\"id\":9,\"cityName\":\"Radom\",\"latitude\":51.402723,\"longitude\":21.147133,\"iterations\":100,\"radius\":1000}]",
+                "vt": "json"
+            },
+            {
+                "p": "db.radius",
+                "v": "1000",
+                "vt": "num"
+            },
+            {
+                "p": "db.iterations",
+                "v": "10",
+                "vt": "num"
+            },
+            {
+                "p": "couter",
+                "v": "0",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 130,
+        "y": 300,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "40d74a71e6042bad",
+        "type": "debug",
+        "z": "9a6f37f6228be923",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.cityName",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "d84c264b033f800c",
+        "type": "function",
+        "z": "7132fd0107f435c6",
+        "name": "random geo coordinates within radius of existing coordinates",
+        "func": "\nvar center = msg.center\nvar radius = msg.radius\n\n\nfunction generateRandomPoint(center, radius) {\n  var x0 = center.lng;\n  var y0 = center.lat;\n  // Convert Radius from meters to degrees.\n  var rd = radius/111300;\n\n  var u = Math.random();\n  var v = Math.random();\n\n  var w = rd * Math.sqrt(u);\n  var t = 2 * Math.PI * v;\n  var x = w * Math.cos(t);\n  var y = w * Math.sin(t);\n\n  var xp = x/Math.cos(y0);\n\n  // Resulting point.\n  return {'lat': y+y0, 'lng': xp+x0};\n}\nmsg.points = generateRandomPoint(center, radius)\nreturn msg.points;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 200,
+        "wires": [
+            [
+                "2b4903851ddc4945"
+            ]
+        ]
+    },
+    {
+        "id": "3da5cb11936d0dad",
+        "type": "comment",
+        "z": "7132fd0107f435c6",
+        "name": "https://stackoverflow.com/questions/6878761/javascript-how-to-create-random-longitude-and-latitudes",
+        "info": "/**\n* Generates number of random geolocation points given a center and a radius.\n* @param  {Object} center A JS object with lat and lng attributes.\n* @param  {number} radius Radius in meters.\n* @param {number} count Number of points to generate.\n* @return {array} Array of Objects with lat and lng attributes.\n*/\nfunction generateRandomPoints(center, radius, count) {\n  var points = [];\n  for (var i=0; i<count; i++) {\n    points.push(generateRandomPoint(center, radius));\n  }\n  return points;\n}\n\n\n/**\n* Generates number of random geolocation points given a center and a radius.\n* Reference URL: http://goo.gl/KWcPE.\n* @param  {Object} center A JS object with lat and lng attributes.\n* @param  {number} radius Radius in meters.\n* @return {Object} The generated random points as JS object with lat and lng attributes.\n*/\nfunction generateRandomPoint(center, radius) {\n  var x0 = center.lng;\n  var y0 = center.lat;\n  // Convert Radius from meters to degrees.\n  var rd = radius/111300;\n\n  var u = Math.random();\n  var v = Math.random();\n\n  var w = rd * Math.sqrt(u);\n  var t = 2 * Math.PI * v;\n  var x = w * Math.cos(t);\n  var y = w * Math.sin(t);\n\n  var xp = x/Math.cos(y0);\n\n  // Resulting point.\n  return {'lat': y+y0, 'lng': xp+x0};\n}\n\n\n// Usage Example.\n// Generates 100 points that is in a 1km radius from the given lat and lng point.\nvar randomGeoPoints = generateRandomPoints({'lat':24.23, 'lng':23.12}, 1000, 100);",
+        "x": 420,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "2b4903851ddc4945",
+        "type": "debug",
+        "z": "7132fd0107f435c6",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 800,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "c9ff543e3e21f967",
+        "type": "function",
+        "z": "7132fd0107f435c6",
+        "name": "assigning longitude, latitude from the array",
+        "func": "var lat = [ 29.42, 30.26, 32.77, 36.37, 38.62, 39.09, 41.87, 43.03, 44.97, 41.25];\nvar lon = [-98.49,-97.74,-96.79,-94.20,-90.19,-94.57,-87.62,-87.90,-93.26,-95.99];\nvar idx = context.get(msg.payload.deviceId+'count') || 0;\nif( idx > 9 )\n{\n    idx = 0;  \n}\nlatitude = lat[idx];\nlongitude = lon[idx];\n\npar01 = Math.floor(Math.random() * 100);\npar02 = Math.floor(Math.random() * 100);\ncontext.set(msg.payload.deviceId+'count',idx+1); //store next idx for later\nreturn msg;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d0bf67c18bd1fe23",
+        "type": "function",
+        "z": "7132fd0107f435c6",
+        "name": " random longitude and latitudes",
+        "func": "  var lng = generateRandomLong()\n  var lat = generateRandomLat()\n\n// LONGITUDE -180 to + 180\nfunction generateRandomLong() {\n    var num = (Math.random()*180).toFixed(3);\n    var posorneg = Math.floor(Math.random());\n    if (posorneg == 0) {\n        num = num * -1;\n    }\n    return num;\n}\n// LATITUDE -90 to +90\nfunction generateRandomLat() {\n    var num = (Math.random()*90).toFixed(3);\n    var posorneg = Math.floor(Math.random());\n    if (posorneg == 0) {\n        num = num * -1;\n    }\n    return num;\n}\n\nmsg.payload = {\n    \"lat\": lat,\n    \"lng\": lng\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 510,
+        "y": 360,
+        "wires": [
+            [
+                "2b4903851ddc4945"
+            ]
+        ]
+    },
+    {
+        "id": "86fbb38da8140c3f",
+        "type": "inject",
+        "z": "7132fd0107f435c6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 200,
+        "y": 320,
+        "wires": [
+            [
+                "1ed217f661ab37a5"
+            ]
+        ]
+    },
+    {
+        "id": "1ed217f661ab37a5",
+        "type": "function",
+        "z": "7132fd0107f435c6",
+        "name": "Calculating new longitude, latitude from old + n meters",
+        "func": "/*\nhttps://stackoverflow.com/questions/7477003/calculating-new-longitude-latitude-from-old-n-meters\nreturn msg;\n\n\n\nThe number of kilometers per degree of longitude is approximately\n\n(pi/180) * r_earth * cos(theta*pi/180)\n\nwhere theta is the latitude in degrees and r_earth is approximately 6378 km.\n\nThe number of kilometers per degree of latitude is approximately the same at all locations, approx\n\n(pi/180) * r_earth = 111 km / degree \n\nSo you can do:\n\nnew_latitude  = latitude  + (dy / r_earth) * (180 / pi);\nnew_longitude = longitude + (dx / r_earth) * (180 / pi) / cos(latitude * pi/180);\n\nAs long as dx and dy are small compared to the radius of the earth and you do*/",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [
+                "d0bf67c18bd1fe23"
+            ]
+        ]
+    },
+    {
+        "id": "1d417b8f92b240fd",
+        "type": "function",
+        "z": "7132fd0107f435c6",
+        "name": "Calculate distance between two latitude-longitude points",
+        "func": "function getDistanceFromLatLonInKm(lat1,lon1,lat2,lon2) {\n  var R = 6371; // Radius of the earth in km\n  var dLat = deg2rad(lat2-lat1);  // deg2rad below\n  var dLon = deg2rad(lon2-lon1); \n  var a = \n    Math.sin(dLat/2) * Math.sin(dLat/2) +\n    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) * \n    Math.sin(dLon/2) * Math.sin(dLon/2)\n    ; \n  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a)); \n  var d = R * c; // Distance in km\n  return d;\n}\n\nfunction deg2rad(deg) {\n  return deg * (Math.PI/180)\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "6ac38b0f3ab45699",
+        "type": "inject",
+        "z": "7132fd0107f435c6",
+        "name": "",
+        "props": [
+            {
+                "p": "db.cities",
+                "v": "[{\"cityName\":\"Warszawa\",\"latitude\":52.237049,\"longitude\":21.017532},{\"cityName\":\"Łódź\",\"latitude\":51.759445,\"longitude\":19.457216},{\"cityName\":\"Płock\",\"latitude\":52.546344,\"longitude\":19.706536},{\"cityName\":\"Toruń\",\"latitude\":53.01379,\"longitude\":18.598443},{\"cityName\":\"Poznań\",\"latitude\":52.409538,\"longitude\":16.931992},{\"cityName\":\"Wrocław\",\"latitude\":51.107883,\"longitude\":17.038538},{\"cityName\":\"Opole\",\"latitude\":50.671062,\"longitude\":17.926126},{\"cityName\":\"Kielce\",\"latitude\":50.866077,\"longitude\":20.6285677},{\"cityName\":\"Radom\",\"latitude\":51.402723,\"longitude\":21.147133}]",
+                "vt": "json"
+            },
+            {
+                "p": "db.radius",
+                "v": "1000",
+                "vt": "num"
+            },
+            {
+                "p": "db.count",
+                "v": "100",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "8c63cdb1264e6ec2"
+            ]
+        ]
+    },
+    {
+        "id": "8c63cdb1264e6ec2",
+        "type": "change",
+        "z": "7132fd0107f435c6",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "db",
+                "pt": "flow"
+            },
+            {
+                "t": "move",
+                "p": "db",
+                "pt": "msg",
+                "to": "db",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 60,
+        "wires": [
+            [
+                "dc790841ba81cef4"
+            ]
+        ]
+    },
+    {
+        "id": "dc790841ba81cef4",
+        "type": "debug",
+        "z": "7132fd0107f435c6",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2a28df846fa16ee1",
+        "type": "inject",
+        "z": "7132fd0107f435c6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 140,
+        "wires": [
+            [
+                "aabf3175c9964bb1"
+            ]
+        ]
+    },
+    {
+        "id": "aabf3175c9964bb1",
+        "type": "function",
+        "z": "7132fd0107f435c6",
+        "name": "function 1",
+        "func": "\nvar database = flow.get(\"db\") || [];\nmsg.payload = database;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 140,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f03016b4488e3f48",
+        "type": "inject",
+        "z": "3370c0fd71deba56",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"cityName\":\"Warszawa\",\"latitude\":52.237049,\"longitude\":21.017532,\"radius\":500,\"leap\":20000}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "2b08acb49622d3df"
+            ]
+        ]
+    },
+    {
+        "id": "a9a70806c39c488d",
+        "type": "function",
+        "z": "3370c0fd71deba56",
+        "name": "geo distance between",
+        "func": "var lat1 = msg.payload.lat1\nvar lon1 = msg.payload.lon1\nvar lat2 = msg.payload.lat2\nvar lon2 = msg.payload.lon2\n\nfunction getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2) {\n  var R = 6371; // Radius of the earth in km\n  var dLat = deg2rad(lat2 - lat1);  // deg2rad below\n  var dLon = deg2rad(lon2 - lon1);\n  var a =\n    Math.sin(dLat / 2) * Math.sin(dLat / 2) +\n    Math.cos(deg2rad(lat1)) * Math.cos(deg2rad(lat2)) *\n    Math.sin(dLon / 2) * Math.sin(dLon / 2)\n    ;\n  var c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));\n  var d = R * c; // Distance in km\n  return d;\n}\n\nfunction deg2rad(deg) {\n  return deg * (Math.PI / 180)\n}\nmsg.payload = getDistanceFromLatLonInKm(lat1, lon1, lat2, lon2)\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 380,
+        "y": 400,
+        "wires": [
+            [
+                "10e314d6c152789b"
+            ]
+        ]
+    },
+    {
+        "id": "5e6af1cf5b4fd8bc",
+        "type": "debug",
+        "z": "3370c0fd71deba56",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 640,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "110b66cf4ff0665f",
+        "type": "worldmap",
+        "z": "3370c0fd71deba56",
+        "name": "",
+        "lat": "52.237049",
+        "lon": "21.017532",
+        "zoom": "",
+        "layer": "OSMG",
+        "cluster": "",
+        "maxage": "600",
+        "usermenu": "show",
+        "layers": "show",
+        "panit": "true",
+        "panlock": "false",
+        "zoomlock": "false",
+        "hiderightclick": "false",
+        "coords": "none",
+        "showgrid": "false",
+        "showruler": "false",
+        "allowFileDrop": "false",
+        "path": "/worldmap",
+        "overlist": "DR,CO,RA,DN,HM",
+        "maplist": "OSMG,OSMC,EsriC,EsriS,EsriT,EsriDG,UKOS",
+        "mapname": "",
+        "mapurl": "",
+        "mapopt": "",
+        "mapwms": false,
+        "x": 720,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "41dbdfdd308b4f19",
+        "type": "inject",
+        "z": "3370c0fd71deba56",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "radius",
+                "v": "100",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"name\":\"Emergency Medical Operation\",\"lat\":52.237049,\"lon\":21.017532}",
+        "payloadType": "json",
+        "x": 190,
+        "y": 800,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "212831c5.2daa8e",
+        "type": "function",
+        "z": "3370c0fd71deba56",
+        "name": "run callback",
+        "func": "msg.callback(msg.payload.value.joke.replace(/&quot;/g, '\"'));",
+        "outputs": "0",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 690,
+        "y": 680,
+        "wires": []
+    },
+    {
+        "id": "127459ed.a814f6",
+        "type": "inject",
+        "z": "3370c0fd71deba56",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 680,
+        "wires": [
+            [
+                "bcc9902c.38276"
+            ]
+        ]
+    },
+    {
+        "id": "bcc9902c.38276",
+        "type": "function",
+        "z": "3370c0fd71deba56",
+        "name": "set getJoke",
+        "func": "var getJoke = function(firstname, lastname, callback) {\n    firstname = firstname || 'Chuck';\n    lastname = lastname || 'Norris';\n    \n    // http request\n    msg.url = `http://api.icndb.com/jokes/random?firstName=${firstname}&lastName=${lastname}`;\n    msg.method = 'GET';\n    \n    // assign callback to msg\n    msg.callback = callback;\n    \n    // return copy of msg\n    node.send(Object.assign({}, msg));\n};\n\n\n// make global\nglobal.set('getJoke', getJoke);",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 310,
+        "y": 680,
+        "wires": [
+            [
+                "fd8227d.b6269d8"
+            ]
+        ]
+    },
+    {
+        "id": "874bac38.909f9",
+        "type": "comment",
+        "z": "3370c0fd71deba56",
+        "name": "Flow callback example",
+        "info": "",
+        "x": 160,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "fd8227d.b6269d8",
+        "type": "http request",
+        "z": "3370c0fd71deba56",
+        "name": "",
+        "method": "GET",
+        "ret": "obj",
+        "paytoqs": "ignore",
+        "url": "",
+        "tls": "",
+        "persist": false,
+        "proxy": "",
+        "insecureHTTPParser": false,
+        "authType": "",
+        "senderr": false,
+        "headers": [],
+        "x": 470,
+        "y": 680,
+        "wires": [
+            [
+                "212831c5.2daa8e"
+            ]
+        ]
+    },
+    {
+        "id": "fc41d0dc.4d401",
+        "type": "inject",
+        "z": "3370c0fd71deba56",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 147,
+        "y": 736,
+        "wires": [
+            [
+                "866162c0.13fd5"
+            ]
+        ]
+    },
+    {
+        "id": "866162c0.13fd5",
+        "type": "function",
+        "z": "3370c0fd71deba56",
+        "name": "run getJoke(firstname, lastname, callback)",
+        "func": "global.get('getJoke')('Wesley', 'Stam', function (joke) {\n    msg.payload = joke;\n    node.send(msg);\n});",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 387,
+        "y": 736,
+        "wires": [
+            [
+                "7f095419.73b7ec"
+            ]
+        ]
+    },
+    {
+        "id": "7f095419.73b7ec",
+        "type": "debug",
+        "z": "3370c0fd71deba56",
+        "name": "",
+        "active": true,
+        "console": "false",
+        "complete": "false",
+        "x": 637,
+        "y": 736,
+        "wires": []
+    },
+    {
+        "id": "10b29fc86881a905",
+        "type": "function",
+        "z": "3370c0fd71deba56",
+        "name": "random geo ",
+        "func": "var radius = msg.payload.radius\nvar latitude = msg.payload.latitude\nvar longitude = msg.payload.longitude\nvar cityName = msg.payload.cityName\n\nvar name = Math.random().toString(36).slice(2)\n\nfunction generateRandomPoint(longitude, latitude , radius) {\n  var x0 = longitude;\n  var y0 = latitude;\n  // Convert Radius from meters to degrees.\n  var rd = radius/111300;\n\n  var u = Math.random();\n  var v = Math.random();\n\n  var w = rd * Math.sqrt(u);\n  var t = 2 * Math.PI * v;\n  var x = w * Math.cos(t);\n  var y = w * Math.sin(t);\n\n  var xp = x/Math.cos(y0);\n\n  // Resulting point.\n  return { 'name': name, 'lat': y+y0, 'lon': xp+x0};\n}\nmsg.payload = generateRandomPoint( longitude, latitude, radius)\n//msg.payload.name = cityName + \"-\" + name\n\nmsg.payload[\"name\"] = cityName + \"-\" + name\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 330,
+        "y": 60,
+        "wires": [
+            [
+                "110b66cf4ff0665f",
+                "5e6af1cf5b4fd8bc"
+            ]
+        ]
+    },
+    {
+        "id": "746dbecb51d4b199",
+        "type": "inject",
+        "z": "3370c0fd71deba56",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"lat1\":52.237049,\"lon1\":21.017532,\"lat2\":51.759445,\"lon2\":19.457216}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 400,
+        "wires": [
+            [
+                "a9a70806c39c488d"
+            ]
+        ]
+    },
+    {
+        "id": "10e314d6c152789b",
+        "type": "debug",
+        "z": "3370c0fd71deba56",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 700,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "2b08acb49622d3df",
+        "type": "function",
+        "z": "3370c0fd71deba56",
+        "name": "leap from geo ",
+        "func": "var leap = msg.payload.leap\nvar latitude = msg.payload.latitude\nvar longitude = msg.payload.longitude\nvar cityName = msg.payload.cityName\nvar name = Math.random().toString(36).slice(2)\nvar earth = 6378.137  //radius of the earth in kilometer\nvar  pi = Math.PI\nvar  cos = Math.cos\nvar sign1 = Math.random() < 0.5 ? -1 : 1;\nvar sign2 = Math.random() < 0.5 ? -1 : 1;\nfunction generateRandomLeap(longitude, latitude, leap) {\n  var m = (1 / ((2 * pi / 360) * earth)) / 1000\n  var lon = longitude + sign1 *(leap * m) / cos(latitude * (pi / 180));\n  var lat = latitude + sign2*(leap * m)\n\n\n  return {\n    'name': name, 'latitude': lat, 'longitude': lon, \"leap\": leap, \"layer\": \"Lines\", \"color\": \"#0000ff\", \"weight\": \"6\"};\n}\n\nmsg.payload = generateRandomLeap( longitude, latitude, leap)\n\nif (flow.get(\"stop\")) { msg.reset; }\n//msg.payload[\"name\"] = cityName + \"-\" + name \nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 220,
+        "wires": [
+            [
+                "5e6af1cf5b4fd8bc",
+                "a8dfe35157d20819",
+                "110b66cf4ff0665f"
+            ]
+        ]
+    },
+    {
+        "id": "a8dfe35157d20819",
+        "type": "delay",
+        "z": "3370c0fd71deba56",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 360,
+        "y": 320,
+        "wires": [
+            [
+                "2b08acb49622d3df"
+            ]
+        ]
+    },
+    {
+        "id": "44126483ab164cb3",
+        "type": "inject",
+        "z": "3370c0fd71deba56",
+        "name": "Stop",
+        "props": [
+            {
+                "p": "stop",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 260,
+        "wires": [
+            [
+                "2b08acb49622d3df"
+            ]
+        ]
+    },
+    {
+        "id": "19cb2d9dc2c21711",
+        "type": "inject",
+        "z": "3370c0fd71deba56",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "leap",
+                "v": "20000",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"cityName\":\"Warszawa\",\"latitude\":52.237049,\"longitude\":21.017532,\"radius\":500,\"leap\":20000}",
+        "payloadType": "json",
+        "x": 130,
+        "y": 60,
+        "wires": [
+            [
+                "10b29fc86881a905"
+            ]
+        ]
+    },
+    {
+        "id": "f079a2f9.244188",
+        "type": "http in",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "url": "/update",
+        "method": "put",
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "7ae7638b.da17d4"
+            ]
+        ]
+    },
+    {
+        "id": "f3abc459.bf4608",
+        "type": "http response",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "x": 882,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a23da17c.89819",
+        "type": "template",
+        "z": "56d27386.5606ec",
+        "name": "Web Template",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en-GB\">\n<head>\n    <title>Users</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css\" />\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css\" />\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css\" />\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js\"></script>\n\n    <script type=\"text/javascript\">\n        $(function () {\n            console.log(\"crud demo\");\n\n            var db = {{#payload}}{{{.}}}{{/payload}};\n\n            $(\"#jsgrid\").jsGrid({\n                width: \"100%\",\n                inserting: true,\n                editing: true,\n                sorting: true,\n                paging: true,\n\n                data: db,\n\n                fields: [\n                    { title:\"ID\", name: \"id\", type: \"number\", width: 20, readOnly: true },\n                    { title:\"User ID\", name: \"userID\", type: \"text\", width: 50 },\n                    { title:\"First Name\", name: \"foreName\", type: \"text\", width: 50 },\n                    { title:\"Last Name\", name: \"sirName\", type: \"text\", width: 50 },\n                    { title:\"Age\", name: \"age\", type:\"number\", width: 25},\n                    { type: \"control\" }\n                ],\n           \n                controller: {\n                    insertItem: function(item) {\n                        return $.ajax({\n                            type: \"POST\",\n                            url: \"/insert\",\n                            data: item\n                        });\n                    },\n                    updateItem: function(item) {\n                       return $.ajax({\n                            type: \"PUT\",\n                            url: \"/update\",\n                            data: item\n                        });\n                    },\n                    deleteItem: function(item) {\n                        return $.ajax({\n                            type: \"DELETE\",\n                            url: \"/delete\",\n                            data: item\n                        });\n                    }\n                }   \n            });\n        });\n    \n  </script>\n</head>\n<body class=\"container\">\n    <section class=\"row\">\n        \n        <div class=\"col-md-6\"></div>\n        <div class=\"col-md-6\" id=\"jsgrid\">\n        </div>\n    </section>\n</body>\n</html>\n\n",
+        "x": 672,
+        "y": 136,
+        "wires": [
+            [
+                "65044ddc.5f260c"
+            ]
+        ]
+    },
+    {
+        "id": "c1275504.9fce88",
+        "type": "http in",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "url": "/index",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 140,
+        "y": 136,
+        "wires": [
+            [
+                "5ab2748a.b25804"
+            ]
+        ]
+    },
+    {
+        "id": "65044ddc.5f260c",
+        "type": "http response",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "x": 882,
+        "y": 136,
+        "wires": []
+    },
+    {
+        "id": "246d6061.16909",
+        "type": "http response",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "x": 882,
+        "y": 264,
+        "wires": []
+    },
+    {
+        "id": "ab9dc1e8.9a6b8",
+        "type": "http in",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "url": "/insert",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 150,
+        "y": 264,
+        "wires": [
+            [
+                "51a96549.d2d4b4"
+            ]
+        ]
+    },
+    {
+        "id": "badd93cd.d949a8",
+        "type": "http in",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "url": "/delete",
+        "method": "delete",
+        "swaggerDoc": "",
+        "x": 160,
+        "y": 328,
+        "wires": [
+            [
+                "5bec0239.ac503c"
+            ]
+        ]
+    },
+    {
+        "id": "fa877325.8c6e2",
+        "type": "http response",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "x": 882,
+        "y": 328,
+        "wires": []
+    },
+    {
+        "id": "5acf6208.3a30ec",
+        "type": "function",
+        "z": "56d27386.5606ec",
+        "name": "Generate dummy data",
+        "func": "const firstNames =  [\"Liam\",\"Noah\",\"Oliver\",\"William\",\"Elijah\",\"James\",\"Benjamin\",\"Lucas\",\"Mason\",\"Ethan\",\"Alexander\",\"Henry\",\"Jacob\",\"Michael\",\"Daniel\",\"Logan\",\"Jackson\",\"Sebastian\",\"Jack\",\"Aiden\"];\nconst sirNames = [\"Jones\",\"Taylor\",\"Williams\",\"Brown\",\"White\",\"Harris\",\"Martin\",\"Davies\",\"Wilson\",\"Cooper\",\"Evans\",\"King\",\"Thomas\",\"Baker\",\"Green\",\"Wright\",\"Johnson\",\"Edwards\",\"Clark\",\"Roberts\",\"Robinson\",\"Hall\",\"Lewis\",\"Young\",\"Davis\",\"Turner\",\"Hill\",\"Phillips\",\"Collins\",\"Allen\",\"Moore\",\"Thompson\",\"Carter\",\"James\",\"Knight\",\"Walker\",\"Wood\",\"Hughes\",\"Parker\",\"Ward\",\"Bennett\",\"Cook\",\"Webb\",\"Bailey\",\"Scott\",\"Jackson\",\"Lee\",\"Cox\"];\n         \n         \n\nvar database = [];\n\nfor(let i = 1; i <= 30; i++) {\n    var item = {\"id\":i, \"timestamp\":Date.now()};\n    item.foreName = randomFirstname();\n    item.sirName = randomSirname();\n    item.userID = \"U\" + randomInt(1000, 2999);\n    item.age = randomInt(20, 65);\n    database.push(item);\n}\n\n\nfunction randomFirstname() {\n   return firstNames[randomInt(0, firstNames.length-1)];\n}\n\nfunction randomSirname() {\n    return sirNames[randomInt(0, sirNames.length-1)];\n}\n\nfunction randomInt(min, max) { \n  return Math.floor(Math.random() * (max - min + 1) + min);\n}\n\nflow.set(\"database\", database);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 388,
+        "y": 56,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "d2c05694.f676a",
+        "type": "inject",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 111,
+        "y": 56,
+        "wires": [
+            [
+                "5acf6208.3a30ec"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "7ae7638b.da17d4",
+        "type": "function",
+        "z": "56d27386.5606ec",
+        "name": "update-query",
+        "func": "\nvar database = flow.get(\"database\") || [];\n\nvar item = database.find(e => e.id == msg.payload.id );\n\nif(msg.payload.foreName == \"\" || msg.payload.sirName == \"\" || msg.payload.userID == \"\") {\n    msg.statusCode = 400;\n    msg.payload = null;\n    return msg;\n}\n\nif(item) {\n    item.foreName = msg.payload.foreName;\n    item.sirName = msg.payload.sirName;\n    item.age = msg.payload.age;\n    item.userID = msg.payload.userID;\n    flow.set(\"database\", database);\n} else {\n    msg.statusCode = 404;//not found\n    msg.payload = null;\n    return msg;\n}\nmsg.payload = item;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 342,
+        "y": 200,
+        "wires": [
+            [
+                "f3abc459.bf4608"
+            ]
+        ]
+    },
+    {
+        "id": "51a96549.d2d4b4",
+        "type": "function",
+        "z": "56d27386.5606ec",
+        "name": "insert-query",
+        "func": "var database = flow.get(\"database\") || [];\nvar nextID = Math.max.apply(Math, database.map(function(o) { return o.id; })) + 1;\nvar item = {\n    id: nextID,\n    timestamp: Date.now(),\n    foreName : msg.payload.foreName,\n    sirName : msg.payload.sirName,\n    age : msg.payload.age,\n    userID : msg.payload.userID,\n}\n\nif(item.foreName == \"\" || item.sirName == \"\" || item.userID == \"\") {\n    msg.statusCode = 400;\n    msg.payload = null;\n    return msg;\n}\n\ndatabase.push(item);\nflow.set(\"database\", database);\n\nmsg.payload = item;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 342,
+        "y": 264,
+        "wires": [
+            [
+                "246d6061.16909"
+            ]
+        ]
+    },
+    {
+        "id": "5bec0239.ac503c",
+        "type": "function",
+        "z": "56d27386.5606ec",
+        "name": "delete-query",
+        "func": "\nvar database = flow.get(\"database\") || [];\n\ndatabase = database.filter(function( obj ) {\n    return obj.id != msg.payload.id;\n});\n\nflow.set(\"database\", database);\n\nmsg.payload = database;\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 342,
+        "y": 328,
+        "wires": [
+            [
+                "fa877325.8c6e2"
+            ]
+        ]
+    },
+    {
+        "id": "5ab2748a.b25804",
+        "type": "function",
+        "z": "56d27386.5606ec",
+        "name": "get database",
+        "func": "\nvar database = flow.get(\"database\") || [];\nmsg.payload = database;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 342,
+        "y": 136,
+        "wires": [
+            [
+                "9a90ca86.24a0f"
+            ]
+        ]
+    },
+    {
+        "id": "9a90ca86.24a0f",
+        "type": "json",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "x": 498,
+        "y": 136,
+        "wires": [
+            [
+                "a23da17c.89819"
+            ]
+        ]
+    },
+    {
+        "id": "5ea0bbec.a24cb4",
+        "type": "inject",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "1",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 580,
+        "wires": [
+            [
+                "d3a8a503.cdca68",
+                "4dd5304a.775dd"
+            ]
+        ]
+    },
+    {
+        "id": "d3a8a503.cdca68",
+        "type": "change",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "user1",
+                "pt": "global",
+                "to": "{\"name\":\"Ralph\",\"ID\":152}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 560,
+        "wires": [
+            [
+                "d9fad929.9ad818"
+            ]
+        ]
+    },
+    {
+        "id": "4dd5304a.775dd",
+        "type": "change",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "user2",
+                "pt": "global",
+                "to": "{\"name\":\"Loren\",\"ID\":444}",
+                "tot": "json"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 340,
+        "y": 600,
+        "wires": [
+            [
+                "d9fad929.9ad818"
+            ]
+        ]
+    },
+    {
+        "id": "f7e7cd9c.39d6a",
+        "type": "inject",
+        "z": "56d27386.5606ec",
+        "name": "fetch id of user1",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "user1.ID",
+        "payloadType": "global",
+        "x": 160,
+        "y": 740,
+        "wires": [
+            [
+                "d73ea156.d63f88"
+            ]
+        ]
+    },
+    {
+        "id": "830b0b1b.25cac8",
+        "type": "inject",
+        "z": "56d27386.5606ec",
+        "name": "modify id of user2",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "900",
+        "payloadType": "num",
+        "x": 170,
+        "y": 840,
+        "wires": [
+            [
+                "e72797b5.3033c"
+            ]
+        ]
+    },
+    {
+        "id": "d73ea156.d63f88",
+        "type": "debug",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 360,
+        "y": 740,
+        "wires": []
+    },
+    {
+        "id": "d9fad929.9ad818",
+        "type": "debug",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 580,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "e72797b5.3033c",
+        "type": "change",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "user2.ID",
+                "pt": "global",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 430,
+        "y": 840,
+        "wires": [
+            [
+                "c0aef31f.ef5a1"
+            ]
+        ]
+    },
+    {
+        "id": "c0aef31f.ef5a1",
+        "type": "debug",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 620,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "1806731.cbe2e0d",
+        "type": "comment",
+        "z": "56d27386.5606ec",
+        "name": "Set global Variable",
+        "info": "![](https://i.imgur.com/28Dx6wl.png)",
+        "x": 150,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "b240863d.8f0ea",
+        "type": "comment",
+        "z": "56d27386.5606ec",
+        "name": "Get a Variable",
+        "info": "![](https://i.imgur.com/28Dx6wl.png)",
+        "x": 130,
+        "y": 700,
+        "wires": []
+    },
+    {
+        "id": "36974f5f.d9f2f8",
+        "type": "comment",
+        "z": "56d27386.5606ec",
+        "name": "Modify a Variable",
+        "info": "![](https://i.imgur.com/28Dx6wl.png)",
+        "x": 140,
+        "y": 800,
+        "wires": []
+    },
+    {
+        "id": "e6fb90f4.bbedd8",
+        "type": "comment",
+        "z": "56d27386.5606ec",
+        "name": "Delete",
+        "info": "![](https://i.imgur.com/28Dx6wl.png)",
+        "x": 110,
+        "y": 920,
+        "wires": []
+    },
+    {
+        "id": "6021bbef.0a0ea4",
+        "type": "inject",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "1",
+        "payload": "",
+        "payloadType": "date",
+        "x": 150,
+        "y": 960,
+        "wires": [
+            [
+                "fbe1d888.4689d8"
+            ]
+        ]
+    },
+    {
+        "id": "fbe1d888.4689d8",
+        "type": "change",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "user1",
+                "pt": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 370,
+        "y": 960,
+        "wires": [
+            [
+                "a36e253f.8e3c58"
+            ]
+        ]
+    },
+    {
+        "id": "a36e253f.8e3c58",
+        "type": "debug",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 530,
+        "y": 960,
+        "wires": []
+    },
+    {
+        "id": "ec536094.9927",
+        "type": "comment",
+        "z": "56d27386.5606ec",
+        "name": "",
+        "info": "",
+        "x": 400,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "8c1321f6.3253a8",
+        "type": "function",
+        "z": "ec0879b.8af1b08",
+        "name": "Message generator",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 480,
+        "wires": [
+            [
+                "5d693ec0.0cb11",
+                "e354a6db.50eb18"
+            ]
+        ]
+    },
+    {
+        "id": "e354a6db.50eb18",
+        "type": "debug",
+        "z": "ec0879b.8af1b08",
+        "name": "during",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 670,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "e3c46a43.4bd95",
+        "type": "inject",
+        "z": "ec0879b.8af1b08",
+        "name": "Enter your data here & Click",
+        "props": [
+            {
+                "p": "i",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "stop",
+                "v": "false",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 180,
+        "y": 160,
+        "wires": [
+            [
+                "506798d9.aa3ec8"
+            ]
+        ]
+    },
+    {
+        "id": "5d693ec0.0cb11",
+        "type": "delay",
+        "z": "ec0879b.8af1b08",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 150,
+        "y": 340,
+        "wires": [
+            [
+                "18f88c72.90c284"
+            ]
+        ]
+    },
+    {
+        "id": "18f88c72.90c284",
+        "type": "function",
+        "z": "ec0879b.8af1b08",
+        "name": "Cycles",
+        "func": "\nvar db = flow.get(\"db\") || [];\n\n\nwhile (db.count > msg.i) {\nif (flow.get(\"stop\")) {break;}\nmsg.i++\nreturn [msg, null ];\n}\nmsg.i = 0\nreturn [null, msg];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 340,
+        "wires": [
+            [
+                "8c1321f6.3253a8"
+            ],
+            [
+                "aa01b1f8f89b4a4b"
+            ]
+        ]
+    },
+    {
+        "id": "1c631185.78da96",
+        "type": "inject",
+        "z": "ec0879b.8af1b08",
+        "name": "Stop",
+        "props": [
+            {
+                "p": "stop",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 220,
+        "wires": [
+            [
+                "506798d9.aa3ec8"
+            ]
+        ]
+    },
+    {
+        "id": "506798d9.aa3ec8",
+        "type": "change",
+        "z": "ec0879b.8af1b08",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "stop",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 500,
+        "y": 220,
+        "wires": [
+            [
+                "18f88c72.90c284"
+            ]
+        ]
+    },
+    {
+        "id": "6c38a1d06237490c",
+        "type": "function",
+        "z": "ec0879b.8af1b08",
+        "name": "Message generator",
+        "func": "\nvar categoryArray = [ \"QUERY\", \"COMMAND\", \"DATAGRAM\", \"EVENT\"]; \nvar categoryInstance = categoryArray[Math.floor(Math.random()*categoryArray.length)]; //getting random category from array\nvar date = new Date(msg.startDate)\ndate.setHours( date.getHours() + parseInt(msg.j)*4) //adding 4 hours to every iteration\ndate.setMinutes( date.getMinutes() + (Math.floor(Math.random() * 201) - 100)) //adding fuzziness to generated timestamp\nvar value = Math.floor(Math.random() * (1000 - 400 + 1)) + 400 // generating random value from a range\n\n\nmsg.payload =   {\n      \"id\": uuidv4(),\n      \"timestamp\": date.toISOString(),\n      \"category\": categoryInstance,\n      \"value\": value\n \n};\n\n\n// UDDI generator function\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 630,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "a55fb20d82e232ef",
+        "type": "inject",
+        "z": "ec0879b.8af1b08",
+        "name": "",
+        "props": [
+            {
+                "p": "db.cities",
+                "v": "[{\"id\":1,\"cityName\":\"Łódź\",\"latitude\":51.759445,\"longitude\":19.457216},{\"id\":2,\"cityName\":\"Warszawa\",\"latitude\":52.237049,\"longitude\":21.017532},{\"id\":3,\"cityName\":\"Płock\",\"latitude\":52.546344,\"longitude\":19.706536},{\"id\":4,\"cityName\":\"Toruń\",\"latitude\":53.01379,\"longitude\":18.598443},{\"id\":5,\"cityName\":\"Poznań\",\"latitude\":52.409538,\"longitude\":16.931992},{\"id\":6,\"cityName\":\"Wrocław\",\"latitude\":51.107883,\"longitude\":17.038538},{\"id\":7,\"cityName\":\"Opole\",\"latitude\":50.671062,\"longitude\":17.926126},{\"id\":8,\"cityName\":\"Kielce\",\"latitude\":50.866077,\"longitude\":20.6285677},{\"id\":9,\"cityName\":\"Radom\",\"latitude\":51.402723,\"longitude\":21.147133}]",
+                "vt": "json"
+            },
+            {
+                "p": "db.radius",
+                "v": "1000",
+                "vt": "num"
+            },
+            {
+                "p": "db.count",
+                "v": "100",
+                "vt": "num"
+            },
+            {
+                "p": "db.cities_count",
+                "v": "[{\"id\":1,\"count\":0},{\"id\":2,\"count\":0},{\"id\":3,\"count\":0},{\"id\":4,\"count\":0},{\"id\":5,\"count\":0},{\"id\":6,\"count\":0},{\"id\":7,\"count\":0},{\"id\":8,\"count\":0},{\"id\":9,\"count\":0}]",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 110,
+        "y": 80,
+        "wires": [
+            [
+                "26da2be4587c4b94"
+            ]
+        ]
+    },
+    {
+        "id": "26da2be4587c4b94",
+        "type": "change",
+        "z": "ec0879b.8af1b08",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "db",
+                "pt": "flow"
+            },
+            {
+                "t": "move",
+                "p": "db",
+                "pt": "msg",
+                "to": "db",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 320,
+        "y": 80,
+        "wires": [
+            [
+                "3c90877a610d6a5f"
+            ]
+        ]
+    },
+    {
+        "id": "3c90877a610d6a5f",
+        "type": "debug",
+        "z": "ec0879b.8af1b08",
+        "name": "debug 3",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 560,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "aa01b1f8f89b4a4b",
+        "type": "debug",
+        "z": "ec0879b.8af1b08",
+        "name": "end",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "4240f85ac22a1cc4",
+        "type": "function",
+        "z": "ec0879b.8af1b08",
+        "name": "Cycles",
+        "func": "\nvar db = flow.get(\"db\") || [];\n\n\nwhile (db.count > msg.i) {\nif (flow.get(\"stop\")) {break;}\nmsg.i++\nreturn [msg, null ];\n}\nmsg.i = 0\nreturn [null, msg];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 810,
+        "y": 160,
+        "wires": [
+            [],
+            []
+        ]
+    },
+    {
+        "id": "c5cd1e6f.3e337",
+        "type": "function",
+        "z": "9b21c092.4affa8",
+        "name": "SERVICE_STARTED",
+        "func": "\nvar serviceArray = [\n{category:\"QUERY\", module:\"dn01\", name:\"creditScore\", version:\"1.1\", type:\"MultiProtocolGateway\", protocol:\"HTTP\", port:\"80\", operation:\"GET\", apiFormat:\"REST\", dataFormat:\"JSON\"}, \n{category:\"COMMAND\", module:\"dn02\", name:\"order\", version:\"1.7\", type:\"MultiProtocolGateway\", protocol:\"HTTPS\", port:\"443\", operation:\"POST\", apiFormat:\"REST\", dataFormat:\"JSON\"}, \n{category:\"QUERY\", module:\"dn01\", name:\"order\", version:\"1.7\", type:\"MultiProtocolGateway\", protocol:\"HTTPS\", port:\"443\", operation:\"GET\", apiFormat:\"REST\", dataFormat:\"JSON\"}, \n{category:\"COMMAND\", module:\"dn02\", name:\"order\", version:\"1.7\", type:\"MultiProtocolGateway\", protocol:\"HTTPS\", port:\"443\", operation:\"DELETE\", apiFormat:\"REST\", dataFormat:\"JSON\"}, \n{category:\"COMMAND\", module:\"dn03\", name:\"billing\", version:\"1\", type:\"WebServiceProxy\", protocol:\"HTTPS\", port:\"443\", operation:\"createSubscription\", apiFormat:\"SOAP\", dataFormat:\"XML\"}, \n{category:\"COMMAND\", module:\"dn01\", name:\"billing\", version:\"1\", type:\"WebServiceProxy\", protocol:\"HTTPS\", port:\"443\", operation:\"deleteBundledItems\", apiFormat:\"SOAP\", dataFormat:\"XML\"}, \n{category:\"QUERY\", module:\"dn01\", name:\"billing\", version:\"1\", type:\"WebServiceProxy\", protocol:\"HTTPS\", port:\"443\", operation:\"getNetworkServices\", apiFormat:\"SOAP\", dataFormat:\"XML\"}, \n{category:\"QUERY\", module:\"dn01\", name:\"billing\", version:\"1\", type:\"WebServiceProxy\", protocol:\"HTTPS\", port:\"443\", operation:\"getPromotions\", apiFormat:\"SOAP\", dataFormat:\"XML\"}, \n{category:\"DATAGRAM\", module:\"dn01\", name:\"reportfiles\", version:\"2.4\", type:\"MultiProtocolGateway\", protocol:\"FTPS\", port:\"990\", operation:\"GET\", apiFormat:\"REST\", dataFormat:\"Binary\"}, \n{category:\"DATAGRAM\", module:\"dn01\", name:\"reportfiles\", version:\"2.4\", type:\"MultiProtocolGateway\", protocol:\"FTPS\", port:\"990\", operation:\"PUT\", apiFormat:\"REST\", dataFormat:\"Binary\"}, \n{category:\"EVENT\", module:\"dn03\", name:\"devicelocation\", version:\"1.4\", type:\"MultiProtocolGateway\", protocol:\"HTTPS\", port:\"9092\", operation:\"SEND\", apiFormat:\"REST\", dataFormat:\"JSON\"}, \n{category:\"EVENT\", module:\"dn02\", name:\"devicelocation\", version:\"1.4\", type:\"MultiProtocolGateway\", protocol:\"HTTPS\", port:\"9092\", operation:\"GET\", apiFormat:\"REST\", dataFormat:\"JSON\"}\n]\n\nvar serviceInstance = serviceArray[Math.floor(Math.random()*serviceArray.length)];\nvar userArray = [ \"axxa2312\", \"varta01\", \"pkobp\", \"visa44\", \"allegro765\", \"mbank99\"]; \nvar userInstance = userArray[Math.floor(Math.random()*userArray.length)];\nvar hostArray = [ \"mars01.appar01t.pl\", \"mars02.appart02.pl\", \"mars03.appart02.pl\"]; \nvar hostInstance = hostArray[Math.floor(Math.random()*hostArray.length)];\n//var date = new Date('2021-02-01T00:00:01')\n//var date = new Date('2021-01-28T23:00:00.000Z')\nvar date = new Date(msg.startDate)\n\ndate.setHours( date.getHours() + msg.i*4)\ndate.setMinutes( date.getMinutes() + (Math.floor(Math.random() * 201) - 100))\n\n\n\nvar data = {\n        \"inputParameters\": {},\n        \"outputParameters\": {}\n      }\nswitch (serviceInstance.category) {\ncase 'QUERY': data = {\"outputParameters\": {\"value01\":Math.floor(Math.random() * (1000 - 400 + 1)) + 400}}\n    break;\ncase 'COMMAND': data = {\"inputParameters\": {\"value01\":Math.floor(Math.random() * (1000 - 400 + 1)) + 400}}\n    break;\ncase 'DATAGRAM': data = {\"inputParameters\": {\"value01\":Math.floor(Math.random() * (1000 - 400 + 1)) + 400}}\n    break;    \ncase 'EVENT': data = {\"inputParameters\": {\"value01\":Math.floor(Math.random() * (1000 - 400 + 1)) + 400},\n        \"outputParameters\": {\"value01\":Math.floor(Math.random() * (1000 - 400 + 1)) + 400}\n      }\n    break;   \n \n  default:\n\n} \n\nmsg.payload =   {\n      \"id\": uuidv4(),\n      \"timestamp\": date.toISOString(),\n      \"category\": \"dp:\"+serviceInstance.category,\n      \"type\": \"dp:SERVICE_STARTED\",\n      \"data\": data,\n      \"source\": {\n        \"id\": serviceInstance.module+\"-\"+serviceInstance.name,\n        \"module\": serviceInstance.module,\n        \"name\": serviceInstance.name,\n        \"version\": serviceInstance.version,\n        \"type\": serviceInstance.type,\n        \"urlPath\": \"/\"+serviceInstance.name +\"/v\"+serviceInstance.version,\n        \"protocol\": serviceInstance.protocol,\n        \"port\": serviceInstance.port,\n        \"operation\": serviceInstance.operation,\n        \"apiFormat\": serviceInstance.apiFormat,\n        \"dataFormat\": serviceInstance.dataFormat\n      },\n      \"system\": {\n        \"id\": hostInstance\n      },\n      \"user\": {\n        \"id\": userInstance \n      }\n\n\n\n};\n\nmsg.random = Math.floor(Math.random() * (10 - 1 + 1)) + 1;\nmsg.key = 'datapower'\n\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 580,
+        "y": 360,
+        "wires": [
+            [
+                "b921c1a1.1f9468",
+                "7fed6b1a.b1ab54",
+                "970ee6d0.37a8e"
+            ]
+        ]
+    },
+    {
+        "id": "523e7855.826f8",
+        "type": "inject",
+        "z": "9b21c092.4affa8",
+        "name": "Send Message",
+        "props": [
+            {
+                "p": "per4hours",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "p": "iterations",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "p": "startDate",
+                "v": "2022-11-01T00:00:01",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "bf503a10.0d0dd8"
+            ]
+        ]
+    },
+    {
+        "id": "d27bed54.e030c",
+        "type": "function",
+        "z": "9b21c092.4affa8",
+        "name": "SERVICE_COMPLETED",
+        "func": "\nmsg.payload.type = \"dp:SERVICE_COMPLETED\"\nvar date = new Date(msg.payload.timestamp)\n\ndate.setSeconds(date.getSeconds() + 10*Math.random())\nmsg.payload.timestamp = date.toISOString()\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 950,
+        "y": 420,
+        "wires": [
+            [
+                "7fed6b1a.b1ab54"
+            ]
+        ]
+    },
+    {
+        "id": "b921c1a1.1f9468",
+        "type": "switch",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "property": "random",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "$round($random()*30, 0)\t",
+                "vt": "jsonata"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 750,
+        "y": 420,
+        "wires": [
+            [
+                "8ff957cb.b1464"
+            ],
+            [
+                "d27bed54.e030c"
+            ]
+        ]
+    },
+    {
+        "id": "8ff957cb.b1464",
+        "type": "function",
+        "z": "9b21c092.4affa8",
+        "name": "SERVICE_FAILED",
+        "func": "\nmsg.payload.type = \"dp:SERVICE_FAILED\"\nvar date = new Date(msg.payload.timestamp)\n\ndate.setSeconds(date.getSeconds() + 30*Math.random())\nmsg.payload.timestamp = date.toISOString()\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 930,
+        "y": 340,
+        "wires": [
+            [
+                "7fed6b1a.b1ab54"
+            ]
+        ]
+    },
+    {
+        "id": "bf503a10.0d0dd8",
+        "type": "counter-loop",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "counter": "i",
+        "counterType": "msg",
+        "reset": true,
+        "resetValue": "value-empty",
+        "initial": 0,
+        "initialType": "num",
+        "operator": "lt",
+        "termination": "per4hours",
+        "terminationType": "msg",
+        "increment": 1,
+        "incrementType": "num",
+        "x": 590,
+        "y": 60,
+        "wires": [
+            [],
+            [
+                "35d001da.f089be"
+            ]
+        ]
+    },
+    {
+        "id": "35d001da.f089be",
+        "type": "counter-loop",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "counter": "j",
+        "counterType": "msg",
+        "reset": true,
+        "resetValue": "value-empty",
+        "initial": 0,
+        "initialType": "num",
+        "operator": "lt",
+        "termination": "iterations",
+        "terminationType": "msg",
+        "increment": 1,
+        "incrementType": "num",
+        "x": 580,
+        "y": 260,
+        "wires": [
+            [
+                "6127730f.ef3f54"
+            ],
+            [
+                "c5cd1e6f.3e337"
+            ]
+        ]
+    },
+    {
+        "id": "7fed6b1a.b1ab54",
+        "type": "json",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 910,
+        "y": 60,
+        "wires": [
+            [
+                "b4f13adf.798228",
+                "7dcbfb8a.826a64"
+            ]
+        ]
+    },
+    {
+        "id": "6127730f.ef3f54",
+        "type": "delay",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "bf503a10.0d0dd8"
+            ]
+        ]
+    },
+    {
+        "id": "970ee6d0.37a8e",
+        "type": "delay",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "25",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "35d001da.f089be"
+            ]
+        ]
+    },
+    {
+        "id": "7dcbfb8a.826a64",
+        "type": "debug",
+        "z": "9b21c092.4affa8",
+        "name": "JSON",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1090,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "7f543dc1.cbb6a4",
+        "type": "comment",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "info": "node-red-contrib-loop-processing\ncounter-loop\nnode-red-contrib-elasticsearch-jupalcf\nElasticsearch index\nnode-red-contrib-kafka-manager",
+        "x": 120,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "3e4a2ccd.c0d864",
+        "type": "function",
+        "z": "9b21c092.4affa8",
+        "name": "small service",
+        "func": "var userArray = [ \"axxa2312\", \"varta01\", \"pkobp\", \"visa44\", \"allegro765\", \"mbank99\"]; \nvar userInstance = userArray[Math.floor(Math.random()*userArray.length)];\nvar date = new Date('2021-01-01T00:00:01')\ndate.setHours( date.getHours() + (Math.floor(Math.random() * 201) - 100))\nvar amount = Math.floor(Math.random() * (1000 - 400 + 1)) + 400\n\n\nmsg.payload =   {\n      \"id\": uuidv4(),\n      \"timestamp\": date.toISOString(),\n      \"user\":userInstance,\n      \"amount\":amount\n    };\n\nmsg.key = 'mytest'\n\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 570,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b4f13adf.798228",
+        "type": "elasticsearch-index",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "server": "f4be98fb.fb1858",
+        "index": "bai",
+        "esType": "datapower",
+        "esId": "",
+        "routing": "",
+        "x": 1330,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5a9ea9c.2b00c8",
+        "type": "ui_form",
+        "z": "9b21c092.4affa8",
+        "name": "Form Environment",
+        "label": "DataPower",
+        "group": "f1afe04e.0d40d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Per4hours",
+                "value": "per4hours",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Iterations",
+                "value": "iterations",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Data",
+                "value": "startDate",
+                "type": "date",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "per4hours": "",
+            "iterations": "",
+            "startDate": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "2a6be0d4.74a798"
+            ]
+        ]
+    },
+    {
+        "id": "2a6be0d4.74a798",
+        "type": "change",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.per4hours",
+                "pt": "msg",
+                "to": "per4hours",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.iterations",
+                "pt": "msg",
+                "to": "iterations",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.startDate",
+                "pt": "msg",
+                "to": "startDate",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 120,
+        "wires": [
+            [
+                "bf503a10.0d0dd8"
+            ]
+        ]
+    }
+]

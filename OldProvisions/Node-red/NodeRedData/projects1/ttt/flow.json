@@ -1,0 +1,1614 @@
+[
+    {
+        "id": "ea8d6c7107d38e18",
+        "type": "tab",
+        "label": "Tutorials ksqlDB Docs",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "3d5590e08baeef55",
+        "type": "tab",
+        "label": "Paragon",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "dfbbc287664bb6ab",
+        "type": "tab",
+        "label": "Virtual Device",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "55701ee5f56bc169",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c7bb7b7df8fe349e",
+        "type": "group",
+        "z": "ea8d6c7107d38e18",
+        "style": {
+            "stroke": "#999999",
+            "stroke-opacity": "1",
+            "fill": "none",
+            "fill-opacity": "1",
+            "label": true,
+            "label-position": "nw",
+            "color": "#a4a4a4"
+        },
+        "nodes": [
+            "b165242008af17c5",
+            "5d35a6cce5d0475a",
+            "0cf813285fb07e2f",
+            "bea1f76df9a4335a",
+            "2c4da9d9dbaaf275",
+            "6c46114e569d20c5",
+            "999f43a989f1dd08"
+        ],
+        "x": 274,
+        "y": 219,
+        "w": 772,
+        "h": 182
+    },
+    {
+        "id": "40b5542f9130e873",
+        "type": "Device Schema",
+        "deviceType": "Meter",
+        "props": [
+            {
+                "guid": "7046db3149f1",
+                "name": "dI",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                }
+            },
+            {
+                "guid": "15ca2edbbdba",
+                "name": "dT",
+                "defaultValue": {
+                    "type": "str",
+                    "value": ""
+                }
+            },
+            {
+                "guid": "2bf1f298b739",
+                "name": "W",
+                "random": {
+                    "func": "floating",
+                    "args": {
+                        "min": 0,
+                        "max": 1,
+                        "fixed": 2
+                    }
+                }
+            },
+            {
+                "guid": "406f17e644f4",
+                "name": "t",
+                "defaultValue": {
+                    "type": "date",
+                    "value": ""
+                }
+            },
+            {
+                "guid": "06776c4df708",
+                "name": "wattageGain",
+                "defaultValue": {
+                    "type": "num",
+                    "value": ""
+                }
+            },
+            {
+                "guid": "f9674bbbf961",
+                "name": "intervalValue",
+                "defaultValue": {
+                    "type": "num",
+                    "value": "10000"
+                }
+            },
+            {
+                "guid": "0ee187298f2b",
+                "name": "segment",
+                "random": {
+                    "func": "natural",
+                    "args": {
+                        "min": 0,
+                        "max": 3
+                    }
+                }
+            }
+        ],
+        "evts": [
+            {
+                "guid": "f9c119eaa547",
+                "name": "state",
+                "payload": {
+                    "properties": {
+                        "0": "7046db3149f1",
+                        "1": "15ca2edbbdba",
+                        "2": "2bf1f298b739",
+                        "3": "406f17e644f4",
+                        "length": 4,
+                        "prevObject": {
+                            "0": "7046db3149f1",
+                            "1": "15ca2edbbdba",
+                            "2": "2bf1f298b739",
+                            "3": "406f17e644f4",
+                            "length": 4,
+                            "prevObject": {
+                                "0": {},
+                                "1": {},
+                                "2": {},
+                                "3": {},
+                                "length": 4,
+                                "prevObject": {
+                                    "0": {
+                                        "sizzle1639557252697": {
+                                            "undefined": {
+                                                "parentNode": [
+                                                    1664,
+                                                    33,
+                                                    true
+                                                ]
+                                            }
+                                        }
+                                    },
+                                    "length": 1
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        ]
+    },
+    {
+        "id": "eac38b1344d2869e",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "41d3e28ba915becc",
+        "type": "Kafka Broker",
+        "name": "",
+        "hosts": [
+            {
+                "host": "kafka",
+                "port": 9092
+            }
+        ],
+        "hostsEnvVar": "",
+        "connectTimeout": "10000",
+        "requestTimeout": "30000",
+        "autoConnect": "true",
+        "idleConnection": "5",
+        "reconnectOnIdle": "true",
+        "maxAsyncRequests": "10",
+        "checkInterval": "10",
+        "selfSign": true,
+        "usetls": false,
+        "useCredentials": false
+    },
+    {
+        "id": "21666b86b8c24643",
+        "type": "key-value-store",
+        "filepath": "store.json",
+        "namespace": "",
+        "name": ""
+    },
+    {
+        "id": "31298c08.cf5b74",
+        "type": "Kafka Broker",
+        "name": "local",
+        "hosts": [
+            {
+                "host": "192.168.40.231",
+                "port": 9092
+            }
+        ],
+        "hostsEnvVar": "",
+        "connectTimeout": "10000",
+        "requestTimeout": "30000",
+        "autoConnect": "true",
+        "idleConnection": "5",
+        "reconnectOnIdle": "true",
+        "maxAsyncRequests": "10",
+        "checkInterval": "10",
+        "selfSign": true,
+        "usetls": false,
+        "useCredentials": false
+    },
+    {
+        "id": "f8577ad8.94ed88",
+        "type": "mqtt-broker",
+        "name": "broker_new",
+        "broker": "ws://127.0.0.1:9000",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "90df32337a9ba2a7",
+        "type": "Kafka Broker",
+        "name": "",
+        "hosts": [
+            {
+                "host": "ksqldb-server",
+                "port": 8088
+            }
+        ],
+        "hostsEnvVar": "",
+        "connectTimeout": "10000",
+        "requestTimeout": "30000",
+        "autoConnect": "true",
+        "idleConnection": "5",
+        "reconnectOnIdle": "true",
+        "maxAsyncRequests": "10",
+        "checkInterval": "10",
+        "selfSign": true,
+        "usetls": false,
+        "useCredentials": false
+    },
+    {
+        "id": "a0c0e67bfd42c4d2",
+        "type": "comment",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "info": "var categoryArray = [ \"QUERY\", \"COMMAND\", \"DATAGRAM\", \"EVENT\"]; \nvar categoryInstance = categoryArray[Math.floor(Math.random()*categoryArray.length)]; //getting random category from array\n\nxxxxxxxxxxxxxxxxxxxxxxxx\n\nlet date = new Date()\nlet segmentArray = [[0.50, 0.31, 0.22, 0.19, 0.16, 0.19, 0.22, 0.31, 0.56, 0.53, 0.49, 0.47, 0.49, 0.52, 0.49, 0.49, 0.56, 0.78, 1.00, 0.97, 0.91, 0.88, 0.78, 0.66],[0.66, 0.65, 0.64, 0.64, 0.66, 0.69, 0.72, 1.31, 1.56, 2.78, 3.00, 2.97, 3.00, 2.91, 2.97, 2.88, 2.78, 2.66, 1.49, 1.31, 0.72, 0.69, 0.66, 0.65], [2.16, 2.15, 2.14, 2.14, 2.16, 2.19, 2.22, 2.31, 3.70, 3.90, 4.00, 4.20, 4.40, 4.50, 4.20, 4.00, 4.50, 5.10, 5.30, 5.00, 4.78, 2.19, 2.16, 2.15]]; \nwattageGain = segmentArray[segment][date.getHours()]/3600000/intervalValue\n\nxxxxxx\ndate.setHours( date.getHours() + parseInt(msg.i)*4) //adding 4 hours to every iteration\ndate.setMinutes( date.getMinutes() + (Math.floor(Math.random() * 201) - 100)) //adding fuzziness to generated timestamp\nvar value = Math.floor(Math.random() * (1000 - 400 + 1)) + 400 // generating random value from a range\n\n",
+        "x": 120,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "0dd842b1b8c2231b",
+        "type": "inject",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "call-center-db.call-center.calls",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 180,
+        "wires": [
+            [
+                "741a3e0ab387f9b2"
+            ]
+        ]
+    },
+    {
+        "id": "741a3e0ab387f9b2",
+        "type": "function",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "func": "msg.payload = {}\nlet nameArray = global.get(\"payload.nameArray\")\n\nlet reasonArray =global.get(\"payload.reasonArray\")\n\nmsg.payload.name = nameArray[Math.floor(Math.random()*nameArray.length)]; \nmsg.payload.reason = reasonArray[Math.floor(Math.random()*reasonArray.length)]; \nmsg.payload.duration_seconds = Math.floor(Math.random()*5000)\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 180,
+        "wires": [
+            [
+                "34f73032c25baca1",
+                "4f42d6043837df73"
+            ]
+        ]
+    },
+    {
+        "id": "34f73032c25baca1",
+        "type": "debug",
+        "z": "ea8d6c7107d38e18",
+        "name": "call-center-db.call-center.calls",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "be46536fea929447",
+        "type": "comment",
+        "z": "ea8d6c7107d38e18",
+        "name": "Materialized cache",
+        "info": "create topic calls\nCREATE STREAM calls_stream (name VARCHAR, reason VARCHAR, duration_seconds INTEGER) WITH (kafka_topic='calls', value_format='json');\nCREATE TABLE support_view AS SELECT name AS name, count_distinct(reason) AS distinct_reasons, latest_by_offset(reason) AS last_reason FROM calls_stream GROUP BY name EMIT CHANGES;\nSELECT * FROM support_view where NAME = 'alex'; \nSELECT * FROM calls_stream; ",
+        "x": 150,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "b165242008af17c5",
+        "type": "inject",
+        "z": "ea8d6c7107d38e18",
+        "g": "c7bb7b7df8fe349e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "customers.public.customers",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 260,
+        "wires": [
+            [
+                "5d35a6cce5d0475a"
+            ]
+        ]
+    },
+    {
+        "id": "5d35a6cce5d0475a",
+        "type": "function",
+        "z": "ea8d6c7107d38e18",
+        "g": "c7bb7b7df8fe349e",
+        "name": "customers",
+        "func": "msg.payload = {}\nlet customersArray = global.get(\"payload.customersArray\")\n\nfor(var i = 0; i < customersArray.length; i++){\n  msg.payload = customersArray[i] \n  node.send(msg)\n\n}\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 550,
+        "y": 260,
+        "wires": [
+            [
+                "0cf813285fb07e2f",
+                "e37acd6213df4a28"
+            ]
+        ]
+    },
+    {
+        "id": "0cf813285fb07e2f",
+        "type": "debug",
+        "z": "ea8d6c7107d38e18",
+        "g": "c7bb7b7df8fe349e",
+        "name": "customers.public.customers",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 840,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "bea1f76df9a4335a",
+        "type": "inject",
+        "z": "ea8d6c7107d38e18",
+        "g": "c7bb7b7df8fe349e",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 340,
+        "wires": [
+            [
+                "2c4da9d9dbaaf275"
+            ]
+        ]
+    },
+    {
+        "id": "2c4da9d9dbaaf275",
+        "type": "function",
+        "z": "ea8d6c7107d38e18",
+        "g": "c7bb7b7df8fe349e",
+        "name": "orders shipments",
+        "func": "msg.order = {}\nmsg.shipment = {}\n//let date = new Date()\nlet date = new Date(global.get(\"payload.startDate\"))\nlet originArray = global.get(\"payload.originArray\")\nlet currencyArray = global.get(\"payload.currencyArray\")\nlet customersArray =global.get(\"payload.customersArray\")\n\n\nlet precision = 100; // 2 decimals\nlet randomPrice = Math.floor(Math.random()*500 * (10 * precision - 1 * precision) + 1 * precision) / (1*precision);\n\nmsg.order.customer_id = customersArray[Math.floor(Math.random()*customersArray.length)].id; \nmsg.order.order_id = uuidv4()\nmsg.order.price = randomPrice\nmsg.order.currency = currencyArray[Math.floor(Math.random()*currencyArray.length)]; \nmsg.order.event_timestamp = date.toISOString()\n\nmsg.shipment.order_id = msg.order.order_id\nmsg.shipment.shipment_id = uuidv4()\nmsg.shipment.origin = originArray[Math.floor(Math.random()*originArray.length)]; \nglobal.set(\"payload.startDate\", date.setMinutes( date.getMinutes() + Math.floor(Math.random() * 201)))\ndate.setHours(date.getHours() + (Math.floor(Math.random() * 241) - 25))\nmsg.shipment.event_timestamp = date.toISOString()\n\nreturn  [msg.order, msg.shipment];\n\n\n// UDDI generator function\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 340,
+        "wires": [
+            [
+                "6c46114e569d20c5",
+                "7038173d3dd5d5cd"
+            ],
+            [
+                "999f43a989f1dd08",
+                "66ecfff567bdd58e"
+            ]
+        ]
+    },
+    {
+        "id": "6c46114e569d20c5",
+        "type": "debug",
+        "z": "ea8d6c7107d38e18",
+        "g": "c7bb7b7df8fe349e",
+        "name": "my-replica-set.logistics.orders",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 850,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "97a3bdf4ffb2c7ad",
+        "type": "comment",
+        "z": "ea8d6c7107d38e18",
+        "name": "Streaming ETL pipeline",
+        "info": "create topic customers\ncreate topic orders\ncreate topic shipments\n\nCREATE STREAM customers_stream (id INTEGER, name VARCHAR, age INTEGER, email_address VARCHAR, card_number VARCHAR) WITH (kafka_topic = 'customers', value_format = 'json');\n\nCREATE STREAM orders_stream (customer_id INTEGER, order_id VARCHAR, price DOUBLE, currency VARCHAR, event_timestamp VARCHAR) WITH (kafka_topic = 'orders', value_format = 'json', timestamp = 'event_timestamp', timestamp_format = 'yyyy-MM-dd''T''HH:mm:ss.SSSX');\n\nCREATE STREAM shipments_stream (order_id VARCHAR, shipment_id VARCHAR, origin VARCHAR, event_timestamp VARCHAR) WITH (kafka_topic = 'shipments', value_format = 'json', timestamp = 'event_timestamp', timestamp_format = 'yyyy-MM-dd''T''HH:mm:ss.SSSX');\n\n\nCREATE TABLE customers_by_key_table AS SELECT id, latest_by_offset(name) AS name, latest_by_offset(age) AS age FROM customers_stream GROUP BY id EMIT CHANGES;\n\nCREATE STREAM enriched_orders_stream AS SELECT o.order_id, o.price, o.currency, c.id AS customer_id, c.name AS customer_name, c.age AS customer_age FROM orders_stream AS o LEFT JOIN customers_by_key_table c ON o.customer_id = c.id EMIT CHANGES;\n\nCREATE STREAM shipped_orders_stream WITH (kafka_topic = 'shipped_orders_stream') AS SELECT o.order_id, s.shipment_id, o.customer_id, o.customer_name, o.customer_age, s.origin, o.price, o.currency FROM enriched_orders_stream AS o INNER JOIN shipments_stream s WITHIN 7 DAYS ON s.order_id = o.order_id EMIT CHANGES;\n\nSELECT * FROM CUSTOMERS_STREAM; \nSELECT * FROM ORDERS_STREAM; \ndrop stream ORDERS_STREAM;\nSELECT * FROM shipments_stream; \ndrop stream shipments_stream;\nSELECT * FROM customers_by_key_table; \nSELECT * FROM enriched_orders_stream; \nSELECT * FROM shipped_orders_stream; ",
+        "x": 140,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "33909f54fdb2cf6e",
+        "type": "comment",
+        "z": "ea8d6c7107d38e18",
+        "name": "https://docs.ksqldb.io/en/latest/tutorials/",
+        "info": "",
+        "x": 190,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "9baabb35ffae10c9",
+        "type": "inject",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.startDate",
+                "v": "2021-12-01T00:00:01",
+                "vt": "str"
+            },
+            {
+                "p": "payload.nameArray",
+                "v": "[\"michael\",\"colin\",\"derek\",\"alex\",\"chris\",\"bob\"]",
+                "vt": "json"
+            },
+            {
+                "p": "payload.reasonArray",
+                "v": "[\"purchase\",\"help\",\"refund\",\"complain\",\"inquiry\",\"resign\"]",
+                "vt": "json"
+            },
+            {
+                "p": "payload.currencyArray",
+                "v": "[\"eur\",\"usd\",\"chf\",\"gbp\",\"aud\",\"cad\"]",
+                "vt": "json"
+            },
+            {
+                "p": "payload.originArray",
+                "v": "[\"Poland\",\"Germany\",\"France\",\"Luxembourg\",\"Norway\",\"Switzerland\"]",
+                "vt": "json"
+            },
+            {
+                "p": "payload.customersArray",
+                "v": "[{\"id\":1,\"name\":\"michael\",\"age\":8,\"email_address\":\"michael@example.com\",\"card_number\":\"541959565095146\"},{\"id\":2,\"name\":\"bill\",\"age\":12,\"email_address\":\"bill@example.com\",\"card_number\":\"651444782192981\"},{\"id\":3,\"name\":\"colin\",\"age\":18,\"email_address\":\"colin@example.com\",\"card_number\":\"896527498574807\"},{\"id\":4,\"name\":\"derek\",\"age\":22,\"email_address\":\"derek@example.com\",\"card_number\":\"239903769729541\"},{\"id\":5,\"name\":\"fred\",\"age\":25,\"email_address\":\"fred@example.com\",\"card_number\":\"197789628019097\"},{\"id\":6,\"name\":\"alex\",\"age\":34,\"email_address\":\"alex@example.com\",\"card_number\":\"240074667904579\"},{\"id\":7,\"name\":\"sue\",\"age\":38,\"email_address\":\"sue@example.com\",\"card_number\":\"324307425812108\"},{\"id\":8,\"name\":\"chris\",\"age\":41,\"email_address\":\"chris@example.com\",\"card_number\":\"693248112494969\"},{\"id\":9,\"name\":\"bob\",\"age\":51,\"email_address\":\"bob@example.com\",\"card_number\":\"606150537647221\"},{\"id\":10,\"name\":\"adam\",\"age\":68,\"email_address\":\"adam@example.com\",\"card_number\":\"109673399314730\"}]",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 370,
+        "y": 100,
+        "wires": [
+            [
+                "efbcad8e959f7dd4"
+            ]
+        ]
+    },
+    {
+        "id": "efbcad8e959f7dd4",
+        "type": "change",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 570,
+        "y": 100,
+        "wires": [
+            [
+                "317f89c475d754ba"
+            ]
+        ]
+    },
+    {
+        "id": "317f89c475d754ba",
+        "type": "debug",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 770,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "999f43a989f1dd08",
+        "type": "debug",
+        "z": "ea8d6c7107d38e18",
+        "g": "c7bb7b7df8fe349e",
+        "name": "my-replica-set.logistics.shipments",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "55ed7bc979db30e3",
+        "type": "comment",
+        "z": "ea8d6c7107d38e18",
+        "name": "Event-driven microservice",
+        "info": "create topic transactions\n\nCREATE STREAM transactions_stream ( tx_id VARCHAR KEY, email_address VARCHAR, card_number VARCHAR, timestamp VARCHAR, amount DECIMAL(12, 2)) WITH ( kafka_topic = 'transactions', partitions = 1, value_format = 'json', timestamp = 'timestamp', timestamp_format = 'yyyy-MM-dd''T''HH:mm:ss');\ndrop stream transactions_stream;\n\n\n\nINSERT INTO transactions_stream ( email_address, card_number, tx_id, timestamp, amount) VALUES ( 'michael@example.com', '358579699410099', 'f88c5ebb-699c-4a7b-b544-45b30681cc39', '2020-04-22T03:19:58', 50.25);\nINSERT INTO transactions_stream  ( email_address, card_number, tx_id, timestamp, amount ) VALUES ( 'michael@example.com', '358579699410099', 'f88c5ebb-699c-4a7b-b544-45b30681cc39', '2020-04-22T03:19:58', 50.25 ); \nINSERT INTO transactions_stream  ( email_address, card_number, tx_id, timestamp, amount ) VALUES ( 'derek@example.com', '352642227248344', '0cf100ca-993c-427f-9ea5-e892ef350363', '2020-04-22T12:50:30', 18.97 ); \nINSERT INTO transactions_stream  ( email_address, card_number, tx_id, timestamp, amount ) VALUES ( 'colin@example.com', '373913272311617', 'de9831c0-7cf1-4ebf-881d-0415edec0d6b', '2020-04-22T09:45:15', 12.50 ); \nINSERT INTO transactions_stream  ( email_address, card_number, tx_id, timestamp, amount ) VALUES ( 'michael@example.com', '358579699410099', '044530c0-b15d-4648-8f05-940acc321eb7', '2020-04-22T03:19:54', 103.43 ); \nINSERT INTO transactions_stream  ( email_address, card_number, tx_id, timestamp, amount ) VALUES ( 'derek@example.com', '352642227248344', '5d916e65-1af3-4142-9fd3-302dd55c512f', '2020-04-22T12:50:25', 3200.80 ); \nINSERT INTO transactions_stream  ( email_address, card_number, tx_id, timestamp, amount ) VALUES ( 'derek@example.com', '352642227248344', 'd7d47fdb-75e9-46c0-93f6-d42ff1432eea', '2020-04-22T12:51:55', 154.32 ); \nINSERT INTO transactions_stream  ( email_address, card_number, tx_id, timestamp, amount ) VALUES ( 'michael@example.com', '358579699410099', 'c5719d20-8d4a-47d4-8cd3-52ed784c89dc', '2020-04-22T03:19:32', 78.73 ); \nINSERT INTO transactions_stream  ( email_address, card_number, tx_id, timestamp, amount ) VALUES ( 'colin@example.com', '373913272311617', '2360d53e-3fad-4e9a-b306-b166b7ca4f64', '2020-04-22T09:45:35', 234.65 ); \nINSERT INTO transactions_stream  ( email_address, card_number, tx_id, timestamp, amount ) VALUES ( 'colin@example.com', '373913272311617', 'de9831c0-7cf1-4ebf-881d-0415edec0d6b', '2020-04-22T09:44:03', 150.00 ); \n\nSELECT * FROM transactions_stream; \n\nCREATE TABLE possible_anomalies WITH (kafka_topic = 'possible_anomalies') AS SELECT card_number AS `card_number_key`, as_value(card_number) AS `card_number`, latest_by_offset(email_address) AS `email_address`, count(*) AS `n_attempts`, sum(amount) AS `total_amount`, collect_list(tx_id) AS `tx_ids`, WINDOWSTART as `start_boundary`, WINDOWEND as `end_boundary` FROM transactions_stream WINDOW TUMBLING (SIZE 30 SECONDS, RETENTION 1000 DAYS) GROUP BY card_number HAVING count(*) >= 3 EMIT CHANGES;\n\nSELECT * FROM possible_anomalies EMIT CHANGES;\nPRINT 'possible_anomalies' FROM BEGINNING;\n",
+        "x": 130,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "a800d0707d301a38",
+        "type": "function",
+        "z": "ea8d6c7107d38e18",
+        "name": "orders shipments",
+        "func": "msg.transaction = {}\n\n//let date = new Date()\nlet date = new Date(global.get(\"payload.startDate\"))\nlet currencyArray = global.get(\"payload.currencyArray\")\nlet customersArray = global.get(\"payload.customersArray\")\n\nlet precision = 100; // 2 decimals\nlet amount = Math.floor(Math.random() * 500 * (10 * precision - 1 * precision) + 1 * precision) / (1 * precision);\nlet customer = customersArray[Math.floor(Math.random() * customersArray.length)]\n\nmsg.transaction.email_address = customer.email_address;\nmsg.transaction.card_number = customer.card_number;\nmsg.transaction.tx_id = uuidv4()\nmsg.transaction.timestamp = date.toISOString()\nmsg.transaction.amount = amount\n\nnode.send(msg.transaction)\n\nlet flag = Math.random() < 0.5 ? 0 : 1\n\nif (flag === 0) {\n\n  let iterator = Math.floor(Math.random() * (9 - 4 + 1)) + 4\n  while (iterator > 0) {\n    amount = Math.floor(Math.random() * 500 * (10 * precision - 1 * precision) + 1 * precision) / (1 * precision);\n    msg.transaction.tx_id = uuidv4()\n\tdate.setMilliseconds(date.getMilliseconds() + Math.floor(Math.random() * (5000 - 2000 + 1)) + 2000)\n    msg.transaction.timestamp = date.toISOString()\n    msg.transaction.amount = amount\n    node.send(msg.transaction)\n    iterator--\n\n  }\n}\nglobal.set(\"payload.startDate\", date.setHours(date.getHours() + (Math.floor(Math.random() * 241) - 25)))\n\n// UDDI generator function\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n    var r = Math.random() * 16 | 0,\n      v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 570,
+        "y": 440,
+        "wires": [
+            [
+                "c58caa6d4c7ae80f",
+                "bbf5dd2f3bf8ef20"
+            ]
+        ]
+    },
+    {
+        "id": "7c804c25a313469b",
+        "type": "inject",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "v": "transactions",
+                "vt": "num"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 440,
+        "wires": [
+            [
+                "a800d0707d301a38"
+            ]
+        ]
+    },
+    {
+        "id": "c58caa6d4c7ae80f",
+        "type": "debug",
+        "z": "ea8d6c7107d38e18",
+        "name": "transactions",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 890,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "7343d9ec238cd088",
+        "type": "Kafka Producer",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "broker": "41d3e28ba915becc",
+        "topic": "calls",
+        "topicSlash2dot": false,
+        "requireAcks": 1,
+        "ackTimeoutMs": 100,
+        "partitionerType": 0,
+        "key": "calls",
+        "partition": 0,
+        "attributes": 0,
+        "connectionType": "Producer",
+        "convertFromJson": false,
+        "x": 1180,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "0c65d13fbf2d62a5",
+        "type": "Kafka Consumer",
+        "z": "ea8d6c7107d38e18",
+        "name": "from kafka",
+        "broker": "31298c08.cf5b74",
+        "regex": false,
+        "topics": [
+            {
+                "topic": "calls",
+                "offset": 0,
+                "partition": 0
+            }
+        ],
+        "groupId": "kafka-node-group",
+        "autoCommit": "true",
+        "autoCommitIntervalMs": 5000,
+        "fetchMaxWaitMs": 100,
+        "fetchMinBytes": 1,
+        "fetchMaxBytes": 1048576,
+        "fromOffset": 0,
+        "encoding": "utf8",
+        "keyEncoding": "utf8",
+        "connectionType": "Consumer",
+        "convertToJson": false,
+        "x": 1180,
+        "y": 180,
+        "wires": [
+            [
+                "7a62c6282a376b82"
+            ]
+        ]
+    },
+    {
+        "id": "c9b3c14c9e5a9034",
+        "type": "debug",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1470,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "4f42d6043837df73",
+        "type": "function",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "func": "msg.payload = Buffer.from(JSON.stringify(msg.payload))\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 920,
+        "y": 120,
+        "wires": [
+            [
+                "7343d9ec238cd088"
+            ]
+        ]
+    },
+    {
+        "id": "7a62c6282a376b82",
+        "type": "json",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 1310,
+        "y": 180,
+        "wires": [
+            [
+                "c9b3c14c9e5a9034"
+            ]
+        ]
+    },
+    {
+        "id": "dc101f2b62d8697b",
+        "type": "Kafka Producer",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "broker": "41d3e28ba915becc",
+        "topic": "customers",
+        "topicSlash2dot": false,
+        "requireAcks": 1,
+        "ackTimeoutMs": 100,
+        "partitionerType": 0,
+        "key": "calls",
+        "partition": 0,
+        "attributes": 0,
+        "connectionType": "Producer",
+        "convertFromJson": false,
+        "x": 1320,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "09e59721ef78933b",
+        "type": "Kafka Producer",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "broker": "41d3e28ba915becc",
+        "topic": "orders",
+        "topicSlash2dot": false,
+        "requireAcks": 1,
+        "ackTimeoutMs": 100,
+        "partitionerType": 0,
+        "key": "calls",
+        "partition": 0,
+        "attributes": 0,
+        "connectionType": "Producer",
+        "convertFromJson": false,
+        "x": 1320,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "6d2ef7c7b36e9395",
+        "type": "Kafka Producer",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "broker": "41d3e28ba915becc",
+        "topic": "shipments",
+        "topicSlash2dot": false,
+        "requireAcks": 1,
+        "ackTimeoutMs": 100,
+        "partitionerType": 0,
+        "key": "calls",
+        "partition": 0,
+        "attributes": 0,
+        "connectionType": "Producer",
+        "convertFromJson": false,
+        "x": 1320,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "e37acd6213df4a28",
+        "type": "function",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "func": "msg.payload = Buffer.from(JSON.stringify(msg.payload))\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 240,
+        "wires": [
+            [
+                "dc101f2b62d8697b"
+            ]
+        ]
+    },
+    {
+        "id": "7038173d3dd5d5cd",
+        "type": "function",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "func": "msg.payload = Buffer.from(JSON.stringify(msg))\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 300,
+        "wires": [
+            [
+                "09e59721ef78933b"
+            ]
+        ]
+    },
+    {
+        "id": "66ecfff567bdd58e",
+        "type": "function",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "func": "msg.payload = Buffer.from(JSON.stringify(msg))\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1140,
+        "y": 360,
+        "wires": [
+            [
+                "6d2ef7c7b36e9395"
+            ]
+        ]
+    },
+    {
+        "id": "3742b2ee45d5dd8e",
+        "type": "comment",
+        "z": "ea8d6c7107d38e18",
+        "name": "docker exec -it ksqldb-cli ksql http://ksqldb-server:8088",
+        "info": "docker exec -it ksqldb-cli ksql http://ksqldb-server:8088\nSET 'auto.offset.reset' = 'earliest';",
+        "x": 240,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "eb426e427befb587",
+        "type": "Kafka Producer",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "broker": "41d3e28ba915becc",
+        "topic": "transactions",
+        "topicSlash2dot": false,
+        "requireAcks": 1,
+        "ackTimeoutMs": 100,
+        "partitionerType": 0,
+        "key": "",
+        "partition": 0,
+        "attributes": 0,
+        "connectionType": "Producer",
+        "convertFromJson": false,
+        "x": 1320,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "bbf5dd2f3bf8ef20",
+        "type": "function",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "func": "msg.key=msg.tx_id\nmsg.payload = Buffer.from(JSON.stringify(msg))\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1120,
+        "y": 440,
+        "wires": [
+            [
+                "0fd916ef587578e0",
+                "eb426e427befb587"
+            ]
+        ]
+    },
+    {
+        "id": "0fd916ef587578e0",
+        "type": "debug",
+        "z": "ea8d6c7107d38e18",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1140,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "accd6be7751f960f",
+        "type": "function",
+        "z": "3d5590e08baeef55",
+        "name": "",
+        "func": "msg.payload = {}\nlet date = new Date(global.get(\"payload.startDate\"))\nlet firmsArray = global.get(\"payload.firmsArray\")\nlet firm = firmsArray[Math.floor(Math.random()*firmsArray.length)]; \n\nlet precision = 100; // 2 decimals\n\n//https://mockaroo.com/\nmsg.payload.nazwa = firm.name\nmsg.payload.zip = firm.zip\nmsg.payload.nip = firm.nip\nmsg.payload.nr_kasy = uuidv4()\nmsg.payload.nr_kasjera = uuidv4()\nmsg.payload.nr_paragonu = uuidv4()\nmsg.payload.timestamp_wydruku  = date.toISOString()\nglobal.set(\"payload.startDate\", date.setMinutes( date.getMinutes() + Math.floor(Math.random() * 201)))\n\nmsg.payload.sprzedaz_PTU_A = Math.floor(Math.random() * 500 * (10 * precision - 1 * precision) + 1 * precision) / (1 * precision);\nmsg.payload.kwota_PTU_A_23 = Math.round((msg.payload.sprzedaz_PTU_A * 0.187) * 100) / 100\n\nmsg.payload.sprzedaz_PTU_B = Math.floor(Math.random() * 200 * (10 * precision - 1 * precision) + 1 * precision) / (1 * precision);\nmsg.payload.kwota_PTU_B_8 = Math.round((msg.payload.sprzedaz_PTU_B * 0.187) * 100) / 100\nmsg.payload.sprzedaz_PTU_C = Math.floor(Math.random() * 100 * (10 * precision - 1 * precision) + 1 * precision) / (1 * precision);\nmsg.payload.kwota_PTU_C_5 = Math.round((msg.payload.sprzedaz_PTU_C * 0.187) * 100) / 100\nmsg.payload.sprzedaz_PTU_D = Math.floor(Math.random() * 90 * (10 * precision - 1 * precision) + 1 * precision) / (1 * precision);\nmsg.payload.kwota_PTU_D_0 = 0\nmsg.payload.sprzedaz_PTU_E = Math.floor(Math.random() * 90 * (10 * precision - 1 * precision) + 1 * precision) / (1 * precision);\nmsg.payload.kwota_PTU_E_0 = 0\nmsg.payload.kwota_PTU_laczna = msg.payload.kwota_PTU_A_23 + msg.payload.kwota_PTU_B_8 + msg.payload.kwota_PTU_C_5 + msg.payload.kwota_PTU_D_0 + msg.payload.kwota_PTU_E_0\nmsg.payload.kwota_PTU_laczna = Math.floor(msg.payload.kwota_PTU_laczna * (10 * precision - 1 * precision) + 1 * precision) / (1 * precision);\nmsg.payload.suma = msg.payload.sprzedaz_PTU_A + msg.payload.sprzedaz_PTU_B + msg.payload.sprzedaz_PTU_C + msg.payload.sprzedaz_PTU_D + msg.payload.sprzedaz_PTU_E\nmsg.payload.suma = Math.floor(msg.payload.suma * (10 * precision - 1 * precision) + 1 * precision) / (1 * precision);\n\nmsg.payload.waluta = 'PLN'\nreturn msg;\n\n// UDDI generator function\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 260,
+        "wires": [
+            [
+                "7a957c18dc6930a9"
+            ]
+        ]
+    },
+    {
+        "id": "7a957c18dc6930a9",
+        "type": "debug",
+        "z": "3d5590e08baeef55",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e0bd469d52c453f5",
+        "type": "function",
+        "z": "3d5590e08baeef55",
+        "name": "",
+        "func": "msg.payload = Buffer.from(JSON.stringify(msg.payload))\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 100,
+        "wires": [
+            [
+                "5c2a90a157bc7fef"
+            ]
+        ]
+    },
+    {
+        "id": "5c2a90a157bc7fef",
+        "type": "Kafka Producer",
+        "z": "3d5590e08baeef55",
+        "name": "",
+        "broker": "41d3e28ba915becc",
+        "topic": "calls",
+        "topicSlash2dot": false,
+        "requireAcks": 1,
+        "ackTimeoutMs": 100,
+        "partitionerType": 0,
+        "key": "calls",
+        "partition": 0,
+        "attributes": 0,
+        "connectionType": "Producer",
+        "convertFromJson": false,
+        "x": 960,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "73e4fe938bf077c3",
+        "type": "comment",
+        "z": "3d5590e08baeef55",
+        "name": "",
+        "info": "naglowek_opcjonalny = image\nnaglowek wydruku (4 linii x 42 znaki \n\tnazwa\n\tadres\n\tNIP\ndata wydruku\ngodzina wydruku\nnr wydruku\nnr paragonu w partii ; nr kasjera\nNumer paragonu fiskalnego\nNumer unikatowy kasy\n\nSprzedaż opodatkowana PTU A\nKwota PTU A 23%\nSprzedaż opodatkowana PTU B\nKwota PTU B 8%\nSprzedaż opodatkowana PTU C\nKwota PTU C 5%\nSprzedaż opodatkowana PTU E\nKwota PTU E 0%\nŁączna kwota PTU\nSUMA PLN\n\n\nA to 23%, B to 8%, C to 5%, E to 0%.\n\n\n\n\"PTU A 23%, PTU B 8%\"? 23% towarów płaci 18.7% VAT, a 8% 7.41?\"\nTo z Wikipedii?\nŹle zrozumiałaś.\nSkoro PTU A to 23% ceny netto, to równa się 18,7% kwoty brutto. Skoro PTU B to 8% kwoty netto, to równa się 7,41% kwoty brutto.\nTo wyliczone z prostej porcji:\n23/100 = x/123\n8/100 = x/108\nZ pierwszego równania x=0,187\nZ drugiego równania x=0,1741",
+        "x": 80,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "17bcc3d8161cff79",
+        "type": "inject",
+        "z": "3d5590e08baeef55",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.startDate",
+                "v": "2021-12-01T00:00:01",
+                "vt": "str"
+            },
+            {
+                "p": "payload.firmsArray",
+                "v": "[{\"name\":\"Youbridge\",\"zip\":\"01-027\",\"nip\":\"7387205005\"},{\"name\":\"Buzzshare\",\"zip\":\"74-292\",\"nip\":\"9133853776\"},{\"name\":\"Tagpad\",\"zip\":\"78-307\",\"nip\":\"1464372309\"},{\"name\":\"Kwinu\",\"zip\":\"37-831\",\"nip\":\"2014699886\"},{\"name\":\"Browsezoom\",\"zip\":\"49-377\",\"nip\":\"2843564399\"},{\"name\":\"Skiba\",\"zip\":\"73-282\",\"nip\":\"8042869603\"},{\"name\":\"Realcube\",\"zip\":\"61-547\",\"nip\":\"3269610057\"},{\"name\":\"Devcast\",\"zip\":\"42-406\",\"nip\":\"1393730662\"},{\"name\":\"Reallinks\",\"zip\":\"35-901\",\"nip\":\"5250347377\"},{\"name\":\"Oyoloo\",\"zip\":\"14-673\",\"nip\":\"2082973766\"},{\"name\":\"Dynava\",\"zip\":\"10-587\",\"nip\":\"3899719761\"},{\"name\":\"Dabvine\",\"zip\":\"53-655\",\"nip\":\"6004276886\"},{\"name\":\"Twimbo\",\"zip\":\"60-735\",\"nip\":\"6476395674\"},{\"name\":\"Rhynoodle\",\"zip\":\"44-483\",\"nip\":\"3268428998\"},{\"name\":\"Aivee\",\"zip\":\"81-081\",\"nip\":\"5803982454\"},{\"name\":\"Fiveclub\",\"zip\":\"74-733\",\"nip\":\"6438313317\"},{\"name\":\"Kwideo\",\"zip\":\"62-892\",\"nip\":\"6602850085\"},{\"name\":\"Trudoo\",\"zip\":\"79-904\",\"nip\":\"7884113163\"},{\"name\":\"Feedmix\",\"zip\":\"59-662\",\"nip\":\"5387148006\"},{\"name\":\"Jetpulse\",\"zip\":\"46-091\",\"nip\":\"6438741298\"}]",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "d82e5fbfbc14e7d3"
+            ]
+        ]
+    },
+    {
+        "id": "d82e5fbfbc14e7d3",
+        "type": "change",
+        "z": "3d5590e08baeef55",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "payload",
+                "tot": "global"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "07ebc72fcc222410"
+            ]
+        ]
+    },
+    {
+        "id": "07ebc72fcc222410",
+        "type": "debug",
+        "z": "3d5590e08baeef55",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a1d9c5f5cda2e614",
+        "type": "inject",
+        "z": "3d5590e08baeef55",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payloadType": "date",
+        "x": 140,
+        "y": 260,
+        "wires": [
+            [
+                "accd6be7751f960f"
+            ]
+        ]
+    },
+    {
+        "id": "6a8a2bd2a4b8026b",
+        "type": "inject",
+        "z": "dfbbc287664bb6ab",
+        "name": "start",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "3",
+        "payloadType": "num",
+        "x": 90,
+        "y": 160,
+        "wires": [
+            [
+                "70a86827f7d121b2"
+            ]
+        ]
+    },
+    {
+        "id": "70a86827f7d121b2",
+        "type": "function",
+        "z": "dfbbc287664bb6ab",
+        "name": "setDeviceId",
+        "func": "var deviceMsgs = []\nfor(var i = 0; i < msg.payload; i++){\n    var deviceId;\n    if(i < 9) {\n        \n        deviceId = \"Meter0\" + (i+1); \n    } else {\n        deviceId = \"Meter\" + (i+1); \n    }\n    deviceMsgs.push({payload: {deviceId: deviceId}});\n}\n\n\n\n\nreturn [deviceMsgs];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 160,
+        "wires": [
+            [
+                "6adb329a0ced77a2"
+            ]
+        ]
+    },
+    {
+        "id": "6adb329a0ced77a2",
+        "type": "start virtual device",
+        "z": "dfbbc287664bb6ab",
+        "name": "",
+        "deviceId": "",
+        "schema": "40b5542f9130e873",
+        "outputs": 1,
+        "x": 410,
+        "y": 160,
+        "wires": [
+            [
+                "5a0f8193dae4f6e0"
+            ]
+        ]
+    },
+    {
+        "id": "919d5daeb66521d9",
+        "type": "delay",
+        "z": "dfbbc287664bb6ab",
+        "name": "",
+        "pauseType": "delayv",
+        "timeout": "20",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 840,
+        "y": 60,
+        "wires": [
+            [
+                "5a0f8193dae4f6e0"
+            ]
+        ]
+    },
+    {
+        "id": "c520c2722a898450",
+        "type": "set properties",
+        "z": "dfbbc287664bb6ab",
+        "deviceId": "",
+        "schema": "40b5542f9130e873",
+        "name": "Set state ",
+        "propAll": true,
+        "prop": "cf34a9983af3",
+        "valueType": "msg",
+        "value": "payload.properties.state",
+        "x": 840,
+        "y": 160,
+        "wires": [
+            [
+                "41ce8fc3c84be414"
+            ]
+        ]
+    },
+    {
+        "id": "41ce8fc3c84be414",
+        "type": "debug",
+        "z": "dfbbc287664bb6ab",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "5a0f8193dae4f6e0",
+        "type": "device function",
+        "z": "dfbbc287664bb6ab",
+        "deviceId": "",
+        "schema": "40b5542f9130e873",
+        "name": "",
+        "func": "let date = new Date()\nlet segmentArray = [[0.50, 0.31, 0.22, 0.19, 0.16, 0.19, 0.22, 0.31, 0.56, 0.53, 0.49, 0.47, 0.49, 0.52, 0.49, 0.49, 0.56, 0.78, 1.00, 0.97, 0.91, 0.88, 0.78, 0.66],[0.66, 0.65, 0.64, 0.64, 0.66, 0.69, 0.72, 1.31, 1.56, 2.78, 3.00, 2.97, 3.00, 2.91, 2.97, 2.88, 2.78, 2.66, 1.49, 1.31, 0.72, 0.69, 0.66, 0.65], [2.16, 2.15, 2.14, 2.14, 2.16, 2.19, 2.22, 2.31, 3.70, 3.90, 4.00, 4.20, 4.40, 4.50, 4.20, 4.00, 4.50, 5.10, 5.30, 5.00, 4.78, 2.19, 2.16, 2.15]]; \nwattageGain = segmentArray[segment][date.getHours()]/3600000/intervalValue\ndI = msg.payload.deviceId\ndT = msg.payload.deviceType\nW += wattageGain\nt = date.toISOString()\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "x": 640,
+        "y": 160,
+        "wires": [
+            [
+                "c520c2722a898450",
+                "baa74fc7c012f9c9"
+            ]
+        ]
+    },
+    {
+        "id": "ba318b8402b9bb24",
+        "type": "debug",
+        "z": "dfbbc287664bb6ab",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 990,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "f774af820280c65d",
+        "type": "stop virtual device",
+        "z": "dfbbc287664bb6ab",
+        "name": "",
+        "deviceId": "",
+        "schema": "40b5542f9130e873",
+        "x": 410,
+        "y": 220,
+        "wires": [
+            [
+                "ba318b8402b9bb24"
+            ]
+        ]
+    },
+    {
+        "id": "315890368953e6dc",
+        "type": "inject",
+        "z": "dfbbc287664bb6ab",
+        "name": "stop",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "3",
+        "payloadType": "num",
+        "x": 90,
+        "y": 220,
+        "wires": [
+            [
+                "c8c68a41644e4b88"
+            ]
+        ]
+    },
+    {
+        "id": "c8c68a41644e4b88",
+        "type": "function",
+        "z": "dfbbc287664bb6ab",
+        "name": "setDeviceId",
+        "func": "var deviceMsgs = []\nfor(var i = 0; i < msg.payload; i++){\n    var deviceId;\n    if(i < 9) {\n        \n        deviceId = \"Meter0\" + (i+1); \n    } else {\n        deviceId = \"Meter\" + (i+1); \n    }\n    deviceMsgs.push({payload: {deviceId: deviceId}});\n}\n\n\n\n\nreturn [deviceMsgs];\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 230,
+        "y": 220,
+        "wires": [
+            [
+                "f774af820280c65d"
+            ]
+        ]
+    },
+    {
+        "id": "baa74fc7c012f9c9",
+        "type": "change",
+        "z": "dfbbc287664bb6ab",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "delay",
+                "pt": "msg",
+                "to": "payload.properties.intervalValue",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 640,
+        "y": 60,
+        "wires": [
+            [
+                "919d5daeb66521d9"
+            ]
+        ]
+    },
+    {
+        "id": "4295521e78dcbf89",
+        "type": "comment",
+        "z": "55701ee5f56bc169",
+        "name": "Read me first",
+        "info": "In order to make this example works you have to do the following things:\n---\nConfigure BAI\n---\n - in Flink event-processor-config.yml enter:\n    configurations:\n        - kafka-topic: in-topic\n          elasticsearch-index: in-topic\n - Call BAI mamagement service. For example:\n        curl -i -k -u admin:passw0rd -X POST -H \"Content-Type: application/json\" -d @sampleiot-avro.json https://ibmbai:6898/api/v1/datasources/elasticsearch/config\n    as defined in https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/20.0.x?topic=cce-event-forwarder\n    where sampleiot-avro.json is like following:\n        {\"index\":\"in-topic\",\"schemaName\":\"sampleiot-value\",\"schema\":{\"name\":\"sampleiot\",\"type\":\"record\",\"namespace\":\"com.ibm.bai\",\"fields\":[{\"name\":\"id\",\"type\":\"string\",\"logicalType\":\"UUID\"},{\"name\":\"timestamp\",\"type\":\"string\"},{\"name\":\"category\",\"type\":\"string\"},{\"name\":\"value\",\"type\":\"int\"}]}}\n\n\n---\nConfigure Node-red\n---\n - Add to Node-red setting.js under functionGlobalContext: the following line: avro:require(\"avro-js\")\n - Install \"node-red-dashboard\" and \"node-red-contrib-kafka-manager\" in 'Manage palette\\install'. You can use also different connectors.\n - Enter in a node \"Enter your data here & Click\" proper: \n    \"avroSchema\" - Avro schema for generated messages,\n    \"avroSchemaid\" - Avro schema id from kafka schema registry, \n            (e.g. https://ibmbai:8084/subjects/sampleiot-value/versions/1)\n    \"message\" – A message corresponding to avro schema.\n - Configure Kafka Producer node:\n    \"Topic\"=in-topic - your kafka topic name for custom messages \n    \"Broker\" - kafka broker configuration info\n    \"Hosts\" =[ibmbai, 29092] - hostname and port number of kafka bootstrap server \n    \"Use TLS\" - configurinf TLS communication\n        Use TLS/Private Key/Upload < - truststore.jks\n        Use TLS/Passphrase < - from store-password.txt\n        Use Credentials (SASL plain)/User < - eg. admin\n        Use Credentials (SASL plain)/Password < - eg. passw0rd\n - Deploy a flow\n - To start flow click \"Enter your data here & Click\" node or enter http://localhost:1880/ui\n",
+        "x": 150,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "e496efe2e09959d6",
+        "type": "debug",
+        "z": "55701ee5f56bc169",
+        "name": "Serialized avro message for BAI",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "c4bc83074be57929",
+        "type": "inject",
+        "z": "55701ee5f56bc169",
+        "name": "Enter your data here & Click",
+        "props": [
+            {
+                "p": "avroSchema",
+                "v": "{\"name\":\"sampleiot\",\"type\":\"record\",\"namespace\":\"com.ibm.bai\",\"fields\":[{\"name\":\"id\",\"type\":\"string\",\"logicalType\":\"UUID\"},{\"name\":\"timestamp\",\"type\":\"string\"},{\"name\":\"category\",\"type\":\"string\"},{\"name\":\"value\",\"type\":\"int\"}]}",
+                "vt": "json"
+            },
+            {
+                "p": "avroSchemaId",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "p": "message",
+                "v": "{\"id\":\"2aadc0e0-6a37-4e55-a65c-530068ceeb32\",\"timestamp\":\"2021-01-01T04:27:01.000Z\",\"category\":\"QUERY\",\"value\":514}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "062139d5e987357f"
+            ]
+        ]
+    },
+    {
+        "id": "062139d5e987357f",
+        "type": "function",
+        "z": "55701ee5f56bc169",
+        "name": "Message parsing",
+        "func": "const avro = global.get('avro'); // Add to Node-red setting.js file under functionGlobalContext: the following line: avro:require(\"avro-js\")\nvar type = avro.parse(msg.avroSchema);\nmsg.payload  = type.toBuffer(msg.message);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 470,
+        "y": 140,
+        "wires": [
+            [
+                "bdf48f3e99187a5b"
+            ]
+        ]
+    },
+    {
+        "id": "bdf48f3e99187a5b",
+        "type": "function",
+        "z": "55701ee5f56bc169",
+        "name": "Adding schemaId",
+        "func": "var schemaIdbuffer = Buffer.alloc(5); //allocating 5 bytes buffer\nschemaIdbuffer.writeInt8(parseInt(msg.avroSchemaId),4) //  avro \"avroSchemaid\" from kafka schema registry\nmsg.payload =  Buffer.concat([schemaIdbuffer, msg.payload])\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 530,
+        "y": 240,
+        "wires": [
+            [
+                "e496efe2e09959d6"
+            ]
+        ]
+    }
+]

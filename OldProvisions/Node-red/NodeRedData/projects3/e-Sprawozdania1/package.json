@@ -1,0 +1,15 @@
+{
+    "name": "e-Sprawozdania1",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "dependencies": {
+        "node-red-node-mui-etable": "0.1.5",
+        "node-red-dashboard": "2.19.4"
+    },
+    "node-red": {
+        "settings": {
+            "flowFile": "e-Sprawozdania1.json",
+            "credentialsFile": "e-Sprawozdania1_cred.json"
+        }
+    }
+}

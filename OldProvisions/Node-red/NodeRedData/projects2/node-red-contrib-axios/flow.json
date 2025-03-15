@@ -1,0 +1,813 @@
+[
+    {
+        "id": "68d99acd98745baf",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "fb144c8a78e3d779",
+        "type": "tab",
+        "label": "axios form-data",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "260ac3869ba162f4",
+        "type": "tab",
+        "label": "axios basics",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "79211805cd09d061",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "a45cedffe9f343a9",
+        "type": "axios-endpoint",
+        "name": "",
+        "baseURL": "http://localhost:1880",
+        "caCertPath": "",
+        "rejectUnauthorized": true,
+        "proxyEnabled": false,
+        "proxyProtocol": "https",
+        "proxyHost": "",
+        "proxyPort": ""
+    },
+    {
+        "id": "de3137252f4a6131",
+        "type": "ldap",
+        "host": "ldap://localhost",
+        "port": "389",
+        "validatecert": true
+    },
+    {
+        "id": "d10fd1e59abd74e1",
+        "type": "inject",
+        "z": "fb144c8a78e3d779",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 160,
+        "wires": [
+            [
+                "d68dcbb69050d699"
+            ]
+        ]
+    },
+    {
+        "id": "4c709069a6a4ecf9",
+        "type": "http in",
+        "z": "fb144c8a78e3d779",
+        "name": "",
+        "url": "/sample/file",
+        "method": "post",
+        "upload": true,
+        "swaggerDoc": "",
+        "x": 170,
+        "y": 260,
+        "wires": [
+            [
+                "87e56229f7a3d95d",
+                "10217e50f0d6f5cc",
+                "0144ad86c1fe6d5f"
+            ]
+        ]
+    },
+    {
+        "id": "43c4fb9b811c8ffc",
+        "type": "http response",
+        "z": "fb144c8a78e3d779",
+        "name": "",
+        "statusCode": "200",
+        "headers": {},
+        "x": 900,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b05f9e3cb2a60106",
+        "type": "axios-request",
+        "z": "fb144c8a78e3d779",
+        "name": "",
+        "endpoint": "a45cedffe9f343a9",
+        "method": "post",
+        "url": "/sample/file",
+        "responseType": "json",
+        "keepAlive": false,
+        "timeout": 30000,
+        "validateStatus": false,
+        "x": 510,
+        "y": 160,
+        "wires": [
+            [
+                "f5482de8ce4328fe"
+            ]
+        ]
+    },
+    {
+        "id": "d68dcbb69050d699",
+        "type": "function",
+        "z": "fb144c8a78e3d779",
+        "name": "formdata",
+        "func": "msg.payload = new FormData();\nmsg.payload.append(\"text\", \"hellow world\");\nmsg.payload.append(\"file\", fs.createReadStream(\"./sample.pdf\"));\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [
+            {
+                "var": "FormData",
+                "module": "form-data"
+            },
+            {
+                "var": "fs",
+                "module": "fs"
+            }
+        ],
+        "x": 320,
+        "y": 160,
+        "wires": [
+            [
+                "b05f9e3cb2a60106"
+            ]
+        ]
+    },
+    {
+        "id": "f5482de8ce4328fe",
+        "type": "debug",
+        "z": "fb144c8a78e3d779",
+        "name": "result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 690,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "87e56229f7a3d95d",
+        "type": "debug",
+        "z": "fb144c8a78e3d779",
+        "name": "get content-type",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "req.headers.content-type",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "b9df9f52f8c52933",
+        "type": "file",
+        "z": "fb144c8a78e3d779",
+        "name": "",
+        "filename": "./sample-received.pdf",
+        "appendNewline": false,
+        "createDir": false,
+        "overwriteFile": "true",
+        "encoding": "none",
+        "x": 520,
+        "y": 260,
+        "wires": [
+            [
+                "cc6e38284a736e97"
+            ]
+        ]
+    },
+    {
+        "id": "10217e50f0d6f5cc",
+        "type": "function",
+        "z": "fb144c8a78e3d779",
+        "name": "get file",
+        "func": "msg.payload = msg.req.files[0].buffer;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "b9df9f52f8c52933"
+            ]
+        ]
+    },
+    {
+        "id": "cc6e38284a736e97",
+        "type": "change",
+        "z": "fb144c8a78e3d779",
+        "name": "",
+        "rules": [
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 260,
+        "wires": [
+            [
+                "43c4fb9b811c8ffc"
+            ]
+        ]
+    },
+    {
+        "id": "0144ad86c1fe6d5f",
+        "type": "debug",
+        "z": "fb144c8a78e3d779",
+        "name": "get form field text",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload.text",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 390,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "a999d69c0acaa83d",
+        "type": "http in",
+        "z": "260ac3869ba162f4",
+        "name": "",
+        "url": "/timestamp",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 200,
+        "y": 100,
+        "wires": [
+            [
+                "196d64cff17e389d"
+            ]
+        ]
+    },
+    {
+        "id": "52c899890f1c2884",
+        "type": "http response",
+        "z": "260ac3869ba162f4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 570,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "196d64cff17e389d",
+        "type": "function",
+        "z": "260ac3869ba162f4",
+        "name": "set timestamp",
+        "func": "msg.payload = {ts: new Date().toISOString() };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 100,
+        "wires": [
+            [
+                "52c899890f1c2884"
+            ]
+        ]
+    },
+    {
+        "id": "63e7155bff7a9c50",
+        "type": "inject",
+        "z": "260ac3869ba162f4",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 140,
+        "wires": [
+            [
+                "738f43ed97a9bfc4"
+            ]
+        ]
+    },
+    {
+        "id": "a48ebcf8027e7d72",
+        "type": "debug",
+        "z": "260ac3869ba162f4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 550,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "738f43ed97a9bfc4",
+        "type": "axios-request",
+        "z": "260ac3869ba162f4",
+        "name": "",
+        "endpoint": "a45cedffe9f343a9",
+        "method": "get",
+        "url": "/timestamp",
+        "responseType": "json",
+        "keepAlive": false,
+        "timeout": 30000,
+        "x": 360,
+        "y": 140,
+        "wires": [
+            [
+                "a48ebcf8027e7d72"
+            ]
+        ]
+    },
+    {
+        "id": "0a9e16b4e0968320",
+        "type": "http in",
+        "z": "260ac3869ba162f4",
+        "name": "",
+        "url": "/order",
+        "method": "post",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 190,
+        "y": 260,
+        "wires": [
+            [
+                "14c119d0ab4be9b3"
+            ]
+        ]
+    },
+    {
+        "id": "d6675dae81b40785",
+        "type": "inject",
+        "z": "260ac3869ba162f4",
+        "name": "inject dummy order",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"products\":[\"Pizza\",\"Fish\",\"Apple\"]}",
+        "payloadType": "json",
+        "x": 210,
+        "y": 300,
+        "wires": [
+            [
+                "a07acb7279021452"
+            ]
+        ]
+    },
+    {
+        "id": "ec0a513a3ae79931",
+        "type": "debug",
+        "z": "260ac3869ba162f4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 630,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "a07acb7279021452",
+        "type": "axios-request",
+        "z": "260ac3869ba162f4",
+        "name": "post order",
+        "endpoint": "a45cedffe9f343a9",
+        "method": "post",
+        "url": "/order",
+        "responseType": "json",
+        "keepAlive": false,
+        "timeout": 30000,
+        "validateStatus": false,
+        "x": 440,
+        "y": 300,
+        "wires": [
+            [
+                "ec0a513a3ae79931"
+            ]
+        ]
+    },
+    {
+        "id": "14c119d0ab4be9b3",
+        "type": "function",
+        "z": "260ac3869ba162f4",
+        "name": "receive order",
+        "func": "const orderList = flow.get('orders') || [];\nconst newOrder = {\n    id: orderList.length + 1,\n    ... msg.payload\n};\n\n// push new order to flow context\norderList.push(newOrder);\nflow.set('orders', orderList);\n\n// response with new order id\nmsg.payload = { id: newOrder.id };\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 260,
+        "wires": [
+            [
+                "7d20a0404f2f601f"
+            ]
+        ]
+    },
+    {
+        "id": "7d20a0404f2f601f",
+        "type": "http response",
+        "z": "260ac3869ba162f4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 650,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "01a355d40ddc7d0b",
+        "type": "inject",
+        "z": "260ac3869ba162f4",
+        "name": "request order id \"1\"",
+        "props": [
+            {
+                "p": "params",
+                "v": "{\"id\": 1}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 210,
+        "y": 480,
+        "wires": [
+            [
+                "cdba926fcee7ae1c"
+            ]
+        ]
+    },
+    {
+        "id": "23f3a6287fbb6fda",
+        "type": "debug",
+        "z": "260ac3869ba162f4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 650,
+        "y": 480,
+        "wires": []
+    },
+    {
+        "id": "cdba926fcee7ae1c",
+        "type": "axios-request",
+        "z": "260ac3869ba162f4",
+        "name": "request order",
+        "endpoint": "a45cedffe9f343a9",
+        "method": "get",
+        "url": "/order",
+        "responseType": "json",
+        "keepAlive": false,
+        "timeout": 30000,
+        "validateStatus": true,
+        "x": 470,
+        "y": 480,
+        "wires": [
+            [
+                "23f3a6287fbb6fda"
+            ]
+        ]
+    },
+    {
+        "id": "aa8a86e6d7f5f657",
+        "type": "http in",
+        "z": "260ac3869ba162f4",
+        "name": "",
+        "url": "/order",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 180,
+        "y": 400,
+        "wires": [
+            [
+                "3d8f0f4b8632f8d2"
+            ]
+        ]
+    },
+    {
+        "id": "3d8f0f4b8632f8d2",
+        "type": "function",
+        "z": "260ac3869ba162f4",
+        "name": "fetch order",
+        "func": "msg.payload = null;\n\nif(!msg.req.query.id) {\n    msg.payload = \"missing query param 'id'\";\n    msg.statusCode = 400;\n    return msg;\n}\n\nconst orderList = flow.get('orders') || [];\nconst orderId = Number(msg.req.query.id);\nconst order = orderList.find((order)=>(order.id === orderId));\nif(order){\n    msg.payload = order;\n    msg.statusCode = 200;\n}else{\n    msg.payload = null;\n    msg.statusCode = 204;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 400,
+        "wires": [
+            [
+                "96952afef1d96317"
+            ]
+        ]
+    },
+    {
+        "id": "96952afef1d96317",
+        "type": "http response",
+        "z": "260ac3869ba162f4",
+        "name": "",
+        "statusCode": "",
+        "headers": {},
+        "x": 530,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "6e06d3ea662c068e",
+        "type": "inject",
+        "z": "260ac3869ba162f4",
+        "name": "request order id \"9000\"",
+        "props": [
+            {
+                "p": "params",
+                "v": "{\"id\": 9000}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 220,
+        "y": 540,
+        "wires": [
+            [
+                "cdba926fcee7ae1c"
+            ]
+        ]
+    },
+    {
+        "id": "55f8c870dc578152",
+        "type": "comment",
+        "z": "260ac3869ba162f4",
+        "name": "example order api",
+        "info": "",
+        "x": 200,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "a2457466739085c3",
+        "type": "inject",
+        "z": "260ac3869ba162f4",
+        "name": "bad request",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 190,
+        "y": 600,
+        "wires": [
+            [
+                "cdba926fcee7ae1c"
+            ]
+        ]
+    },
+    {
+        "id": "8b083246f9736e8d",
+        "type": "catch",
+        "z": "260ac3869ba162f4",
+        "name": "",
+        "scope": null,
+        "uncaught": false,
+        "x": 460,
+        "y": 560,
+        "wires": [
+            [
+                "fc51904dd8317276"
+            ]
+        ]
+    },
+    {
+        "id": "fc51904dd8317276",
+        "type": "debug",
+        "z": "260ac3869ba162f4",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 610,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "67a96486ab268509",
+        "type": "comment",
+        "z": "260ac3869ba162f4",
+        "name": "example timestamp api",
+        "info": "",
+        "x": 220,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "20a52e9a.effdd2",
+        "type": "inject",
+        "z": "79211805cd09d061",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 140,
+        "wires": [
+            [
+                "e9e6bf34.b121b"
+            ]
+        ]
+    },
+    {
+        "id": "360872fa.93b0de",
+        "type": "debug",
+        "z": "79211805cd09d061",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 590,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "e9e6bf34.b121b",
+        "type": "ldap-search in",
+        "z": "79211805cd09d061",
+        "name": "",
+        "ldap": "de3137252f4a6131",
+        "baseDn": "OU=Users,DC=domain,DC=com",
+        "searchScope": "sub",
+        "filter": "(firstName=te*)",
+        "attributes": "givenName,firstName,sn",
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "360872fa.93b0de"
+            ]
+        ]
+    },
+    {
+        "id": "cce713bb.65c02",
+        "type": "comment",
+        "z": "79211805cd09d061",
+        "name": "Search for user where first name starts with \"te\"",
+        "info": "",
+        "x": 360,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "493215c4.a19bcc",
+        "type": "inject",
+        "z": "79211805cd09d061",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Jordan Vohwinkel",
+        "payloadType": "str",
+        "x": 280,
+        "y": 260,
+        "wires": [
+            [
+                "e67f79ca.795808"
+            ]
+        ]
+    },
+    {
+        "id": "da373307.cdefa",
+        "type": "debug",
+        "z": "79211805cd09d061",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "x": 630,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "e67f79ca.795808",
+        "type": "ldap-update in",
+        "z": "79211805cd09d061",
+        "name": "",
+        "ldap": "de3137252f4a6131",
+        "operation": "replace",
+        "dn": "CN=Jordan Vohwinkel,OU=Users,DC=domain,DC=com",
+        "attribute": "displayName",
+        "value": "",
+        "x": 470,
+        "y": 260,
+        "wires": [
+            [
+                "da373307.cdefa"
+            ]
+        ]
+    },
+    {
+        "id": "9bf93a10.612cd8",
+        "type": "comment",
+        "z": "79211805cd09d061",
+        "name": "Update user attribute",
+        "info": "",
+        "x": 280,
+        "y": 220,
+        "wires": []
+    }
+]

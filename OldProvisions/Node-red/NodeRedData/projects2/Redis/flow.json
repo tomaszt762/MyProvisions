@@ -1,0 +1,2471 @@
+[
+    {
+        "id": "9f8d13b7746c26b6",
+        "type": "tab",
+        "label": "main",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "5958ff721067593b",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e42454bcc45e9a67",
+        "type": "tab",
+        "label": "Set Up",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "440793650e9aba2b",
+        "type": "tab",
+        "label": "Simple Examples",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "900d631a0b35cca2",
+        "type": "tab",
+        "label": "Context Store",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "49e3087e0eaf97e1",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "076616130c52a934",
+        "order": 3,
+        "disp": true,
+        "width": "11",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "076616130c52a934",
+        "type": "ui_tab",
+        "name": "View",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "af1bcd182c618452",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "32169097f73341c4",
+        "type": "debug",
+        "z": "9f8d13b7746c26b6",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 960,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "b3c1d5223a1c6283",
+        "type": "function",
+        "z": "9f8d13b7746c26b6",
+        "name": "OK - hSet ",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\n\nawait client.hSet('isToTake:' + msg.payload.timestamp, msg.payload);\n\n//client.quit()\nawait client.disconnect();\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 620,
+        "y": 180,
+        "wires": [
+            [
+                "32169097f73341c4"
+            ]
+        ]
+    },
+    {
+        "id": "d8165d605b4f780b",
+        "type": "comment",
+        "z": "9f8d13b7746c26b6",
+        "name": "nodes",
+        "info": "\n\nnode-red-contrib-loop\nnode-red-dashboard\nnode-red-node-ui-table\nnode-red-contrib-queue-gate\nnode-red-contrib-actionflows",
+        "x": 90,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "805d026aee25295b",
+        "type": "inject",
+        "z": "9f8d13b7746c26b6",
+        "name": "select",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "select",
+        "payloadType": "str",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "687e43d8a2625371"
+            ]
+        ]
+    },
+    {
+        "id": "2edfc5172cdce81f",
+        "type": "inject",
+        "z": "9f8d13b7746c26b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "update",
+        "payloadType": "str",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "687e43d8a2625371"
+            ]
+        ]
+    },
+    {
+        "id": "327aa90a508d0ab2",
+        "type": "inject",
+        "z": "9f8d13b7746c26b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "insert",
+        "payloadType": "str",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "687e43d8a2625371"
+            ]
+        ]
+    },
+    {
+        "id": "bfcb431a1f31aa39",
+        "type": "inject",
+        "z": "9f8d13b7746c26b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "delete",
+        "payloadType": "str",
+        "x": 150,
+        "y": 240,
+        "wires": [
+            [
+                "687e43d8a2625371"
+            ]
+        ]
+    },
+    {
+        "id": "687e43d8a2625371",
+        "type": "function",
+        "z": "9f8d13b7746c26b6",
+        "name": "Form Data Capture",
+        "func": "\nif(msg.payload !== undefined){\n\n    msg.payload = {\n        \"timestamp\": Date.now(),        \n        \"type\": msg.payload,\n        \"iterations\": Math.floor(Math.random() * 10) + 1,\n        \"delay\": Math.floor(Math.random() * 1000) + 1,\n        \"counter\":0\n    };\n    \n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 180,
+        "wires": [
+            [
+                "b3c1d5223a1c6283"
+            ]
+        ]
+    },
+    {
+        "id": "be4f29dea20e71f5",
+        "type": "function",
+        "z": "9f8d13b7746c26b6",
+        "name": "OK - SCAN & hGetAll ",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\nlet cursor = 0\nvar results = []\ndo {\n    let result = await client.SCAN(cursor, { \"MATCH\": \"isToTake:*\" });\n    cursor = result.cursor\n    for (const key of result.keys) {\n        results.push(await client.hGetAll(key))\n    }\n} while (cursor != 0);\n\n\n//client.quit()\n\nawait client.disconnect();\n\nmsg.payload = results\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "02734f28314beafa",
+        "type": "inject",
+        "z": "9f8d13b7746c26b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 170,
+        "y": 320,
+        "wires": [
+            [
+                "74455b3afd7adb73"
+            ]
+        ]
+    },
+    {
+        "id": "69f0a8557ff3e513",
+        "type": "debug",
+        "z": "9f8d13b7746c26b6",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 780,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "7aa5547d09524975",
+        "type": "function",
+        "z": "9f8d13b7746c26b6",
+        "name": "OK - SCAN & hGetAll & DEL & hSet in MULTI ",
+        "func": "\n\nconst redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\n\nlet cursor = 0\nlet results = []\n\ndo {\n    let result = await client.SCAN(cursor, { \"MATCH\": \"isToTake:*\" });\n    cursor = result.cursor\n    for (const key of result.keys) {\n        results.push(await client.hGetAll(key))\n        await client.DEL(key)\n    }\n} while (cursor != 0);\n\n\nfor (const item of results) {\n    await client.hSet('isTaken:' + item.timestamp, item);\n}\n\n//client.quit()\n\n\n\nawait client.disconnect();\n\nmsg.payload = results\nreturn msg\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 500,
+        "y": 380,
+        "wires": [
+            [
+                "0f6e7fef20b61e5c"
+            ]
+        ]
+    },
+    {
+        "id": "40a2ab32f7edc88e",
+        "type": "inject",
+        "z": "9f8d13b7746c26b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 170,
+        "y": 380,
+        "wires": [
+            [
+                "7aa5547d09524975"
+            ]
+        ]
+    },
+    {
+        "id": "0f6e7fef20b61e5c",
+        "type": "debug",
+        "z": "9f8d13b7746c26b6",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 880,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "dae537e0c4e7cf48",
+        "type": "function",
+        "z": "9f8d13b7746c26b6",
+        "name": "OK hGetAll & DEL &  hSet",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\nawait client.WATCH(\"isTaken:\" + msg.payload.timestamp)\nlet item = await client.hGetAll(\"isTaken:\" + msg.payload.timestamp)\nawait client.multi()\n    .DEL(\"isTaken:\" + msg.payload.timestamp)\n    .hSet('isDone:' + item.timestamp, item)\n    .exec();\nclient.quit()\n\nmsg.payload = item\nreturn msg\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 440,
+        "wires": [
+            [
+                "8c52c8d2495e69d9"
+            ]
+        ]
+    },
+    {
+        "id": "8bd2f49602247a47",
+        "type": "inject",
+        "z": "9f8d13b7746c26b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.timestamp",
+                "v": "1671825542991",
+                "vt": "num"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 440,
+        "wires": [
+            [
+                "dae537e0c4e7cf48"
+            ]
+        ]
+    },
+    {
+        "id": "8c52c8d2495e69d9",
+        "type": "debug",
+        "z": "9f8d13b7746c26b6",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "4999267fc09603d0",
+        "type": "function",
+        "z": "9f8d13b7746c26b6",
+        "name": "function 5",
+        "func": "\n    for (var i = 0; i < xs.length; i++) { console.log(xs[i]); }\n    xs.forEach((x, i) => console.log(x));\n    for (const x of xs) { console.log(x); }\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "b642c2fd45c53f5d",
+        "type": "inject",
+        "z": "9f8d13b7746c26b6",
+        "name": "",
+        "props": [
+            {
+                "p": "payload.timestamp",
+                "v": "1672133735990",
+                "vt": "num"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 170,
+        "y": 520,
+        "wires": [
+            [
+                "8573892e6d5c6406"
+            ]
+        ]
+    },
+    {
+        "id": "317239a804873721",
+        "type": "debug",
+        "z": "9f8d13b7746c26b6",
+        "name": "debug 24",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 520,
+        "wires": []
+    },
+    {
+        "id": "8573892e6d5c6406",
+        "type": "function",
+        "z": "9f8d13b7746c26b6",
+        "name": "OK - hGetAll & DEL &  hSet in MULTI",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\nawait client.WATCH(\"isToTake:\" + msg.payload.timestamp)\nlet item = await client.hGetAll(\"isToTake:\" + msg.payload.timestamp);\nawait client.multi()\n.DEL(\"isToTake:\" + msg.payload.timestamp)\n.hSet('isDone:' + item.timestamp, item)\n.exec();\nclient.quit()\n//await client.disconnect();\nmsg.payload = item\nreturn msg\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 520,
+        "wires": [
+            [
+                "317239a804873721"
+            ]
+        ]
+    },
+    {
+        "id": "74455b3afd7adb73",
+        "type": "function",
+        "z": "9f8d13b7746c26b6",
+        "name": "OK - SCAN & hGetAll ",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\nlet cursor = 0\nlet result = await client.SCAN(cursor, { \"MATCH\": \"isToTake:*\", \"COUNT\": \"1\"});\n\n\n\nclient.quit()\n\n\nmsg.payload = result\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 260,
+        "wires": [
+            [
+                "69f0a8557ff3e513"
+            ]
+        ]
+    },
+    {
+        "id": "8398d92c34e6184f",
+        "type": "ui_table",
+        "z": "5958ff721067593b",
+        "group": "49e3087e0eaf97e1",
+        "name": "Table Log",
+        "order": 1,
+        "width": 11,
+        "height": 5,
+        "columns": [
+            {
+                "field": "timestamp",
+                "title": "ID",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "type",
+                "title": "type",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "iterations",
+                "title": "iterations",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "delay",
+                "title": "delay",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 580,
+        "y": 280,
+        "wires": [
+            [
+                "cf4740434078d992"
+            ]
+        ]
+    },
+    {
+        "id": "f07bb8c027ebdd5f",
+        "type": "function",
+        "z": "5958ff721067593b",
+        "name": "SCAN isToTake",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\nlet cursor = 0\nvar results = []\ndo {\n    let result = await client.SCAN(cursor, { \"MATCH\": \"isToTake:*\" });\n    cursor = result.cursor\n    for (const key of result.keys) {\n        results.push(await client.hGetAll(key))\n    }\n} while (cursor != 0);\n\n\nclient.quit()\n\nmsg.payload = results\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 280,
+        "wires": [
+            [
+                "8398d92c34e6184f"
+            ]
+        ]
+    },
+    {
+        "id": "cf4740434078d992",
+        "type": "function",
+        "z": "5958ff721067593b",
+        "name": "remove item",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\nawait client.DEL(\"isToTake:\" + msg.payload.timestamp)\n\nclient.quit()\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 790,
+        "y": 280,
+        "wires": [
+            [
+                "ec81b160b3bd2899"
+            ]
+        ]
+    },
+    {
+        "id": "ec81b160b3bd2899",
+        "type": "debug",
+        "z": "5958ff721067593b",
+        "name": "remove item",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1010,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "5bb1f0aa663991e1",
+        "type": "inject",
+        "z": "5958ff721067593b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 150,
+        "y": 280,
+        "wires": [
+            [
+                "f07bb8c027ebdd5f"
+            ]
+        ]
+    },
+    {
+        "id": "dfd2034695ca8da7",
+        "type": "ui_button",
+        "z": "5958ff721067593b",
+        "name": "",
+        "group": "49e3087e0eaf97e1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Start",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "stop",
+        "topicType": "flow",
+        "x": 210,
+        "y": 740,
+        "wires": [
+            [
+                "2dc4c383cc7754d5"
+            ]
+        ]
+    },
+    {
+        "id": "ca3b1b8e1ba4d9d6",
+        "type": "ui_button",
+        "z": "5958ff721067593b",
+        "name": "",
+        "group": "49e3087e0eaf97e1",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Stop",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "stop",
+        "topicType": "flow",
+        "x": 210,
+        "y": 780,
+        "wires": [
+            [
+                "2dc4c383cc7754d5"
+            ]
+        ]
+    },
+    {
+        "id": "abd46a9784ca1130",
+        "type": "debug",
+        "z": "5958ff721067593b",
+        "name": "select",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1790,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "94dfd564dd770742",
+        "type": "switch",
+        "z": "5958ff721067593b",
+        "name": "",
+        "property": "payload.type",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "select",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "update",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "insert",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "delete",
+                "vt": "str"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 5,
+        "x": 730,
+        "y": 860,
+        "wires": [
+            [
+                "651337e2f66b5846"
+            ],
+            [],
+            [],
+            [],
+            []
+        ]
+    },
+    {
+        "id": "7b24824472e5dec7",
+        "type": "function",
+        "z": "5958ff721067593b",
+        "name": "get next",
+        "func": "node.send({topic: \"control\", payload: \"drop\"})\nmsg.topic = \"control\"\nmsg.payload = \"peek\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1790,
+        "y": 640,
+        "wires": [
+            [
+                "651337e2f66b5846"
+            ]
+        ]
+    },
+    {
+        "id": "651337e2f66b5846",
+        "type": "q-gate",
+        "z": "5958ff721067593b",
+        "name": "q-gate",
+        "controlTopic": "control",
+        "defaultState": "queueing",
+        "openCmd": "open",
+        "closeCmd": "close",
+        "toggleCmd": "toggle",
+        "queueCmd": "queue",
+        "defaultCmd": "default",
+        "triggerCmd": "trigger",
+        "flushCmd": "flush",
+        "resetCmd": "reset",
+        "peekCmd": "peek",
+        "dropCmd": "drop",
+        "statusCmd": "status",
+        "maxQueueLength": "100",
+        "keepNewest": false,
+        "qToggle": false,
+        "persist": false,
+        "x": 1000,
+        "y": 640,
+        "wires": [
+            [
+                "7c40d89fa0d36b47"
+            ]
+        ]
+    },
+    {
+        "id": "7c24463b879ffd43",
+        "type": "inject",
+        "z": "5958ff721067593b",
+        "name": "Start",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "x": 210,
+        "y": 820,
+        "wires": [
+            [
+                "2dc4c383cc7754d5"
+            ]
+        ]
+    },
+    {
+        "id": "fb0dcd9c5d5a7250",
+        "type": "inject",
+        "z": "5958ff721067593b",
+        "name": "Stop",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "x": 210,
+        "y": 860,
+        "wires": [
+            [
+                "2dc4c383cc7754d5"
+            ]
+        ]
+    },
+    {
+        "id": "f4d8bdecb1ea5e88",
+        "type": "loop",
+        "z": "5958ff721067593b",
+        "name": "",
+        "kind": "cond",
+        "count": "",
+        "initial": "1",
+        "step": "1",
+        "condition": "flow.get(\"stop\")",
+        "conditionType": "js",
+        "when": "before",
+        "enumeration": "enum",
+        "enumerationType": "msg",
+        "limit": "",
+        "loopPayload": "loop-keep",
+        "finalPayload": "final-orig",
+        "x": 600,
+        "y": 540,
+        "wires": [
+            [],
+            [
+                "4bc83af78ab2f30d"
+            ]
+        ]
+    },
+    {
+        "id": "2dc4c383cc7754d5",
+        "type": "change",
+        "z": "5958ff721067593b",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 410,
+        "y": 800,
+        "wires": [
+            [
+                "f4d8bdecb1ea5e88"
+            ]
+        ]
+    },
+    {
+        "id": "39fa7ef95f6becdb",
+        "type": "delay",
+        "z": "5958ff721067593b",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "10",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "allowrate": false,
+        "outputs": 1,
+        "x": 620,
+        "y": 720,
+        "wires": [
+            [
+                "f4d8bdecb1ea5e88"
+            ]
+        ]
+    },
+    {
+        "id": "4bc83af78ab2f30d",
+        "type": "function",
+        "z": "5958ff721067593b",
+        "name": "hGetAll",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\n\nlet cursor = 0\nvar results = []\ndo {\n    let result = await client.SCAN(cursor, { \"MATCH\": \"isToTake:*\" });\n    cursor = result.cursor\n    for (const key of result.keys) {\n        results.push(key)\n    }\n} while (cursor != 0);\n\nif (results.length) {\n\n    for (const key of results) {\n    await client.WATCH(key)\n    let item = await client.hGetAll(key);\n    await client.multi()\n        .DEL(key)\n        .hSet('isTaken:' + item.timestamp, item)\n        .exec();\n        msg.statusCode = 200;//not found\n        msg.payload = item\n        node.send(msg)\n    }\n    client.quit()\n    msg.payload = null\n    node.send(msg)\n} else {\n\n    client.quit()\n    msg.statusCode = 404;//not found\n    msg.payload = null\n    node.send(msg);\n}\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 800,
+        "y": 540,
+        "wires": [
+            [
+                "39fa7ef95f6becdb",
+                "94dfd564dd770742",
+                "68872b3f87911ba1"
+            ]
+        ]
+    },
+    {
+        "id": "7c40d89fa0d36b47",
+        "type": "function",
+        "z": "5958ff721067593b",
+        "name": "flow.set",
+        "func": "flow.set('select', msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1150,
+        "y": 640,
+        "wires": [
+            [
+                "432baf11dbdd300d"
+            ]
+        ]
+    },
+    {
+        "id": "432baf11dbdd300d",
+        "type": "function",
+        "z": "5958ff721067593b",
+        "name": "select Cycles",
+        "func": "var item = flow.get('select') || [];\n\nwhile (item.iterations > item.counter) {\n   item.counter++\n   msg.delay = item.delay\n   flow.set('select', item);\n   return [null, msg];\n}\nflow.set('select', undefined);\n\nmsg.payload = item\nreturn [msg, null];\n\n\n\n\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1355,
+        "y": 640,
+        "wires": [
+            [
+                "5a3b1e3baae4d2b3"
+            ],
+            [
+                "d241feb8d2de69a8"
+            ]
+        ]
+    },
+    {
+        "id": "89607901536160f5",
+        "type": "change",
+        "z": "5958ff721067593b",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "payload",
+                "pt": "msg",
+                "to": "peek",
+                "tot": "str"
+            },
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "control",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 730,
+        "y": 1080,
+        "wires": [
+            [
+                "651337e2f66b5846"
+            ]
+        ]
+    },
+    {
+        "id": "5a3b1e3baae4d2b3",
+        "type": "function",
+        "z": "5958ff721067593b",
+        "name": "isDone",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\nawait client.multi()\n    .DEL(\"isTaken:\" + msg.payload.timestamp)\n    .hSet(\"isDone:\" + msg.payload.timestamp, msg.payload)\n    .exec();\nclient.quit()\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1580,
+        "y": 640,
+        "wires": [
+            [
+                "7b24824472e5dec7",
+                "40fb43bdc706509c"
+            ]
+        ]
+    },
+    {
+        "id": "d241feb8d2de69a8",
+        "type": "actionflows",
+        "z": "5958ff721067593b",
+        "info": "Describe your action API here.",
+        "untilproptype": "num",
+        "proptype": "msg",
+        "name": "select",
+        "prop": "loop",
+        "untilprop": 0,
+        "until": "gt",
+        "loop": "none",
+        "scope": "global",
+        "perf": false,
+        "seq": false,
+        "x": 1355,
+        "y": 720,
+        "wires": [
+            [
+                "432baf11dbdd300d",
+                "abd46a9784ca1130"
+            ]
+        ]
+    },
+    {
+        "id": "b324bebaae60526f",
+        "type": "inject",
+        "z": "5958ff721067593b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 400,
+        "y": 1080,
+        "wires": [
+            [
+                "89607901536160f5"
+            ]
+        ]
+    },
+    {
+        "id": "d71f2a409fe68e0f",
+        "type": "debug",
+        "z": "5958ff721067593b",
+        "name": "debug 25",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1000,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "658bf60cd2a6a026",
+        "type": "function",
+        "z": "5958ff721067593b",
+        "name": "hSet ",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\n\nawait client.hSet('isToTake:' + msg.payload.timestamp, msg.payload);\n\nclient.quit()\n\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 610,
+        "y": 140,
+        "wires": [
+            [
+                "d71f2a409fe68e0f"
+            ]
+        ]
+    },
+    {
+        "id": "dca5ad1ddac2ee0b",
+        "type": "inject",
+        "z": "5958ff721067593b",
+        "name": "select",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "select",
+        "payloadType": "str",
+        "x": 150,
+        "y": 80,
+        "wires": [
+            [
+                "52e988466c99fe93"
+            ]
+        ]
+    },
+    {
+        "id": "6d281ad769514f1d",
+        "type": "inject",
+        "z": "5958ff721067593b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "update",
+        "payloadType": "str",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "52e988466c99fe93"
+            ]
+        ]
+    },
+    {
+        "id": "899574dd61e3600a",
+        "type": "inject",
+        "z": "5958ff721067593b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "insert",
+        "payloadType": "str",
+        "x": 150,
+        "y": 160,
+        "wires": [
+            [
+                "52e988466c99fe93"
+            ]
+        ]
+    },
+    {
+        "id": "3f5db288291d84cf",
+        "type": "inject",
+        "z": "5958ff721067593b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "delete",
+        "payloadType": "str",
+        "x": 150,
+        "y": 200,
+        "wires": [
+            [
+                "52e988466c99fe93"
+            ]
+        ]
+    },
+    {
+        "id": "52e988466c99fe93",
+        "type": "function",
+        "z": "5958ff721067593b",
+        "name": "Form Data Capture",
+        "func": "\nif(msg.payload !== undefined){\n\n    msg.payload = {\n        \"timestamp\": Date.now(),        \n        \"type\": msg.payload,\n        \"iterations\": Math.floor(Math.random() * 10) + 1,\n        \"delay\": Math.floor(Math.random() * 1000) + 1,\n        \"counter\":0\n    };\n    \n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 370,
+        "y": 140,
+        "wires": [
+            [
+                "658bf60cd2a6a026"
+            ]
+        ]
+    },
+    {
+        "id": "68872b3f87911ba1",
+        "type": "debug",
+        "z": "5958ff721067593b",
+        "name": "debug 26",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1060,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "85fad53b058956e5",
+        "type": "function",
+        "z": "5958ff721067593b",
+        "name": "function 7",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\nlet cursor = flow.get(\"cursor\") || 0\nlet result = await client.SCAN(cursor, {\"MATCH\":\"isToTake:*\", \"COUNT\":\"1\" });\nflow.set(\"cursor\", result.cursor) \nmsg.result = result\nmsg.cursor = result.cursor\n\nif (result.keys.length) {\n\n    await client.WATCH(result.keys[0])\n    let item = await client.hGetAll(result.keys[0]);\n        await client.multi()\n            .DEL(result.keys[0])\n            .hSet('isTaken:' + item.timestamp, item)\n            .exec();\n        msg.statusCode = 200;//not found\n        msg.payload = item\n    client.quit()\n        node.send(msg)\n} else {\n    flow.set(\"cursor\", undefined) \n    client.quit()\n    msg.statusCode = 404;//not found\n    msg.payload = null\n    node.send(msg);\n}\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 760,
+        "y": 440,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ac48c10fe4c03068",
+        "type": "actionflows_in",
+        "z": "5958ff721067593b",
+        "name": "select in",
+        "priority": "50",
+        "links": [],
+        "scope": "global",
+        "x": 1300,
+        "y": 340,
+        "wires": [
+            [
+                "100328595c0db6ca"
+            ]
+        ]
+    },
+    {
+        "id": "3baa59dc4a720219",
+        "type": "actionflows_out",
+        "z": "5958ff721067593b",
+        "name": "select out",
+        "links": [],
+        "x": 1620,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "100328595c0db6ca",
+        "type": "function",
+        "z": "5958ff721067593b",
+        "name": "function 8",
+        "func": "\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1460,
+        "y": 340,
+        "wires": [
+            [
+                "3baa59dc4a720219"
+            ]
+        ]
+    },
+    {
+        "id": "40fb43bdc706509c",
+        "type": "debug",
+        "z": "5958ff721067593b",
+        "name": "select isDone",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1760,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "1e1f250350e6ade5",
+        "type": "comment",
+        "z": "e42454bcc45e9a67",
+        "name": "set up",
+        "info": "    functionGlobalContext: {\n\t\tredis:require('redis')\n    },",
+        "x": 130,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "bb3d3c8de5ef1e71",
+        "type": "comment",
+        "z": "e42454bcc45e9a67",
+        "name": "to read",
+        "info": "https://www.tutorialspoint.com/redis/index.htm\nhttps://redis.com/blog/get-sql-like-experience-redis/\nhttps://www.sitepoint.com/using-redis-node-js/\nhttps://medium.com/@stockholmux/using-the-redis-multi-object-in-node-js-for-fun-and-profit-daf8cb62b86b\nhttps://github.com/redis/node-redis\n\nhttps://koalatea.io/node-redis-sorted-set/\nhttps://redis.io/docs/stack/json/\n\nhttps://medium.com/wix-engineering/redis-as-a-database-f9df579b09c0",
+        "x": 130,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "4f13cb6bfe8bef18",
+        "type": "function",
+        "z": "440793650e9aba2b",
+        "name": "Generate dummy data",
+        "func": "const firstNames =  [\"Liam\",\"Noah\",\"Oliver\",\"William\",\"Elijah\",\"James\",\"Benjamin\",\"Lucas\",\"Mason\",\"Ethan\",\"Alexander\",\"Henry\",\"Jacob\",\"Michael\",\"Daniel\",\"Logan\",\"Jackson\",\"Sebastian\",\"Jack\",\"Aiden\"];\nconst sirNames = [\"Jones\",\"Taylor\",\"Williams\",\"Brown\",\"White\",\"Harris\",\"Martin\",\"Davies\",\"Wilson\",\"Cooper\",\"Evans\",\"King\",\"Thomas\",\"Baker\",\"Green\",\"Wright\",\"Johnson\",\"Edwards\",\"Clark\",\"Roberts\",\"Robinson\",\"Hall\",\"Lewis\",\"Young\",\"Davis\",\"Turner\",\"Hill\",\"Phillips\",\"Collins\",\"Allen\",\"Moore\",\"Thompson\",\"Carter\",\"James\",\"Knight\",\"Walker\",\"Wood\",\"Hughes\",\"Parker\",\"Ward\",\"Bennett\",\"Cook\",\"Webb\",\"Bailey\",\"Scott\",\"Jackson\",\"Lee\",\"Cox\"];\n         \n         \n\nvar db = [];\n\nfor(let i = 1; i <= 30; i++) {\n    var item = {\"id\":i, \"timestamp\":Date.now()};\n    item.foreName = randomFirstname();\n    item.sirName = randomSirname();\n    item.userID = \"U\" + randomInt(1000, 2999);\n    item.age = randomInt(20, 65);\n  db.push(item);\n}\n\n\nfunction randomFirstname() {\n   return firstNames[randomInt(0, firstNames.length-1)];\n}\n\nfunction randomSirname() {\n    return sirNames[randomInt(0, sirNames.length-1)];\n}\n\nfunction randomInt(min, max) { \n  return Math.floor(Math.random() * (max - min + 1) + min);\n}\n\nflow.set(\"db\", db);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 360,
+        "y": 40,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "c0263a9a8b364329",
+        "type": "inject",
+        "z": "440793650e9aba2b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 83,
+        "y": 40,
+        "wires": [
+            [
+                "4f13cb6bfe8bef18"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "f84229d47e889b9f",
+        "type": "comment",
+        "z": "440793650e9aba2b",
+        "name": "",
+        "info": "SCAN 0 match *:0:* count 1\nGETDEL mykey",
+        "x": 80,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "8efbe19c4424b4ba",
+        "type": "function",
+        "z": "440793650e9aba2b",
+        "name": "simple string - SET/GET",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\nnode.warn(\"client.connect()\");\n\nawait client.set('framework', 'ReactJS', function (err, reply) {\n    console.log(reply); // OK\n});\nnode.warn(\"client.set\");\n\n\n\nconst value = await client.get('framework');\nawait client.disconnect();\nnode.warn(\"client.get\");\nmsg.payload = value\nreturn msg\n\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 140,
+        "wires": [
+            [
+                "2b6ccfe16a0c6117"
+            ]
+        ]
+    },
+    {
+        "id": "51ee569b71e65fdb",
+        "type": "inject",
+        "z": "440793650e9aba2b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 140,
+        "wires": [
+            [
+                "8efbe19c4424b4ba"
+            ]
+        ]
+    },
+    {
+        "id": "2b6ccfe16a0c6117",
+        "type": "debug",
+        "z": "440793650e9aba2b",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "9d7112702f1c32c2",
+        "type": "function",
+        "z": "440793650e9aba2b",
+        "name": "hashes (objects) - HMSET/HMGET",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient({ url: 'redis://redis:6379' });\n\nawait client.connect();\n\nawait client.hSet('frameworks_hash', {\n    'javascript': 'ReactJSRRR',\n    'css': 'TailwindCSSRRR',\n    'node': 'ExpressRRR'\n});\nnode.warn(\"client.hmset2\");\nawait client.hGetAll('frameworks_hash', function (err, reply) {\n    if (err) {\n        console.log(err);\n    } else {\n        console.log(reply);\n        client.quit();\n        msg.payload= reply ;\n    }\n});\n\nnode.warn(\"client.hgetall\");\nawait client.disconnect();\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 200,
+        "wires": [
+            [
+                "d7250bcf58c41a83"
+            ]
+        ]
+    },
+    {
+        "id": "0bb02d13b382f808",
+        "type": "inject",
+        "z": "440793650e9aba2b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 200,
+        "wires": [
+            [
+                "9d7112702f1c32c2"
+            ]
+        ]
+    },
+    {
+        "id": "d7250bcf58c41a83",
+        "type": "debug",
+        "z": "440793650e9aba2b",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "8a0289b4c46fe1cc",
+        "type": "inject",
+        "z": "440793650e9aba2b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 260,
+        "wires": [
+            [
+                "317bc75c61b47171"
+            ]
+        ]
+    },
+    {
+        "id": "317bc75c61b47171",
+        "type": "function",
+        "z": "440793650e9aba2b",
+        "name": "list - RPUSH/LRANGE",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient(6379, 'redis');\n\nclient.on('connect', function () {\n    console.log('Connected!');\n});\n\nclient.rpush(['frameworks_list', 'ReactJS', 'Angular'], function (err, reply) {\n    console.log(reply); // 2\n});\n\n/**\n * or \n * \n * client.lpush(['frameworks_list', 'ReactJS', 'Angular'], function (err, reply) { console.log(reply); });\n */\n\nclient.lrange('frameworks_list', 0, -1, function (err, reply) {\n    console.log(reply); // [ 'ReactJS', 'Angular' ]\n    client.quit();\n    node.send({ payload: reply });\n});\n\n/**\n * Just note that you get all the elements of the list by passing -1 as the third argument to lrange(). \n * If you want a subset of the list, you should pass the end index here.\n */\n\n\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 440,
+        "y": 260,
+        "wires": [
+            [
+                "660cae30c08f8873"
+            ]
+        ]
+    },
+    {
+        "id": "660cae30c08f8873",
+        "type": "debug",
+        "z": "440793650e9aba2b",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "827d3f93d231f60d",
+        "type": "inject",
+        "z": "440793650e9aba2b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 320,
+        "wires": [
+            [
+                "965720b50c3a31f6"
+            ]
+        ]
+    },
+    {
+        "id": "965720b50c3a31f6",
+        "type": "function",
+        "z": "440793650e9aba2b",
+        "name": "sets - SADD/SMEMBERS",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient(6379, 'redis');\n\nclient.on('connect', function () {\n    console.log('Connected!');\n});\n\n/**\n * Sets are similar to lists, but the difference is that they don’t allow duplicates.\n * So, if you don’t want any duplicate elements in your list, you can use a set.\n * \n */\n\nclient.sadd(['frameworks_set', 'ReactJS', 'Angular', 'Svelte', 'VueJS', 'VueJS'], function (err, reply) {\n    console.log(reply); // 4\n});\n\nclient.smembers('frameworks_set', function (err, reply) {\n    console.log(reply); // [ 'Angular', 'ReactJS', 'VueJS', 'Svelte' ]\n    client.quit();\n    node.send({ payload: reply });\n});\n\n\n\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 450,
+        "y": 320,
+        "wires": [
+            [
+                "1e2cc35919307549"
+            ]
+        ]
+    },
+    {
+        "id": "1e2cc35919307549",
+        "type": "debug",
+        "z": "440793650e9aba2b",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "df074c421224f785",
+        "type": "inject",
+        "z": "440793650e9aba2b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 220,
+        "y": 380,
+        "wires": [
+            [
+                "21797f330611e6b3"
+            ]
+        ]
+    },
+    {
+        "id": "21797f330611e6b3",
+        "type": "function",
+        "z": "440793650e9aba2b",
+        "name": "sorted sets - ZADD/ZRANGE",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient(6379, 'redis');\n\nclient.on('connect', function () {\n    console.log('Connected!');\n});\n\n/**\n * A Redis sorted set is a collection of unique strings (members) ordered by an associated score. \n * When more than one string has the same score, the strings are ordered lexicographically. \n * Some use cases for sorted sets include:\n *     Leaderboards. For example, you can use sorted sets to easily maintain ordered lists of the highest scores in a massive online game.\n *     Rate limiters. In particular, you can use a sorted set to build a sliding-window rate limiter to prevent excessive API requests.\n *  https://redis.io/docs/data-types/sorted-sets/\n */\n\n\n\n// if you'd like to select database 3, instead of 0 (default), call\n// client.select(3, function() { /* ... */ });\n\n\n// Creates score 1 items in the set\nclient.zadd(\"myzset\", 1, \"i1\");\nclient.zadd(\"myzset\", 1, \"i2\");\nclient.zadd(\"myzset\", 1, \"i3\");\nclient.zadd(\"myzset\", 1, \"i4\");\nclient.zadd(\"myzset\", 1, \"i5\");\nclient.zadd(\"myzset\", 1, \"i6\");\n\n// Increment the first element several times\nclient.zincrby(\"myzset\", 1, \"i1\");\nclient.zincrby(\"myzset\", 1, \"i1\");\nclient.zincrby(\"myzset\", 1, \"i1\");\nclient.zincrby(\"myzset\", 1, \"i1\");\n\n// Get a range of items ordered by score from highest to lowest\nclient.zrevrange(\"myzset\", 0, 10, function (err, list) {\n    if (err) throw err;\n    node.warn(\"plain range:\"+ list);\n});\n\n// Get a range of items, along with their scores, sorted by\n// major to minor\nclient.zrevrange(\"myzset\", 0, 10, \"withscores\", function (err, listwithscores) {\n    if (err) throw err;\n    node.warn(\"with scores:\" + listwithscores);\n});\n\n// Get a range of items Get the top 3 scores\nclient.zrange(\"myzset\", 0, 2, function (err, listno) {\n    if (err) throw err;\n    node.warn(\"with scores:\" + listno);\n    msg.payload = listno\n});\nclient.quit(function (err, res) {\n    node.warn(\"Exiting from quit command.\");\n});\n\n\nreturn msg\n\n\n\n\n\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 380,
+        "wires": [
+            [
+                "70ae56aa550e68c4"
+            ]
+        ]
+    },
+    {
+        "id": "70ae56aa550e68c4",
+        "type": "debug",
+        "z": "440793650e9aba2b",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 720,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "ddb0a8c68449916d",
+        "type": "inject",
+        "z": "440793650e9aba2b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 180,
+        "y": 540,
+        "wires": [
+            [
+                "ee42dcbc67175092"
+            ]
+        ]
+    },
+    {
+        "id": "ee42dcbc67175092",
+        "type": "function",
+        "z": "440793650e9aba2b",
+        "name": "Checking the existence of keys",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient(6379, 'redis');\n\nclient.on('connect', function () {\n    console.log('Connected!');\n});\n\nclient.exists('framework', function (err, reply) {\n    if (reply === 1) {\n        console.log('Exists!');\n        client.quit();\n        node.send({ payload: reply });\n    } else {\n        console.log('Doesn\\'t exist!');\n        client.quit();\n        node.send({ payload: reply });\n    }\n});\n\n\n\n\n\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 540,
+        "wires": [
+            [
+                "7a71fcfb0e311c58"
+            ]
+        ]
+    },
+    {
+        "id": "7a71fcfb0e311c58",
+        "type": "debug",
+        "z": "440793650e9aba2b",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 680,
+        "y": 540,
+        "wires": []
+    },
+    {
+        "id": "3ca44424f45a330d",
+        "type": "inject",
+        "z": "440793650e9aba2b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 600,
+        "wires": [
+            [
+                "cb316d0195eafaf8"
+            ]
+        ]
+    },
+    {
+        "id": "cb316d0195eafaf8",
+        "type": "function",
+        "z": "440793650e9aba2b",
+        "name": "Deleting and expiring keys",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient(6379, 'redis');\n\nclient.on('connect', function () {\n    console.log('Connected!');\n});\n\nclient.del('frameworks_listXXX', function (err, reply) {\n    if (reply === 1) {\n        console.log('Deleted!');\n        client.quit();\n        node.send({ payload: reply });\n    } else {\n        console.log('Doesn\\'t exist!');\n        client.quit();\n        node.send({ payload: reply });\n    }\n});\n\nclient.set('status', 'logged_in');\nclient.expire('status', 300);\n\n\n\n\n\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 600,
+        "wires": [
+            [
+                "b168022caa2cca8b"
+            ]
+        ]
+    },
+    {
+        "id": "b168022caa2cca8b",
+        "type": "debug",
+        "z": "440793650e9aba2b",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 600,
+        "wires": []
+    },
+    {
+        "id": "f57251d61a03cef9",
+        "type": "function",
+        "z": "440793650e9aba2b",
+        "name": "Incrementing and decrementing",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient(6379, 'redis');\n\nclient.on('connect', function () {\n    console.log('Connected!');\n});\n\n\n\nclient.set('working_days', 5, function () {\n    client.incr('working_days', function (err, reply) {\n        console.log(reply); // 6\n    });\n});\n\n/**\n * The incr() function increments a key value by 1. \n * If you need to increment by a different amount, you can use the incrby() function.\n * Similarly, to decrement a key you can use functions like decr() and decrby().\n */\n\n\n\n\n\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 410,
+        "y": 660,
+        "wires": [
+            [
+                "eda5d1892ccbfe14"
+            ]
+        ]
+    },
+    {
+        "id": "b85a70bef01fb31b",
+        "type": "inject",
+        "z": "440793650e9aba2b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 660,
+        "wires": [
+            [
+                "f57251d61a03cef9"
+            ]
+        ]
+    },
+    {
+        "id": "eda5d1892ccbfe14",
+        "type": "debug",
+        "z": "440793650e9aba2b",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 660,
+        "wires": []
+    },
+    {
+        "id": "06c06b141ceea4a6",
+        "type": "inject",
+        "z": "440793650e9aba2b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 204,
+        "y": 446,
+        "wires": [
+            [
+                "2496913ce364628a"
+            ]
+        ]
+    },
+    {
+        "id": "2496913ce364628a",
+        "type": "function",
+        "z": "440793650e9aba2b",
+        "name": "JSON",
+        "func": "const redis = context.global.get('redis');\nconst client = redis.createClient(6379, 'redis');\n\nclient.on('connect', function () {\n    console.log('Connected!');\n});\n\n/**\n * A Redis sorted set is a collection of unique strings (members) ordered by an associated score. \n * When more than one string has the same score, the strings are ordered lexicographically. \n * Some use cases for sorted sets include:\n *     Leaderboards. For example, you can use sorted sets to easily maintain ordered lists of the highest scores in a massive online game.\n *     Rate limiters. In particular, you can use a sorted set to build a sliding-window rate limiter to prevent excessive API requests.\n *  https://redis.io/docs/data-types/sorted-sets/\n */\n\nclient.sadd(['frameworks_set', 'ReactJS', 'Angular', 'Svelte', 'VueJS', 'VueJS'], function (err, reply) {\n    console.log(reply); // 4\n});\n\nclient.smembers('frameworks_set', function (err, reply) {\n    console.log(reply); // [ 'Angular', 'ReactJS', 'VueJS', 'Svelte' ]\n    client.quit();\n    node.send({ payload: reply });\n});\n\n\n\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 374,
+        "y": 446,
+        "wires": [
+            [
+                "a244d589ec1d8d6f"
+            ]
+        ]
+    },
+    {
+        "id": "a244d589ec1d8d6f",
+        "type": "debug",
+        "z": "440793650e9aba2b",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 704,
+        "y": 446,
+        "wires": []
+    },
+    {
+        "id": "739775acc78c78e2",
+        "type": "function",
+        "z": "440793650e9aba2b",
+        "name": "",
+        "func": "const redis = context.global.get('redis');\n\n\n(async function () {\n    const client = redis.createClient({ url: 'redis://redis:6379' });\n    await client.connect();\n    await client.set('framework', 'ReactJS44', function (err, reply) {\n        node.warn(reply); // OK\n    });\n    await client.get('framework', function (err, results) {\n        if (err) {\n            node.warn(err);\n        } else {\n            node.warn(results);\n            client.quit();\n            node.send({ payload: results });\n        }\n    });\n})();\n\n\n\n\n\n\n\n\n\n\n\n\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 340,
+        "y": 780,
+        "wires": [
+            [
+                "d9a61f4487adb53d"
+            ]
+        ]
+    },
+    {
+        "id": "964fd594b2a03612",
+        "type": "inject",
+        "z": "440793650e9aba2b",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 160,
+        "y": 780,
+        "wires": [
+            [
+                "739775acc78c78e2"
+            ]
+        ]
+    },
+    {
+        "id": "d9a61f4487adb53d",
+        "type": "debug",
+        "z": "440793650e9aba2b",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 660,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "38fc37e6ea010e7f",
+        "type": "http in",
+        "z": "900d631a0b35cca2",
+        "name": "",
+        "url": "/update",
+        "method": "put",
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 220,
+        "wires": [
+            [
+                "dfec266c556404e3"
+            ]
+        ]
+    },
+    {
+        "id": "5f0c839982bc8129",
+        "type": "http response",
+        "z": "900d631a0b35cca2",
+        "name": "",
+        "x": 962,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "ba43dd8ef17b3c15",
+        "type": "template",
+        "z": "900d631a0b35cca2",
+        "name": "Web Template",
+        "field": "payload",
+        "fieldType": "msg",
+        "format": "handlebars",
+        "syntax": "mustache",
+        "template": "<!DOCTYPE html>\n<html lang=\"en-GB\">\n<head>\n    <title>Users</title>\n    <meta charset=\"utf-8\">\n    <meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">\n    <link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\">\n    <link rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/bootstrap-timepicker/0.5.2/css/bootstrap-timepicker.min.css\" />\n    <script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n    <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\"></script>\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.css\" />\n    <link type=\"text/css\" rel=\"stylesheet\" href=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid-theme.min.css\" />\n    <script type=\"text/javascript\" src=\"https://cdnjs.cloudflare.com/ajax/libs/jsgrid/1.5.3/jsgrid.min.js\"></script>\n\n    <script type=\"text/javascript\">\n        $(function () {\n            console.log(\"crud demo\");\n\n            var db = {{#payload}}{{{.}}}{{/payload}};\n\n            $(\"#jsgrid\").jsGrid({\n                width: \"100%\",\n                inserting: true,\n                editing: true,\n                sorting: true,\n                paging: true,\n\n                data: db,\n\n                fields: [\n                    { title:\"ID\", name: \"id\", type: \"number\", width: 20, readOnly: true },\n                    { title:\"User ID\", name: \"userID\", type: \"text\", width: 50 },\n                    { title:\"First Name\", name: \"foreName\", type: \"text\", width: 50 },\n                    { title:\"Last Name\", name: \"sirName\", type: \"text\", width: 50 },\n                    { title:\"Age\", name: \"age\", type:\"number\", width: 25},\n                    { type: \"control\" }\n                ],\n           \n                controller: {\n                    insertItem: function(item) {\n                        return $.ajax({\n                            type: \"POST\",\n                            url: \"/insert\",\n                            data: item\n                        });\n                    },\n                    updateItem: function(item) {\n                       return $.ajax({\n                            type: \"PUT\",\n                            url: \"/update\",\n                            data: item\n                        });\n                    },\n                    deleteItem: function(item) {\n                        return $.ajax({\n                            type: \"DELETE\",\n                            url: \"/delete\",\n                            data: item\n                        });\n                    }\n                }   \n            });\n        });\n    \n  </script>\n</head>\n<body class=\"container\">\n    <section class=\"row\">\n        \n        <div class=\"col-md-6\"></div>\n        <div class=\"col-md-6\" id=\"jsgrid\">\n        </div>\n    </section>\n</body>\n</html>\n\n",
+        "x": 752,
+        "y": 156,
+        "wires": [
+            [
+                "e1f9f218b3ec7e70"
+            ]
+        ]
+    },
+    {
+        "id": "31db1b3b8cd2309e",
+        "type": "http in",
+        "z": "900d631a0b35cca2",
+        "name": "",
+        "url": "/index",
+        "method": "get",
+        "upload": false,
+        "swaggerDoc": "",
+        "x": 220,
+        "y": 156,
+        "wires": [
+            [
+                "99112cc890f9db2c"
+            ]
+        ]
+    },
+    {
+        "id": "e1f9f218b3ec7e70",
+        "type": "http response",
+        "z": "900d631a0b35cca2",
+        "name": "",
+        "x": 962,
+        "y": 156,
+        "wires": []
+    },
+    {
+        "id": "1b2314729edf474f",
+        "type": "http response",
+        "z": "900d631a0b35cca2",
+        "name": "",
+        "x": 962,
+        "y": 284,
+        "wires": []
+    },
+    {
+        "id": "7eca22892f08d631",
+        "type": "http in",
+        "z": "900d631a0b35cca2",
+        "name": "",
+        "url": "/insert",
+        "method": "post",
+        "swaggerDoc": "",
+        "x": 230,
+        "y": 284,
+        "wires": [
+            [
+                "d3ec2087d6509694"
+            ]
+        ]
+    },
+    {
+        "id": "01273d372d3911aa",
+        "type": "http in",
+        "z": "900d631a0b35cca2",
+        "name": "",
+        "url": "/delete",
+        "method": "delete",
+        "swaggerDoc": "",
+        "x": 240,
+        "y": 348,
+        "wires": [
+            [
+                "2cc55b7850746c07"
+            ]
+        ]
+    },
+    {
+        "id": "fde4740429e3c84e",
+        "type": "http response",
+        "z": "900d631a0b35cca2",
+        "name": "",
+        "x": 962,
+        "y": 348,
+        "wires": []
+    },
+    {
+        "id": "9c1682fde2145f94",
+        "type": "function",
+        "z": "900d631a0b35cca2",
+        "name": "Generate dummy data",
+        "func": "const firstNames =  [\"Liam\",\"Noah\",\"Oliver\",\"William\",\"Elijah\",\"James\",\"Benjamin\",\"Lucas\",\"Mason\",\"Ethan\",\"Alexander\",\"Henry\",\"Jacob\",\"Michael\",\"Daniel\",\"Logan\",\"Jackson\",\"Sebastian\",\"Jack\",\"Aiden\"];\nconst sirNames = [\"Jones\",\"Taylor\",\"Williams\",\"Brown\",\"White\",\"Harris\",\"Martin\",\"Davies\",\"Wilson\",\"Cooper\",\"Evans\",\"King\",\"Thomas\",\"Baker\",\"Green\",\"Wright\",\"Johnson\",\"Edwards\",\"Clark\",\"Roberts\",\"Robinson\",\"Hall\",\"Lewis\",\"Young\",\"Davis\",\"Turner\",\"Hill\",\"Phillips\",\"Collins\",\"Allen\",\"Moore\",\"Thompson\",\"Carter\",\"James\",\"Knight\",\"Walker\",\"Wood\",\"Hughes\",\"Parker\",\"Ward\",\"Bennett\",\"Cook\",\"Webb\",\"Bailey\",\"Scott\",\"Jackson\",\"Lee\",\"Cox\"];\n         \n         \n\nvar db = [];\n\nfor(let i = 1; i <= 30; i++) {\n    var item = {\"id\":i, \"timestamp\":Date.now()};\n    item.foreName = randomFirstname();\n    item.sirName = randomSirname();\n    item.userID = \"U\" + randomInt(1000, 2999);\n    item.age = randomInt(20, 65);\n  db.push(item);\n}\n\n\nfunction randomFirstname() {\n   return firstNames[randomInt(0, firstNames.length-1)];\n}\n\nfunction randomSirname() {\n    return sirNames[randomInt(0, sirNames.length-1)];\n}\n\nfunction randomInt(min, max) { \n  return Math.floor(Math.random() * (max - min + 1) + min);\n}\n\nflow.set(\"db\", db);\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 468,
+        "y": 76,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "019ae34a40fc5c80",
+        "type": "inject",
+        "z": "900d631a0b35cca2",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 191,
+        "y": 76,
+        "wires": [
+            [
+                "9c1682fde2145f94"
+            ]
+        ],
+        "l": false
+    },
+    {
+        "id": "dfec266c556404e3",
+        "type": "function",
+        "z": "900d631a0b35cca2",
+        "name": "update-query",
+        "func": "\nvar db = flow.get(\"db\", function (err, db) {\n    if (err) {\n        node.error(err, msg);\n    } else {\n\n        var item = db.find(e => e.id == msg.payload.id);\n\n        if (msg.payload.foreName == \"\" || msg.payload.sirName == \"\" || msg.payload.userID == \"\") {\n            msg.statusCode = 400;\n            msg.payload = null;\n            return msg;\n        }\n\n        if (item) {\n            item.foreName = msg.payload.foreName;\n            item.sirName = msg.payload.sirName;\n            item.age = msg.payload.age;\n            item.userID = msg.payload.userID;\n\n            flow.set(\"db\", db, function (err) {\n                if (err) {\n                    node.error(err, msg);\n                }\n            })\n\n        } else {\n            msg.statusCode = 404;//not found\n            msg.payload = null;\n            return msg;\n        }\n        msg.payload = item;\n        node.send(msg);\n    }\n});",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 422,
+        "y": 220,
+        "wires": [
+            [
+                "5f0c839982bc8129"
+            ]
+        ]
+    },
+    {
+        "id": "d3ec2087d6509694",
+        "type": "function",
+        "z": "900d631a0b35cca2",
+        "name": "insert-query",
+        "func": "var db = flow.get(\"db\", function (err, db) {\n    if (err) {\n        node.error(err, msg);\n    } else {\n\n        var nextID = Math.max.apply(Math, db.map(function (o) { return o.id; })) + 1;\n        var item = {\n            id: nextID,\n            timestamp: Date.now(),\n            foreName: msg.payload.foreName,\n            sirName: msg.payload.sirName,\n            age: msg.payload.age,\n            userID: msg.payload.userID,\n        }\n\n        if (item.foreName == \"\" || item.sirName == \"\" || item.userID == \"\") {\n            msg.statusCode = 400;\n            msg.payload = null;\n            return msg;\n        }\n\n        db.push(item);\n        flow.set(\"db\", db, function (err) {\n            if (err) {\n                node.error(err, msg);\n            }\n        })\n\n        msg.payload = item;\n        node.send(msg);\n    }\n});",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 422,
+        "y": 284,
+        "wires": [
+            [
+                "1b2314729edf474f"
+            ]
+        ]
+    },
+    {
+        "id": "2cc55b7850746c07",
+        "type": "function",
+        "z": "900d631a0b35cca2",
+        "name": "delete-query",
+        "func": "\nvar db = flow.get(\"db\", function (err, db) {\n    if (err) {\n        node.error(err, msg);\n    } else {\n\n        db = db.filter(function (obj) {\n            return obj.id != msg.payload.id;\n        });\n\n        flow.set(\"db\", db, function (err) {\n            if (err) {\n                node.error(err, msg);\n            }\n        })\n\n        msg.payload = db;\n        node.send(msg);\n    }\n});",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 422,
+        "y": 348,
+        "wires": [
+            [
+                "fde4740429e3c84e"
+            ]
+        ]
+    },
+    {
+        "id": "99112cc890f9db2c",
+        "type": "function",
+        "z": "900d631a0b35cca2",
+        "name": "get database",
+        "func": "var db = flow.get(\"db\", function (err, db) {\n    if (err) {\n        node.error(err, msg);\n    } else {\n    msg.payload = db;\n    node.send(msg);\n}\n});;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 422,
+        "y": 156,
+        "wires": [
+            [
+                "85c99581326980c1"
+            ]
+        ]
+    },
+    {
+        "id": "85c99581326980c1",
+        "type": "json",
+        "z": "900d631a0b35cca2",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 578,
+        "y": 156,
+        "wires": [
+            [
+                "ba43dd8ef17b3c15"
+            ]
+        ]
+    },
+    {
+        "id": "df97063b56d45bc2",
+        "type": "function",
+        "z": "900d631a0b35cca2",
+        "name": "update-query delay(10000)",
+        "func": "\nvar db = flow.get(\"db\", async function (err, db) {\n    const delay = ms => new Promise(resolve => setTimeout(resolve, ms))\n\n    if (err) {\n        node.error(err, msg);\n    } else {\n\n        var item = db.find(e => e.id == msg.payload.id);\n\n        if (msg.payload.foreName == \"\" || msg.payload.sirName == \"\" || msg.payload.userID == \"\") {\n            msg.statusCode = 400;\n            msg.payload = null;\n            return msg;\n        }\n\n        if (item) {\n            item.foreName = msg.payload.foreName;\n            item.sirName = msg.payload.sirName;\n            item.age = msg.payload.age;\n            item.userID = msg.payload.userID;\n\n            await delay(10000)\n            flow.set(\"db\", db, function (err) {\n                if (err) {\n                    node.error(err, msg);\n                }\n            })\n\n        } else {\n            msg.statusCode = 404;//not found\n            msg.payload = null;\n            return msg;\n        }\n        msg.payload = item;\n        node.send(msg);\n    }\n});",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 460,
+        "wires": [
+            []
+        ]
+    }
+]

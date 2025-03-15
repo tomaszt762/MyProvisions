@@ -1,0 +1,6 @@
+{
+    "bdd7a831cf7004f4": {
+        "user": "${MYSQL_USER}",
+        "password": "${MYSQL_PASSWORD}"
+    }
+}

@@ -1,0 +1,2330 @@
+[
+    {
+        "id": "cd0e46db73c60932",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "889f478.2b8c4b8",
+        "type": "tab",
+        "label": "Basic",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "bf33cd73.af03a8",
+        "type": "tab",
+        "label": "Advanced",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2238b241.03b2ae",
+        "type": "tab",
+        "label": "NowDB Demo",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "c4fab67dd16d9611",
+        "type": "tab",
+        "label": "GUI",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "e4fe9c44.6dee1",
+        "type": "tab",
+        "label": "AMQP General Examples",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "0cc45254d30ca639",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "c3098df5bf4b838c",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "mouse",
+            "lockMenu": "true",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "154cf665.b09eba",
+        "type": "ui_group",
+        "name": "New Contact",
+        "tab": "a0522e54.c0d52",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "63e62899.5164e8",
+        "type": "ui_group",
+        "name": "My Contacts",
+        "tab": "a0522e54.c0d52",
+        "order": 2,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "8e34c88d.ff35d8",
+        "type": "ui_group",
+        "name": "Detail Contact",
+        "tab": "a0522e54.c0d52",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "a0522e54.c0d52",
+        "type": "ui_tab",
+        "name": "NowDB",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "dd54207981703118",
+        "type": "ui_group",
+        "name": "Postgresql API",
+        "tab": "076616130c52a934",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "076616130c52a934",
+        "type": "ui_tab",
+        "name": "View",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "9b14658e6487aa4c",
+        "type": "function",
+        "z": "cd0e46db73c60932",
+        "name": "function 1",
+        "func": "var c = Math.floor(Math.random() * 1) + 0.5\nmsg.payload = c\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 320,
+        "y": 240,
+        "wires": [
+            [
+                "157fae2d04ca2286"
+            ]
+        ]
+    },
+    {
+        "id": "6987c6281fc8079a",
+        "type": "inject",
+        "z": "cd0e46db73c60932",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 100,
+        "y": 160,
+        "wires": [
+            [
+                "9b14658e6487aa4c"
+            ]
+        ]
+    },
+    {
+        "id": "157fae2d04ca2286",
+        "type": "debug",
+        "z": "cd0e46db73c60932",
+        "name": "debug 1",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 460,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "fbc4f89c51385ada",
+        "type": "inject",
+        "z": "cd0e46db73c60932",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 600,
+        "y": 120,
+        "wires": [
+            [
+                "9b99ef9baab67b44"
+            ]
+        ]
+    },
+    {
+        "id": "9b99ef9baab67b44",
+        "type": "function",
+        "z": "cd0e46db73c60932",
+        "name": "Generate dummy data",
+        "func": "const firstNames =  [\"Liam\",\"Noah\",\"Oliver\",\"William\",\"Elijah\",\"James\",\"Benjamin\",\"Lucas\",\"Mason\",\"Ethan\",\"Alexander\",\"Henry\",\"Jacob\",\"Michael\",\"Daniel\",\"Logan\",\"Jackson\",\"Sebastian\",\"Jack\",\"Aiden\"];\nconst sirNames = [\"Jones\",\"Taylor\",\"Williams\",\"Brown\",\"White\",\"Harris\",\"Martin\",\"Davies\",\"Wilson\",\"Cooper\",\"Evans\",\"King\",\"Thomas\",\"Baker\",\"Green\",\"Wright\",\"Johnson\",\"Edwards\",\"Clark\",\"Roberts\",\"Robinson\",\"Hall\",\"Lewis\",\"Young\",\"Davis\",\"Turner\",\"Hill\",\"Phillips\",\"Collins\",\"Allen\",\"Moore\",\"Thompson\",\"Carter\",\"James\",\"Knight\",\"Walker\",\"Wood\",\"Hughes\",\"Parker\",\"Ward\",\"Bennett\",\"Cook\",\"Webb\",\"Bailey\",\"Scott\",\"Jackson\",\"Lee\",\"Cox\"];\n         \n         \n\nvar database = [];\n\nfor(let i = 1; i <= 30; i++) {\n    var item = {\"id\":i, \"timestamp\":Date.now()};\n    item.foreName = randomFirstname();\n    item.sirName = randomSirname();\n    item.userID = \"U\" + randomInt(1000, 2999);\n    item.age = randomInt(20, 65);\n    database.push(item);\n}\n\n\nfunction randomFirstname() {\n   return firstNames[randomInt(0, firstNames.length-1)];\n}\n\nfunction randomSirname() {\n    return sirNames[randomInt(0, sirNames.length-1)];\n}\n\nfunction randomInt(min, max) { \n  return Math.floor(Math.random() * (max - min + 1) + min);\n}\n\nflow.set(\"database\", database);\nmsg.payload = database;\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 780,
+        "y": 320,
+        "wires": [
+            [
+                "67cbfb52e2296653"
+            ]
+        ],
+        "icon": "node-red/leveldb.png"
+    },
+    {
+        "id": "67cbfb52e2296653",
+        "type": "debug",
+        "z": "cd0e46db73c60932",
+        "name": "debug 2",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "false",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 900,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "4a9239c6.0c96f",
+        "type": "comment",
+        "z": "889f478.2b8c4b8",
+        "name": "Read me first",
+        "info": "In order to make this example works you have to do the following things:\n---\nConfigure BAI\n---\n - in Flink event-processor-config.yml enter:\n    configurations:\n        - kafka-topic: in-topic\n          elasticsearch-index: in-topic\n - Call BAI mamagement service. For example:\n        curl -i -k -u admin:passw0rd -X POST -H \"Content-Type: application/json\" -d @sampleiot-avro.json https://ibmbai:6898/api/v1/datasources/elasticsearch/config\n    as defined in https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/20.0.x?topic=cce-event-forwarder\n    where sampleiot-avro.json is like following:\n        {\"index\":\"in-topic\",\"schemaName\":\"sampleiot-value\",\"schema\":{\"name\":\"sampleiot\",\"type\":\"record\",\"namespace\":\"com.ibm.bai\",\"fields\":[{\"name\":\"id\",\"type\":\"string\",\"logicalType\":\"UUID\"},{\"name\":\"timestamp\",\"type\":\"string\"},{\"name\":\"category\",\"type\":\"string\"},{\"name\":\"value\",\"type\":\"int\"}]}}\n\n\n---\nConfigure Node-red\n---\n - Add to Node-red setting.js under functionGlobalContext: the following line: avro:require(\"avro-js\")\n - Install \"node-red-dashboard\" and \"node-red-contrib-kafka-manager\" in 'Manage palette\\install'. You can use also different connectors.\n - Enter in a node \"Enter your data here & Click\" proper: \n    \"avroSchema\" - Avro schema for generated messages,\n    \"avroSchemaid\" - Avro schema id from kafka schema registry, \n            (e.g. https://ibmbai:8084/subjects/sampleiot-value/versions/1)\n    \"message\" – A message corresponding to avro schema.\n - Configure Kafka Producer node:\n    \"Topic\"=in-topic - your kafka topic name for custom messages \n    \"Broker\" - kafka broker configuration info\n    \"Hosts\" =[ibmbai, 29092] - hostname and port number of kafka bootstrap server \n    \"Use TLS\" - configurinf TLS communication\n        Use TLS/Private Key/Upload < - truststore.jks\n        Use TLS/Passphrase < - from store-password.txt\n        Use Credentials (SASL plain)/User < - eg. admin\n        Use Credentials (SASL plain)/Password < - eg. passw0rd\n - Deploy a flow\n - To start flow click \"Enter your data here & Click\" node or enter http://localhost:1880/ui\n",
+        "x": 170,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "2f136e0b.6463f2",
+        "type": "debug",
+        "z": "889f478.2b8c4b8",
+        "name": "Serialized avro message for BAI",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 830,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "38d567ef.f44778",
+        "type": "inject",
+        "z": "889f478.2b8c4b8",
+        "name": "Enter your data here & Click",
+        "props": [
+            {
+                "p": "avroSchema",
+                "v": "{\"name\":\"sampleiot\",\"type\":\"record\",\"namespace\":\"com.ibm.bai\",\"fields\":[{\"name\":\"id\",\"type\":\"string\",\"logicalType\":\"UUID\"},{\"name\":\"timestamp\",\"type\":\"string\"},{\"name\":\"category\",\"type\":\"string\"},{\"name\":\"value\",\"type\":\"int\"}]}",
+                "vt": "json"
+            },
+            {
+                "p": "avroSchemaId",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "p": "message",
+                "v": "{\"id\":\"2aadc0e0-6a37-4e55-a65c-530068ceeb32\",\"timestamp\":\"2021-01-01T04:27:01.000Z\",\"category\":\"QUERY\",\"value\":514}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "50e74b30.939164"
+            ]
+        ]
+    },
+    {
+        "id": "50e74b30.939164",
+        "type": "function",
+        "z": "889f478.2b8c4b8",
+        "name": "Message parsing",
+        "func": "const avro = global.get('avro'); // Add to Node-red setting.js file under functionGlobalContext: the following line: avro:require(\"avro-js\")\nvar type = avro.parse(msg.avroSchema);\nmsg.payload  = type.toBuffer(msg.message);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 490,
+        "y": 120,
+        "wires": [
+            [
+                "87fbc8d9.bcbe38"
+            ]
+        ]
+    },
+    {
+        "id": "87fbc8d9.bcbe38",
+        "type": "function",
+        "z": "889f478.2b8c4b8",
+        "name": "Adding schemaId",
+        "func": "var schemaIdbuffer = Buffer.alloc(5); //allocating 5 bytes buffer\nschemaIdbuffer.writeInt8(parseInt(msg.avroSchemaId),4) //  avro \"avroSchemaid\" from kafka schema registry\nmsg.payload =  Buffer.concat([schemaIdbuffer, msg.payload])\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 550,
+        "y": 220,
+        "wires": [
+            [
+                "2f136e0b.6463f2"
+            ]
+        ]
+    },
+    {
+        "id": "ec44b37.a4f1fd",
+        "type": "function",
+        "z": "bf33cd73.af03a8",
+        "name": "Message generator",
+        "func": "\nvar categoryArray = [ \"QUERY\", \"COMMAND\", \"DATAGRAM\", \"EVENT\"]; \nvar categoryInstance = categoryArray[Math.floor(Math.random()*categoryArray.length)]; //getting random category from array\nvar date = new Date(msg.startDate)\ndate.setHours( date.getHours() + parseInt(msg.i)*4) //adding 4 hours to every iteration\ndate.setMinutes( date.getMinutes() + (Math.floor(Math.random() * 201) - 100)) //adding fuzziness to generated timestamp\nvar value = Math.floor(Math.random() * (1000 - 400 + 1)) + 400 // generating random value from a range\n\n\nmsg.payload =   {\n      \"id\": uuidv4(),\n      \"timestamp\": date.toISOString(),\n      \"category\": categoryInstance,\n      \"value\": value\n \n};\n\n\n// UDDI generator function\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 360,
+        "wires": [
+            [
+                "63875957.17e32",
+                "e82239b5.c28ae8",
+                "bc273d72.66b3f8"
+            ]
+        ]
+    },
+    {
+        "id": "6e751fde.715198",
+        "type": "inject",
+        "z": "bf33cd73.af03a8",
+        "name": "Enter your data here & Click",
+        "props": [
+            {
+                "p": "iterations",
+                "v": "80",
+                "vt": "num"
+            },
+            {
+                "p": "cycles",
+                "v": "1",
+                "vt": "num"
+            },
+            {
+                "p": "startDate",
+                "v": "2021-02-01T00:00:01",
+                "vt": "str"
+            },
+            {
+                "p": "avroSchema",
+                "v": "{\"name\":\"sampleiot\",\"type\":\"record\",\"namespace\":\"com.ibm.bai\",\"fields\":[{\"name\":\"id\",\"type\":\"string\",\"logicalType\":\"UUID\"},{\"name\":\"timestamp\",\"type\":\"string\"},{\"name\":\"category\",\"type\":\"string\"},{\"name\":\"value\",\"type\":\"int\"}]}",
+                "vt": "json"
+            },
+            {
+                "p": "avroSchemaId",
+                "v": "6",
+                "vt": "num"
+            },
+            {
+                "p": "i",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "j",
+                "v": "0",
+                "vt": "num"
+            },
+            {
+                "p": "stop",
+                "v": "false",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 160,
+        "y": 60,
+        "wires": [
+            [
+                "b978459.c993538"
+            ]
+        ]
+    },
+    {
+        "id": "63ce1d99.e1a27c",
+        "type": "delay",
+        "z": "bf33cd73.af03a8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "1",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 100,
+        "y": 220,
+        "wires": [
+            [
+                "e5bfb3d9.af2f08"
+            ]
+        ]
+    },
+    {
+        "id": "63875957.17e32",
+        "type": "delay",
+        "z": "bf33cd73.af03a8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "25",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "outputs": 1,
+        "x": 110,
+        "y": 280,
+        "wires": [
+            [
+                "336b9697.81302a"
+            ]
+        ]
+    },
+    {
+        "id": "fa2e6375.0da188",
+        "type": "comment",
+        "z": "bf33cd73.af03a8",
+        "name": "Read me first",
+        "info": "In order to make this example works you have to do the following things:\n---\nConfigure BAI\n---\n - in Flink event-processor-config.yml enter:\n    configurations:\n        - kafka-topic: in-topic\n          elasticsearch-index: in-topic\n - Call BAI mamagement service. For example:\n        curl -i -k -u admin:passw0rd -X POST -H \"Content-Type: application/json\" -d @sampleiot-avro.json https://ibmbai:6898/api/v1/datasources/elasticsearch/config\n    as defined in https://www.ibm.com/docs/en/cloud-paks/cp-biz-automation/20.0.x?topic=cce-event-forwarder\n    where sampleiot-avro.json is like following:\n        {\"index\":\"in-topic\",\"schemaName\":\"sampleiot-value\",\"schema\":{\"name\":\"sampleiot\",\"type\":\"record\",\"namespace\":\"com.ibm.bai\",\"fields\":[{\"name\":\"id\",\"type\":\"string\",\"logicalType\":\"UUID\"},{\"name\":\"timestamp\",\"type\":\"string\"},{\"name\":\"category\",\"type\":\"string\"},{\"name\":\"value\",\"type\":\"int\"}]}}\n\n\n---\nConfigure Node-red\n---\n - Add to Node-red setting.js under functionGlobalContext: the following line: avro:require(\"avro-js\")\n - Install \"node-red-dashboard\" and \"node-red-contrib-kafka-manager\" in 'Manage palette\\install'. You can use also different connectors.\n - Enter in a node \"Enter your data here & Click\" proper: \n    \"iterations\" - How many iterations every 4 hours,\n    \"cycles\" - How many cycles per every iteration,\n    \"startDate\" - Date from which data will be generated,\n    \"avroSchema\" - Avro schema for generated messages,\n    \"avroSchemaid\" - Avro schema id from kafka schema registry, \n            (e.g. https://ibmbai:8084/subjects/sampleiot-value/versions/1)\n - Do not change \"i\", \"j\" and \"stop\" parameters unless you do know what you do\n - Configure Kafka Producer node:\n    \"Topic\"=in-topic - your kafka topic name for custom messages \n    \"Broker\" - kafka broker configuration info\n    \"Hosts\" =[ibmbai, 29092] - hostname and port number of kafka bootstrap server \n    \"Use TLS\" - configurinf TLS communication\n        Use TLS/Private Key/Upload < - truststore.jks\n        Use TLS/Passphrase < - from store-password.txt\n        Use Credentials (SASL plain)/User < - eg. admin\n        Use Credentials (SASL plain)/Password < - eg. passw0rd\n - Deploy a flow\n - To start the flow click \"Enter your data here & Click\" node or enter http://localhost:1880/ui\n - To stop the flow clic \"Stop\" node\n\n\n\n -\n\n",
+        "x": 90,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "1439970d.8625e1",
+        "type": "change",
+        "z": "bf33cd73.af03a8",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.iterations",
+                "pt": "msg",
+                "to": "iterations",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.cycles",
+                "pt": "msg",
+                "to": "cycles",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.startDate",
+                "pt": "msg",
+                "to": "startDate",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.avroSchema",
+                "pt": "msg",
+                "to": "avroSchema",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.avroSchemaId",
+                "pt": "msg",
+                "to": "avroSchemaId",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.stop",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "flow"
+            },
+            {
+                "t": "set",
+                "p": "i",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "set",
+                "p": "j",
+                "pt": "msg",
+                "to": "0",
+                "tot": "num"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "e5bfb3d9.af2f08"
+            ]
+        ]
+    },
+    {
+        "id": "e5bfb3d9.af2f08",
+        "type": "function",
+        "z": "bf33cd73.af03a8",
+        "name": "Iterations",
+        "func": "while (msg.iterations > msg.i) {\nif (flow.get(\"stop\")) {break;}\nmsg.i++\nreturn [msg, null ];\n}\nmsg.i = 0\nreturn [null, msg];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 380,
+        "y": 220,
+        "wires": [
+            [
+                "336b9697.81302a"
+            ],
+            []
+        ]
+    },
+    {
+        "id": "336b9697.81302a",
+        "type": "function",
+        "z": "bf33cd73.af03a8",
+        "name": "Cycles",
+        "func": "while (msg.cycles > msg.j) {\nif (flow.get(\"stop\")) {break;}\nmsg.j++\nreturn [msg, null ];\n}\nmsg.j = 0\nreturn [null, msg];\n",
+        "outputs": 2,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 370,
+        "y": 280,
+        "wires": [
+            [
+                "ec44b37.a4f1fd"
+            ],
+            [
+                "63ce1d99.e1a27c"
+            ]
+        ]
+    },
+    {
+        "id": "fe56f2f3.5bcc18",
+        "type": "function",
+        "z": "bf33cd73.af03a8",
+        "name": "Adding schemaId",
+        "func": "var schemaIdbuffer = Buffer.alloc(5); //allocating 5 bytes buffer\nschemaIdbuffer.writeInt8(parseInt(msg.avroSchemaId),4) //  avro \"avroSchemaid\" from kafka schema registry\nmsg.payload =  Buffer.concat([schemaIdbuffer, msg.payload])\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 440,
+        "wires": [
+            [
+                "8fdb1673.d0bb18"
+            ]
+        ]
+    },
+    {
+        "id": "e82239b5.c28ae8",
+        "type": "function",
+        "z": "bf33cd73.af03a8",
+        "name": "Message parsing",
+        "func": "const avro = global.get('avro'); // Add to Node-red setting.js file under functionGlobalContext: the following line: avro:require(\"avro-js\")\nvar type = avro.parse(msg.avroSchema);\nmsg.payload  = type.toBuffer(msg.payload);\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 410,
+        "y": 400,
+        "wires": [
+            [
+                "fe56f2f3.5bcc18"
+            ]
+        ]
+    },
+    {
+        "id": "8fdb1673.d0bb18",
+        "type": "debug",
+        "z": "bf33cd73.af03a8",
+        "name": "Serialized avro message for BAI",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "740ab835.241ce",
+        "type": "debug",
+        "z": "bf33cd73.af03a8",
+        "name": "Just a message in JSON",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 810,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "bc273d72.66b3f8",
+        "type": "json",
+        "z": "bf33cd73.af03a8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 610,
+        "y": 360,
+        "wires": [
+            [
+                "740ab835.241ce"
+            ]
+        ]
+    },
+    {
+        "id": "b978459.c993538",
+        "type": "change",
+        "z": "bf33cd73.af03a8",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "stop",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "flow"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 680,
+        "y": 60,
+        "wires": [
+            [
+                "e5bfb3d9.af2f08"
+            ]
+        ]
+    },
+    {
+        "id": "2554120f.c16c56",
+        "type": "inject",
+        "z": "bf33cd73.af03a8",
+        "name": "Stop",
+        "props": [
+            {
+                "p": "stop",
+                "v": "true",
+                "vt": "bool"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 90,
+        "y": 100,
+        "wires": [
+            [
+                "b978459.c993538"
+            ]
+        ]
+    },
+    {
+        "id": "db144e62.3696b",
+        "type": "ui_text_input",
+        "z": "2238b241.03b2ae",
+        "name": "name",
+        "label": "Name",
+        "tooltip": "",
+        "group": "154cf665.b09eba",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "name",
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "a864ff12.2cd05"
+            ]
+        ]
+    },
+    {
+        "id": "9773258a.e6d108",
+        "type": "ui_text_input",
+        "z": "2238b241.03b2ae",
+        "name": "email",
+        "label": "Email",
+        "tooltip": "",
+        "group": "154cf665.b09eba",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "email",
+        "delay": 300,
+        "topic": "email",
+        "x": 410,
+        "y": 260,
+        "wires": [
+            [
+                "a864ff12.2cd05"
+            ]
+        ]
+    },
+    {
+        "id": "f15b8b9f.45f5b8",
+        "type": "ui_dropdown",
+        "z": "2238b241.03b2ae",
+        "name": "gender",
+        "label": "Gender",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "154cf665.b09eba",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Male",
+                "value": "M",
+                "type": "str"
+            },
+            {
+                "label": "Female",
+                "value": "F",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "gender",
+        "x": 420,
+        "y": 320,
+        "wires": [
+            [
+                "a864ff12.2cd05"
+            ]
+        ]
+    },
+    {
+        "id": "c486688.9c07898",
+        "type": "ui_button",
+        "z": "2238b241.03b2ae",
+        "name": "Submit",
+        "group": "154cf665.b09eba",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Submit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "submit",
+        "x": 420,
+        "y": 440,
+        "wires": [
+            [
+                "a864ff12.2cd05"
+            ]
+        ]
+    },
+    {
+        "id": "a864ff12.2cd05",
+        "type": "function",
+        "z": "2238b241.03b2ae",
+        "name": "Form Data Capture",
+        "func": "var lastinput = context.get(\"lastinput\") || \"\";\n\nif(msg.topic === \"name\"){\n    lastinput = msg.payload;\n    context.set(\"name\", lastinput);\n}\n\nif(msg.topic === \"phone\"){\n    lastinput = msg.payload;\n    context.set(\"phone\", lastinput);\n}\n\nif(msg.topic === \"email\"){\n    lastinput = msg.payload;\n    context.set(\"email\", lastinput);\n}\n\nif(msg.topic === \"gender\"){\n    lastinput = msg.payload;\n    context.set(\"gender\", lastinput);\n}\n\nif(msg.topic === \"age\"){\n    lastinput = msg.payload;\n    context.set(\"age\", lastinput);\n}\n\nif(msg.topic === \"submit\"){\n    msg.payload = {\n        \"name\":context.get(\"name\"),\n        \"phone\":context.get(\"phone\"),\n        \"email\":context.get(\"email\"),\n        \"gender\":context.get(\"gender\"),\n        \"age\":context.get(\"age\")\n    };\n    \n    context.set(\"name\", \"\");\n    context.set(\"phone\", \"\");\n    context.set(\"email\", \"\");\n    context.set(\"gender\", \"\");\n    context.set(\"age\", \"\");\n\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 670,
+        "y": 320,
+        "wires": [
+            [
+                "321533c7.8b2d5c",
+                "7d702a45.3b3af4"
+            ]
+        ]
+    },
+    {
+        "id": "30d2708c.f25ba",
+        "type": "debug",
+        "z": "2238b241.03b2ae",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1330,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "5ec0bb70.0fc004",
+        "type": "ui_text_input",
+        "z": "2238b241.03b2ae",
+        "name": "phone",
+        "label": "Phone Number",
+        "tooltip": "",
+        "group": "154cf665.b09eba",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "tel",
+        "delay": 300,
+        "topic": "phone",
+        "x": 410,
+        "y": 200,
+        "wires": [
+            [
+                "a864ff12.2cd05"
+            ]
+        ]
+    },
+    {
+        "id": "b55aa492.9f94c8",
+        "type": "ui_text_input",
+        "z": "2238b241.03b2ae",
+        "name": "age",
+        "label": "Age",
+        "tooltip": "",
+        "group": "154cf665.b09eba",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "age",
+        "x": 410,
+        "y": 380,
+        "wires": [
+            [
+                "a864ff12.2cd05"
+            ]
+        ]
+    },
+    {
+        "id": "321533c7.8b2d5c",
+        "type": "function",
+        "z": "2238b241.03b2ae",
+        "name": "Data Adjustment",
+        "func": "msg.payload = {\n    \"name\": msg.payload.name,\n    \"phone\": msg.payload.phone,\n    \"email\": msg.payload.email,\n    \"picture\": \"\",\n    \"gender\": msg.payload.gender,\n    \"age\": msg.payload.age,\n    \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 880,
+        "y": 320,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "7d702a45.3b3af4",
+        "type": "function",
+        "z": "2238b241.03b2ae",
+        "name": "Set Blank",
+        "func": "msg.payload = \"\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 160,
+        "y": 260,
+        "wires": [
+            [
+                "db144e62.3696b",
+                "5ec0bb70.0fc004",
+                "9773258a.e6d108",
+                "f15b8b9f.45f5b8",
+                "b55aa492.9f94c8"
+            ]
+        ]
+    },
+    {
+        "id": "a4363c1.341b4c",
+        "type": "comment",
+        "z": "2238b241.03b2ae",
+        "name": "Set Blank Form",
+        "info": "",
+        "x": 180,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "728942f6.2c3e3c",
+        "type": "ui_template",
+        "z": "2238b241.03b2ae",
+        "group": "63e62899.5164e8",
+        "name": "",
+        "order": 1,
+        "width": "6",
+        "height": "6",
+        "format": "<div ng-if=\"msg.payload.status == 'have'\">\n    <md-list>\n        <md-list-item class=\"md-3-line secondary-button-padding\" ng-repeat=\"(k,v) in msg.payload.data\">\n            <!--<img ng-src=\"{{item.face}}?{{$index}}\" class=\"md-avatar\" alt=\"{{item.who}}\" />-->\n            <div class=\"md-list-item-text\">\n                <h3>{{ v.name }}</h3>\n                <h4>{{ v.email }}</h4>\n                <p>{{ v.gender }}</p>\n            </div>\n            <div class=\"md-secondary\">\n                <i class=\"material-icons\" style=\"color: #888888;\" ng-click=\"send({id: v.id, name: v.name, phone: v.phone, email: v.email, age: v.age, gender: v.gender, topic: 'Detail'})\">info</i>\n                <i class=\"material-icons\" style=\"color: #888888;\" ng-click=\"send({payload: v.id, topic: 'Remove'})\">delete</i>\n            </div>\n        </md-list-item>\n    </md-list>    \n</div>",
+        "storeOutMessages": false,
+        "fwdInMessages": true,
+        "resendOnRefresh": false,
+        "templateScope": "local",
+        "className": "",
+        "x": 880,
+        "y": 640,
+        "wires": [
+            [
+                "946c3573.379058"
+            ]
+        ]
+    },
+    {
+        "id": "7739fb94.484574",
+        "type": "json",
+        "z": "2238b241.03b2ae",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 570,
+        "y": 640,
+        "wires": [
+            [
+                "ae16773a.819728"
+            ]
+        ]
+    },
+    {
+        "id": "1d5a419b.5dadae",
+        "type": "function",
+        "z": "2238b241.03b2ae",
+        "name": "",
+        "func": "if(msg.topic === 'Remove'){\n    msg.payload = {\n        \"id\": msg.payload\n    }\n    \n    msg.topic = null;\n    \n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1200,
+        "y": 580,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "ae16773a.819728",
+        "type": "function",
+        "z": "2238b241.03b2ae",
+        "name": "",
+        "func": "if(msg.payload.Data == \"0\"){\n    msg.payload = {\n        \"status\": \"empty\"\n    }\n    \n    msg.topic = null;\n    \n    return msg;\n}else{\n    msg.payload = {\n        \"status\": \"have\",\n        \"data\": msg.payload\n    }\n    \n    msg.topic = null;\n}\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 720,
+        "y": 640,
+        "wires": [
+            [
+                "728942f6.2c3e3c"
+            ]
+        ]
+    },
+    {
+        "id": "8bf4a3fc.cbedd",
+        "type": "ui_ui_control",
+        "z": "2238b241.03b2ae",
+        "name": "",
+        "events": "all",
+        "x": 160,
+        "y": 1020,
+        "wires": [
+            [
+                "7d702a45.3b3af4",
+                "1160c124.b089cf"
+            ]
+        ]
+    },
+    {
+        "id": "b63605d9.fef988",
+        "type": "comment",
+        "z": "2238b241.03b2ae",
+        "name": "Get Data to Template",
+        "info": "",
+        "x": 420,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "66931c4b.1bed94",
+        "type": "comment",
+        "z": "2238b241.03b2ae",
+        "name": "Capture Input and Insert",
+        "info": "",
+        "x": 870,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "b38fe519.2597e8",
+        "type": "comment",
+        "z": "2238b241.03b2ae",
+        "name": "Remove and Reload Data",
+        "info": "",
+        "x": 1430,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "e67aacbe.13c81",
+        "type": "comment",
+        "z": "2238b241.03b2ae",
+        "name": "Trigger When Dashboard Load",
+        "info": "",
+        "x": 230,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "69e8ec38.3e6fb4",
+        "type": "ui_text_input",
+        "z": "2238b241.03b2ae",
+        "name": "name",
+        "label": "Name",
+        "tooltip": "",
+        "group": "8e34c88d.ff35d8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "text",
+        "delay": 300,
+        "topic": "name",
+        "x": 1490,
+        "y": 780,
+        "wires": [
+            [
+                "7523c544.e026ac"
+            ]
+        ]
+    },
+    {
+        "id": "ab870c11.0a4e7",
+        "type": "ui_text_input",
+        "z": "2238b241.03b2ae",
+        "name": "email",
+        "label": "Email",
+        "tooltip": "",
+        "group": "8e34c88d.ff35d8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "email",
+        "delay": 300,
+        "topic": "email",
+        "x": 1490,
+        "y": 900,
+        "wires": [
+            [
+                "7523c544.e026ac"
+            ]
+        ]
+    },
+    {
+        "id": "925c28a0.d4f708",
+        "type": "ui_dropdown",
+        "z": "2238b241.03b2ae",
+        "name": "gender",
+        "label": "Gender",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "8e34c88d.ff35d8",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "Male",
+                "value": "M",
+                "type": "str"
+            },
+            {
+                "label": "Female",
+                "value": "F",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "gender",
+        "x": 1500,
+        "y": 960,
+        "wires": [
+            [
+                "7523c544.e026ac"
+            ]
+        ]
+    },
+    {
+        "id": "188be043.89249",
+        "type": "ui_button",
+        "z": "2238b241.03b2ae",
+        "name": "Update",
+        "group": "8e34c88d.ff35d8",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Update",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "update",
+        "x": 1500,
+        "y": 1080,
+        "wires": [
+            [
+                "7523c544.e026ac"
+            ]
+        ]
+    },
+    {
+        "id": "7da6a3ef.64b61c",
+        "type": "ui_text_input",
+        "z": "2238b241.03b2ae",
+        "name": "phone",
+        "label": "Phone Number",
+        "tooltip": "",
+        "group": "8e34c88d.ff35d8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "tel",
+        "delay": 300,
+        "topic": "phone",
+        "x": 1490,
+        "y": 840,
+        "wires": [
+            [
+                "7523c544.e026ac"
+            ]
+        ]
+    },
+    {
+        "id": "560c9a66.edc9e4",
+        "type": "ui_text_input",
+        "z": "2238b241.03b2ae",
+        "name": "age",
+        "label": "Age",
+        "tooltip": "",
+        "group": "8e34c88d.ff35d8",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "mode": "number",
+        "delay": 300,
+        "topic": "age",
+        "x": 1490,
+        "y": 1020,
+        "wires": [
+            [
+                "7523c544.e026ac"
+            ]
+        ]
+    },
+    {
+        "id": "946c3573.379058",
+        "type": "switch",
+        "z": "2238b241.03b2ae",
+        "name": "",
+        "property": "topic",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "Remove",
+                "vt": "str"
+            },
+            {
+                "t": "eq",
+                "v": "Detail",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 1030,
+        "y": 640,
+        "wires": [
+            [
+                "1d5a419b.5dadae"
+            ],
+            [
+                "e037d0c5.ba403",
+                "452d700f.abed3",
+                "d3f252b6.1d676",
+                "814d3a2f.a35a58",
+                "2dd760ff.a26ad",
+                "1b028f69.20fb11"
+            ]
+        ]
+    },
+    {
+        "id": "e037d0c5.ba403",
+        "type": "function",
+        "z": "2238b241.03b2ae",
+        "name": "",
+        "func": "if(msg.topic === 'Detail'){\n    msg.payload = msg.name;\n    \n    msg.topic = null;\n    \n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1180,
+        "y": 780,
+        "wires": [
+            [
+                "69e8ec38.3e6fb4"
+            ]
+        ]
+    },
+    {
+        "id": "452d700f.abed3",
+        "type": "function",
+        "z": "2238b241.03b2ae",
+        "name": "",
+        "func": "if(msg.topic === 'Detail'){\n    msg.payload = msg.phone;\n    \n    msg.topic = null;\n    \n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1180,
+        "y": 840,
+        "wires": [
+            [
+                "7da6a3ef.64b61c"
+            ]
+        ]
+    },
+    {
+        "id": "d3f252b6.1d676",
+        "type": "function",
+        "z": "2238b241.03b2ae",
+        "name": "",
+        "func": "if(msg.topic === 'Detail'){\n    msg.payload = msg.email;\n    \n    msg.topic = null;\n    \n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1180,
+        "y": 900,
+        "wires": [
+            [
+                "ab870c11.0a4e7"
+            ]
+        ]
+    },
+    {
+        "id": "814d3a2f.a35a58",
+        "type": "function",
+        "z": "2238b241.03b2ae",
+        "name": "",
+        "func": "if(msg.topic === 'Detail'){\n    msg.payload = msg.gender;\n    \n    msg.topic = null;\n    \n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1180,
+        "y": 960,
+        "wires": [
+            [
+                "925c28a0.d4f708"
+            ]
+        ]
+    },
+    {
+        "id": "2dd760ff.a26ad",
+        "type": "function",
+        "z": "2238b241.03b2ae",
+        "name": "",
+        "func": "if(msg.topic === 'Detail'){\n    msg.payload = parseInt(msg.age);\n    \n    msg.topic = null;\n    \n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1180,
+        "y": 1020,
+        "wires": [
+            [
+                "560c9a66.edc9e4"
+            ]
+        ]
+    },
+    {
+        "id": "1160c124.b089cf",
+        "type": "function",
+        "z": "2238b241.03b2ae",
+        "name": "Set Blank",
+        "func": "msg.payload = \"\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1180,
+        "y": 1120,
+        "wires": [
+            [
+                "69e8ec38.3e6fb4",
+                "7da6a3ef.64b61c",
+                "ab870c11.0a4e7",
+                "925c28a0.d4f708",
+                "560c9a66.edc9e4"
+            ]
+        ]
+    },
+    {
+        "id": "1b028f69.20fb11",
+        "type": "function",
+        "z": "2238b241.03b2ae",
+        "name": "",
+        "func": "if(msg.topic === 'Detail'){\n    msg.payload = msg.id;\n    msg.topic = 'id';\n    \n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1480,
+        "y": 720,
+        "wires": [
+            [
+                "7523c544.e026ac"
+            ]
+        ]
+    },
+    {
+        "id": "7523c544.e026ac",
+        "type": "function",
+        "z": "2238b241.03b2ae",
+        "name": "Form Data Capture",
+        "func": "var lastinput = context.get(\"lastinput\") || \"\";\n\nif(msg.topic === \"name\"){\n    lastinput = msg.payload;\n    context.set(\"name\", lastinput);\n}\n\nif(msg.topic === \"phone\"){\n    lastinput = msg.payload;\n    context.set(\"phone\", lastinput);\n}\n\nif(msg.topic === \"email\"){\n    lastinput = msg.payload;\n    context.set(\"email\", lastinput);\n}\n\nif(msg.topic === \"gender\"){\n    lastinput = msg.payload;\n    context.set(\"gender\", lastinput);\n}\n\nif(msg.topic === \"age\"){\n    lastinput = msg.payload;\n    context.set(\"age\", lastinput);\n}\n\nif(msg.topic === \"id\"){\n    lastinput = msg.payload;\n    context.set(\"id\", lastinput);\n}\n\nif(msg.topic === \"update\"){\n    msg.payload = {\n        \"name\":context.get(\"name\"),\n        \"phone\":context.get(\"phone\"),\n        \"email\":context.get(\"email\"),\n        \"gender\":context.get(\"gender\"),\n        \"age\":context.get(\"age\"),\n        \"id\":context.get(\"id\")\n    };\n    \n    context.set(\"name\", \"\");\n    context.set(\"phone\", \"\");\n    context.set(\"email\", \"\");\n    context.set(\"gender\", \"\");\n    context.set(\"age\", \"\");\n    context.set(\"id\", \"\");\n\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1750,
+        "y": 1080,
+        "wires": [
+            [
+                "1160c124.b089cf"
+            ]
+        ]
+    },
+    {
+        "id": "b1deb28c.f8fa6",
+        "type": "comment",
+        "z": "2238b241.03b2ae",
+        "name": "Update and Reload Data",
+        "info": "",
+        "x": 1390,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "ff16435f.1cb36",
+        "type": "comment",
+        "z": "2238b241.03b2ae",
+        "name": "Capture Edited Data",
+        "info": "",
+        "x": 1750,
+        "y": 1020,
+        "wires": []
+    },
+    {
+        "id": "542e033d.6fb1cc",
+        "type": "comment",
+        "z": "2238b241.03b2ae",
+        "name": "Passing Detail Data",
+        "info": "",
+        "x": 1210,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "3460fd14.da6402",
+        "type": "comment",
+        "z": "2238b241.03b2ae",
+        "name": "Check Action to Remove or Edit",
+        "info": "",
+        "x": 950,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "1dc351271589e68f",
+        "type": "ui_ui_control",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "events": "all",
+        "x": 100,
+        "y": 140,
+        "wires": [
+            [
+                "90126fdf91924073",
+                "3c1e4dbe34477b17"
+            ]
+        ]
+    },
+    {
+        "id": "0308c34263768313",
+        "type": "ui_dropdown",
+        "z": "c4fab67dd16d9611",
+        "name": "Operation",
+        "label": "Operation",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "dd54207981703118",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "select",
+                "value": "select",
+                "type": "str"
+            },
+            {
+                "label": "update",
+                "value": "update",
+                "type": "str"
+            },
+            {
+                "label": "insert",
+                "value": "insert",
+                "type": "str"
+            },
+            {
+                "label": "delete",
+                "value": "delete",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "type",
+        "topicType": "str",
+        "className": "",
+        "x": 460,
+        "y": 80,
+        "wires": [
+            [
+                "10ff580bae415505"
+            ]
+        ]
+    },
+    {
+        "id": "2699a35d6c715a04",
+        "type": "ui_numeric",
+        "z": "c4fab67dd16d9611",
+        "name": "Iterations",
+        "label": "Iterations",
+        "tooltip": "",
+        "group": "dd54207981703118",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "iterations",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "2000",
+        "step": "10",
+        "className": "",
+        "x": 460,
+        "y": 140,
+        "wires": [
+            [
+                "10ff580bae415505"
+            ]
+        ]
+    },
+    {
+        "id": "302c5955798f8c4f",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "dd54207981703118",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Submit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "submit",
+        "topicType": "str",
+        "x": 460,
+        "y": 240,
+        "wires": [
+            [
+                "10ff580bae415505"
+            ]
+        ]
+    },
+    {
+        "id": "90126fdf91924073",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "function 6",
+        "func": "msg.topic = \"type\"\nmsg.payload = \"select\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 80,
+        "wires": [
+            [
+                "0308c34263768313"
+            ]
+        ]
+    },
+    {
+        "id": "3c1e4dbe34477b17",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "function 7",
+        "func": "msg.topic = \"iterations\"\nmsg.payload = 10\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 280,
+        "y": 140,
+        "wires": [
+            [
+                "2699a35d6c715a04"
+            ]
+        ]
+    },
+    {
+        "id": "ae667f349b80ad4d",
+        "type": "ui_text",
+        "z": "c4fab67dd16d9611",
+        "group": "dd54207981703118",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "type",
+        "label": "Type",
+        "format": "{{msg.payload.type}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1050,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "83a96c7afaaf525f",
+        "type": "ui_text",
+        "z": "c4fab67dd16d9611",
+        "group": "dd54207981703118",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "iterations",
+        "label": "Iterations",
+        "format": "{{msg.payload.iterations}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1060,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "603f4142fdd4502c",
+        "type": "ui_text",
+        "z": "c4fab67dd16d9611",
+        "group": "dd54207981703118",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "counter",
+        "label": "Counter",
+        "format": "{{msg.payload.counter}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1060,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "bc46abe6398bdecb",
+        "type": "ui_text",
+        "z": "c4fab67dd16d9611",
+        "group": "dd54207981703118",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "name": "delay",
+        "label": "Delay",
+        "format": "{{msg.payload.delay}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1050,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "8e19ce2f2532fccf",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "Form Data Capture",
+        "func": "var lastinput = context.get(\"lastinput\") || \"\";\n\nif(msg.topic === \"name\"){\n    lastinput = msg.payload;\n    context.set(\"name\", lastinput);\n}\n\nif(msg.topic === \"phone\"){\n    lastinput = msg.payload;\n    context.set(\"phone\", lastinput);\n}\n\nif(msg.topic === \"email\"){\n    lastinput = msg.payload;\n    context.set(\"email\", lastinput);\n}\n\nif(msg.topic === \"gender\"){\n    lastinput = msg.payload;\n    context.set(\"gender\", lastinput);\n}\n\nif(msg.topic === \"age\"){\n    lastinput = msg.payload;\n    context.set(\"age\", lastinput);\n}\n\nif(msg.topic === \"submit\"){\n    msg.payload = {\n        \"name\":context.get(\"name\"),\n        \"phone\":context.get(\"phone\"),\n        \"email\":context.get(\"email\"),\n        \"gender\":context.get(\"gender\"),\n        \"age\":context.get(\"age\")\n    };\n    \n    context.set(\"name\", \"\");\n    context.set(\"phone\", \"\");\n    context.set(\"email\", \"\");\n    context.set(\"gender\", \"\");\n    context.set(\"age\", \"\");\n\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1170,
+        "y": 320,
+        "wires": [
+            [
+                "151279a9c7c43753"
+            ]
+        ]
+    },
+    {
+        "id": "151279a9c7c43753",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "Data Adjustment",
+        "func": "msg.payload = {\n    \"name\": msg.payload.name,\n    \"phone\": msg.payload.phone,\n    \"email\": msg.payload.email,\n    \"picture\": \"\",\n    \"gender\": msg.payload.gender,\n    \"age\": msg.payload.age,\n    \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 1100,
+        "y": 280,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "10ff580bae415505",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "Form Data Capture",
+        "func": "var lastinput = context.get(\"lastinput\") || \"\";\n\nif (msg.topic === \"type\"){\n    lastinput = msg.payload;\n    context.set(\"type\", lastinput);\n}\n\nif (msg.topic === \"iterations\"){\n    lastinput = msg.payload;\n    context.set(\"iterations\", lastinput);\n}\n\nif(msg.topic === \"submit\"){\n    msg.payload = {\n        \"type\":context.get(\"type\"),\n        \"iterations\":context.get(\"iterations\"),\n        \"counter\":0,\n        \"delay\":getDelay()\n    };\n    \n\n    function getDelay() {\n\n        switch (context.get(\"type\")) {\n            case 'select':\n                return 1000;\n            case 'update':\n                return 7000;\n            case 'insert':\n                return 5000;\n            case 'delete':\n                return 8000;\n            default:\n                return 1000;\n        } \n\n\n\n        \n    }\n\n    return msg;\n}",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 730,
+        "y": 100,
+        "wires": [
+            [
+                "80303b41c33d30c5",
+                "ae667f349b80ad4d",
+                "83a96c7afaaf525f",
+                "603f4142fdd4502c",
+                "bc46abe6398bdecb"
+            ]
+        ]
+    },
+    {
+        "id": "cb88e428bdf4478f",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "Data Adjustment",
+        "func": "msg.payload = {\n    \"name\": msg.payload.name,\n    \"phone\": msg.payload.phone,\n    \"email\": msg.payload.email,\n    \"picture\": \"\",\n    \"gender\": msg.payload.gender,\n    \"age\": msg.payload.age,\n    \n}\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 980,
+        "y": 540,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "80303b41c33d30c5",
+        "type": "debug",
+        "z": "c4fab67dd16d9611",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "19af6507.cc992b",
+        "type": "amqp-out",
+        "z": "e4fe9c44.6dee1",
+        "name": "",
+        "broker": "",
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "old.routing.key",
+        "exchangeDurable": true,
+        "amqpProperties": "{\"appId\":\"app-123\"}",
+        "outputs": 0,
+        "x": 550,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "32ebb2ab.99fc6e",
+        "type": "inject",
+        "z": "e4fe9c44.6dee1",
+        "name": "Topic Input",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "properties",
+                "v": "{\"correlationId\":\"correlation-123\",\"headers\":{\"arbitrary\":\"data\"}}",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "new.routing.key",
+        "payload": "{\"data\":\"the payload\"}",
+        "payloadType": "json",
+        "x": 140,
+        "y": 340,
+        "wires": [
+            [
+                "19af6507.cc992b"
+            ]
+        ]
+    },
+    {
+        "id": "716664b4.d3e6fc",
+        "type": "debug",
+        "z": "e4fe9c44.6dee1",
+        "name": "Topic Output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 510,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "3c555900.750918",
+        "type": "amqp-in",
+        "z": "e4fe9c44.6dee1",
+        "name": "",
+        "broker": "",
+        "prefetch": 0,
+        "noAck": true,
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "*.routing.key",
+        "exchangeDurable": true,
+        "queueName": "",
+        "queueExclusive": false,
+        "queueDurable": false,
+        "queueAutoDelete": true,
+        "headers": "",
+        "x": 180,
+        "y": 400,
+        "wires": [
+            [
+                "716664b4.d3e6fc"
+            ]
+        ]
+    },
+    {
+        "id": "c76c0f14.f6bf8",
+        "type": "comment",
+        "z": "e4fe9c44.6dee1",
+        "name": "Topic Exchange Example",
+        "info": "",
+        "x": 130,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "985c80c7.32f88",
+        "type": "amqp-out",
+        "z": "e4fe9c44.6dee1",
+        "name": "",
+        "broker": "",
+        "exchangeName": "amq.fanout",
+        "exchangeType": "fanout",
+        "exchangeRoutingKey": "",
+        "exchangeDurable": true,
+        "amqpProperties": "{\"appId\":\"really_new\"}",
+        "outputs": 0,
+        "x": 510,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "47a41431.e1c49c",
+        "type": "inject",
+        "z": "e4fe9c44.6dee1",
+        "name": "Fanout Input",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "properties",
+                "v": "{\"correlationId\":\"yar-123\",\"headers\":{\"arbitrary\":\"data\"}}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"data\":\"the payload\"}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 560,
+        "wires": [
+            [
+                "985c80c7.32f88"
+            ]
+        ]
+    },
+    {
+        "id": "31cf21dd.3de65e",
+        "type": "debug",
+        "z": "e4fe9c44.6dee1",
+        "name": "Fanout Output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "da3a3158.c844e",
+        "type": "amqp-in",
+        "z": "e4fe9c44.6dee1",
+        "name": "",
+        "broker": "",
+        "prefetch": 0,
+        "noAck": true,
+        "exchangeName": "amq.fanout",
+        "exchangeType": "fanout",
+        "exchangeRoutingKey": "",
+        "exchangeDurable": true,
+        "queueName": "",
+        "queueExclusive": false,
+        "queueDurable": false,
+        "queueAutoDelete": true,
+        "headers": "",
+        "x": 150,
+        "y": 620,
+        "wires": [
+            [
+                "31cf21dd.3de65e"
+            ]
+        ]
+    },
+    {
+        "id": "e13f5415.b32358",
+        "type": "amqp-in",
+        "z": "e4fe9c44.6dee1",
+        "name": "",
+        "broker": "",
+        "prefetch": 0,
+        "noAck": true,
+        "exchangeName": "amq.fanout",
+        "exchangeType": "fanout",
+        "exchangeRoutingKey": "",
+        "exchangeDurable": true,
+        "queueName": "",
+        "queueExclusive": false,
+        "queueDurable": false,
+        "queueAutoDelete": true,
+        "headers": "",
+        "x": 150,
+        "y": 680,
+        "wires": [
+            [
+                "31cf21dd.3de65e"
+            ]
+        ]
+    },
+    {
+        "id": "91b26155.dc80e",
+        "type": "comment",
+        "z": "e4fe9c44.6dee1",
+        "name": "Fanout Exchange Example",
+        "info": "",
+        "x": 130,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "c93fe173.9c98c",
+        "type": "amqp-out",
+        "z": "e4fe9c44.6dee1",
+        "name": "",
+        "broker": "",
+        "exchangeName": "amq.direct",
+        "exchangeType": "direct",
+        "exchangeRoutingKey": "old-routing-key",
+        "exchangeDurable": true,
+        "amqpProperties": "{\"appId\":\"app-123\"}",
+        "outputs": 0,
+        "x": 560,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "cd5ab12b.e0e04",
+        "type": "inject",
+        "z": "e4fe9c44.6dee1",
+        "name": "Direct Input",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "properties",
+                "v": "{\"correlationId\":\"correlation-123\",\"headers\":{\"arbitrary\":\"data\"}}",
+                "vt": "json"
+            },
+            {
+                "p": "routingKey",
+                "v": "new-routing-key",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"data\":\"the payload\"}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 120,
+        "wires": [
+            [
+                "c93fe173.9c98c"
+            ]
+        ]
+    },
+    {
+        "id": "88ed2319.87f56",
+        "type": "debug",
+        "z": "e4fe9c44.6dee1",
+        "name": "Direct Output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "66ba8a46.b3ba84",
+        "type": "amqp-in",
+        "z": "e4fe9c44.6dee1",
+        "name": "",
+        "broker": "",
+        "prefetch": 0,
+        "noAck": true,
+        "exchangeName": "amq.direct",
+        "exchangeType": "direct",
+        "exchangeRoutingKey": "new-routing-key",
+        "exchangeDurable": true,
+        "queueName": "",
+        "queueExclusive": false,
+        "queueDurable": false,
+        "queueAutoDelete": true,
+        "headers": "",
+        "x": 200,
+        "y": 180,
+        "wires": [
+            [
+                "88ed2319.87f56"
+            ]
+        ]
+    },
+    {
+        "id": "33421fba.f8418",
+        "type": "comment",
+        "z": "e4fe9c44.6dee1",
+        "name": "Direct Exchange Example",
+        "info": "",
+        "x": 130,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "12c8048f.4eaefb",
+        "type": "amqp-in",
+        "z": "e4fe9c44.6dee1",
+        "name": "",
+        "broker": "",
+        "prefetch": 0,
+        "noAck": true,
+        "exchangeName": "amq.headers",
+        "exchangeType": "headers",
+        "exchangeRoutingKey": "",
+        "exchangeDurable": true,
+        "queueName": "",
+        "queueExclusive": true,
+        "queueDurable": false,
+        "queueAutoDelete": true,
+        "headers": "{\"x-match\":\"all\",\"name\":\"header-name\",\"topic\":\"header-topic\"}",
+        "x": 150,
+        "y": 900,
+        "wires": [
+            [
+                "8ec3fa87.70c338"
+            ]
+        ]
+    },
+    {
+        "id": "6eccc4f.c6a2a3c",
+        "type": "amqp-out",
+        "z": "e4fe9c44.6dee1",
+        "name": "",
+        "broker": "",
+        "exchangeName": "amq.headers",
+        "exchangeType": "headers",
+        "exchangeRoutingKey": "",
+        "exchangeDurable": true,
+        "amqpProperties": "{\"appId\":\"really_new\",\"headers\":{\"name\":\"header-name\",\"topic\":\"header-topic\"}}",
+        "outputs": 0,
+        "x": 510,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "cb5093bf.1d524",
+        "type": "inject",
+        "z": "e4fe9c44.6dee1",
+        "name": "Headers Input",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "properties",
+                "v": "{\"appId\":\"hello\"}",
+                "vt": "json"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "{\"name\":\"hello-there\"}",
+        "payloadType": "json",
+        "x": 150,
+        "y": 840,
+        "wires": [
+            [
+                "6eccc4f.c6a2a3c"
+            ]
+        ]
+    },
+    {
+        "id": "8ec3fa87.70c338",
+        "type": "debug",
+        "z": "e4fe9c44.6dee1",
+        "name": "Headers Output",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 520,
+        "y": 900,
+        "wires": []
+    },
+    {
+        "id": "3f7dd2f6.9db46e",
+        "type": "comment",
+        "z": "e4fe9c44.6dee1",
+        "name": "Headers Exchange Example",
+        "info": "",
+        "x": 140,
+        "y": 780,
+        "wires": []
+    },
+    {
+        "id": "49a4c90058d9d209",
+        "type": "webhookrelay",
+        "z": "0cc45254d30ca639",
+        "buckets": "",
+        "x": 580,
+        "y": 220,
+        "wires": [
+            []
+        ]
+    }
+]

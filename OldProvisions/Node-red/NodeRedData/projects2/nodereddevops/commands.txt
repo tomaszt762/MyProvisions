@@ -1,0 +1,6 @@
+git push --all
+
+git push -f
+git push -u origin main
+git commit -m "descriptive message"
+git add commands.txt

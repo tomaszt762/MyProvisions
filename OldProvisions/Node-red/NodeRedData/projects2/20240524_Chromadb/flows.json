@@ -1,0 +1,1843 @@
+[
+    {
+        "id": "1823208a5811dccf",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "1e6ef671efdf6e7b",
+        "type": "tab",
+        "label": "ChromaDB",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "2a0a2da327d0df65",
+        "type": "tab",
+        "label": "Flow 2",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "685fbaa883647a79",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "965aa128464b51c4",
+        "type": "remote-server-collection",
+        "host": "localhost"
+    },
+    {
+        "id": "7fec57409bb26a0a",
+        "type": "remote-server-client",
+        "host": "localhost"
+    },
+    {
+        "id": "fd55ed7dc8b3d5a9",
+        "type": "remote-server-client",
+        "host": "http://chromadb:8000"
+    },
+    {
+        "id": "90446f611386a7ad",
+        "type": "remote-server-collection",
+        "host": "http://chromadb:8000"
+    },
+    {
+        "id": "49e0e89357e3e89c",
+        "type": "debug",
+        "z": "1823208a5811dccf",
+        "name": "debug 20",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "8fdda99057e91cbe",
+        "type": "chromadb-collection",
+        "z": "1823208a5811dccf",
+        "remoteServer": "90446f611386a7ad",
+        "name": "",
+        "collection": "",
+        "operation": "add",
+        "x": 660,
+        "y": 120,
+        "wires": [
+            [
+                "49e0e89357e3e89c"
+            ]
+        ]
+    },
+    {
+        "id": "791914005f179ca1",
+        "type": "function",
+        "z": "1823208a5811dccf",
+        "name": "collection | add",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {\n\tdocuments: [\n\t\t\"apples on a tree\",\n\t\t\"five pears in a basket\",\n\t\t\"fish in a pond\",\n\t\t\"pool full of water\",\n\t\t\"tasty apple pie\",\n\t\t\"yummy orange juice\",\n\t\t\"a large apple tree\",\n\t\t\"two baskets filled with fruits\",\n\t],\n\tmetadatas: [\n\t\t{ fruit: \"apple\" },\n\t\t{ fruit: \"pear\" },\n\t\t{ animal: \"fish\" },\n\t\t{ location: \"pool\" },\n\t\t{ food: \"pie\" },\n\t\t{ drink: \"juice\" },\n\t\t{ fruit: \"apple\" },\n\t\t{ fruit: \"fruits\" },\n\t],\n\tids: [\"doc1\", \"doc2\", \"doc3\", \"doc4\", \"doc5\", \"doc6\", \"doc7\", \"doc8\"],\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 120,
+        "wires": [
+            [
+                "8fdda99057e91cbe"
+            ]
+        ]
+    },
+    {
+        "id": "303b523765dfd63b",
+        "type": "inject",
+        "z": "1823208a5811dccf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 120,
+        "wires": [
+            [
+                "791914005f179ca1"
+            ]
+        ]
+    },
+    {
+        "id": "ba5dd5aafaa9b9a6",
+        "type": "comment",
+        "z": "1823208a5811dccf",
+        "name": "",
+        "info": "// CJS\nconst { OpenAIEmbeddingFunction } = require(\"chromadb\");\n\n// ESM\nimport { OpenAIEmbeddingFunction } from 'chromadb'\n\nconst embedder = new OpenAIEmbeddingFunction({\n  openai_api_key: \"your_api_key\",\n});\nconst collection = await client.createCollection({\n  name: \"my_collection\",\n  embeddingFunction: embedder,\n\n\n  https://github.com/chroma-core/chroma/issues/1455\n  ",
+        "x": 320,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "c42f5af2ba9ed497",
+        "type": "debug",
+        "z": "1823208a5811dccf",
+        "name": "debug 21",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "cf2eaaa8becd6d86",
+        "type": "chromadb-collection",
+        "z": "1823208a5811dccf",
+        "remoteServer": "90446f611386a7ad",
+        "name": "",
+        "collection": "",
+        "operation": "add",
+        "x": 660,
+        "y": 200,
+        "wires": [
+            [
+                "c42f5af2ba9ed497"
+            ]
+        ]
+    },
+    {
+        "id": "009bfa969d345daf",
+        "type": "function",
+        "z": "1823208a5811dccf",
+        "name": "collection | add",
+        "func": "const { OpenAIEmbeddingFunction } = global.get('chromadb');\n\nconst embedder = new OpenAIEmbeddingFunction({\n  openai_api_key: \"your_api_key\",\n});\n\nmsg.collection = \"my_collection\";\nmsg.payload = {\n\tdocuments: [\n\t\t\"apples on a tree\",\n\t\t\"five pears in a basket\",\n\t\t\"fish in a pond\",\n\t\t\"pool full of water\",\n\t\t\"tasty apple pie\",\n\t\t\"yummy orange juice\",\n\t\t\"a large apple tree\",\n\t\t\"two baskets filled with fruits\",\n\t],\n\tmetadatas: [\n\t\t{ fruit: \"apple\" },\n\t\t{ fruit: \"pear\" },\n\t\t{ animal: \"fish\" },\n\t\t{ location: \"pool\" },\n\t\t{ food: \"pie\" },\n\t\t{ drink: \"juice\" },\n\t\t{ fruit: \"apple\" },\n\t\t{ fruit: \"fruits\" },\n\t],\n\tids: [\"doc1\", \"doc2\", \"doc3\", \"doc4\", \"doc5\", \"doc6\", \"doc7\", \"doc8\"],\n\tembeddingFunction: embedder\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 200,
+        "wires": [
+            [
+                "cf2eaaa8becd6d86"
+            ]
+        ]
+    },
+    {
+        "id": "242d5cdfdc16822f",
+        "type": "inject",
+        "z": "1823208a5811dccf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 200,
+        "wires": [
+            [
+                "009bfa969d345daf"
+            ]
+        ]
+    },
+    {
+        "id": "12a3e3f543a88108",
+        "type": "function",
+        "z": "1823208a5811dccf",
+        "name": "function 1",
+        "func": "import { HuggingFaceTransformersEmbeddings } from \"@langchain/community/embeddings/hf_transformers\";\n\nconst model = new HuggingFaceTransformersEmbeddings({\n  model: \"Xenova/all-MiniLM-L6-v2\",\n});\n\n/* Embed queries */\nconst res = await model.embedQuery(\n  \"What would be a good company name for a company that makes colorful socks?\"\n);\nconsole.log({ res });\n/* Embed documents */\nconst documentRes = await model.embedDocuments([\"Hello world\", \"Bye bye\"]);\nconsole.log({ documentRes });\nmsg.res = res\nmsg.documentRes = documentRes\nreturn msg;",
+        "outputs": 1,
+        "timeout": 0,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 580,
+        "y": 320,
+        "wires": [
+            [
+                "e7428c398dff38b2"
+            ]
+        ]
+    },
+    {
+        "id": "4907e6fcea23c575",
+        "type": "inject",
+        "z": "1823208a5811dccf",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 380,
+        "y": 300,
+        "wires": [
+            [
+                "12a3e3f543a88108"
+            ]
+        ]
+    },
+    {
+        "id": "e7428c398dff38b2",
+        "type": "debug",
+        "z": "1823208a5811dccf",
+        "name": "debug 22",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "4792f9f4b8190c2f",
+        "type": "inject",
+        "z": "1e6ef671efdf6e7b",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 290,
+        "y": 320,
+        "wires": [
+            [
+                "a8efe2228a20081d"
+            ]
+        ]
+    },
+    {
+        "id": "c6332d85335a6f9f",
+        "type": "debug",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "result",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "1d56935af7702c2d",
+        "type": "comment",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Good I Deer ChromaDB",
+        "info": "",
+        "x": 320,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "d667ed331e78790d",
+        "type": "inject",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Embeddings",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[[1.2, 2.4, 4.5], [2.2, 4.4, 4.5]]",
+        "payloadType": "jsonata",
+        "x": 310,
+        "y": 380,
+        "wires": [
+            [
+                "c203de7681166255"
+            ]
+        ]
+    },
+    {
+        "id": "e778da936ae795f4",
+        "type": "debug",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "result",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "6ae163d47c1f45cf",
+        "type": "inject",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Embeddings",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[[1.2, 2.4, 4.5], [2.2, 4.4, 4.5]]",
+        "payloadType": "jsonata",
+        "x": 310,
+        "y": 440,
+        "wires": [
+            [
+                "5f7cd9e19723b46e"
+            ]
+        ]
+    },
+    {
+        "id": "32ea1864d84fdb4e",
+        "type": "debug",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "8c25f32070d63b87",
+        "type": "inject",
+        "z": "1e6ef671efdf6e7b",
+        "name": "IDs",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "[\"id-1\", \"id-2\"]",
+        "payloadType": "jsonata",
+        "x": 290,
+        "y": 500,
+        "wires": [
+            [
+                "cf75be103178217a"
+            ]
+        ]
+    },
+    {
+        "id": "67946cfb0b10bac5",
+        "type": "debug",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "4acb518fd1eb8271",
+        "type": "inject",
+        "z": "1e6ef671efdf6e7b",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 290,
+        "y": 260,
+        "wires": [
+            [
+                "603eb6e696d796f2"
+            ]
+        ]
+    },
+    {
+        "id": "63358d81ceaa24de",
+        "type": "debug",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Payload",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 760,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "624f10863faede9f",
+        "type": "inject",
+        "z": "1e6ef671efdf6e7b",
+        "name": "",
+        "props": [],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "x": 290,
+        "y": 560,
+        "wires": [
+            [
+                "30f9b81713d706aa"
+            ]
+        ]
+    },
+    {
+        "id": "796b026101abc5f9",
+        "type": "debug",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Result",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "result",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 750,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "a8efe2228a20081d",
+        "type": "good-chroma-db",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Create Collection",
+        "dbIp": "http://chromadb",
+        "dbPort": "8000",
+        "dbName": "my_collection",
+        "distance": "cosine",
+        "operation": "create",
+        "nResults": "1",
+        "x": 530,
+        "y": 320,
+        "wires": [
+            [
+                "c6332d85335a6f9f"
+            ]
+        ]
+    },
+    {
+        "id": "c203de7681166255",
+        "type": "good-chroma-db",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Insert Embeddings",
+        "dbIp": "http://chromadb",
+        "dbPort": "8000",
+        "dbName": "my_collection",
+        "distance": "cosine",
+        "operation": "insert",
+        "nResults": "1",
+        "x": 530,
+        "y": 380,
+        "wires": [
+            [
+                "e778da936ae795f4"
+            ]
+        ]
+    },
+    {
+        "id": "5f7cd9e19723b46e",
+        "type": "good-chroma-db",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Query Embeddings",
+        "dbIp": "http://chromadb",
+        "dbPort": "8000",
+        "dbName": "my_collection",
+        "distance": "cosine",
+        "operation": "query",
+        "nResults": "10",
+        "x": 530,
+        "y": 440,
+        "wires": [
+            [
+                "32ea1864d84fdb4e"
+            ]
+        ]
+    },
+    {
+        "id": "cf75be103178217a",
+        "type": "good-chroma-db",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Delete Embeddings",
+        "dbIp": "http://chromadb",
+        "dbPort": "8000",
+        "dbName": "my_collection",
+        "distance": "cosine",
+        "operation": "delete",
+        "nResults": "1",
+        "x": 530,
+        "y": 500,
+        "wires": [
+            [
+                "67946cfb0b10bac5"
+            ]
+        ]
+    },
+    {
+        "id": "30f9b81713d706aa",
+        "type": "good-chroma-db",
+        "z": "1e6ef671efdf6e7b",
+        "name": "Drop Collection",
+        "dbIp": "http://chromadb",
+        "dbPort": "8000",
+        "dbName": "my_collection",
+        "distance": "cosine",
+        "operation": "drop",
+        "nResults": "1",
+        "x": 520,
+        "y": 560,
+        "wires": [
+            [
+                "796b026101abc5f9"
+            ]
+        ]
+    },
+    {
+        "id": "603eb6e696d796f2",
+        "type": "good-chroma-db",
+        "z": "1e6ef671efdf6e7b",
+        "name": "List Collections",
+        "dbIp": "http://chromadb",
+        "dbPort": "8000",
+        "dbName": "MyCollection",
+        "distance": "cosine",
+        "operation": "list",
+        "nResults": "1",
+        "x": 520,
+        "y": 260,
+        "wires": [
+            [
+                "63358d81ceaa24de"
+            ]
+        ]
+    },
+    {
+        "id": "1b7d9f868c6f08ad",
+        "type": "inject",
+        "z": "2a0a2da327d0df65",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 100,
+        "wires": [
+            [
+                "e411dcf415b95393"
+            ]
+        ]
+    },
+    {
+        "id": "e411dcf415b95393",
+        "type": "function",
+        "z": "2a0a2da327d0df65",
+        "name": "client | createCollection",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {\n    metadata: {\n        description: \"My first collection\"\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 100,
+        "wires": [
+            [
+                "6c3a2824d0af607c"
+            ]
+        ]
+    },
+    {
+        "id": "6c3a2824d0af607c",
+        "type": "chromadb-client",
+        "z": "2a0a2da327d0df65",
+        "name": "",
+        "remoteServer": "fd55ed7dc8b3d5a9",
+        "collection": "",
+        "operation": "createCollection",
+        "x": 750,
+        "y": 100,
+        "wires": [
+            [
+                "a4691c6c13d4bbe5"
+            ]
+        ]
+    },
+    {
+        "id": "a4691c6c13d4bbe5",
+        "type": "debug",
+        "z": "2a0a2da327d0df65",
+        "name": "debug 5",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "beef7af6d5f71b47",
+        "type": "inject",
+        "z": "2a0a2da327d0df65",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 160,
+        "wires": [
+            [
+                "57ed772571b1a98b"
+            ]
+        ]
+    },
+    {
+        "id": "57ed772571b1a98b",
+        "type": "function",
+        "z": "2a0a2da327d0df65",
+        "name": "client | deleteCollection",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 470,
+        "y": 160,
+        "wires": [
+            [
+                "79de862b0ef85782"
+            ]
+        ]
+    },
+    {
+        "id": "79de862b0ef85782",
+        "type": "chromadb-client",
+        "z": "2a0a2da327d0df65",
+        "name": "",
+        "remoteServer": "fd55ed7dc8b3d5a9",
+        "collection": "",
+        "operation": "deleteCollection",
+        "x": 750,
+        "y": 160,
+        "wires": [
+            [
+                "4d806f504e9c9ecc"
+            ]
+        ]
+    },
+    {
+        "id": "4d806f504e9c9ecc",
+        "type": "debug",
+        "z": "2a0a2da327d0df65",
+        "name": "debug 6",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 160,
+        "wires": []
+    },
+    {
+        "id": "3147ed5bf6e5e7b6",
+        "type": "inject",
+        "z": "2a0a2da327d0df65",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 220,
+        "wires": [
+            [
+                "e05935dccf477712"
+            ]
+        ]
+    },
+    {
+        "id": "e05935dccf477712",
+        "type": "function",
+        "z": "2a0a2da327d0df65",
+        "name": "client | getCollection",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 460,
+        "y": 220,
+        "wires": [
+            [
+                "65f0c38de2ba974e"
+            ]
+        ]
+    },
+    {
+        "id": "65f0c38de2ba974e",
+        "type": "chromadb-client",
+        "z": "2a0a2da327d0df65",
+        "name": "",
+        "remoteServer": "fd55ed7dc8b3d5a9",
+        "collection": "",
+        "operation": "getCollection",
+        "x": 750,
+        "y": 220,
+        "wires": [
+            [
+                "561592fa843a2bc8"
+            ]
+        ]
+    },
+    {
+        "id": "561592fa843a2bc8",
+        "type": "debug",
+        "z": "2a0a2da327d0df65",
+        "name": "debug 7",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "6aae5e335d17ebe5",
+        "type": "inject",
+        "z": "2a0a2da327d0df65",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 260,
+        "y": 280,
+        "wires": [
+            [
+                "b9d753b719deb8fd"
+            ]
+        ]
+    },
+    {
+        "id": "b9d753b719deb8fd",
+        "type": "function",
+        "z": "2a0a2da327d0df65",
+        "name": "client | getOrCreateCollection",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {\n    metadata: {\n        description: \"My first collection\"\n    }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 490,
+        "y": 280,
+        "wires": [
+            [
+                "2c3b02213ca1431f"
+            ]
+        ]
+    },
+    {
+        "id": "2c3b02213ca1431f",
+        "type": "chromadb-client",
+        "z": "2a0a2da327d0df65",
+        "name": "",
+        "remoteServer": "fd55ed7dc8b3d5a9",
+        "collection": "",
+        "operation": "getOrCreateCollection",
+        "x": 750,
+        "y": 280,
+        "wires": [
+            [
+                "55468bf7733589b2"
+            ]
+        ]
+    },
+    {
+        "id": "55468bf7733589b2",
+        "type": "debug",
+        "z": "2a0a2da327d0df65",
+        "name": "debug 8",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "4fa9a542a18a407e",
+        "type": "inject",
+        "z": "2a0a2da327d0df65",
+        "name": "listCollections",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 550,
+        "y": 340,
+        "wires": [
+            [
+                "9cc866fada84f776"
+            ]
+        ]
+    },
+    {
+        "id": "9cc866fada84f776",
+        "type": "chromadb-client",
+        "z": "2a0a2da327d0df65",
+        "name": "",
+        "remoteServer": "fd55ed7dc8b3d5a9",
+        "collection": "",
+        "operation": "listCollections",
+        "x": 750,
+        "y": 340,
+        "wires": [
+            [
+                "1fc688ab52e71646"
+            ]
+        ]
+    },
+    {
+        "id": "1fc688ab52e71646",
+        "type": "debug",
+        "z": "2a0a2da327d0df65",
+        "name": "debug 9",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "8bf5bb5898a8b329",
+        "type": "inject",
+        "z": "2a0a2da327d0df65",
+        "name": "version",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 530,
+        "y": 400,
+        "wires": [
+            [
+                "5dadd563dc9936d2"
+            ]
+        ]
+    },
+    {
+        "id": "5dadd563dc9936d2",
+        "type": "chromadb-client",
+        "z": "2a0a2da327d0df65",
+        "name": "",
+        "remoteServer": "fd55ed7dc8b3d5a9",
+        "collection": "",
+        "operation": "version",
+        "x": 750,
+        "y": 400,
+        "wires": [
+            [
+                "b8c1318cea823d3e"
+            ]
+        ]
+    },
+    {
+        "id": "b8c1318cea823d3e",
+        "type": "debug",
+        "z": "2a0a2da327d0df65",
+        "name": "debug 10",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 940,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "b42e7537237d729d",
+        "type": "inject",
+        "z": "685fbaa883647a79",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 80,
+        "wires": [
+            [
+                "47eef2e7ea8fdda6"
+            ]
+        ]
+    },
+    {
+        "id": "47eef2e7ea8fdda6",
+        "type": "function",
+        "z": "685fbaa883647a79",
+        "name": "collection | add",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {\n    ids: [\"id1\", \"id2\"],\n    embeddings: [\n        [1, 2, 3],\n        [4, 5, 6],\n    ],\n    metadatas: [{ key: \"value\" }, { key: \"value\" }],\n    documents: [\"document1\", \"document2\"],\n};\n\nreturn msg;",
+        "outputs": 1,
+        "timeout": "",
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 80,
+        "wires": [
+            [
+                "999aa0170b207b87"
+            ]
+        ]
+    },
+    {
+        "id": "dd95178f2cb380ae",
+        "type": "debug",
+        "z": "685fbaa883647a79",
+        "name": "debug 11",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "999aa0170b207b87",
+        "type": "chromadb-collection",
+        "z": "685fbaa883647a79",
+        "remoteServer": "90446f611386a7ad",
+        "name": "",
+        "collection": "",
+        "operation": "add",
+        "x": 660,
+        "y": 80,
+        "wires": [
+            [
+                "dd95178f2cb380ae"
+            ]
+        ]
+    },
+    {
+        "id": "d1c2de583a1d974b",
+        "type": "inject",
+        "z": "685fbaa883647a79",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 140,
+        "wires": [
+            [
+                "87b7702cf3e0a437"
+            ]
+        ]
+    },
+    {
+        "id": "87b7702cf3e0a437",
+        "type": "function",
+        "z": "685fbaa883647a79",
+        "name": "collection | count",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 140,
+        "wires": [
+            [
+                "7fad750789b57fe3"
+            ]
+        ]
+    },
+    {
+        "id": "dad21363b5ed2a5e",
+        "type": "debug",
+        "z": "685fbaa883647a79",
+        "name": "debug 12",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "7fad750789b57fe3",
+        "type": "chromadb-collection",
+        "z": "685fbaa883647a79",
+        "remoteServer": "90446f611386a7ad",
+        "name": "",
+        "collection": "",
+        "operation": "count",
+        "x": 660,
+        "y": 140,
+        "wires": [
+            [
+                "dad21363b5ed2a5e"
+            ]
+        ]
+    },
+    {
+        "id": "f38c72e785a23e81",
+        "type": "inject",
+        "z": "685fbaa883647a79",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 200,
+        "wires": [
+            [
+                "4ee4ea2e91362bff"
+            ]
+        ]
+    },
+    {
+        "id": "4ee4ea2e91362bff",
+        "type": "function",
+        "z": "685fbaa883647a79",
+        "name": "collection | delete",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {\n    ids: \"some_id\",\n    where: { key: \"value\" },\n    whereDocument: { \"$contains\": \"search_string\" }\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 200,
+        "wires": [
+            [
+                "1d2b661f04b6abe6"
+            ]
+        ]
+    },
+    {
+        "id": "f362a944fb330e49",
+        "type": "debug",
+        "z": "685fbaa883647a79",
+        "name": "debug 13",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "1d2b661f04b6abe6",
+        "type": "chromadb-collection",
+        "z": "685fbaa883647a79",
+        "remoteServer": "90446f611386a7ad",
+        "name": "",
+        "collection": "",
+        "operation": "delete",
+        "x": 660,
+        "y": 200,
+        "wires": [
+            [
+                "f362a944fb330e49"
+            ]
+        ]
+    },
+    {
+        "id": "ffc2f60f8aada726",
+        "type": "inject",
+        "z": "685fbaa883647a79",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 260,
+        "wires": [
+            [
+                "c56f08686037db9c"
+            ]
+        ]
+    },
+    {
+        "id": "c56f08686037db9c",
+        "type": "function",
+        "z": "685fbaa883647a79",
+        "name": "collection | get",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {\n    ids: [\"id1\", \"id2\"],\n    where: { key: \"value\" },\n    limit: 10,\n    offset: 0,\n    include: [\"embeddings\", \"metadatas\", \"documents\"],\n    whereDocument: { $contains: \"value\" },\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 260,
+        "wires": [
+            [
+                "0e1ab92fc4a0c37c"
+            ]
+        ]
+    },
+    {
+        "id": "d4cc16d136e4f861",
+        "type": "debug",
+        "z": "685fbaa883647a79",
+        "name": "debug 14",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 260,
+        "wires": []
+    },
+    {
+        "id": "0e1ab92fc4a0c37c",
+        "type": "chromadb-collection",
+        "z": "685fbaa883647a79",
+        "remoteServer": "90446f611386a7ad",
+        "name": "",
+        "collection": "",
+        "operation": "get",
+        "x": 660,
+        "y": 260,
+        "wires": [
+            [
+                "d4cc16d136e4f861"
+            ]
+        ]
+    },
+    {
+        "id": "26814bef5090667f",
+        "type": "inject",
+        "z": "685fbaa883647a79",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 320,
+        "wires": [
+            [
+                "fcb5c30c7e1ec4f3"
+            ]
+        ]
+    },
+    {
+        "id": "fcb5c30c7e1ec4f3",
+        "type": "function",
+        "z": "685fbaa883647a79",
+        "name": "collection | modify",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {\n    name: \"new collection name\",\n    metadata: { key: \"value\" },\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 320,
+        "wires": [
+            [
+                "cb47942d2fbfcfbb"
+            ]
+        ]
+    },
+    {
+        "id": "ad2ca5f8ae370319",
+        "type": "debug",
+        "z": "685fbaa883647a79",
+        "name": "debug 15",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 320,
+        "wires": []
+    },
+    {
+        "id": "cb47942d2fbfcfbb",
+        "type": "chromadb-collection",
+        "z": "685fbaa883647a79",
+        "remoteServer": "90446f611386a7ad",
+        "name": "",
+        "collection": "",
+        "operation": "modify",
+        "x": 660,
+        "y": 320,
+        "wires": [
+            [
+                "ad2ca5f8ae370319"
+            ]
+        ]
+    },
+    {
+        "id": "b2d215db69f2fffe",
+        "type": "inject",
+        "z": "685fbaa883647a79",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 380,
+        "wires": [
+            [
+                "63c4835fad7e9d64"
+            ]
+        ]
+    },
+    {
+        "id": "63c4835fad7e9d64",
+        "type": "function",
+        "z": "685fbaa883647a79",
+        "name": "collection | peek",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {\n    limit: 10,\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 420,
+        "y": 380,
+        "wires": [
+            [
+                "f030d5ef27b90689"
+            ]
+        ]
+    },
+    {
+        "id": "5dcde816f1b8402f",
+        "type": "debug",
+        "z": "685fbaa883647a79",
+        "name": "debug 16",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 380,
+        "wires": []
+    },
+    {
+        "id": "f030d5ef27b90689",
+        "type": "chromadb-collection",
+        "z": "685fbaa883647a79",
+        "remoteServer": "90446f611386a7ad",
+        "name": "",
+        "collection": "",
+        "operation": "peek",
+        "x": 660,
+        "y": 380,
+        "wires": [
+            [
+                "5dcde816f1b8402f"
+            ]
+        ]
+    },
+    {
+        "id": "541e398be55bdef0",
+        "type": "inject",
+        "z": "685fbaa883647a79",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 440,
+        "wires": [
+            [
+                "bcdf9891df34b11c"
+            ]
+        ]
+    },
+    {
+        "id": "bcdf9891df34b11c",
+        "type": "function",
+        "z": "685fbaa883647a79",
+        "name": "collection | query",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {\n    queryEmbeddings: [0.1, 0.2],\n    nResults: 10,\n    where: { key: \"value\" },\n    include: [\"metadata\", \"document\"]\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 440,
+        "wires": [
+            [
+                "4c6e035d56ca8b4d"
+            ]
+        ]
+    },
+    {
+        "id": "4956dfa18b7c9861",
+        "type": "debug",
+        "z": "685fbaa883647a79",
+        "name": "debug 17",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 440,
+        "wires": []
+    },
+    {
+        "id": "4c6e035d56ca8b4d",
+        "type": "chromadb-collection",
+        "z": "685fbaa883647a79",
+        "remoteServer": "90446f611386a7ad",
+        "name": "",
+        "collection": "",
+        "operation": "query",
+        "x": 660,
+        "y": 440,
+        "wires": [
+            [
+                "4956dfa18b7c9861"
+            ]
+        ]
+    },
+    {
+        "id": "737cdbb4f9a163b8",
+        "type": "inject",
+        "z": "685fbaa883647a79",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 500,
+        "wires": [
+            [
+                "8f708462cd93f99a"
+            ]
+        ]
+    },
+    {
+        "id": "8f708462cd93f99a",
+        "type": "function",
+        "z": "685fbaa883647a79",
+        "name": "collection | update",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {\n    ids: [\"id1\", \"id2\"],\n    embeddings: [\n        [1, 2, 3],\n        [4, 5, 6],\n    ],\n    metadatas: [{ key: \"value\" }, { key: \"value\" }],\n    documents: [\"new document 1\", \"new document 2\"],\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 500,
+        "wires": [
+            [
+                "cc93959cb132043f"
+            ]
+        ]
+    },
+    {
+        "id": "09386c5979e6c571",
+        "type": "debug",
+        "z": "685fbaa883647a79",
+        "name": "debug 18",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 500,
+        "wires": []
+    },
+    {
+        "id": "cc93959cb132043f",
+        "type": "chromadb-collection",
+        "z": "685fbaa883647a79",
+        "remoteServer": "90446f611386a7ad",
+        "name": "",
+        "collection": "",
+        "operation": "update",
+        "x": 660,
+        "y": 500,
+        "wires": [
+            [
+                "09386c5979e6c571"
+            ]
+        ]
+    },
+    {
+        "id": "974d5e82380171fe",
+        "type": "inject",
+        "z": "685fbaa883647a79",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 240,
+        "y": 560,
+        "wires": [
+            [
+                "253e72ed145f6ac3"
+            ]
+        ]
+    },
+    {
+        "id": "253e72ed145f6ac3",
+        "type": "function",
+        "z": "685fbaa883647a79",
+        "name": "collection | upsert",
+        "func": "msg.collection = \"my_collection\";\nmsg.payload = {\n    ids: [\"id1\", \"id2\"],\n    embeddings: [\n        [1, 2, 3],\n        [4, 5, 6],\n    ],\n    metadatas: [{ key: \"value\" }, { key: \"value\" }],\n    documents: [\"document1\", \"document2\"],\n};\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 430,
+        "y": 560,
+        "wires": [
+            [
+                "c714eb576074b488"
+            ]
+        ]
+    },
+    {
+        "id": "468d53118afc6bc3",
+        "type": "debug",
+        "z": "685fbaa883647a79",
+        "name": "debug 19",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 860,
+        "y": 560,
+        "wires": []
+    },
+    {
+        "id": "c714eb576074b488",
+        "type": "chromadb-collection",
+        "z": "685fbaa883647a79",
+        "remoteServer": "90446f611386a7ad",
+        "name": "",
+        "collection": "",
+        "operation": "update",
+        "x": 660,
+        "y": 560,
+        "wires": [
+            [
+                "468d53118afc6bc3"
+            ]
+        ]
+    }
+]
