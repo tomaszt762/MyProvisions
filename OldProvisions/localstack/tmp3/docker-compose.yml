@@ -1,0 +1,26 @@
+version: '2.1'
+services:
+  localstack:
+    image: localstack/localstack
+    ports:
+      - 4566:4566
+      - 4572:4572
+      - 8080:8080
+    environment:
+      - DEBUG=1
+      - HOSTNAME_EXTERNAL=localstack
+      - SERVICES=s3,iam,ec2,dynamodb
+      - LAMBDA_REMOTE_DOCKER=false
+      - LAMBDA_EXECUTOR=docker
+      - LAMBDA_DOCKER_NETWORK=localstack-network
+      - AWS_ACCESS_KEY_ID=anaccesskey
+      - AWS_SECRET_ACCESS_KEY=asecretkey
+      - DEFAULT_REGION=us-west-2
+      - DOCKER_HOST=unix:///var/run/docker.sock
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+      - /tmp/localstack:/tmp/localstack
+# docker-compose up -d
+# docker-compose down
+# docker-compose start
+# docker-compose stop
