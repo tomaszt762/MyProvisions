@@ -1,0 +1,14 @@
+{
+    "name": "node-red-project",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "private": true,
+    "dependencies": {
+        "@meowwolf/node-red-contrib-amqp": "~2.4.1",
+        "node-red-contrib-env": "~1.0.2",
+        "node-red-contrib-loop-processing": "~0.5.1",
+        "node-red-dashboard": "~3.2.0",
+        "node-red-node-ui-table": "~0.4.3",
+        "redis": "^4.5.1"
+    }
+}

@@ -1,0 +1,1374 @@
+[
+    {
+        "id": "c4fab67dd16d9611",
+        "type": "tab",
+        "label": "GuiJob",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "02cdaf20d7b14791",
+        "type": "ui_spacer",
+        "z": "c4fab67dd16d9611",
+        "name": "spacer",
+        "group": "dd54207981703118",
+        "order": 8,
+        "width": 6,
+        "height": 1
+    },
+    {
+        "id": "dd54207981703118",
+        "type": "ui_group",
+        "name": "Postgresql API",
+        "tab": "076616130c52a934",
+        "order": 1,
+        "disp": true,
+        "width": 6,
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "86c4f5821759c76a",
+        "type": "ui_group",
+        "name": "Table ",
+        "tab": "076616130c52a934",
+        "order": 2,
+        "disp": true,
+        "width": "16",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "49e3087e0eaf97e1",
+        "type": "ui_group",
+        "name": "Control",
+        "tab": "076616130c52a934",
+        "order": 3,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "4ade2752bb8e0a7b",
+        "type": "amqp-broker",
+        "name": "",
+        "host": "${RABBITMQ_HOST}",
+        "port": "${RABBITMQ_PORT}",
+        "vhost": "",
+        "tls": false,
+        "credsFromSettings": false
+    },
+    {
+        "id": "076616130c52a934",
+        "type": "ui_tab",
+        "name": "View",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "73a6249ff02627bc",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "0308c34263768313",
+        "type": "ui_dropdown",
+        "z": "c4fab67dd16d9611",
+        "name": "Operation",
+        "label": "Operation",
+        "tooltip": "",
+        "place": "Select option",
+        "group": "dd54207981703118",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "multiple": false,
+        "options": [
+            {
+                "label": "select",
+                "value": "select",
+                "type": "str"
+            },
+            {
+                "label": "update",
+                "value": "update",
+                "type": "str"
+            },
+            {
+                "label": "insert",
+                "value": "insert",
+                "type": "str"
+            },
+            {
+                "label": "delete",
+                "value": "delete",
+                "type": "str"
+            }
+        ],
+        "payload": "",
+        "topic": "type",
+        "topicType": "str",
+        "className": "",
+        "x": 580,
+        "y": 80,
+        "wires": [
+            [
+                "10ff580bae415505"
+            ]
+        ]
+    },
+    {
+        "id": "2699a35d6c715a04",
+        "type": "ui_numeric",
+        "z": "c4fab67dd16d9611",
+        "name": "Iterations",
+        "label": "Iterations",
+        "tooltip": "",
+        "group": "dd54207981703118",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "iterations",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": 0,
+        "max": "2000",
+        "step": "10",
+        "className": "",
+        "x": 580,
+        "y": 140,
+        "wires": [
+            [
+                "10ff580bae415505"
+            ]
+        ]
+    },
+    {
+        "id": "302c5955798f8c4f",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "dd54207981703118",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Submit",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "num",
+        "topic": "submit",
+        "topicType": "str",
+        "x": 580,
+        "y": 260,
+        "wires": [
+            [
+                "10ff580bae415505"
+            ]
+        ]
+    },
+    {
+        "id": "90126fdf91924073",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "msg.topic = \"type\"",
+        "func": "msg.topic = \"type\"\nmsg.payload = \"select\"\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 80,
+        "wires": [
+            [
+                "0308c34263768313"
+            ]
+        ]
+    },
+    {
+        "id": "3c1e4dbe34477b17",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "msg.topic = \"iterations\"",
+        "func": "msg.topic = \"iterations\"\nmsg.payload = 10\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 400,
+        "y": 140,
+        "wires": [
+            [
+                "2699a35d6c715a04"
+            ]
+        ]
+    },
+    {
+        "id": "ae667f349b80ad4d",
+        "type": "ui_text",
+        "z": "c4fab67dd16d9611",
+        "group": "dd54207981703118",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "name": "type",
+        "label": "Type",
+        "format": "{{msg.payload.type}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1170,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "83a96c7afaaf525f",
+        "type": "ui_text",
+        "z": "c4fab67dd16d9611",
+        "group": "dd54207981703118",
+        "order": 6,
+        "width": 0,
+        "height": 0,
+        "name": "iterations",
+        "label": "Iterations",
+        "format": "{{msg.payload.iterations}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1180,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "bc46abe6398bdecb",
+        "type": "ui_text",
+        "z": "c4fab67dd16d9611",
+        "group": "dd54207981703118",
+        "order": 7,
+        "width": 0,
+        "height": 0,
+        "name": "delay",
+        "label": "Delay",
+        "format": "{{msg.payload.delay}}",
+        "layout": "row-spread",
+        "className": "",
+        "x": 1170,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "10ff580bae415505",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "Form Data Capture",
+        "func": "var lastinput = context.get(\"lastinput\") || \"\";\nvar date = new Date()\nif (msg.topic === \"type\"){\n    lastinput = msg.payload;\n    context.set(\"type\", lastinput);\n}\n\nif (msg.topic === \"iterations\"){\n    lastinput = msg.payload;\n    context.set(\"iterations\", lastinput);\n}\n\nif (msg.topic === \"delay\") {\n    lastinput = msg.payload;\n    context.set(\"delay\", lastinput);\n}\nif(msg.topic === \"submit\"){\n\n    msg.payload = {\n        \"id\": uuidv4(),\n        \"timestamp\": date.toISOString(),        \n        \"type\":context.get(\"type\"),\n        \"iterations\": context.get(\"iterations\") || 10,\n        \"delay\": context.get(\"delay\") || 1000,\n        \"isToTake\":{}\n    }\n    \n    return msg;\n}\n\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nfunction uuidv4() {\n    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n        return v.toString(16);\n    });\n}\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 850,
+        "y": 100,
+        "wires": [
+            [
+                "ae667f349b80ad4d",
+                "83a96c7afaaf525f",
+                "bc46abe6398bdecb",
+                "340ae2adc80e8169"
+            ]
+        ]
+    },
+    {
+        "id": "80303b41c33d30c5",
+        "type": "debug",
+        "z": "c4fab67dd16d9611",
+        "name": "debug 10",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1160,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "d2ab34808f5793a4",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "msg.topic = \"delay\"",
+        "func": "msg.topic = \"delay\"\nmsg.payload = 1000\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 390,
+        "y": 200,
+        "wires": [
+            [
+                "7519312452e70131"
+            ]
+        ]
+    },
+    {
+        "id": "7519312452e70131",
+        "type": "ui_numeric",
+        "z": "c4fab67dd16d9611",
+        "name": "Delay",
+        "label": "Delay",
+        "tooltip": "",
+        "group": "dd54207981703118",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "wrap": false,
+        "passthru": true,
+        "topic": "delay",
+        "topicType": "str",
+        "format": "{{msg.payload}}",
+        "min": "1000",
+        "max": "10000",
+        "step": "1000",
+        "className": "",
+        "x": 570,
+        "y": 200,
+        "wires": [
+            [
+                "10ff580bae415505"
+            ]
+        ]
+    },
+    {
+        "id": "340ae2adc80e8169",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "hSet",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\nlet date = new Date()\n\n\n\nawait client.connect();\n\n//let isToTake = { \"containerName\": envw.CONTAINER_NAME, \"timestamp\": date.toISOString() }\n\nmsg.payload['isToTake'] = envw.CONTAINER_NAME\n\nawait client.hSet('isToTake:' + msg.payload.id, msg.payload);\n\n//client.quit()\nawait client.disconnect();\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 950,
+        "y": 200,
+        "wires": [
+            [
+                "80303b41c33d30c5"
+            ]
+        ]
+    },
+    {
+        "id": "1dc351271589e68f",
+        "type": "ui_ui_control",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "events": "all",
+        "x": 200,
+        "y": 140,
+        "wires": [
+            [
+                "90126fdf91924073",
+                "3c1e4dbe34477b17",
+                "d2ab34808f5793a4"
+            ]
+        ]
+    },
+    {
+        "id": "cbc26185706ba67c",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "5",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "5",
+        "payloadType": "num",
+        "x": 270,
+        "y": 460,
+        "wires": [
+            [
+                "8001c9f6228fc757"
+            ]
+        ]
+    },
+    {
+        "id": "8001c9f6228fc757",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "Form Data Capture",
+        "func": "var typeArray = [\"select\", \"update\", \"insert\", \"delete\"];\nconst delay = ms => new Promise(resolve => setTimeout(resolve, ms))\nvar date = new Date()\nlet i = msg.payload\nlet j = 1\n\n\nwhile (i >= j) {\nlet typeInstance = typeArray[Math.floor(Math.random() * typeArray.length)]; //getting random category from array\n    msg.payload = {\n        \"id\": uuidv4(),\n        \"timestamp\": date.toISOString(),\n        \"type\": typeInstance,\n        \"iterations\": Math.floor(Math.random() * 30) + 1,\n        \"delay\": Math.floor(Math.random() * 5000) + 1000,\n        \"isToTake\": {}\n    };\nawait delay(1000)\n    node.send(msg);\n    j++\n  }\n  j=0\n\n\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nfunction uuidv4() {\n    return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function (c) {\n        var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n        return v.toString(16);\n    });\n}\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 890,
+        "y": 360,
+        "wires": [
+            [
+                "340ae2adc80e8169"
+            ]
+        ]
+    },
+    {
+        "id": "5edd1207f8eb59a9",
+        "type": "ui_table",
+        "z": "c4fab67dd16d9611",
+        "group": "86c4f5821759c76a",
+        "name": "Table isToTake",
+        "order": 1,
+        "width": 16,
+        "height": 4,
+        "columns": [
+            {
+                "field": "id",
+                "title": "ID",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "type",
+                "title": "type",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "iterations",
+                "title": "iterations",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "delay",
+                "title": "delay",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 782.5,
+        "y": 511.25,
+        "wires": [
+            [
+                "cfb8cd8b07def572"
+            ]
+        ]
+    },
+    {
+        "id": "caef85e4b5a38c9d",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "SCAN isToTake",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nawait client.connect();\nlet cursor = 0\nvar results = []\ndo {\n    let result = await client.SCAN(cursor, { \"MATCH\": \"isToTake:*\" });\n    cursor = result.cursor\n    for (const key of result.keys) {\n        results.push(await client.hGetAll(key))\n    }\n} while (cursor != 0);\n\n\nclient.quit()\n\nmsg.payload = results\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 542.5,
+        "y": 511.25,
+        "wires": [
+            [
+                "5edd1207f8eb59a9"
+            ]
+        ]
+    },
+    {
+        "id": "cfb8cd8b07def572",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "remove item",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nawait client.connect();\nawait client.DEL(\"isToTake:\" + msg.payload.id)\n\nclient.quit()\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 972.5,
+        "y": 511.25,
+        "wires": [
+            [
+                "4747e4722597b353"
+            ]
+        ]
+    },
+    {
+        "id": "4747e4722597b353",
+        "type": "debug",
+        "z": "c4fab67dd16d9611",
+        "name": "remove item",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1192.5,
+        "y": 511.25,
+        "wires": []
+    },
+    {
+        "id": "e9efe2252049f340",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 332.5,
+        "y": 511.25,
+        "wires": [
+            [
+                "caef85e4b5a38c9d"
+            ]
+        ]
+    },
+    {
+        "id": "9fe5c00994a637ba",
+        "type": "comment",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "info": "[\n    {\n        \"id\": \"1ef99d7f97206a6d\",\n        \"type\": \"group\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"style\": {\n            \"stroke\": \"#999999\",\n            \"stroke-opacity\": \"1\",\n            \"fill\": \"none\",\n            \"fill-opacity\": \"1\",\n            \"label\": true,\n            \"label-position\": \"nw\",\n            \"color\": \"#a4a4a4\"\n        },\n        \"nodes\": [\n            \"617a5f0353397a73\",\n            \"e17b70f1b7ee4793\",\n            \"71dc27a8b09852cc\",\n            \"0b67783246d5b32d\",\n            \"738f14238f2b88b4\",\n            \"4615042b7fc61a12\",\n            \"be895835d90f1d69\",\n            \"f6bc9f71abf0c741\",\n            \"39bef8d410bdf447\",\n            \"60e89040d3e74d35\",\n            \"dc3ed6c2fa62b0cb\",\n            \"2f628e844ce034c2\",\n            \"93abfb7989ec1ffc\",\n            \"a4bceba958c63ade\",\n            \"41a95e246cd90d9c\",\n            \"6a372ebb5dd09b95\",\n            \"ea3ca3637256ded7\",\n            \"a52ca0b00441d668\",\n            \"8942d9f2a252e835\",\n            \"f30d364b625f12f9\",\n            \"56a3704aa73bba3b\",\n            \"10dc9d288d1b29cb\",\n            \"befc87ac11dddf4d\",\n            \"b35223ba0f6417fd\",\n            \"3aeae8d28746cfb9\",\n            \"7d11aec2ec2364ca\",\n            \"e40d4c23b8cc7c2a\",\n            \"9d652287d5b09c8e\",\n            \"4b2cbfc763286bd0\",\n            \"6bc3bdcb45f20994\",\n            \"de161152f740c19f\",\n            \"8e678d8e56ba350d\",\n            \"c155b3fa6a0ed5eb\",\n            \"ea97105787fc2947\",\n            \"37974d44253f1177\",\n            \"0e8d0576a9b41035\",\n            \"8d857a4c1d31c23e\",\n            \"442fccdb9c89a91d\",\n            \"d5b2c90e31d69260\",\n            \"617a5f0353397a73\"\n        ],\n        \"x\": 114,\n        \"y\": 859,\n        \"w\": 1772,\n        \"h\": 722\n    },\n    {\n        \"id\": \"617a5f0353397a73\",\n        \"type\": \"ui_button\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"group\": \"49e3087e0eaf97e1\",\n        \"order\": 2,\n        \"width\": 0,\n        \"height\": 0,\n        \"passthru\": false,\n        \"label\": \"Start\",\n        \"tooltip\": \"\",\n        \"color\": \"\",\n        \"bgcolor\": \"\",\n        \"className\": \"\",\n        \"icon\": \"\",\n        \"payload\": \"true\",\n        \"payloadType\": \"bool\",\n        \"topic\": \"stop\",\n        \"topicType\": \"flow\",\n        \"x\": 210,\n        \"y\": 1100,\n        \"wires\": [\n            [\n                \"41a95e246cd90d9c\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"e17b70f1b7ee4793\",\n        \"type\": \"ui_button\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"group\": \"49e3087e0eaf97e1\",\n        \"order\": 3,\n        \"width\": 0,\n        \"height\": 0,\n        \"passthru\": false,\n        \"label\": \"Stop\",\n        \"tooltip\": \"\",\n        \"color\": \"\",\n        \"bgcolor\": \"\",\n        \"className\": \"\",\n        \"icon\": \"\",\n        \"payload\": \"false\",\n        \"payloadType\": \"bool\",\n        \"topic\": \"stop\",\n        \"topicType\": \"flow\",\n        \"x\": 210,\n        \"y\": 1140,\n        \"wires\": [\n            [\n                \"41a95e246cd90d9c\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"71dc27a8b09852cc\",\n        \"type\": \"debug\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"select\",\n        \"active\": false,\n        \"tosidebar\": true,\n        \"console\": false,\n        \"tostatus\": false,\n        \"complete\": \"payload\",\n        \"targetType\": \"msg\",\n        \"statusVal\": \"\",\n        \"statusType\": \"auto\",\n        \"x\": 1790,\n        \"y\": 1080,\n        \"wires\": []\n    },\n    {\n        \"id\": \"0b67783246d5b32d\",\n        \"type\": \"debug\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"insert\",\n        \"active\": false,\n        \"tosidebar\": true,\n        \"console\": false,\n        \"tostatus\": false,\n        \"complete\": \"payload\",\n        \"targetType\": \"msg\",\n        \"statusVal\": \"\",\n        \"statusType\": \"auto\",\n        \"x\": 1790,\n        \"y\": 1240,\n        \"wires\": []\n    },\n    {\n        \"id\": \"738f14238f2b88b4\",\n        \"type\": \"debug\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"update\",\n        \"active\": false,\n        \"tosidebar\": true,\n        \"console\": false,\n        \"tostatus\": false,\n        \"complete\": \"payload\",\n        \"targetType\": \"msg\",\n        \"statusVal\": \"\",\n        \"statusType\": \"auto\",\n        \"x\": 1790,\n        \"y\": 1400,\n        \"wires\": []\n    },\n    {\n        \"id\": \"4615042b7fc61a12\",\n        \"type\": \"debug\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"delete\",\n        \"active\": false,\n        \"tosidebar\": true,\n        \"console\": false,\n        \"tostatus\": false,\n        \"complete\": \"payload\",\n        \"targetType\": \"msg\",\n        \"statusVal\": \"\",\n        \"statusType\": \"auto\",\n        \"x\": 1790,\n        \"y\": 1540,\n        \"wires\": []\n    },\n    {\n        \"id\": \"be895835d90f1d69\",\n        \"type\": \"switch\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"property\": \"payload.type\",\n        \"propertyType\": \"msg\",\n        \"rules\": [\n            {\n                \"t\": \"eq\",\n                \"v\": \"select\",\n                \"vt\": \"str\"\n            },\n            {\n                \"t\": \"eq\",\n                \"v\": \"update\",\n                \"vt\": \"str\"\n            },\n            {\n                \"t\": \"eq\",\n                \"v\": \"insert\",\n                \"vt\": \"str\"\n            },\n            {\n                \"t\": \"eq\",\n                \"v\": \"delete\",\n                \"vt\": \"str\"\n            },\n            {\n                \"t\": \"else\"\n            }\n        ],\n        \"checkall\": \"true\",\n        \"repair\": false,\n        \"outputs\": 5,\n        \"x\": 730,\n        \"y\": 1220,\n        \"wires\": [\n            [\n                \"39bef8d410bdf447\"\n            ],\n            [\n                \"dc3ed6c2fa62b0cb\"\n            ],\n            [\n                \"8942d9f2a252e835\"\n            ],\n            [\n                \"56a3704aa73bba3b\"\n            ],\n            []\n        ]\n    },\n    {\n        \"id\": \"f6bc9f71abf0c741\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"get next\",\n        \"func\": \"node.send({topic: \\\"control\\\", payload: \\\"drop\\\"})\\nmsg.topic = \\\"control\\\"\\nmsg.payload = \\\"peek\\\"\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1790,\n        \"y\": 1000,\n        \"wires\": [\n            [\n                \"39bef8d410bdf447\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"39bef8d410bdf447\",\n        \"type\": \"q-gate\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"q-gate\",\n        \"controlTopic\": \"control\",\n        \"defaultState\": \"queueing\",\n        \"openCmd\": \"open\",\n        \"closeCmd\": \"close\",\n        \"toggleCmd\": \"toggle\",\n        \"queueCmd\": \"queue\",\n        \"defaultCmd\": \"default\",\n        \"triggerCmd\": \"trigger\",\n        \"flushCmd\": \"flush\",\n        \"resetCmd\": \"reset\",\n        \"peekCmd\": \"peek\",\n        \"dropCmd\": \"drop\",\n        \"statusCmd\": \"status\",\n        \"maxQueueLength\": \"100\",\n        \"keepNewest\": false,\n        \"qToggle\": false,\n        \"persist\": false,\n        \"x\": 1000,\n        \"y\": 1000,\n        \"wires\": [\n            [\n                \"10dc9d288d1b29cb\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"60e89040d3e74d35\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"get next\",\n        \"func\": \"node.send({topic: \\\"control\\\", payload: \\\"drop\\\"})\\nmsg.topic = \\\"control\\\"\\nmsg.payload = \\\"peek\\\"\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1790,\n        \"y\": 1160,\n        \"wires\": [\n            [\n                \"dc3ed6c2fa62b0cb\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"dc3ed6c2fa62b0cb\",\n        \"type\": \"q-gate\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"q-gate\",\n        \"controlTopic\": \"control\",\n        \"defaultState\": \"queueing\",\n        \"openCmd\": \"open\",\n        \"closeCmd\": \"close\",\n        \"toggleCmd\": \"toggle\",\n        \"queueCmd\": \"queue\",\n        \"defaultCmd\": \"default\",\n        \"triggerCmd\": \"trigger\",\n        \"flushCmd\": \"flush\",\n        \"resetCmd\": \"reset\",\n        \"peekCmd\": \"peek\",\n        \"dropCmd\": \"drop\",\n        \"statusCmd\": \"status\",\n        \"maxQueueLength\": \"100\",\n        \"keepNewest\": false,\n        \"qToggle\": false,\n        \"persist\": false,\n        \"x\": 1000,\n        \"y\": 1160,\n        \"wires\": [\n            [\n                \"befc87ac11dddf4d\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"2f628e844ce034c2\",\n        \"type\": \"inject\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"Start\",\n        \"props\": [\n            {\n                \"p\": \"payload\"\n            }\n        ],\n        \"repeat\": \"\",\n        \"crontab\": \"\",\n        \"once\": false,\n        \"onceDelay\": 0.1,\n        \"topic\": \"\",\n        \"payload\": \"true\",\n        \"payloadType\": \"bool\",\n        \"x\": 210,\n        \"y\": 1180,\n        \"wires\": [\n            [\n                \"41a95e246cd90d9c\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"93abfb7989ec1ffc\",\n        \"type\": \"inject\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"Stop\",\n        \"props\": [\n            {\n                \"p\": \"payload\"\n            }\n        ],\n        \"repeat\": \"\",\n        \"crontab\": \"\",\n        \"once\": false,\n        \"onceDelay\": 0.1,\n        \"topic\": \"\",\n        \"payload\": \"false\",\n        \"payloadType\": \"bool\",\n        \"x\": 210,\n        \"y\": 1220,\n        \"wires\": [\n            [\n                \"41a95e246cd90d9c\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"a4bceba958c63ade\",\n        \"type\": \"loop\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"kind\": \"cond\",\n        \"count\": \"\",\n        \"initial\": \"1\",\n        \"step\": \"1\",\n        \"condition\": \"flow.get(\\\"stop\\\")\",\n        \"conditionType\": \"js\",\n        \"when\": \"before\",\n        \"enumeration\": \"enum\",\n        \"enumerationType\": \"msg\",\n        \"limit\": \"\",\n        \"loopPayload\": \"loop-keep\",\n        \"finalPayload\": \"final-orig\",\n        \"x\": 730,\n        \"y\": 900,\n        \"wires\": [\n            [],\n            [\n                \"ea3ca3637256ded7\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"41a95e246cd90d9c\",\n        \"type\": \"change\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"rules\": [\n            {\n                \"t\": \"move\",\n                \"p\": \"payload\",\n                \"pt\": \"msg\",\n                \"to\": \"stop\",\n                \"tot\": \"flow\"\n            }\n        ],\n        \"action\": \"\",\n        \"property\": \"\",\n        \"from\": \"\",\n        \"to\": \"\",\n        \"reg\": false,\n        \"x\": 410,\n        \"y\": 1160,\n        \"wires\": [\n            [\n                \"a4bceba958c63ade\",\n                \"de161152f740c19f\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"6a372ebb5dd09b95\",\n        \"type\": \"delay\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"pauseType\": \"delay\",\n        \"timeout\": \"2\",\n        \"timeoutUnits\": \"seconds\",\n        \"rate\": \"1\",\n        \"nbRateUnits\": \"1\",\n        \"rateUnits\": \"second\",\n        \"randomFirst\": \"1\",\n        \"randomLast\": \"5\",\n        \"randomUnits\": \"seconds\",\n        \"drop\": false,\n        \"allowrate\": false,\n        \"outputs\": 1,\n        \"x\": 680,\n        \"y\": 1080,\n        \"wires\": [\n            [\n                \"a4bceba958c63ade\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"ea3ca3637256ded7\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"function 7\",\n        \"func\": \"const redis = context.global.get('redis');\\nconst client = redis.createClient({ url: 'redis://redis:6379' });\\n\\nawait client.connect();\\n\\nlet cursor = 0\\nvar results = []\\ndo {\\n    let result = await client.SCAN(cursor, { \\\"MATCH\\\": \\\"isToTake:*\\\" });\\n    cursor = result.cursor\\n    for (const key of result.keys) {\\n        results.push(key)\\n    }\\n} while (cursor != 0);\\n\\nif (results.length) {\\n\\n    for (const key of results) {\\n        await client.WATCH(key)\\n        let item = await client.hGetAll(key);\\n        await client.multi()\\n            .DEL(key)\\n            .hSet('isTaken:' + item.timestamp, item)\\n            .exec();\\n        msg.statusCode = 200;//not found\\n        msg.payload = item\\n        node.send(msg)\\n    }\\n    await client.UNWATCH()\\n    client.quit()\\n    msg.payload = null\\n    node.send(msg)\\n} else {\\n\\n    client.quit()\\n    msg.statusCode = 404;//not found\\n    msg.payload = null\\n    node.send(msg);\\n}\\n\\n\\n\\n\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 800,\n        \"y\": 980,\n        \"wires\": [\n            [\n                \"6a372ebb5dd09b95\",\n                \"be895835d90f1d69\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"a52ca0b00441d668\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"get next\",\n        \"func\": \"node.send({topic: \\\"control\\\", payload: \\\"drop\\\"})\\nmsg.topic = \\\"control\\\"\\nmsg.payload = \\\"peek\\\"\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1790,\n        \"y\": 1320,\n        \"wires\": [\n            [\n                \"8942d9f2a252e835\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"8942d9f2a252e835\",\n        \"type\": \"q-gate\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"q-gate\",\n        \"controlTopic\": \"control\",\n        \"defaultState\": \"queueing\",\n        \"openCmd\": \"open\",\n        \"closeCmd\": \"close\",\n        \"toggleCmd\": \"toggle\",\n        \"queueCmd\": \"queue\",\n        \"defaultCmd\": \"default\",\n        \"triggerCmd\": \"trigger\",\n        \"flushCmd\": \"flush\",\n        \"resetCmd\": \"reset\",\n        \"peekCmd\": \"peek\",\n        \"dropCmd\": \"drop\",\n        \"statusCmd\": \"status\",\n        \"maxQueueLength\": \"100\",\n        \"keepNewest\": false,\n        \"qToggle\": false,\n        \"persist\": false,\n        \"x\": 1000,\n        \"y\": 1320,\n        \"wires\": [\n            [\n                \"b35223ba0f6417fd\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"f30d364b625f12f9\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"get next\",\n        \"func\": \"node.send({topic: \\\"control\\\", payload: \\\"drop\\\"})\\nmsg.topic = \\\"control\\\"\\nmsg.payload = \\\"peek\\\"\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1790,\n        \"y\": 1460,\n        \"wires\": [\n            [\n                \"56a3704aa73bba3b\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"56a3704aa73bba3b\",\n        \"type\": \"q-gate\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"q-gate\",\n        \"controlTopic\": \"control\",\n        \"defaultState\": \"queueing\",\n        \"openCmd\": \"open\",\n        \"closeCmd\": \"close\",\n        \"toggleCmd\": \"toggle\",\n        \"queueCmd\": \"queue\",\n        \"defaultCmd\": \"default\",\n        \"triggerCmd\": \"trigger\",\n        \"flushCmd\": \"flush\",\n        \"resetCmd\": \"reset\",\n        \"peekCmd\": \"peek\",\n        \"dropCmd\": \"drop\",\n        \"statusCmd\": \"status\",\n        \"maxQueueLength\": \"100\",\n        \"keepNewest\": false,\n        \"qToggle\": false,\n        \"persist\": false,\n        \"x\": 1000,\n        \"y\": 1460,\n        \"wires\": [\n            [\n                \"3aeae8d28746cfb9\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"10dc9d288d1b29cb\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"flow.set\",\n        \"func\": \"flow.set('select', msg.payload);\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1150,\n        \"y\": 1000,\n        \"wires\": [\n            [\n                \"7d11aec2ec2364ca\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"befc87ac11dddf4d\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"flow.set\",\n        \"func\": \"flow.set('update', msg.payload);\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1150,\n        \"y\": 1160,\n        \"wires\": [\n            [\n                \"e40d4c23b8cc7c2a\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"b35223ba0f6417fd\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"flow.set\",\n        \"func\": \"flow.set('insert', msg.payload);\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1150,\n        \"y\": 1320,\n        \"wires\": [\n            [\n                \"9d652287d5b09c8e\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"3aeae8d28746cfb9\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"flow.set\",\n        \"func\": \"flow.set('delete', msg.payload);\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1150,\n        \"y\": 1460,\n        \"wires\": [\n            [\n                \"4b2cbfc763286bd0\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"7d11aec2ec2364ca\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"select Cycles\",\n        \"func\": \"var item = flow.get('select') || [];\\n\\nwhile (item.iterations > item.counter) {\\n   item.counter++\\n   msg.delay = item.delay\\n   flow.set('select', item);\\n   return [null, msg];\\n}\\nflow.set('select', undefined);\\n\\nmsg.payload = item\\nreturn [msg, null];\\n\\n\\n\\n\\n\",\n        \"outputs\": 2,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1355,\n        \"y\": 1000,\n        \"wires\": [\n            [\n                \"8e678d8e56ba350d\"\n            ],\n            [\n                \"37974d44253f1177\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"e40d4c23b8cc7c2a\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"insert Cycles\",\n        \"func\": \"var item = flow.get('update') || [];\\n\\nwhile (item.iterations > item.counter) {\\n   item.counter++\\n   msg.delay = item.delay\\n   msg.payload = {\\n      \\\"type\\\": item.type,\\n      \\\"counter\\\": item.counter\\n   }\\n\\n   flow.set('update', item);\\n   return [null, msg];\\n}\\nflow.set('update', undefined);\\n\\n\\nmsg.payload = item\\nreturn [msg, null];\\n\",\n        \"outputs\": 2,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1355,\n        \"y\": 1160,\n        \"wires\": [\n            [\n                \"c155b3fa6a0ed5eb\"\n            ],\n            [\n                \"0e8d0576a9b41035\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"9d652287d5b09c8e\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"Select Cycles\",\n        \"func\": \"var item = flow.get('insert') || [];\\n\\nwhile (item.iterations > item.counter) {\\n   item.counter++\\n   msg.delay = item.delay\\n   msg.payload = {\\n      \\\"type\\\": item.type,\\n      \\\"counter\\\": item.counter\\n   }\\n\\n   flow.set('insert', item);\\n   return [null, msg];\\n}\\nflow.set('insert', undefined);\\n\\n\\nmsg.payload = item\\nreturn [msg, null];\\n\\n\\n\",\n        \"outputs\": 2,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1355,\n        \"y\": 1320,\n        \"wires\": [\n            [\n                \"ea97105787fc2947\"\n            ],\n            [\n                \"8d857a4c1d31c23e\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"4b2cbfc763286bd0\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"Select Cycles\",\n        \"func\": \"var item = flow.get('delete') || [];\\n\\nwhile (item.iterations > item.counter) {\\n   item.counter++\\n   msg.delay = item.delay\\n   msg.payload = {\\n      \\\"type\\\": item.type,\\n      \\\"counter\\\": item.counter\\n   }\\n\\n   flow.set('delete', item);\\n   return [null, msg];\\n}\\nflow.set('delete', undefined);\\n\\n\\nmsg.payload = item\\nreturn [msg, null];\\n\\n\\n\\n\\n\",\n        \"outputs\": 2,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1355,\n        \"y\": 1460,\n        \"wires\": [\n            [\n                \"6bc3bdcb45f20994\"\n            ],\n            [\n                \"442fccdb9c89a91d\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"6bc3bdcb45f20994\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"isDone\",\n        \"func\": \"const redis = context.global.get('redis');\\nconst client = redis.createClient({ url: 'redis://redis:6379' });\\n\\nawait client.connect();\\nawait client.multi()\\n    .DEL(\\\"isTaken:\\\" + msg.payload.timestamp)\\n    .hSet(\\\"isDone:\\\" + msg.payload.timestamp, msg.payload)\\n    .exec();\\nclient.quit()\\n\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1580,\n        \"y\": 1460,\n        \"wires\": [\n            [\n                \"f30d364b625f12f9\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"de161152f740c19f\",\n        \"type\": \"change\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"rules\": [\n            {\n                \"t\": \"set\",\n                \"p\": \"payload\",\n                \"pt\": \"msg\",\n                \"to\": \"peek\",\n                \"tot\": \"str\"\n            },\n            {\n                \"t\": \"set\",\n                \"p\": \"topic\",\n                \"pt\": \"msg\",\n                \"to\": \"control\",\n                \"tot\": \"str\"\n            }\n        ],\n        \"action\": \"\",\n        \"property\": \"\",\n        \"from\": \"\",\n        \"to\": \"\",\n        \"reg\": false,\n        \"x\": 730,\n        \"y\": 1440,\n        \"wires\": [\n            [\n                \"39bef8d410bdf447\",\n                \"dc3ed6c2fa62b0cb\",\n                \"8942d9f2a252e835\",\n                \"56a3704aa73bba3b\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"8e678d8e56ba350d\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"isDone\",\n        \"func\": \"const redis = context.global.get('redis');\\nconst client = redis.createClient({ url: 'redis://redis:6379' });\\n\\nawait client.connect();\\nawait client.multi()\\n    .DEL(\\\"isTaken:\\\" + msg.payload.timestamp)\\n    .hSet(\\\"isDone:\\\" + msg.payload.timestamp, msg.payload)\\n    .exec();\\nclient.quit()\\n\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1580,\n        \"y\": 1000,\n        \"wires\": [\n            [\n                \"f6bc9f71abf0c741\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"c155b3fa6a0ed5eb\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"isDone\",\n        \"func\": \"const redis = context.global.get('redis');\\nconst client = redis.createClient({ url: 'redis://redis:6379' });\\n\\nawait client.connect();\\nawait client.multi()\\n    .DEL(\\\"isTaken:\\\" + msg.payload.timestamp)\\n    .hSet(\\\"isDone:\\\" + msg.payload.timestamp, msg.payload)\\n    .exec();\\nclient.quit()\\n\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1580,\n        \"y\": 1160,\n        \"wires\": [\n            [\n                \"60e89040d3e74d35\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"ea97105787fc2947\",\n        \"type\": \"function\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"isDone\",\n        \"func\": \"const redis = context.global.get('redis');\\nconst client = redis.createClient({ url: 'redis://redis:6379' });\\n\\nawait client.connect();\\nawait client.multi()\\n    .DEL(\\\"isTaken:\\\" + msg.payload.timestamp)\\n    .hSet(\\\"isDone:\\\" + msg.payload.timestamp, msg.payload)\\n    .exec();\\nclient.quit()\\n\\nreturn msg;\",\n        \"outputs\": 1,\n        \"noerr\": 0,\n        \"initialize\": \"\",\n        \"finalize\": \"\",\n        \"libs\": [],\n        \"x\": 1580,\n        \"y\": 1320,\n        \"wires\": [\n            [\n                \"a52ca0b00441d668\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"37974d44253f1177\",\n        \"type\": \"actionflows\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"info\": \"Describe your action API here.\",\n        \"untilproptype\": \"num\",\n        \"proptype\": \"msg\",\n        \"name\": \"select\",\n        \"prop\": \"loop\",\n        \"untilprop\": 0,\n        \"until\": \"gt\",\n        \"loop\": \"none\",\n        \"scope\": \"global\",\n        \"perf\": false,\n        \"seq\": false,\n        \"x\": 1355,\n        \"y\": 1080,\n        \"wires\": [\n            [\n                \"7d11aec2ec2364ca\",\n                \"71dc27a8b09852cc\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"0e8d0576a9b41035\",\n        \"type\": \"actionflows\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"info\": \"Describe your action API here.\",\n        \"untilproptype\": \"num\",\n        \"proptype\": \"msg\",\n        \"name\": \"update\",\n        \"prop\": \"loop\",\n        \"untilprop\": 0,\n        \"until\": \"gt\",\n        \"loop\": \"none\",\n        \"scope\": \"global\",\n        \"perf\": false,\n        \"seq\": false,\n        \"x\": 1355,\n        \"y\": 1240,\n        \"wires\": [\n            [\n                \"e40d4c23b8cc7c2a\",\n                \"0b67783246d5b32d\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"8d857a4c1d31c23e\",\n        \"type\": \"actionflows\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"info\": \"Describe your action API here.\",\n        \"untilproptype\": \"num\",\n        \"proptype\": \"msg\",\n        \"name\": \"insert\",\n        \"prop\": \"loop\",\n        \"untilprop\": 0,\n        \"until\": \"gt\",\n        \"loop\": \"none\",\n        \"scope\": \"global\",\n        \"perf\": false,\n        \"seq\": false,\n        \"x\": 1355,\n        \"y\": 1400,\n        \"wires\": [\n            [\n                \"9d652287d5b09c8e\",\n                \"738f14238f2b88b4\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"442fccdb9c89a91d\",\n        \"type\": \"actionflows\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"info\": \"Describe your action API here.\",\n        \"untilproptype\": \"num\",\n        \"proptype\": \"msg\",\n        \"name\": \"delete\",\n        \"prop\": \"loop\",\n        \"untilprop\": 0,\n        \"until\": \"gt\",\n        \"loop\": \"none\",\n        \"scope\": \"global\",\n        \"perf\": false,\n        \"seq\": false,\n        \"x\": 1355,\n        \"y\": 1540,\n        \"wires\": [\n            [\n                \"4615042b7fc61a12\",\n                \"4b2cbfc763286bd0\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"d5b2c90e31d69260\",\n        \"type\": \"inject\",\n        \"z\": \"c4fab67dd16d9611\",\n        \"g\": \"1ef99d7f97206a6d\",\n        \"name\": \"\",\n        \"props\": [\n            {\n                \"p\": \"payload\"\n            },\n            {\n                \"p\": \"topic\",\n                \"vt\": \"str\"\n            }\n        ],\n        \"repeat\": \"\",\n        \"crontab\": \"\",\n        \"once\": false,\n        \"onceDelay\": 0.1,\n        \"topic\": \"\",\n        \"payload\": \"\",\n        \"payloadType\": \"date\",\n        \"x\": 400,\n        \"y\": 1440,\n        \"wires\": [\n            [\n                \"de161152f740c19f\"\n            ]\n        ]\n    },\n    {\n        \"id\": \"49e3087e0eaf97e1\",\n        \"type\": \"ui_group\",\n        \"name\": \"Control\",\n        \"tab\": \"076616130c52a934\",\n        \"order\": 3,\n        \"disp\": true,\n        \"width\": \"6\",\n        \"collapse\": false,\n        \"className\": \"\"\n    },\n    {\n        \"id\": \"076616130c52a934\",\n        \"type\": \"ui_tab\",\n        \"name\": \"View\",\n        \"icon\": \"dashboard\",\n        \"disabled\": false,\n        \"hidden\": false\n    }\n]",
+        "x": 200,
+        "y": 1520,
+        "wires": []
+    },
+    {
+        "id": "e5b2a4eaf60a1f0c",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "10",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 450,
+        "y": 460,
+        "wires": [
+            [
+                "8001c9f6228fc757"
+            ]
+        ]
+    },
+    {
+        "id": "22cb787275472392",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "40",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "40",
+        "payloadType": "num",
+        "x": 610,
+        "y": 460,
+        "wires": [
+            [
+                "8001c9f6228fc757"
+            ]
+        ]
+    },
+    {
+        "id": "b31460ca2e7fe7b2",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "49e3087e0eaf97e1",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Start Processing",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "true",
+        "payloadType": "bool",
+        "topic": "stop",
+        "topicType": "flow",
+        "x": 300,
+        "y": 700,
+        "wires": [
+            [
+                "60e5d04f04bb8b60"
+            ]
+        ]
+    },
+    {
+        "id": "ad370b18818a397f",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "49e3087e0eaf97e1",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Stop Processing",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "false",
+        "payloadType": "bool",
+        "topic": "stop",
+        "topicType": "flow",
+        "x": 300,
+        "y": 760,
+        "wires": [
+            [
+                "60e5d04f04bb8b60"
+            ]
+        ]
+    },
+    {
+        "id": "f8037b9051d3a2c2",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 330,
+        "y": 580,
+        "wires": [
+            [
+                "bd3661853a9cadd4"
+            ]
+        ]
+    },
+    {
+        "id": "bd3661853a9cadd4",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "SCAN isTaken",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nawait client.connect();\nlet cursor = 0\nvar results = []\ndo {\n    let result = await client.SCAN(cursor, { \"MATCH\": \"isTaken:*\" });\n    cursor = result.cursor\n    for (const key of result.keys) {\n        results.push(await client.hGetAll(key))\n    }\n} while (cursor != 0);\n\n\nclient.quit()\n\nmsg.payload = results\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 580,
+        "wires": [
+            [
+                "6c907929dbf92417"
+            ]
+        ]
+    },
+    {
+        "id": "6c907929dbf92417",
+        "type": "ui_table",
+        "z": "c4fab67dd16d9611",
+        "group": "86c4f5821759c76a",
+        "name": "Table isTaken",
+        "order": 2,
+        "width": 16,
+        "height": 4,
+        "columns": [
+            {
+                "field": "id",
+                "title": "ID",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "type",
+                "title": "type",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "iterations",
+                "title": "iterations",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "delay",
+                "title": "delay",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 780,
+        "y": 580,
+        "wires": [
+            [
+                "af34fc9f8bf3e671"
+            ]
+        ]
+    },
+    {
+        "id": "af34fc9f8bf3e671",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "remove item",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nawait client.connect();\nawait client.DEL(\"isTaken:\" + msg.payload.id)\n\nclient.quit()\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 580,
+        "wires": [
+            [
+                "3abe582c05109796"
+            ]
+        ]
+    },
+    {
+        "id": "3abe582c05109796",
+        "type": "debug",
+        "z": "c4fab67dd16d9611",
+        "name": "remove item",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 580,
+        "wires": []
+    },
+    {
+        "id": "8fca3a5242690f18",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "5",
+        "crontab": "",
+        "once": true,
+        "onceDelay": "2",
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 330,
+        "y": 640,
+        "wires": [
+            [
+                "39f1f85ad5bfb72d"
+            ]
+        ]
+    },
+    {
+        "id": "39f1f85ad5bfb72d",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "SCAN isDone",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nawait client.connect();\nlet cursor = 0\nvar results = []\ndo {\n    let result = await client.SCAN(cursor, { \"MATCH\": \"isDone:*\" });\n    cursor = result.cursor\n    for (const key of result.keys) {\n        results.push(await client.hGetAll(key))\n    }\n} while (cursor != 0);\n\n\nclient.quit()\n\nmsg.payload = results\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 640,
+        "wires": [
+            [
+                "30e5c9ade82d338b"
+            ]
+        ]
+    },
+    {
+        "id": "30e5c9ade82d338b",
+        "type": "ui_table",
+        "z": "c4fab67dd16d9611",
+        "group": "86c4f5821759c76a",
+        "name": "Table isDone",
+        "order": 3,
+        "width": 16,
+        "height": 4,
+        "columns": [
+            {
+                "field": "id",
+                "title": "ID",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "type",
+                "title": "type",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "iterations",
+                "title": "iterations",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            },
+            {
+                "field": "delay",
+                "title": "delay",
+                "width": "",
+                "align": "left",
+                "formatter": "plaintext",
+                "formatterParams": {
+                    "target": "_blank"
+                }
+            }
+        ],
+        "outputs": 1,
+        "cts": true,
+        "x": 770,
+        "y": 640,
+        "wires": [
+            [
+                "288deeaf37d73c9c"
+            ]
+        ]
+    },
+    {
+        "id": "288deeaf37d73c9c",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "remove item",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\n\nawait client.connect();\nawait client.DEL(\"isDone:\" + msg.payload.id)\n\nclient.quit()\n\n\nreturn msg",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 970,
+        "y": 640,
+        "wires": [
+            [
+                "9e3180ae6b57e655"
+            ]
+        ]
+    },
+    {
+        "id": "9e3180ae6b57e655",
+        "type": "debug",
+        "z": "c4fab67dd16d9611",
+        "name": "remove item",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 640,
+        "wires": []
+    },
+    {
+        "id": "60e5d04f04bb8b60",
+        "type": "amqp-out",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "broker": "4ade2752bb8e0a7b",
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "command01.routing.key",
+        "exchangeRoutingKeyType": "str",
+        "exchangeDurable": true,
+        "amqpProperties": "{ \"headers\": {} }",
+        "rpcTimeoutMilliseconds": 3000,
+        "outputs": 0,
+        "x": 580,
+        "y": 720,
+        "wires": []
+    },
+    {
+        "id": "4c9c30a5cfb15fd3",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "dd54207981703118",
+        "order": 11,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "=> 40",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "40",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 410,
+        "y": 380,
+        "wires": [
+            [
+                "8001c9f6228fc757"
+            ]
+        ]
+    },
+    {
+        "id": "e4f2022f89cb035f",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "dd54207981703118",
+        "order": 10,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "=> 10",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "10",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 410,
+        "y": 340,
+        "wires": [
+            [
+                "8001c9f6228fc757"
+            ]
+        ]
+    },
+    {
+        "id": "ccdd63dc7fd2e9f9",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "dd54207981703118",
+        "order": 9,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "=> 5",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "5",
+        "payloadType": "num",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 410,
+        "y": 300,
+        "wires": [
+            [
+                "8001c9f6228fc757"
+            ]
+        ]
+    },
+    {
+        "id": "6c5dee4c1c0c6ef9",
+        "type": "function",
+        "z": "c4fab67dd16d9611",
+        "name": "flushDB",
+        "func": "const redis = context.global.get('redis');\nvar envw = global.get('env');\nconst client = redis.createClient({ url: envw.REDIS_HOSTS });\nawait client.connect();\nawait client.FLUSHDB('ASYNC', function (err, succeeded) {\n    console.log(succeeded); // will be true if successfull\n});\n\nclient.quit()\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 540,
+        "y": 840,
+        "wires": [
+            [
+                "cd390321cb43cbce"
+            ]
+        ]
+    },
+    {
+        "id": "fc1d894e6c45adc8",
+        "type": "inject",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "str",
+        "x": 270,
+        "y": 900,
+        "wires": [
+            [
+                "6c5dee4c1c0c6ef9"
+            ]
+        ]
+    },
+    {
+        "id": "cd390321cb43cbce",
+        "type": "debug",
+        "z": "c4fab67dd16d9611",
+        "name": "debug 14",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 740,
+        "y": 840,
+        "wires": []
+    },
+    {
+        "id": "ff5e4393d929e25d",
+        "type": "comment",
+        "z": "c4fab67dd16d9611",
+        "name": "nodes",
+        "info": "node-red-dashboard\nnode-red-node-ui-table\n@meowwolf/node-red-contrib-amqp\n@reggae_ulli/node-red-contrib-minio-all-fix\nnode-red-contrib-postgresql",
+        "x": 150,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "e4f7a6394f885d71",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "49e3087e0eaf97e1",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Delete All Redis Tables",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 840,
+        "wires": [
+            [
+                "6c5dee4c1c0c6ef9"
+            ]
+        ]
+    },
+    {
+        "id": "7284cdfb4115bff2",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "49e3087e0eaf97e1",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Delete all objects in store",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 270,
+        "y": 980,
+        "wires": [
+            [
+                "d2e0632ee6400127"
+            ]
+        ]
+    },
+    {
+        "id": "d2e0632ee6400127",
+        "type": "amqp-out",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "broker": "4ade2752bb8e0a7b",
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "command02.routing.key",
+        "exchangeRoutingKeyType": "str",
+        "exchangeDurable": true,
+        "amqpProperties": "{ \"headers\": {} }",
+        "rpcTimeoutMilliseconds": 3000,
+        "outputs": 0,
+        "x": 600,
+        "y": 980,
+        "wires": []
+    },
+    {
+        "id": "c6d692e222d5612a",
+        "type": "ui_button",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "group": "49e3087e0eaf97e1",
+        "order": 5,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Delete all indices in elastic",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 280,
+        "y": 1060,
+        "wires": [
+            [
+                "a7d63058d2dde8b5"
+            ]
+        ]
+    },
+    {
+        "id": "a7d63058d2dde8b5",
+        "type": "amqp-out",
+        "z": "c4fab67dd16d9611",
+        "name": "",
+        "broker": "4ade2752bb8e0a7b",
+        "exchangeName": "amq.topic",
+        "exchangeType": "topic",
+        "exchangeRoutingKey": "command03.routing.key",
+        "exchangeRoutingKeyType": "str",
+        "exchangeDurable": true,
+        "amqpProperties": "{ \"headers\": {} }",
+        "rpcTimeoutMilliseconds": 3000,
+        "outputs": 0,
+        "x": 600,
+        "y": 1060,
+        "wires": []
+    }
+]
