@@ -1,0 +1,17 @@
+{
+    "name": "MyMock",
+    "description": "A Node-RED Project",
+    "version": "0.0.1",
+    "dependencies": {},
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "~6.1.0",
+        "request": "^2.88.0"
+    },
+    "node-red": {
+        "settings": {
+            "flowFile": "flows.json",
+            "credentialsFile": "flows_cred.json"
+        }
+    }
+}

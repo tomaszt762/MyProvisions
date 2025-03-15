@@ -1,0 +1,591 @@
+[
+    {
+        "id": "9b21c092.4affa8",
+        "type": "tab",
+        "label": "Flow 3",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "2bcf548e.9f0ce4",
+        "type": "Kafka Broker",
+        "name": "",
+        "hosts": [
+            {
+                "host": "kafka",
+                "port": 29092
+            }
+        ],
+        "hostsEnvVar": "",
+        "connectTimeout": "60000",
+        "requestTimeout": "30000",
+        "autoConnect": "true",
+        "idleConnection": "5",
+        "reconnectOnIdle": "true",
+        "maxAsyncRequests": "10",
+        "checkInterval": "10",
+        "selfSign": true,
+        "usetls": false,
+        "useCredentials": false
+    },
+    {
+        "id": "f4be98fb.fb1858",
+        "type": "elasticsearch-config",
+        "name": "ElasticSearch",
+        "server": "http://elastic:9200/",
+        "timeout": "30000",
+        "apiVersion": "7.x"
+    },
+    {
+        "id": "26ceb598.9cb1a2",
+        "type": "ui_tab",
+        "name": "DataPower Mock",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "f1afe04e.0d40d",
+        "type": "ui_group",
+        "name": "DataPower",
+        "tab": "26ceb598.9cb1a2",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false
+    },
+    {
+        "id": "4c521d28.65a5d4",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": true,
+                "reset": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c5cd1e6f.3e337",
+        "type": "function",
+        "z": "9b21c092.4affa8",
+        "name": "SERVICE_STARTED",
+        "func": "\nvar serviceArray = [\n{category:\"QUERY\", module:\"dn01\", name:\"creditScore\", version:\"1.1\", type:\"MultiProtocolGateway\", protocol:\"HTTP\", port:\"80\", operation:\"GET\", apiFormat:\"REST\", dataFormat:\"JSON\"}, \n{category:\"COMMAND\", module:\"dn02\", name:\"order\", version:\"1.7\", type:\"MultiProtocolGateway\", protocol:\"HTTPS\", port:\"443\", operation:\"POST\", apiFormat:\"REST\", dataFormat:\"JSON\"}, \n{category:\"QUERY\", module:\"dn01\", name:\"order\", version:\"1.7\", type:\"MultiProtocolGateway\", protocol:\"HTTPS\", port:\"443\", operation:\"GET\", apiFormat:\"REST\", dataFormat:\"JSON\"}, \n{category:\"COMMAND\", module:\"dn02\", name:\"order\", version:\"1.7\", type:\"MultiProtocolGateway\", protocol:\"HTTPS\", port:\"443\", operation:\"DELETE\", apiFormat:\"REST\", dataFormat:\"JSON\"}, \n{category:\"COMMAND\", module:\"dn03\", name:\"billing\", version:\"1\", type:\"WebServiceProxy\", protocol:\"HTTPS\", port:\"443\", operation:\"createSubscription\", apiFormat:\"SOAP\", dataFormat:\"XML\"}, \n{category:\"COMMAND\", module:\"dn01\", name:\"billing\", version:\"1\", type:\"WebServiceProxy\", protocol:\"HTTPS\", port:\"443\", operation:\"deleteBundledItems\", apiFormat:\"SOAP\", dataFormat:\"XML\"}, \n{category:\"QUERY\", module:\"dn01\", name:\"billing\", version:\"1\", type:\"WebServiceProxy\", protocol:\"HTTPS\", port:\"443\", operation:\"getNetworkServices\", apiFormat:\"SOAP\", dataFormat:\"XML\"}, \n{category:\"QUERY\", module:\"dn01\", name:\"billing\", version:\"1\", type:\"WebServiceProxy\", protocol:\"HTTPS\", port:\"443\", operation:\"getPromotions\", apiFormat:\"SOAP\", dataFormat:\"XML\"}, \n{category:\"DATAGRAM\", module:\"dn01\", name:\"reportfiles\", version:\"2.4\", type:\"MultiProtocolGateway\", protocol:\"FTPS\", port:\"990\", operation:\"GET\", apiFormat:\"REST\", dataFormat:\"Binary\"}, \n{category:\"DATAGRAM\", module:\"dn01\", name:\"reportfiles\", version:\"2.4\", type:\"MultiProtocolGateway\", protocol:\"FTPS\", port:\"990\", operation:\"PUT\", apiFormat:\"REST\", dataFormat:\"Binary\"}, \n{category:\"EVENT\", module:\"dn03\", name:\"devicelocation\", version:\"1.4\", type:\"MultiProtocolGateway\", protocol:\"HTTPS\", port:\"9092\", operation:\"SEND\", apiFormat:\"REST\", dataFormat:\"JSON\"}, \n{category:\"EVENT\", module:\"dn02\", name:\"devicelocation\", version:\"1.4\", type:\"MultiProtocolGateway\", protocol:\"HTTPS\", port:\"9092\", operation:\"GET\", apiFormat:\"REST\", dataFormat:\"JSON\"}\n]\n\nvar serviceInstance = serviceArray[Math.floor(Math.random()*serviceArray.length)];\nvar userArray = [ \"axxa2312\", \"varta01\", \"pkobp\", \"visa44\", \"allegro765\", \"mbank99\"]; \nvar userInstance = userArray[Math.floor(Math.random()*userArray.length)];\nvar hostArray = [ \"mars01.appar01t.pl\", \"mars02.appart02.pl\", \"mars03.appart02.pl\"]; \nvar hostInstance = hostArray[Math.floor(Math.random()*hostArray.length)];\n//var date = new Date('2021-02-01T00:00:01')\n//var date = new Date('2021-01-28T23:00:00.000Z')\nvar date = new Date(msg.startDate)\n\ndate.setHours( date.getHours() + msg.i*4)\ndate.setMinutes( date.getMinutes() + (Math.floor(Math.random() * 201) - 100))\n\n\n\nvar data = {\n        \"inputParameters\": {},\n        \"outputParameters\": {}\n      }\nswitch (serviceInstance.category) {\ncase 'QUERY': data = {\"outputParameters\": {\"value01\":Math.floor(Math.random() * (1000 - 400 + 1)) + 400}}\n    break;\ncase 'COMMAND': data = {\"inputParameters\": {\"value01\":Math.floor(Math.random() * (1000 - 400 + 1)) + 400}}\n    break;\ncase 'DATAGRAM': data = {\"inputParameters\": {\"value01\":Math.floor(Math.random() * (1000 - 400 + 1)) + 400}}\n    break;    \ncase 'EVENT': data = {\"inputParameters\": {\"value01\":Math.floor(Math.random() * (1000 - 400 + 1)) + 400},\n        \"outputParameters\": {\"value01\":Math.floor(Math.random() * (1000 - 400 + 1)) + 400}\n      }\n    break;   \n \n  default:\n\n} \n\nmsg.payload =   {\n      \"id\": uuidv4(),\n      \"timestamp\": date.toISOString(),\n      \"category\": \"dp:\"+serviceInstance.category,\n      \"type\": \"dp:SERVICE_STARTED\",\n      \"data\": data,\n      \"source\": {\n        \"id\": serviceInstance.module+\"-\"+serviceInstance.name,\n        \"module\": serviceInstance.module,\n        \"name\": serviceInstance.name,\n        \"version\": serviceInstance.version,\n        \"type\": serviceInstance.type,\n        \"urlPath\": \"/\"+serviceInstance.name +\"/v\"+serviceInstance.version,\n        \"protocol\": serviceInstance.protocol,\n        \"port\": serviceInstance.port,\n        \"operation\": serviceInstance.operation,\n        \"apiFormat\": serviceInstance.apiFormat,\n        \"dataFormat\": serviceInstance.dataFormat\n      },\n      \"system\": {\n        \"id\": hostInstance\n      },\n      \"user\": {\n        \"id\": userInstance \n      }\n\n\n\n};\n\nmsg.random = Math.floor(Math.random() * (10 - 1 + 1)) + 1;\nmsg.key = 'datapower'\n\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 580,
+        "y": 360,
+        "wires": [
+            [
+                "b921c1a1.1f9468",
+                "7fed6b1a.b1ab54",
+                "970ee6d0.37a8e"
+            ]
+        ]
+    },
+    {
+        "id": "523e7855.826f8",
+        "type": "inject",
+        "z": "9b21c092.4affa8",
+        "name": "Send Message",
+        "props": [
+            {
+                "p": "per4hours",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "p": "iterations",
+                "v": "2",
+                "vt": "num"
+            },
+            {
+                "p": "startDate",
+                "v": "2021-01-01T00:00:01",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": "1",
+        "topic": "",
+        "x": 120,
+        "y": 60,
+        "wires": [
+            [
+                "bf503a10.0d0dd8"
+            ]
+        ]
+    },
+    {
+        "id": "d27bed54.e030c",
+        "type": "function",
+        "z": "9b21c092.4affa8",
+        "name": "SERVICE_COMPLETED",
+        "func": "\nmsg.payload.type = \"dp:SERVICE_COMPLETED\"\nvar date = new Date(msg.payload.timestamp)\n\ndate.setSeconds(date.getSeconds() + 10*Math.random())\nmsg.payload.timestamp = date.toISOString()\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 950,
+        "y": 420,
+        "wires": [
+            [
+                "7fed6b1a.b1ab54"
+            ]
+        ]
+    },
+    {
+        "id": "b921c1a1.1f9468",
+        "type": "switch",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "property": "random",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "$round($random()*30, 0)\t",
+                "vt": "jsonata"
+            },
+            {
+                "t": "else"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 2,
+        "x": 750,
+        "y": 420,
+        "wires": [
+            [
+                "8ff957cb.b1464"
+            ],
+            [
+                "d27bed54.e030c"
+            ]
+        ]
+    },
+    {
+        "id": "8ff957cb.b1464",
+        "type": "function",
+        "z": "9b21c092.4affa8",
+        "name": "SERVICE_FAILED",
+        "func": "\nmsg.payload.type = \"dp:SERVICE_FAILED\"\nvar date = new Date(msg.payload.timestamp)\n\ndate.setSeconds(date.getSeconds() + 30*Math.random())\nmsg.payload.timestamp = date.toISOString()\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 930,
+        "y": 340,
+        "wires": [
+            [
+                "7fed6b1a.b1ab54"
+            ]
+        ]
+    },
+    {
+        "id": "bf503a10.0d0dd8",
+        "type": "counter-loop",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "counter": "i",
+        "counterType": "msg",
+        "reset": true,
+        "resetValue": "value-empty",
+        "initial": 0,
+        "initialType": "num",
+        "operator": "lt",
+        "termination": "per4hours",
+        "terminationType": "msg",
+        "increment": 1,
+        "incrementType": "num",
+        "x": 590,
+        "y": 60,
+        "wires": [
+            [],
+            [
+                "35d001da.f089be"
+            ]
+        ]
+    },
+    {
+        "id": "35d001da.f089be",
+        "type": "counter-loop",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "counter": "j",
+        "counterType": "msg",
+        "reset": true,
+        "resetValue": "value-empty",
+        "initial": 0,
+        "initialType": "num",
+        "operator": "lt",
+        "termination": "iterations",
+        "terminationType": "msg",
+        "increment": 1,
+        "incrementType": "num",
+        "x": 580,
+        "y": 260,
+        "wires": [
+            [
+                "6127730f.ef3f54"
+            ],
+            [
+                "c5cd1e6f.3e337"
+            ]
+        ]
+    },
+    {
+        "id": "7fed6b1a.b1ab54",
+        "type": "json",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "property": "payload",
+        "action": "",
+        "pretty": false,
+        "x": 910,
+        "y": 60,
+        "wires": [
+            [
+                "3b2df7e2.48868"
+            ]
+        ]
+    },
+    {
+        "id": "6127730f.ef3f54",
+        "type": "delay",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 340,
+        "y": 200,
+        "wires": [
+            [
+                "bf503a10.0d0dd8"
+            ]
+        ]
+    },
+    {
+        "id": "970ee6d0.37a8e",
+        "type": "delay",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "pauseType": "delay",
+        "timeout": "25",
+        "timeoutUnits": "milliseconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 350,
+        "y": 260,
+        "wires": [
+            [
+                "35d001da.f089be"
+            ]
+        ]
+    },
+    {
+        "id": "7dcbfb8a.826a64",
+        "type": "debug",
+        "z": "9b21c092.4affa8",
+        "name": "JSON",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1050,
+        "y": 620,
+        "wires": []
+    },
+    {
+        "id": "7f543dc1.cbb6a4",
+        "type": "comment",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "info": "node-red-contrib-loop-processing\ncounter-loop\nnode-red-contrib-elasticsearch-jupalcf\nElasticsearch index\nnode-red-contrib-kafka-manager",
+        "x": 120,
+        "y": 20,
+        "wires": []
+    },
+    {
+        "id": "3e4a2ccd.c0d864",
+        "type": "function",
+        "z": "9b21c092.4affa8",
+        "name": "small service",
+        "func": "var userArray = [ \"axxa2312\", \"varta01\", \"pkobp\", \"visa44\", \"allegro765\", \"mbank99\"]; \nvar userInstance = userArray[Math.floor(Math.random()*userArray.length)];\nvar date = new Date('2021-01-01T00:00:01')\ndate.setHours( date.getHours() + (Math.floor(Math.random() * 201) - 100))\nvar amount = Math.floor(Math.random() * (1000 - 400 + 1)) + 400\n\n\nmsg.payload =   {\n      \"id\": uuidv4(),\n      \"timestamp\": date.toISOString(),\n      \"user\":userInstance,\n      \"amount\":amount\n    };\n\nmsg.key = 'mytest'\n\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\nfunction uuidv4() {\n  return 'xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx'.replace(/[xy]/g, function(c) {\n    var r = Math.random() * 16 | 0, v = c == 'x' ? r : (r & 0x3 | 0x8);\n    return v.toString(16);\n  });\n}\n//xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx\n\n\nreturn msg;",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "x": 570,
+        "y": 480,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "decaa9b3.2fb5b",
+        "type": "Kafka Consumer Group",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "broker": "2bcf548e.9f0ce4",
+        "groupId": "aGroup",
+        "sessionTimeout": 15000,
+        "protocol": [
+            "roundrobin"
+        ],
+        "encoding": "utf8",
+        "fromOffset": "latest",
+        "commitOffsetsOnFirstJoin": "true",
+        "outOfRangeOffset": "earliest",
+        "topics": [
+            "ibm-bai-ingress"
+        ],
+        "x": 740,
+        "y": 580,
+        "wires": [
+            [
+                "b4f13adf.798228",
+                "7dcbfb8a.826a64"
+            ]
+        ]
+    },
+    {
+        "id": "3b2df7e2.48868",
+        "type": "Kafka Producer",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "broker": "2bcf548e.9f0ce4",
+        "topic": "ibm-bai-ingress",
+        "topicSlash2dot": false,
+        "requireAcks": 1,
+        "ackTimeoutMs": 100,
+        "partitionerType": 0,
+        "key": "datapower",
+        "partition": 0,
+        "attributes": 0,
+        "connectionType": "Producer",
+        "convertFromJson": false,
+        "x": 1080,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "b4f13adf.798228",
+        "type": "elasticsearch-index",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "server": "f4be98fb.fb1858",
+        "index": "bai",
+        "esType": "datapower",
+        "esId": "",
+        "routing": "",
+        "x": 1030,
+        "y": 520,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "f5a9ea9c.2b00c8",
+        "type": "ui_form",
+        "z": "9b21c092.4affa8",
+        "name": "Form Environment",
+        "label": "DataPower",
+        "group": "f1afe04e.0d40d",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "options": [
+            {
+                "label": "Per4hours",
+                "value": "per4hours",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Iterations",
+                "value": "iterations",
+                "type": "number",
+                "required": true,
+                "rows": null
+            },
+            {
+                "label": "Data",
+                "value": "startDate",
+                "type": "date",
+                "required": true,
+                "rows": null
+            }
+        ],
+        "formValue": {
+            "per4hours": "",
+            "iterations": "",
+            "startDate": ""
+        },
+        "payload": "",
+        "submit": "submit",
+        "cancel": "cancel",
+        "topic": "",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "2a6be0d4.74a798"
+            ]
+        ]
+    },
+    {
+        "id": "2a6be0d4.74a798",
+        "type": "change",
+        "z": "9b21c092.4affa8",
+        "name": "",
+        "rules": [
+            {
+                "t": "move",
+                "p": "payload.per4hours",
+                "pt": "msg",
+                "to": "per4hours",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.iterations",
+                "pt": "msg",
+                "to": "iterations",
+                "tot": "msg"
+            },
+            {
+                "t": "move",
+                "p": "payload.startDate",
+                "pt": "msg",
+                "to": "startDate",
+                "tot": "msg"
+            },
+            {
+                "t": "delete",
+                "p": "payload",
+                "pt": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 300,
+        "y": 120,
+        "wires": [
+            [
+                "bf503a10.0d0dd8"
+            ]
+        ]
+    }
+]

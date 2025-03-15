@@ -1,0 +1,757 @@
+[
+    {
+        "id": "38a1cd90.014a7a",
+        "type": "tab",
+        "label": "Flow 4",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "e4a3bd6e.404b2",
+        "type": "tab",
+        "label": "Minimal state machine JSON object",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "70d12b2e.625c9c",
+        "type": "tab",
+        "label": "Simple state machine with data object",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "854a9f95.2f9f7",
+        "type": "tab",
+        "label": "State machine with feedback flow",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "cd27ad32.fb2ce8",
+        "type": "tab",
+        "label": "State machine with rbe",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "70d24837.fa7bb8",
+        "type": "finite-state-machine",
+        "z": "e4a3bd6e.404b2",
+        "name": "",
+        "fsmDefinition": "{\"state\":{\"status\":\"IDLE\"},\"transitions\":{\"IDLE\":{\"toggleRUNNING\":\"RUNNING\"},\"RUNNING\":{\"toggleIDLE\":\"IDLE\"}}}",
+        "sendInitialState": false,
+        "sendStateWithoutChange": true,
+        "showTransitionErrors": true,
+        "x": 410,
+        "y": 140,
+        "wires": [
+            [
+                "236d8d.5ef6da74"
+            ]
+        ]
+    },
+    {
+        "id": "236d8d.5ef6da74",
+        "type": "debug",
+        "z": "e4a3bd6e.404b2",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 630,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "701f2b41.e4ecb4",
+        "type": "inject",
+        "z": "e4a3bd6e.404b2",
+        "name": "toggleRUNNING",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "\"toggleRUNNING\"",
+        "x": 120,
+        "y": 280,
+        "wires": [
+            [
+                "70d24837.fa7bb8"
+            ]
+        ]
+    },
+    {
+        "id": "a75e8c2f.0b2378",
+        "type": "comment",
+        "z": "e4a3bd6e.404b2",
+        "name": "sending topic \"toggleState\" toggles between the two states",
+        "info": "",
+        "x": 350,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "61510f93.98e07",
+        "type": "comment",
+        "z": "38a1cd90.014a7a",
+        "name": "https://github.com/lutzer/node-red-contrib-finite-statemachine/blob/master/MANUAL.md",
+        "info": "",
+        "x": 350,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "453ab056.75db6",
+        "type": "inject",
+        "z": "e4a3bd6e.404b2",
+        "name": "toggleIDLE",
+        "props": [
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "\"toggleIDLE\"",
+        "x": 120,
+        "y": 180,
+        "wires": [
+            [
+                "70d24837.fa7bb8"
+            ]
+        ]
+    },
+    {
+        "id": "a0edf135.e14588",
+        "type": "finite-state-machine",
+        "z": "70d12b2e.625c9c",
+        "name": "",
+        "fsmDefinition": "{\"state\":{\"status\":\"IDLE\",\"data\":{\"x\":99}},\"transitions\":{\"IDLE\":{\"run\":{\"status\":\"RUNNING\",\"data\":{\"x\":42}}},\"RUNNING\":{\"stop\":{\"status\":\"IDLE\",\"data\":{\"x\":0}},\"set\":\"RUNNING\"}}}",
+        "sendInitialState": false,
+        "sendStateWithoutChange": false,
+        "showTransitionErrors": true,
+        "x": 600,
+        "y": 260,
+        "wires": [
+            [
+                "cb19a198.11647",
+                "b1877454.ee2168"
+            ]
+        ]
+    },
+    {
+        "id": "9befd239.ea94b",
+        "type": "inject",
+        "z": "70d12b2e.625c9c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "reset",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "reset",
+        "payload": "",
+        "payloadType": "str",
+        "x": 210,
+        "y": 120,
+        "wires": [
+            [
+                "a0edf135.e14588"
+            ]
+        ]
+    },
+    {
+        "id": "456671ae.4a071",
+        "type": "comment",
+        "z": "70d12b2e.625c9c",
+        "name": "sending topic \"reset\" will set the state machine to its initial state",
+        "info": "",
+        "x": 380,
+        "y": 80,
+        "wires": []
+    },
+    {
+        "id": "bcc44c08.7c6d08",
+        "type": "inject",
+        "z": "70d12b2e.625c9c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "run",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "run",
+        "payload": "",
+        "payloadType": "str",
+        "x": 210,
+        "y": 240,
+        "wires": [
+            [
+                "a0edf135.e14588"
+            ]
+        ]
+    },
+    {
+        "id": "201e40f8.865b2",
+        "type": "inject",
+        "z": "70d12b2e.625c9c",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "{\"x\" : 2, \"name\" : \"peter\"}",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "v": "set",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "set",
+        "payload": "{\"x\" : 2, \"name\" : \"peter\"}",
+        "payloadType": "json",
+        "x": 290,
+        "y": 400,
+        "wires": [
+            [
+                "a0edf135.e14588"
+            ]
+        ]
+    },
+    {
+        "id": "61fd9c83.dd95fc",
+        "type": "inject",
+        "z": "70d12b2e.625c9c",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "set",
+        "payload": "{\"y\" : 3}",
+        "payloadType": "json",
+        "x": 230,
+        "y": 440,
+        "wires": [
+            [
+                "a0edf135.e14588"
+            ]
+        ]
+    },
+    {
+        "id": "c6add2b4.c41ee",
+        "type": "comment",
+        "z": "70d12b2e.625c9c",
+        "name": "any other topic will trigger a transition",
+        "info": "",
+        "x": 290,
+        "y": 200,
+        "wires": []
+    },
+    {
+        "id": "a4c93b9f.44d3f",
+        "type": "inject",
+        "z": "70d12b2e.625c9c",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "stop",
+        "payload": "",
+        "payloadType": "str",
+        "x": 210,
+        "y": 280,
+        "wires": [
+            [
+                "a0edf135.e14588"
+            ]
+        ]
+    },
+    {
+        "id": "3b5f9a43.cdf68e",
+        "type": "comment",
+        "z": "70d12b2e.625c9c",
+        "name": "by sending a JSON object as payload you can add data to the state",
+        "info": "",
+        "x": 380,
+        "y": 360,
+        "wires": []
+    },
+    {
+        "id": "cb19a198.11647",
+        "type": "debug",
+        "z": "70d12b2e.625c9c",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload.status",
+        "targetType": "msg",
+        "statusVal": "payload.status",
+        "statusType": "auto",
+        "x": 880,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "b1877454.ee2168",
+        "type": "debug",
+        "z": "70d12b2e.625c9c",
+        "name": "",
+        "active": true,
+        "tosidebar": false,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload.data",
+        "targetType": "msg",
+        "statusVal": "payload.data",
+        "statusType": "auto",
+        "x": 880,
+        "y": 300,
+        "wires": []
+    },
+    {
+        "id": "7aa13ebe.fa216",
+        "type": "comment",
+        "z": "70d12b2e.625c9c",
+        "name": "",
+        "info": "[{\"id\":\"70d12b2e.625c9c\",\"type\":\"tab\",\"label\":\"Simple state machine with data object\",\"disabled\":false,\"info\":\"\"},{\"id\":\"a0edf135.e14588\",\"type\":\"finite-state-machine\",\"z\":\"70d12b2e.625c9c\",\"name\":\"\",\"fsmDefinition\":\"{\\\"state\\\":{\\\"status\\\":\\\"IDLE\\\",\\\"data\\\":{\\\"x\\\":99}},\\\"transitions\\\":{\\\"IDLE\\\":{\\\"run\\\":{\\\"status\\\":\\\"RUNNING\\\",\\\"data\\\":{\\\"x\\\":42}}},\\\"RUNNING\\\":{\\\"stop\\\":{\\\"status\\\":\\\"IDLE\\\",\\\"data\\\":{\\\"x\\\":0}},\\\"set\\\":\\\"RUNNING\\\"}}}\",\"sendInitialState\":false,\"showTransitionErrors\":true,\"x\":600,\"y\":260,\"wires\":[[\"cb19a198.11647\",\"b1877454.ee2168\"]]},{\"id\":\"9befd239.ea94b\",\"type\":\"inject\",\"z\":\"70d12b2e.625c9c\",\"name\":\"\",\"topic\":\"reset\",\"payload\":\"\",\"payloadType\":\"str\",\"repeat\":\"\",\"crontab\":\"\",\"once\":true,\"onceDelay\":0.1,\"x\":210,\"y\":120,\"wires\":[[\"a0edf135.e14588\"]]},{\"id\":\"456671ae.4a071\",\"type\":\"comment\",\"z\":\"70d12b2e.625c9c\",\"name\":\"sending topic \\\"reset\\\" will set the state machine to its initial state\",\"info\":\"\",\"x\":380,\"y\":80,\"wires\":[]},{\"id\":\"bcc44c08.7c6d08\",\"type\":\"inject\",\"z\":\"70d12b2e.625c9c\",\"name\":\"\",\"topic\":\"run\",\"payload\":\"\",\"payloadType\":\"str\",\"repeat\":\"\",\"crontab\":\"\",\"once\":false,\"onceDelay\":0.1,\"x\":210,\"y\":240,\"wires\":[[\"a0edf135.e14588\"]]},{\"id\":\"201e40f8.865b2\",\"type\":\"inject\",\"z\":\"70d12b2e.625c9c\",\"name\":\"\",\"topic\":\"set\",\"payload\":\"{\\\"x\\\" : 2, \\\"name\\\" : \\\"peter\\\"}\",\"payloadType\":\"json\",\"repeat\":\"\",\"crontab\":\"\",\"once\":false,\"onceDelay\":0.1,\"x\":290,\"y\":400,\"wires\":[[\"a0edf135.e14588\"]]},{\"id\":\"61fd9c83.dd95fc\",\"type\":\"inject\",\"z\":\"70d12b2e.625c9c\",\"name\":\"\",\"topic\":\"set\",\"payload\":\"{\\\"y\\\" : 3}\",\"payloadType\":\"json\",\"repeat\":\"\",\"crontab\":\"\",\"once\":false,\"onceDelay\":0.1,\"x\":230,\"y\":440,\"wires\":[[\"a0edf135.e14588\"]]},{\"id\":\"c6add2b4.c41ee\",\"type\":\"comment\",\"z\":\"70d12b2e.625c9c\",\"name\":\"any other topic will trigger a transition\",\"info\":\"\",\"x\":290,\"y\":200,\"wires\":[]},{\"id\":\"a4c93b9f.44d3f\",\"type\":\"inject\",\"z\":\"70d12b2e.625c9c\",\"name\":\"\",\"topic\":\"stop\",\"payload\":\"\",\"payloadType\":\"str\",\"repeat\":\"\",\"crontab\":\"\",\"once\":false,\"onceDelay\":0.1,\"x\":210,\"y\":280,\"wires\":[[\"a0edf135.e14588\"]]},{\"id\":\"3b5f9a43.cdf68e\",\"type\":\"comment\",\"z\":\"70d12b2e.625c9c\",\"name\":\"by sending a JSON object as payload you can add data to the state\",\"info\":\"\",\"x\":380,\"y\":360,\"wires\":[]},{\"id\":\"cb19a198.11647\",\"type\":\"debug\",\"z\":\"70d12b2e.625c9c\",\"name\":\"\",\"active\":true,\"tosidebar\":false,\"console\":false,\"tostatus\":true,\"complete\":\"payload.status\",\"targetType\":\"msg\",\"x\":880,\"y\":220,\"wires\":[]},{\"id\":\"b1877454.ee2168\",\"type\":\"debug\",\"z\":\"70d12b2e.625c9c\",\"name\":\"\",\"active\":true,\"tosidebar\":false,\"console\":false,\"tostatus\":true,\"complete\":\"payload.data\",\"targetType\":\"msg\",\"x\":880,\"y\":300,\"wires\":[]}]",
+        "x": 90,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "8e00e3c4.d05b98",
+        "type": "comment",
+        "z": "e4a3bd6e.404b2",
+        "name": "",
+        "info": "[{\"id\":\"70d24837.fa7bb8\",\"type\":\"finite-state-machine\",\"z\":\"9b6215d1.9ceba8\",\"name\":\"\",\"fsmDefinition\":\"{\\\"state\\\":{\\\"status\\\":\\\"IDLE\\\"},\\\"transitions\\\":{\\\"IDLE\\\":{\\\"toggleState\\\":\\\"RUNNING\\\"},\\\"RUNNING\\\":{\\\"toggleState\\\":\\\"IDLE\\\"}}}\",\"sendInitialState\":false,\"showTransitionErrors\":true,\"x\":480,\"y\":240,\"wires\":[[\"236d8d.5ef6da74\"]]},{\"id\":\"236d8d.5ef6da74\",\"type\":\"debug\",\"z\":\"9b6215d1.9ceba8\",\"name\":\"\",\"active\":true,\"tosidebar\":false,\"console\":false,\"tostatus\":true,\"complete\":\"payload\",\"targetType\":\"msg\",\"x\":720,\"y\":240,\"wires\":[]},{\"id\":\"701f2b41.e4ecb4\",\"type\":\"inject\",\"z\":\"9b6215d1.9ceba8\",\"name\":\"\",\"topic\":\"toggleState\",\"payload\":\"\",\"payloadType\":\"str\",\"repeat\":\"\",\"crontab\":\"\",\"once\":false,\"onceDelay\":0.1,\"x\":250,\"y\":240,\"wires\":[[\"70d24837.fa7bb8\"]]},{\"id\":\"a75e8c2f.0b2378\",\"type\":\"comment\",\"z\":\"9b6215d1.9ceba8\",\"name\":\"sending topic \\\"toggleState\\\" toggles between the two states\",\"info\":\"\",\"x\":420,\"y\":180,\"wires\":[]}]",
+        "x": 110,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "47aa9b50.b6825c",
+        "type": "finite-state-machine",
+        "z": "854a9f95.2f9f7",
+        "name": "",
+        "fsmDefinition": "{\"state\":{\"status\":\"IDLE\",\"data\":{\"x\":5}},\"transitions\":{\"IDLE\":{\"run\":\"RUNNING\"},\"RUNNING\":{\"stop\":\"IDLE\",\"set\":\"RUNNING\"}}}",
+        "sendInitialState": false,
+        "sendStateWithoutChange": false,
+        "showTransitionErrors": true,
+        "x": 480,
+        "y": 160,
+        "wires": [
+            [
+                "a8262434.cf7498"
+            ]
+        ]
+    },
+    {
+        "id": "87fbee09.255fe8",
+        "type": "inject",
+        "z": "854a9f95.2f9f7",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "run",
+        "payload": "",
+        "payloadType": "str",
+        "x": 270,
+        "y": 160,
+        "wires": [
+            [
+                "47aa9b50.b6825c"
+            ]
+        ]
+    },
+    {
+        "id": "a8262434.cf7498",
+        "type": "switch",
+        "z": "854a9f95.2f9f7",
+        "name": "onRUNNING",
+        "property": "payload.status",
+        "propertyType": "msg",
+        "rules": [
+            {
+                "t": "eq",
+                "v": "RUNNING",
+                "vt": "str"
+            }
+        ],
+        "checkall": "true",
+        "repair": false,
+        "outputs": 1,
+        "x": 690,
+        "y": 140,
+        "wires": [
+            [
+                "1bb1822b.773f76"
+            ]
+        ]
+    },
+    {
+        "id": "1bb1822b.773f76",
+        "type": "delay",
+        "z": "854a9f95.2f9f7",
+        "name": "delay 5s",
+        "pauseType": "delay",
+        "timeout": "5",
+        "timeoutUnits": "seconds",
+        "rate": "1",
+        "nbRateUnits": "1",
+        "rateUnits": "second",
+        "randomFirst": "1",
+        "randomLast": "5",
+        "randomUnits": "seconds",
+        "drop": false,
+        "x": 760,
+        "y": 300,
+        "wires": [
+            [
+                "983f9b74.7bcbd8"
+            ]
+        ]
+    },
+    {
+        "id": "983f9b74.7bcbd8",
+        "type": "change",
+        "z": "854a9f95.2f9f7",
+        "name": "set msg.topic to stop",
+        "rules": [
+            {
+                "t": "set",
+                "p": "topic",
+                "pt": "msg",
+                "to": "stop",
+                "tot": "str"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 220,
+        "y": 200,
+        "wires": [
+            [
+                "47aa9b50.b6825c"
+            ]
+        ]
+    },
+    {
+        "id": "a0a931fb.60bc4",
+        "type": "comment",
+        "z": "854a9f95.2f9f7",
+        "name": "sending topic \"run\" will trigger the machine which is stopped 5 seconds later",
+        "info": "",
+        "x": 390,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "514cda8d.ee6de4",
+        "type": "comment",
+        "z": "854a9f95.2f9f7",
+        "name": "",
+        "info": "[{\"id\":\"854a9f95.2f9f7\",\"type\":\"tab\",\"label\":\"State machine with feedback flow\",\"disabled\":false,\"info\":\"\"},{\"id\":\"47aa9b50.b6825c\",\"type\":\"finite-state-machine\",\"z\":\"854a9f95.2f9f7\",\"name\":\"\",\"fsmDefinition\":\"{\\\"state\\\":{\\\"status\\\":\\\"IDLE\\\",\\\"data\\\":{\\\"x\\\":5}},\\\"transitions\\\":{\\\"IDLE\\\":{\\\"run\\\":\\\"RUNNING\\\"},\\\"RUNNING\\\":{\\\"stop\\\":\\\"IDLE\\\",\\\"set\\\":\\\"RUNNING\\\"}}}\",\"sendInitialState\":false,\"showTransitionErrors\":true,\"x\":480,\"y\":160,\"wires\":[[\"a8262434.cf7498\"]]},{\"id\":\"87fbee09.255fe8\",\"type\":\"inject\",\"z\":\"854a9f95.2f9f7\",\"name\":\"\",\"topic\":\"run\",\"payload\":\"\",\"payloadType\":\"str\",\"repeat\":\"\",\"crontab\":\"\",\"once\":false,\"onceDelay\":0.1,\"x\":270,\"y\":160,\"wires\":[[\"47aa9b50.b6825c\"]]},{\"id\":\"a8262434.cf7498\",\"type\":\"switch\",\"z\":\"854a9f95.2f9f7\",\"name\":\"onRUNNING\",\"property\":\"payload.status\",\"propertyType\":\"msg\",\"rules\":[{\"t\":\"eq\",\"v\":\"RUNNING\",\"vt\":\"str\"}],\"checkall\":\"true\",\"repair\":false,\"outputs\":1,\"x\":690,\"y\":140,\"wires\":[[\"1bb1822b.773f76\"]]},{\"id\":\"1bb1822b.773f76\",\"type\":\"delay\",\"z\":\"854a9f95.2f9f7\",\"name\":\"delay 5s\",\"pauseType\":\"delay\",\"timeout\":\"5\",\"timeoutUnits\":\"seconds\",\"rate\":\"1\",\"nbRateUnits\":\"1\",\"rateUnits\":\"second\",\"randomFirst\":\"1\",\"randomLast\":\"5\",\"randomUnits\":\"seconds\",\"drop\":false,\"x\":760,\"y\":300,\"wires\":[[\"983f9b74.7bcbd8\"]]},{\"id\":\"983f9b74.7bcbd8\",\"type\":\"change\",\"z\":\"854a9f95.2f9f7\",\"name\":\"set msg.topic to stop\",\"rules\":[{\"t\":\"set\",\"p\":\"topic\",\"pt\":\"msg\",\"to\":\"stop\",\"tot\":\"str\"}],\"action\":\"\",\"property\":\"\",\"from\":\"\",\"to\":\"\",\"reg\":false,\"x\":220,\"y\":200,\"wires\":[[\"47aa9b50.b6825c\"]]},{\"id\":\"a0a931fb.60bc4\",\"type\":\"comment\",\"z\":\"854a9f95.2f9f7\",\"name\":\"sending topic \\\"run\\\" will trigger the machine which is stopped 5 seconds later\",\"info\":\"\",\"x\":390,\"y\":100,\"wires\":[]}]",
+        "x": 150,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "741f9b7e.bd3d34",
+        "type": "finite-state-machine",
+        "z": "cd27ad32.fb2ce8",
+        "name": "",
+        "fsmDefinition": "{\"state\":{\"status\":\"IDLE\",\"data\":{\"x\":5}},\"transitions\":{\"IDLE\":{\"toggle\":\"RUNNING\",\"set\":\"IDLE\"},\"RUNNING\":{\"toggle\":\"IDLE\"}}}",
+        "sendInitialState": false,
+        "sendStateWithoutChange": false,
+        "showTransitionErrors": true,
+        "x": 350,
+        "y": 200,
+        "wires": [
+            [
+                "2c5a6aeb.c6e35e",
+                "22380426.fd5b5c",
+                "fd0fdc38.21c4c8",
+                "19579af6.c76055"
+            ]
+        ]
+    },
+    {
+        "id": "6f9447ed.5d58",
+        "type": "inject",
+        "z": "cd27ad32.fb2ce8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "{ \"x\" :6 }",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "v": "set",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "set",
+        "payload": "{ \"x\" :6 }",
+        "payloadType": "json",
+        "x": 100,
+        "y": 240,
+        "wires": [
+            [
+                "741f9b7e.bd3d34"
+            ]
+        ]
+    },
+    {
+        "id": "3e18afe6.ce355",
+        "type": "inject",
+        "z": "cd27ad32.fb2ce8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "{ \"x\" :7 }",
+                "vt": "json"
+            },
+            {
+                "p": "topic",
+                "v": "set",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "set",
+        "payload": "{ \"x\" :7 }",
+        "payloadType": "json",
+        "x": 100,
+        "y": 280,
+        "wires": [
+            [
+                "741f9b7e.bd3d34"
+            ]
+        ]
+    },
+    {
+        "id": "d8ffa74c.efa948",
+        "type": "inject",
+        "z": "cd27ad32.fb2ce8",
+        "name": "",
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "toggle",
+        "payload": "",
+        "payloadType": "str",
+        "x": 120,
+        "y": 200,
+        "wires": [
+            [
+                "741f9b7e.bd3d34"
+            ]
+        ]
+    },
+    {
+        "id": "8ee732f2.01075",
+        "type": "debug",
+        "z": "cd27ad32.fb2ce8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload.data",
+        "targetType": "msg",
+        "x": 800,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "2c5a6aeb.c6e35e",
+        "type": "rbe",
+        "z": "cd27ad32.fb2ce8",
+        "name": "dataChanged",
+        "func": "rbei",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "septopics": true,
+        "property": "payload.data",
+        "topi": "topic",
+        "x": 590,
+        "y": 180,
+        "wires": [
+            [
+                "8ee732f2.01075"
+            ]
+        ]
+    },
+    {
+        "id": "22380426.fd5b5c",
+        "type": "rbe",
+        "z": "cd27ad32.fb2ce8",
+        "name": "stateChanged",
+        "func": "rbei",
+        "gap": "",
+        "start": "",
+        "inout": "out",
+        "property": "payload.status",
+        "x": 590,
+        "y": 240,
+        "wires": [
+            [
+                "6abdae73.1aaac"
+            ]
+        ]
+    },
+    {
+        "id": "6abdae73.1aaac",
+        "type": "debug",
+        "z": "cd27ad32.fb2ce8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload.status",
+        "targetType": "msg",
+        "x": 800,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "2d6a156e.5f98ca",
+        "type": "inject",
+        "z": "cd27ad32.fb2ce8",
+        "name": "",
+        "props": [
+            {
+                "p": "payload",
+                "v": "",
+                "vt": "str"
+            },
+            {
+                "p": "topic",
+                "v": "set",
+                "vt": "string"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "set",
+        "payload": "",
+        "payloadType": "str",
+        "x": 120,
+        "y": 160,
+        "wires": [
+            [
+                "741f9b7e.bd3d34"
+            ]
+        ]
+    },
+    {
+        "id": "fd0fdc38.21c4c8",
+        "type": "debug",
+        "z": "cd27ad32.fb2ce8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload.status",
+        "targetType": "msg",
+        "x": 600,
+        "y": 100,
+        "wires": []
+    },
+    {
+        "id": "19579af6.c76055",
+        "type": "debug",
+        "z": "cd27ad32.fb2ce8",
+        "name": "",
+        "active": false,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload.data",
+        "targetType": "msg",
+        "x": 600,
+        "y": 40,
+        "wires": []
+    },
+    {
+        "id": "2cc8acb90ae508d7",
+        "type": "smxstate",
+        "z": "cd27ad32.fb2ce8",
+        "name": "",
+        "xstateDefinition": "// Available variables/objects/functions:\n// xstate\n// - .Machine\n// - .interpret\n// - .assign\n// - .send\n// - .sendParent\n// - .spawn\n// - .raise\n// - .actions\n//\n// Common\n// - setInterval, setTimeout, clearInterval, clearTimeout\n// - node.send, node.warn, node.log, node.error\n// - context.get, context.set\n// - flow.get, flow.set\n// - env.get\n// - util\n\nconst { assign } = xstate;\n\n// First define names guards, actions, ...\n\n/**\n * Guards\n */\nconst maxValueReached = (context, event) => {\n  return context.counter >= 10;\n};\n\n/**\n * Actions\n */\nconst incrementCounter = assign({\n  counter: (context, event) => context.counter + 1\n});\n\nconst resetCounter = assign({\n  counter: (context, event) => {\n    // Can send log messages via\n    //  - node.log\n    //  - node.warn\n    //  - node.error\n    //node.warn(\"RESET\");\n\n    // Can send messages to the second outport\n    // Specify an array to send multiple messages\n    // at once\n    //  - node.send(msg)\n    node.send({ payload: \"resetCounter\" });\n    \n    return 0;\n  }\n});\n\n/**\n * Activities\n */\nconst doStuff = () => {\n  // See https://xstate.js.org/docs/guides/activities.html\n  const interval = setInterval(() => {\n    node.send({ payload: 'BEEP' });\n  }, 1000);\n  return () => clearInterval(interval);\n};\n\n/***************************\n * Main machine definition * \n ***************************/\nreturn {\n  machine: {\n    context: {\n      counter: 0\n    },\n    initial: 'run',\n    states: {\n      run: {\n        initial: 'count',\n        states: {\n          count: {\n            on: {\n              '': { target: 'reset', cond: 'maxValueReached' }\n            },\n            after: {\n              1000: { target: 'count', actions: 'incrementCounter' }\n            }\n          },\n          reset: {\n            exit: 'resetCounter',\n            after: {\n              5000: { target: 'count' }\n            },\n            activities: 'doStuff'\n          }\n        },\n        on: {\n          PAUSE: 'pause'\n        }\n      },\n      pause: {\n        on: {\n          RESUME: 'run'\n        }\n      }\n    }\n  },\n  // Configuration containing guards, actions, activities, ...\n  // see above\n  config: {\n    guards: { maxValueReached },\n    actions: { incrementCounter, resetCounter },\n    activities: { doStuff }\n  },\n  // Define listeners (can be an array of functions)\n  //    Functions get called on every state/context update\n  listeners: (data) => {\n    //node.warn(data.state + \":\" + data.context.counter);\n  }\n};",
+        "noerr": 0,
+        "x": 370,
+        "y": 620,
+        "wires": [
+            [],
+            []
+        ]
+    }
+]
